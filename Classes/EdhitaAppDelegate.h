@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RootViewController.h"
+#import "DetailViewController.h"
+
 @interface EdhitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 }

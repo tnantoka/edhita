@@ -21,15 +21,23 @@
     // Override point for customization after application launch.
 	
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	UIView *view = [[UIView alloc] initWithFrame: [window frame]];
-	[window addSubview:view];
 
-	UILabel *label = [[UILabel alloc] initWithFrame: [window frame]];
-	label.text = @"Hello, iPad!";
-	label.textAlignment = UITextAlignmentCenter;
-	label.font = [[UIFont alloc] fontWithSize: 50];
-	[view addSubview:label];
+	RootViewController *rootViewController = [[RootViewController alloc] init];
+	// tableview単体じゃ仕方ないのでnavviewでwrap
+	UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+	
+	DetailViewController *detailViewController = [[DetailViewController alloc] init];
+
+	rootViewController.detailViewController = detailViewController;
+
+	UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
+	splitViewController.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
+	splitViewController.delegate = detailViewController;
+	
+	[window addSubview:splitViewController.view];
+	[rootViewController release];
+	[navigationController release];
+	[detailViewController release];
 	
     [window makeKeyAndVisible];
 	
