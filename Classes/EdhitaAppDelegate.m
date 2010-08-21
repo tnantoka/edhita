@@ -22,9 +22,12 @@
 	
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-	RootViewController *rootViewController = [[RootViewController alloc] init];
+	NSString *homeDir = NSHomeDirectory();
+	NSString *path = [homeDir stringByAppendingPathComponent:@"Documents"];
+	RootViewController *rootViewController = [[RootViewController alloc] initWithPath:path];
 	// tableview単体じゃ仕方ないのでnavviewでwrap
-	UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+//	rootViewController.title = @"Documents";
+	EdhitaNavigationController* navigationController = [[EdhitaNavigationController alloc] initWithRootViewController:rootViewController];
 	
 	DetailViewController *detailViewController = [[DetailViewController alloc] init];
 
