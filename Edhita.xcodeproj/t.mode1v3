@@ -202,46 +202,6 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>13C3AE0212202FCD004512A2</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>DetailViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>13C3AE0312202FCD004512A2</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>DetailViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>13C3AE0F1220301F004512A2</string>
-						<key>history</key>
-						<array>
-							<string>13C3ADFE12202FC2004512A2</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {954, 493}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>1280 91 954 534 1280 -100 1440 900 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
 				<string>13F214FE121FFC9800F38E30</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>EdhitaTableViewController.m</string>
@@ -256,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE101220301F004512A2</string>
+						<string>13F48CDC12217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13C3AD3F12202974004512A2</string>
+							<string>13F48CC312217A10005FFE7F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -275,31 +235,31 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>1303 168 954 534 1280 -100 1440 900 </string>
+				<string>1494 200 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>13F214FA121FFC9800F38E30</string>
+				<string>132B7E42121D62390053BB1F</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>EdhitaTableViewController.h</string>
+				<string>RootViewController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>13F214FB121FFC9800F38E30</string>
+						<string>132B7E43121D62390053BB1F</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>EdhitaTableViewController.h</string>
+						<string>RootViewController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE111220301F004512A2</string>
+						<string>13F48CDD12217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13C3ADF812202F9E004512A2</string>
+							<string>13F48CC512217A10005FFE7F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -315,7 +275,47 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>1432 173 954 534 1280 -100 1440 900 </string>
+				<string>1320 78 954 534 1280 -100 1440 900 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>13C3AE0212202FCD004512A2</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>DetailViewController.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>13C3AE0312202FCD004512A2</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>DetailViewController.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>13F48CDE12217CCA005FFE7F</string>
+						<key>history</key>
+						<array>
+							<string>13F48CC712217A10005FFE7F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {954, 493}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>1331 64 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 		<dict>
@@ -336,10 +336,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE121220301F004512A2</string>
+						<string>13F48CDF12217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13F4B572122017AC00D243EE</string>
+							<string>1364FF5B12211DF3007FDF3C</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -362,24 +362,24 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>132B7E42121D62390053BB1F</string>
+				<string>13F48C60122168D1005FFE7F</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>RootViewController.m</string>
+				<string>EdhitaNavigationController.m</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>132B7E43121D62390053BB1F</string>
+						<string>13F48C61122168D1005FFE7F</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>RootViewController.m</string>
+						<string>EdhitaNavigationController.m</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE131220301F004512A2</string>
+						<string>13F48CE012217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13C3AD3D12202974004512A2</string>
+							<string>13F48C9612216CE6005FFE7F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -395,31 +395,31 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>1753 163 954 534 1280 -100 1440 900 </string>
+				<string>1463 56 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
-				<string>1301C4D8121F6F9B009C9FFE</string>
+				<string>13F48C151221642B005FFE7F</string>
 				<key>PBXProjectModuleLabel</key>
-				<string>EdhitaAppDelegate.m</string>
+				<string>DetailViewController.h</string>
 				<key>PBXSplitModuleInNavigatorKey</key>
 				<dict>
 					<key>Split0</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
-						<string>1301C4D9121F6F9B009C9FFE</string>
+						<string>13F48C161221642B005FFE7F</string>
 						<key>PBXProjectModuleLabel</key>
-						<string>EdhitaAppDelegate.m</string>
+						<string>DetailViewController.h</string>
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE141220301F004512A2</string>
+						<string>13F48CE112217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13F4B575122017AC00D243EE</string>
+							<string>13F48C0112216403005FFE7F</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -435,7 +435,47 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>1528 126 954 534 1280 -100 1440 900 </string>
+				<string>1342 83 954 534 1280 -100 1440 900 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>13F214FA121FFC9800F38E30</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>EdhitaTableViewController.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>13F214FB121FFC9800F38E30</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>EdhitaTableViewController.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>13F48CE212217CCA005FFE7F</string>
+						<key>history</key>
+						<array>
+							<string>13F48C111221642B005FFE7F</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {954, 493}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>1432 173 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 		<dict>
@@ -456,10 +496,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13C3AE151220301F004512A2</string>
+						<string>13F48CE312217CCA005FFE7F</string>
 						<key>history</key>
 						<array>
-							<string>13F4B577122017AC00D243EE</string>
+							<string>1364FF5F12211DF3007FDF3C</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -476,6 +516,46 @@
 				<false/>
 				<key>RubberWindowFrame</key>
 				<string>1384 17 954 534 1280 -100 1440 900 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>1301C4D8121F6F9B009C9FFE</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>EdhitaAppDelegate.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>1301C4D9121F6F9B009C9FFE</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>EdhitaAppDelegate.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>13F48CE412217CCA005FFE7F</string>
+						<key>history</key>
+						<array>
+							<string>1364FF6112211DF3007FDF3C</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {954, 493}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>1528 126 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 	</array>
@@ -561,7 +641,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {186, 445}}</string>
+							<string>{{0, 0}, {186, 539}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -573,14 +653,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {203, 463}}</string>
+						<string>{{0, 0}, {203, 557}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>186</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>1397 278 788 504 1280 -100 1440 900 </string>
+						<string>1350 202 795 598 1280 -100 1440 900 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -596,7 +676,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EdhitaAppDelegate.h</string>
+								<string>EdhitaTableViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -604,25 +684,25 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EdhitaAppDelegate.h</string>
+										<string>EdhitaTableViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>13C3AE0E1220301F004512A2</string>
+										<string>13F48CDB12217CCA005FFE7F</string>
 										<key>history</key>
 										<array>
 											<string>13174E081217A3BE00FC741F</string>
-											<string>1316CA06121EE960004822F2</string>
-											<string>13F214C5121FF74A00F38E30</string>
-											<string>13C3AD3212202974004512A2</string>
-											<string>13C3AD3312202974004512A2</string>
 											<string>13C3AD3412202974004512A2</string>
-											<string>13C3AD3512202974004512A2</string>
-											<string>13C3AD3612202974004512A2</string>
-											<string>13C3AD3712202974004512A2</string>
-											<string>13C3AD3812202974004512A2</string>
 											<string>13C3AD7412202B64004512A2</string>
-											<string>13C3AD7512202B64004512A2</string>
+											<string>1364FF5912211DF3007FDF3C</string>
+											<string>13F48C071221642B005FFE7F</string>
+											<string>13F48C5D122168D1005FFE7F</string>
+											<string>13F48C5E122168D1005FFE7F</string>
+											<string>13F48C9412216CE6005FFE7F</string>
+											<string>13F48CB112217774005FFE7F</string>
+											<string>13F48CB212217774005FFE7F</string>
+											<string>13F48CC112217A10005FFE7F</string>
+											<string>13F48CA412217023005FFE7F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -634,14 +714,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 105}}</string>
+								<string>{{0, 0}, {587, 169}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1397 278 788 504 1280 -100 1440 900 </string>
+								<string>1350 202 795 598 1280 -100 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>105pt</string>
+							<string>169pt</string>
 						</dict>
 						<dict>
 							<key>BecomeActive</key>
@@ -656,18 +736,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 110}, {580, 353}}</string>
+								<string>{{0, 174}, {587, 383}}</string>
 								<key>RubberWindowFrame</key>
-								<string>1397 278 788 504 1280 -100 1440 900 </string>
+								<string>1350 202 795 598 1280 -100 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>353pt</string>
+							<string>383pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>580pt</string>
+					<string>587pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -682,9 +762,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>13C3AD3B12202974004512A2</string>
+				<string>13F48C0F1221642B005FFE7F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>13C3AD3C12202974004512A2</string>
+				<string>13F48C101221642B005FFE7F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -822,20 +902,23 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>13F48C271221642B005FFE7F</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1334EEF2120EDF56000738D9</string>
-		<string>1301C458121F63FE009C9FFE</string>
 		<string>1301C4D8121F6F9B009C9FFE</string>
-		<string>132B7E42121D62390053BB1F</string>
-		<string>1C78EAAD065D492600B07095</string>
-		<string>1316CA0C121EE960004822F2</string>
+		<string>1301C458121F63FE009C9FFE</string>
 		<string>13F214FA121FFC9800F38E30</string>
+		<string>13F48C151221642B005FFE7F</string>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>13F48C60122168D1005FFE7F</string>
+		<string>1316CA0C121EE960004822F2</string>
+		<string>13C3AE0212202FCD004512A2</string>
+		<string>132B7E42121D62390053BB1F</string>
 		<string>/Users/t/t/dev/iphone/editor/Edhita/Edhita.xcodeproj</string>
 		<string>13F214FE121FFC9800F38E30</string>
-		<string>13C3AE0212202FCD004512A2</string>
 	</array>
 	<key>WindowString</key>
-	<string>1397 278 788 504 1280 -100 1440 900 </string>
+	<string>1350 202 795 598 1280 -100 1440 900 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -856,7 +939,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EdhitaTableViewController.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -873,8 +956,6 @@
 							<string>305pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -914,7 +995,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1334EEF2120EDF56000738D9</string>
-				<string>13C3AD4712202974004512A2</string>
+				<string>13F48C1E1221642B005FFE7F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -1036,13 +1117,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>13C3AD4812202974004512A2</string>
+				<string>13F48C1F1221642B005FFE7F</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>13C3AD4912202974004512A2</string>
-				<string>13C3AD4A12202974004512A2</string>
-				<string>13C3AD4B12202974004512A2</string>
-				<string>13C3AD4C12202974004512A2</string>
-				<string>13C3AD4D12202974004512A2</string>
+				<string>13F48C201221642B005FFE7F</string>
+				<string>13F48C211221642B005FFE7F</string>
+				<string>13F48C221221642B005FFE7F</string>
+				<string>13F48C231221642B005FFE7F</string>
+				<string>13F48C241221642B005FFE7F</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1206,7 +1287,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>13C3AD4E12202974004512A2</string>
+				<string>13F48C251221642B005FFE7F</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
