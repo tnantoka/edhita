@@ -14,6 +14,8 @@
 		1301C615121F7B86009C9FFE /* dir_new.png in Resources */ = {isa = PBXBuildFile; fileRef = 1301C613121F7B86009C9FFE /* dir_new.png */; };
 		13174DE31217A1C600FC741F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE01217A1C600FC741F /* DetailViewController.m */; };
 		13174DE41217A1C700FC741F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE21217A1C600FC741F /* RootViewController.m */; };
+		13F1C244122AAE9100027068 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C242122AAE9100027068 /* arrow_left.png */; };
+		13F1C245122AAE9100027068 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C243122AAE9100027068 /* arrow_right.png */; };
 		13F214F0121FFB5800F38E30 /* EdhitaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */; };
 		13F340BB122A4C02007264FD /* EdhitaAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */; };
 		13FC0DCE122A0C1200FB0693 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13FC0DCD122A0C1200FB0693 /* Settings.bundle */; };
@@ -35,6 +37,8 @@
 		13174DE01217A1C600FC741F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		13174DE11217A1C600FC741F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		13174DE21217A1C600FC741F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		13F1C242122AAE9100027068 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		13F1C243122AAE9100027068 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		13F214EE121FFB5800F38E30 /* EdhitaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaTableViewController.h; sourceTree = "<group>"; };
 		13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdhitaTableViewController.m; sourceTree = "<group>"; };
 		13F340B9122A4C02007264FD /* EdhitaAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaAccessoryView.h; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				1301C612121F7B86009C9FFE /* file_new.png */,
 				1301C613121F7B86009C9FFE /* dir_new.png */,
 				8D1107310486CEB800E47090 /* Edhita-Info.plist */,
+				13F1C242122AAE9100027068 /* arrow_left.png */,
+				13F1C243122AAE9100027068 /* arrow_right.png */,
 				1301C4C8121F6D65009C9FFE /* file.png */,
 				1301C4C9121F6D65009C9FFE /* dir.png */,
 				13FC0DCD122A0C1200FB0693 /* Settings.bundle */,
@@ -183,6 +189,8 @@
 				1301C614121F7B86009C9FFE /* file_new.png in Resources */,
 				1301C615121F7B86009C9FFE /* dir_new.png in Resources */,
 				13FC0DCE122A0C1200FB0693 /* Settings.bundle in Resources */,
+				13F1C244122AAE9100027068 /* arrow_left.png in Resources */,
+				13F1C245122AAE9100027068 /* arrow_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
