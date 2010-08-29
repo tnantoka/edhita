@@ -15,6 +15,7 @@
 		13174DE31217A1C600FC741F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE01217A1C600FC741F /* DetailViewController.m */; };
 		13174DE41217A1C700FC741F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE21217A1C600FC741F /* RootViewController.m */; };
 		13F214F0121FFB5800F38E30 /* EdhitaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */; };
+		13FC0DCE122A0C1200FB0693 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13FC0DCD122A0C1200FB0693 /* Settings.bundle */; };
 		1D3623260D0F684500981E51 /* EdhitaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* EdhitaAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -35,6 +36,7 @@
 		13174DE21217A1C600FC741F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		13F214EE121FFB5800F38E30 /* EdhitaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaTableViewController.h; sourceTree = "<group>"; };
 		13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdhitaTableViewController.m; sourceTree = "<group>"; };
+		13FC0DCD122A0C1200FB0693 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* EdhitaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* EdhitaAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdhitaAppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				8D1107310486CEB800E47090 /* Edhita-Info.plist */,
 				1301C4C8121F6D65009C9FFE /* file.png */,
 				1301C4C9121F6D65009C9FFE /* dir.png */,
+				13FC0DCD122A0C1200FB0693 /* Settings.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				1301C4CB121F6D65009C9FFE /* dir.png in Resources */,
 				1301C614121F7B86009C9FFE /* file_new.png in Resources */,
 				1301C615121F7B86009C9FFE /* dir_new.png in Resources */,
+				13FC0DCE122A0C1200FB0693 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
