@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB11231AAAC0082C092</string>
+						<string>1356EC071231B2B20082C092</string>
 						<key>history</key>
 						<array>
-							<string>1356E93012317E4A0082C092</string>
+							<string>1356EBF11231B02D0082C092</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -256,10 +256,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB21231AAAC0082C092</string>
+						<string>1356EC081231B2B20082C092</string>
 						<key>history</key>
 						<array>
-							<string>1356EB761231A7CC0082C092</string>
+							<string>1356EBC71231AEFA0082C092</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -282,6 +282,46 @@
 			<key>Content</key>
 			<dict>
 				<key>PBXProjectModuleGUID</key>
+				<string>1356EBCB1231AEFA0082C092</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>EdhitaAccessoryView.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>1356EBCC1231AEFA0082C092</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>EdhitaAccessoryView.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>1356EC091231B2B20082C092</string>
+						<key>history</key>
+						<array>
+							<string>1356EBBE1231ABF00082C092</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {954, 493}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>1378 -44 954 534 1280 -100 1440 900 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
 				<string>13F214FE121FFC9800F38E30</string>
 				<key>PBXProjectModuleLabel</key>
 				<string>EdhitaTableViewController.m</string>
@@ -296,7 +336,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB31231AAAC0082C092</string>
+						<string>1356EC0A1231B2B20082C092</string>
 						<key>history</key>
 						<array>
 							<string>13F1C289122AB14E00027068</string>
@@ -336,7 +376,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB41231AAAC0082C092</string>
+						<string>1356EC0B1231B2B20082C092</string>
 						<key>history</key>
 						<array>
 							<string>13F1C286122AB14E00027068</string>
@@ -376,7 +416,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB51231AAAC0082C092</string>
+						<string>1356EC0C1231B2B20082C092</string>
 						<key>history</key>
 						<array>
 							<string>13F1C287122AB14E00027068</string>
@@ -416,7 +456,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>1356EBB61231AAAC0082C092</string>
+						<string>1356EC0D1231B2B20082C092</string>
 						<key>history</key>
 						<array>
 							<string>13F1C28A122AB14E00027068</string>
@@ -516,7 +556,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>1</integer>
+									<integer>26</integer>
+									<integer>25</integer>
+									<integer>17</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -556,7 +598,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DetailViewController.h</string>
+								<string>Root.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -564,28 +606,28 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DetailViewController.h</string>
+										<string>Root.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>1356EBB01231AAAC0082C092</string>
+										<string>1356EC051231B2B20082C092</string>
 										<key>history</key>
 										<array>
 											<string>13174E081217A3BE00FC741F</string>
 											<string>13F48C071221642B005FFE7F</string>
 											<string>13F48C5E122168D1005FFE7F</string>
-											<string>13F25D4D122A30A300F79B06</string>
 											<string>13F340FC122A54FB007264FD</string>
-											<string>13F343D3122A79D1007264FD</string>
 											<string>13F1BFFB122A9F3E00027068</string>
 											<string>13F1BFFE122A9F3E00027068</string>
 											<string>13F1C030122A9FFC00027068</string>
 											<string>13F1C19F122AA8CC00027068</string>
 											<string>13F1C1A0122AA8CC00027068</string>
-											<string>13F1C250122AAF8700027068</string>
 											<string>1356E92D12317E4A0082C092</string>
-											<string>1356E92E12317E4A0082C092</string>
-											<string>13F1C24F122AAF8700027068</string>
+											<string>1356EBC31231AEFA0082C092</string>
+											<string>1356EBC41231AEFA0082C092</string>
+											<string>1356EBEE1231B02D0082C092</string>
+											<string>1356EBFB1231B05E0082C092</string>
+											<string>1356EBFC1231B05E0082C092</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -607,8 +649,6 @@
 							<string>252pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -793,6 +833,7 @@
 		<string>13F1BF10122A983200027068</string>
 		<string>13F214FE121FFC9800F38E30</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>1356EBCB1231AEFA0082C092</string>
 		<string>13F340CC122A4D15007264FD</string>
 		<string>/Users/t/t/dev/iphone/editor/Edhita/Edhita.xcodeproj</string>
 		<string>13F1C1A7122AA8CC00027068</string>
