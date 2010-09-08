@@ -332,9 +332,10 @@
 	}
 }
 
-- (BOOL)useTestAd {
-	return YES;
+- (NSArray *)testDevices {
+	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, nil];
 }
+ 
 
 @end
 
