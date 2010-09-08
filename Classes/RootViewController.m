@@ -239,8 +239,8 @@
 //		adView.backgroundColor = [UIColor grayColor];
 //		self.tableView.tableFooterView = adView;
 		
-//		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];
-		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
+		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];
+//		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
 		self.tableView.tableFooterView = adMobView;
 	}
 	return self;
@@ -319,8 +319,8 @@
 - (UIViewController *)currentViewControllerForAd:(AdMobView *)adView {
 	// Return the top level view controller if possible. In this case, it is
 	// the split view controller
-//	return self.splitViewController;
-	return self.navigationController.parentViewController;
+	return self.splitViewController;
+//	return self.navigationController.parentViewController;
 }
 
 - (void)willPresentFullScreenModalFromAd:(AdMobView *)adView {
