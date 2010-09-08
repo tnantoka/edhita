@@ -1,0 +1,1271 @@
+TEdhita
+v7
+r0
+t305640994.213208
+cCheck dependencies
+cCpResource build/Debug-iphoneos/Edhita.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+cProcessInfoPlistFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist Edhita-Info.plist
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png file.png
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png dir.png
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file_new.png file_new.png
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir_new.png dir_new.png
+cCpResource build/Debug-iphoneos/Edhita.app/Settings.bundle Settings.bundle
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_left.png arrow_left.png
+cCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_right.png arrow_right.png
+cProcessPCH /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch Edhita_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o /Users/t/t/dev/iphone/editor/Edhita/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSCharacterSet_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSDictionary_JSONExtensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSScanner_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDataSerializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDeserializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONScanner.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONSerializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CSerializedJSONData.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+cProcessProductPackaging "/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision" /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+cProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk
+c000000004C6FE1DA0000000000000110
+t1282400730
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+c000000004C06E99F00000000000001A7
+t1275521439
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+c000000004C06E99F00000000000001E5
+t1275521439
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C005A1C00000000003B4B70
+t1275091484
+s3885936
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C005A45000000000036A640
+t1275091525
+s3581504
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C005A310000000000001355
+t1275091505
+s4949
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C00642C000000000000098F
+t1275094060
+s2447
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0064A60000000002703220
+t1275094182
+s40907296
+
+N/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision
+c000000004C79E8B70000000000001C43
+t1283057847
+s7235
+
+N/Users/t/Library/MobileDevice/Provisioning Profiles/D6663DA8-BD29-477C-BA3D-20A871DE9515.mobileprovision
+c000000004C0096510000000000001C43
+t1275106897
+s7235
+
+N/Users/t/t/dev/iphone/editor/Edhita/AdMob/AdMobDelegateProtocol.h
+c000000004C8763100000000000002166
+t1283941136
+s8550
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/AdMob/AdMobView.h
+c000000004C8763100000000000000A76
+t1283941136
+s2678
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/AdMob/libAdMob.a
+c000000004C8763100000000000239C04
+t1283941136
+s2333700
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.h
+c000000004C817774000000000000048A
+t1283553140
+s1162
+i<UIKit/UIKit.h>
+i"EdhitaAccessoryView.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m
+c000000004C877E2400000000000039D9
+t1283948068
+s14809
+i"DetailViewController.h"
+i"RootViewController.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.h
+c000000004C81DBFE00000000000001E6
+t1283578878
+s486
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m
+c000000004C81DBF600000000000015B2
+t1283578870
+s5554
+i"EdhitaAccessoryView.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.h
+c000000004C6F2C7A00000000000001A4
+t1282354298
+s420
+i<UIKit/UIKit.h>
+i"RootViewController.h"
+i"DetailViewController.h"
+i"EdhitaNavigationController.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m
+c000000004C79EFBD0000000000000AC1
+t1283059645
+s2753
+i"EdhitaAppDelegate.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.h
+c000000004C6F2C4F00000000000000F3
+t1282354255
+s243
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m
+c000000004C7A6769000000000000066B
+t1283090281
+s1643
+i"EdhitaNavigationController.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.h
+c000000004C712C9F0000000000000219
+t1282485407
+s537
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m
+c000000004C7A684B0000000000001E92
+t1283090507
+s7826
+i"EdhitaTableViewController.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.h
+c000000004C877E920000000000000376
+t1283948178
+s886
+i<UIKit/UIKit.h>
+i"EdhitaTableViewController.h"
+i"DetailViewController.h"
+i"AdMobDelegateProtocol.h"
+i"AdMobView.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m
+c000000004C877E8100000000000029DE
+t1283948161
+s10718
+i"RootViewController.h"
+i"DetailViewController.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch
+c000000004C5EA7CD00000000000000B5
+t1281271757
+s181
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/Settings.bundle
+c000000004C8178450000000000000088
+t1283553349
+s136
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.h
+c000000004C876310000000000000095B
+t1283941136
+s2395
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m
+c000000004C8763100000000000001674
+t1283941136
+s5748
+i"CDataScanner.h"
+i"CDataScanner_Extensions.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.h
+c000000004C87631000000000000005AD
+t1283941136
+s1453
+i"CDataScanner.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m
+c000000004C87631000000000000009EC
+t1283941136
+s2540
+i"CDataScanner_Extensions.h"
+i"NSCharacterSet_Extensions.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.h
+c000000004C876310000000000000057A
+t1283941136
+s1402
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m
+c000000004C8763100000000000000731
+t1283941136
+s1841
+i"NSCharacterSet_Extensions.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.h
+c000000004C8763100000000000000598
+t1283941136
+s1432
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m
+c000000004C8763100000000000000613
+t1283941136
+s1555
+i"NSDictionary_JSONExtensions.h"
+i"CJSONDeserializer.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.h
+c000000004C8763100000000000000656
+t1283941136
+s1622
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m
+c000000004C8763100000000000000D65
+t1283941136
+s3429
+i"NSScanner_Extensions.h"
+i"NSCharacterSet_Extensions.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.h
+c000000004C8763100000000000000716
+t1283941136
+s1814
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m
+c000000004C8763100000000000001AB2
+t1283941136
+s6834
+i"CJSONDataSerializer.h"
+i"CSerializedJSONData.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.h
+c000000004C8763100000000000000681
+t1283941136
+s1665
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m
+c000000004C8763100000000000000B3A
+t1283941136
+s2874
+i"CJSONDeserializer.h"
+i"CJSONScanner.h"
+i"CDataScanner.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.h
+c000000004C876310000000000000081C
+t1283941136
+s2076
+i"CDataScanner.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m
+c000000004C87631000000000000039AA
+t1283941136
+s14762
+i"CJSONScanner.h"
+i"NSCharacterSet_Extensions.h"
+i"CDataScanner_Extensions.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.h
+c000000004C8763100000000000000787
+t1283941136
+s1927
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m
+c000000004C87631000000000000008C6
+t1283941136
+s2246
+i"CJSONSerializer.h"
+i"CJSONDataSerializer.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.h
+c000000004C87631000000000000005A9
+t1283941136
+s1449
+i<Foundation/Foundation.h>
+
+N/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m
+c000000004C87631000000000000005FB
+t1283941136
+s1531
+i"CSerializedJSONData.h"
+
+N/Users/t/t/dev/iphone/editor/Edhita/arrow_left.png
+c000000004C7A76FC00000000000000FA
+t1283094268
+s250
+
+N/Users/t/t/dev/iphone/editor/Edhita/arrow_right.png
+c000000004C7A76E300000000000000F6
+t1283094243
+s246
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+t2
+s0
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app.dSYM
+t2
+s0
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
+t2
+s0
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist
+t1283948191
+s895
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/PkgInfo
+t1283948191
+s8
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/ResourceRules.plist
+t1283948191
+s485
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Settings.bundle
+t1283948192
+s136
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_left.png
+t1283948192
+s255
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_right.png
+t1283948192
+s259
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png
+t1283948192
+s794
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir_new.png
+t1283948192
+s395
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+t1283948194
+s7235
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png
+t1283948192
+s332
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file_new.png
+t1283948192
+s364
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
+t1283948194
+s412
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner.o
+t1283948193
+s24440
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner_Extensions.o
+t1283948193
+s9940
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDataSerializer.o
+t1283948193
+s23580
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDeserializer.o
+t1283948193
+s11108
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONScanner.o
+t1283948194
+s29540
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONSerializer.o
+t1283948194
+s11824
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CSerializedJSONData.o
+t1283948194
+s8008
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o
+t1283948193
+s70332
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/Edhita.LinkFileList
+c000000004C877E9F0000000000000859
+t1283948191
+s2137
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o
+t1283948193
+s30504
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o
+t1283948193
+s50036
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o
+t1283948193
+s36728
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o
+t1283948193
+s51020
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSCharacterSet_Extensions.o
+t1283948193
+s7120
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSDictionary_JSONExtensions.o
+t1283948193
+s7208
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSScanner_Extensions.o
+t1283948193
+s12696
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o
+t2
+s0
+
+N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o
+t1283948193
+s6600
+
+N/Users/t/t/dev/iphone/editor/Edhita/dir.png
+c000000004C6F35B400000000000002E2
+t1282356660
+s738
+
+N/Users/t/t/dev/iphone/editor/Edhita/dir_new.png
+c000000004C6F35D90000000000000184
+t1282356697
+s388
+
+N/Users/t/t/dev/iphone/editor/Edhita/file.png
+c000000004C6F35C3000000000000017A
+t1282356675
+s378
+
+N/Users/t/t/dev/iphone/editor/Edhita/file_new.png
+c000000004C6F35A10000000000000177
+t1282356641
+s375
+
+N/Users/t/t/dev/iphone/editor/Edhita/main.m
+c000000004C5EBA5700000000000001AB
+t1281276503
+s427
+i<UIKit/UIKit.h>
+
+N/var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch
+t1283948193
+s9421460
+
+NEdhita-Info.plist
+c000000004C70E64A0000000000000470
+t1282467402
+s1136
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies305640991#305640991#0(0"0(0#1#0"8611419648#0"0#
+
+CCodeSign /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+s305640936.608201
+e305640937.378475
+r1
+xCodeSign
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+lSLF07#2@40"CodeSign build/Debug-iphoneos/Edhita.app305640936#305640937#0(0"0(0#0#67"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app8618531488#634"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Tatsuya Tobioka (BZJ3A476LE)" --resource-rules=/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/ResourceRules.plist --entitlements /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.547662
+e305640993.760168
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@68"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m305640993#305640993#0(0"0(0#0#60"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m8607960800#1697"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.581987
+e305640993.668816
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner_Extensions.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@90"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m305640993#305640993#0(0"0(0#0#82"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m8606689568#1730"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/CDataScanner_Extensions.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CDataScanner_Extensions.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDataSerializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.814723
+e305640994.001911
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDataSerializer.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m305640993#305640994#0(0"0(0#0#72"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m8608416096#1716"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDataSerializer.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDataSerializer.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDeserializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.884304
+e305640993.958262
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDeserializer.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@78"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m305640993#305640993#0(0"0(0#0#70"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m8619778976#1712"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONDeserializer.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONDeserializer.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONScanner.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.958384
+e305640994.135969
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONScanner.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m305640993#305640994#0(0"0(0#0#65"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m8619065440#1702"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONScanner.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONScanner.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONSerializer.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640994.002013
+e305640994.075682
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONSerializer.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m305640994#305640994#0(0"0(0#0#68"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m8617828032#1708"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CJSONSerializer.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CJSONSerializer.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CSerializedJSONData.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640994.075795
+e305640994.165817
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CSerializedJSONData.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m305640994#305640994#0(0"0(0#0#72"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m8608513184#1716"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/JSON/CSerializedJSONData.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/CSerializedJSONData.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.157001
+e305640993.416231
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@74"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m305640993#305640993#0(0"0(0#0#66"/Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m8618972544#1711"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/DetailViewController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.471502
+e305640993.581868
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m305640993#305640993#0(0"0(0#0#65"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m8616894912#1709"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.092039
+e305640993.193385
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@71"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m305640993#305640993#0(0"0(0#0#63"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m8619142848#1705"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.383380
+e305640993.471391
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@80"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m305640993#305640993#0(0"0(0#0#72"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m8619831200#1723"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaNavigationController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.416347
+e305640993.547537
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@79"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m305640993#305640993#0(0"0(0#0#71"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m8618358656#1721"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaTableViewController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSCharacterSet_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.668942
+e305640993.738289
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSCharacterSet_Extensions.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@92"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m305640993#305640993#0(0"0(0#0#84"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m8619853472#1734"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSCharacterSet_Extensions.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSCharacterSet_Extensions.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSDictionary_JSONExtensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.738423
+e305640993.814611
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSDictionary_JSONExtensions.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@94"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m305640993#305640993#0(0"0(0#0#86"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m8618179776#1738"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSDictionary_JSONExtensions.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSDictionary_JSONExtensions.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSScanner_Extensions.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.760286
+e305640993.884190
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSScanner_Extensions.o
+x/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m305640993#305640993#0(0"0(0#0#79"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m8617713408#1724"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/NSScanner_Extensions.o0#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.193497
+e305640993.383270
+r0
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o
+x/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m: In function '-[RootViewController willPresentFullScreenModalFromAd:]':
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m:325: error: accessing unknown 'popoverController' getter method
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m:325: confused by earlier errors, bailing out
+o{standard input}:2369:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_56" minus "L252"
+o{standard input}:2369:symbol: "L_OBJC_SELECTOR_REFERENCES_56" can't be undefined in a subtraction expression
+o{standard input}:2256:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L238"
+o{standard input}:2256:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:2255:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L237"
+o{standard input}:2255:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression
+o{standard input}:2254:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_33" minus "L236"
+o{standard input}:2254:symbol: "L_OBJC_SELECTOR_REFERENCES_33" can't be undefined in a subtraction expression
+o{standard input}:2253:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L235"
+o{standard input}:2253:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression
+o{standard input}:2252:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L234"
+o{standard input}:2252:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:2251:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_7" minus "L233"
+o{standard input}:2251:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_7" can't be undefined in a subtraction expression
+o{standard input}:2250:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L232"
+o{standard input}:2250:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:2249:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L231"
+o{standard input}:2249:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:2248:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L230"
+o{standard input}:2248:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:2247:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L229"
+o{standard input}:2247:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:2246:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L228"
+o{standard input}:2246:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:2115:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_54" minus "L220"
+o{standard input}:2115:symbol: "L_OBJC_SELECTOR_REFERENCES_54" can't be undefined in a subtraction expression
+o{standard input}:2114:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L219"
+o{standard input}:2114:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:2112:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_55" minus "L217"
+o{standard input}:2112:symbol: "L_OBJC_SELECTOR_REFERENCES_55" can't be undefined in a subtraction expression
+o{standard input}:2111:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_54" minus "L212"
+o{standard input}:2111:symbol: "L_OBJC_SELECTOR_REFERENCES_54" can't be undefined in a subtraction expression
+o{standard input}:2110:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L211"
+o{standard input}:2110:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1983:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L206"
+o{standard input}:1983:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:1982:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L205"
+o{standard input}:1982:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:1981:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_52" minus "L204"
+o{standard input}:1981:symbol: "L_OBJC_SELECTOR_REFERENCES_52" can't be undefined in a subtraction expression
+o{standard input}:1980:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L203"
+o{standard input}:1980:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1979:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_53" minus "L202"
+o{standard input}:1979:symbol: "L_OBJC_SELECTOR_REFERENCES_53" can't be undefined in a subtraction expression
+o{standard input}:1978:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L201"
+o{standard input}:1978:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:1977:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L200"
+o{standard input}:1977:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:1976:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L199"
+o{standard input}:1976:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:1975:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L198"
+o{standard input}:1975:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1973:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_50" minus "L196"
+o{standard input}:1973:symbol: "L_OBJC_SELECTOR_REFERENCES_50" can't be undefined in a subtraction expression
+o{standard input}:1839:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L191"
+o{standard input}:1839:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:1838:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L190"
+o{standard input}:1838:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:1837:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_52" minus "L189"
+o{standard input}:1837:symbol: "L_OBJC_SELECTOR_REFERENCES_52" can't be undefined in a subtraction expression
+o{standard input}:1836:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L188"
+o{standard input}:1836:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1835:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_51" minus "L187"
+o{standard input}:1835:symbol: "L_OBJC_SELECTOR_REFERENCES_51" can't be undefined in a subtraction expression
+o{standard input}:1834:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L186"
+o{standard input}:1834:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:1833:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L185"
+o{standard input}:1833:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1830:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_50" minus "L182"
+o{standard input}:1830:symbol: "L_OBJC_SELECTOR_REFERENCES_50" can't be undefined in a subtraction expression
+o{standard input}:1693:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_48" minus "L177"
+o{standard input}:1693:symbol: "L_OBJC_SELECTOR_REFERENCES_48" can't be undefined in a subtraction expression
+o{standard input}:1692:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_49" minus "L176"
+o{standard input}:1692:symbol: "L_OBJC_SELECTOR_REFERENCES_49" can't be undefined in a subtraction expression
+o{standard input}:1691:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_47" minus "L175"
+o{standard input}:1691:symbol: "L_OBJC_SELECTOR_REFERENCES_47" can't be undefined in a subtraction expression
+o{standard input}:1690:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_46" minus "L174"
+o{standard input}:1690:symbol: "L_OBJC_SELECTOR_REFERENCES_46" can't be undefined in a subtraction expression
+o{standard input}:1689:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_41" minus "L173"
+o{standard input}:1689:symbol: "L_OBJC_SELECTOR_REFERENCES_41" can't be undefined in a subtraction expression
+o{standard input}:1688:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L172"
+o{standard input}:1688:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression
+o{standard input}:1687:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_45" minus "L171"
+o{standard input}:1687:symbol: "L_OBJC_SELECTOR_REFERENCES_45" can't be undefined in a subtraction expression
+o{standard input}:1685:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L169"
+o{standard input}:1685:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression
+o{standard input}:1684:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L168"
+o{standard input}:1684:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1683:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_44" minus "L167"
+o{standard input}:1683:symbol: "L_OBJC_SELECTOR_REFERENCES_44" can't be undefined in a subtraction expression
+o{standard input}:1682:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L166"
+o{standard input}:1682:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:1681:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L165"
+o{standard input}:1681:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression
+o{standard input}:1680:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_43" minus "L164"
+o{standard input}:1680:symbol: "L_OBJC_SELECTOR_REFERENCES_43" can't be undefined in a subtraction expression
+o{standard input}:1678:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L162"
+o{standard input}:1678:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression
+o{standard input}:1677:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L161"
+o{standard input}:1677:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1676:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_44" minus "L160"
+o{standard input}:1676:symbol: "L_OBJC_SELECTOR_REFERENCES_44" can't be undefined in a subtraction expression
+o{standard input}:1675:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L159"
+o{standard input}:1675:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:1674:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L158"
+o{standard input}:1674:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression
+o{standard input}:1673:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_42" minus "L157"
+o{standard input}:1673:symbol: "L_OBJC_SELECTOR_REFERENCES_42" can't be undefined in a subtraction expression
+o{standard input}:1672:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L156"
+o{standard input}:1672:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:1671:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L155"
+o{standard input}:1671:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression
+o{standard input}:1670:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_37" minus "L154"
+o{standard input}:1670:symbol: "L_OBJC_SELECTOR_REFERENCES_37" can't be undefined in a subtraction expression
+o{standard input}:1669:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_41" minus "L153"
+o{standard input}:1669:symbol: "L_OBJC_SELECTOR_REFERENCES_41" can't be undefined in a subtraction expression
+o{standard input}:1668:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L152"
+o{standard input}:1668:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression
+o{standard input}:1667:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L151"
+o{standard input}:1667:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1665:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L149"
+o{standard input}:1665:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression
+o{standard input}:1664:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L148"
+o{standard input}:1664:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1662:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L146"
+o{standard input}:1662:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression
+o{standard input}:1661:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L145"
+o{standard input}:1661:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression
+o{standard input}:1660:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L144"
+o{standard input}:1660:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+o{standard input}:1659:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L143"
+o{standard input}:1659:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+o{standard input}:1658:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L142"
+o{standard input}:1658:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:1657:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L141"
+o{standard input}:1657:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:1656:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L140"
+o{standard input}:1656:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1655:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_39" minus "L139"
+o{standard input}:1655:symbol: "L_OBJC_SELECTOR_REFERENCES_39" can't be undefined in a subtraction expression
+o{standard input}:1654:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_38" minus "L138"
+o{standard input}:1654:symbol: "L_OBJC_SELECTOR_REFERENCES_38" can't be undefined in a subtraction expression
+o{standard input}:1653:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_37" minus "L137"
+o{standard input}:1653:symbol: "L_OBJC_SELECTOR_REFERENCES_37" can't be undefined in a subtraction expression
+o{standard input}:1652:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L136"
+o{standard input}:1652:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1651:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_36" minus "L133"
+o{standard input}:1651:symbol: "L_OBJC_SELECTOR_REFERENCES_36" can't be undefined in a subtraction expression
+o{standard input}:1650:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L132"
+o{standard input}:1650:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:1208:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_35" minus "L127"
+o{standard input}:1208:symbol: "L_OBJC_SELECTOR_REFERENCES_35" can't be undefined in a subtraction expression
+o{standard input}:1207:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L126"
+o{standard input}:1207:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:1206:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L125"
+o{standard input}:1206:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:1205:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L124"
+o{standard input}:1205:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1204:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L123"
+o{standard input}:1204:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:1203:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L122"
+o{standard input}:1203:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1202:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L121"
+o{standard input}:1202:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:1201:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L120"
+o{standard input}:1201:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1200:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L119"
+o{standard input}:1200:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:1199:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" minus "L118"
+o{standard input}:1199:symbol: "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1070:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_34" minus "L111"
+o{standard input}:1070:symbol: "L_OBJC_SELECTOR_REFERENCES_34" can't be undefined in a subtraction expression
+o{standard input}:1069:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L110"
+o{standard input}:1069:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:1028:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L105"
+o{standard input}:1028:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression
+o{standard input}:1027:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" minus "L104"
+o{standard input}:1027:symbol: "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1026:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L102"
+o{standard input}:1026:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression
+o{standard input}:1025:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_33" minus "L101"
+o{standard input}:1025:symbol: "L_OBJC_SELECTOR_REFERENCES_33" can't be undefined in a subtraction expression
+o{standard input}:1024:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_29" minus "L100"
+o{standard input}:1024:symbol: "L_OBJC_SELECTOR_REFERENCES_29" can't be undefined in a subtraction expression
+o{standard input}:1023:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_32" minus "L99"
+o{standard input}:1023:symbol: "L_OBJC_SELECTOR_REFERENCES_32" can't be undefined in a subtraction expression
+o{standard input}:1022:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L98"
+o{standard input}:1022:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression
+o{standard input}:1021:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L97"
+o{standard input}:1021:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:1020:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L96"
+o{standard input}:1020:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression
+o{standard input}:1019:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L93"
+o{standard input}:1019:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression
+o{standard input}:1018:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L92"
+o{standard input}:1018:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:1017:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L91"
+o{standard input}:1017:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:1016:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L90"
+o{standard input}:1016:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:1015:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L89"
+o{standard input}:1015:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:1014:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L88"
+o{standard input}:1014:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:1013:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L87"
+o{standard input}:1013:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:1012:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L86"
+o{standard input}:1012:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:819:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L81"
+o{standard input}:819:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression
+o{standard input}:818:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L80"
+o{standard input}:818:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression
+o{standard input}:817:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L79"
+o{standard input}:817:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression
+o{standard input}:816:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L78"
+o{standard input}:816:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:815:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L77"
+o{standard input}:815:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression
+o{standard input}:814:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L76"
+o{standard input}:814:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:813:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L75"
+o{standard input}:813:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression
+o{standard input}:812:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L74"
+o{standard input}:812:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:811:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L73"
+o{standard input}:811:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:810:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L72"
+o{standard input}:810:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:809:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L71"
+o{standard input}:809:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:808:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L70"
+o{standard input}:808:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:807:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L69"
+o{standard input}:807:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:806:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L68"
+o{standard input}:806:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:645:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_20" minus "L61"
+o{standard input}:645:symbol: "L_OBJC_SELECTOR_REFERENCES_20" can't be undefined in a subtraction expression
+o{standard input}:644:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L60"
+o{standard input}:644:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression
+o{standard input}:643:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L59"
+o{standard input}:643:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:642:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L58"
+o{standard input}:642:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:641:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L57"
+o{standard input}:641:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression
+o{standard input}:640:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L56"
+o{standard input}:640:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:639:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L55"
+o{standard input}:639:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:638:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L54"
+o{standard input}:638:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression
+o{standard input}:637:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L53"
+o{standard input}:637:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:636:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L52"
+o{standard input}:636:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression
+o{standard input}:635:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L51"
+o{standard input}:635:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression
+o{standard input}:634:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L50"
+o{standard input}:634:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression
+o{standard input}:633:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L49"
+o{standard input}:633:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression
+o{standard input}:632:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L48"
+o{standard input}:632:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:631:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L47"
+o{standard input}:631:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression
+o{standard input}:630:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L46"
+o{standard input}:630:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression
+o{standard input}:628:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L44"
+o{standard input}:628:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression
+o{standard input}:627:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L43"
+o{standard input}:627:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression
+o{standard input}:626:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L42"
+o{standard input}:626:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression
+o{standard input}:624:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L38"
+o{standard input}:624:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression
+o{standard input}:376:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L33"
+o{standard input}:376:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression
+o{standard input}:375:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L32"
+o{standard input}:375:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:280:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L23"
+o{standard input}:280:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression
+o{standard input}:279:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L22"
+o{standard input}:279:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression
+o{standard input}:278:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L21"
+o{standard input}:278:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression
+o{standard input}:277:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L20"
+o{standard input}:277:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:276:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L19"
+o{standard input}:276:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression
+o{standard input}:275:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L18"
+o{standard input}:275:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression
+o{standard input}:274:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L17"
+o{standard input}:274:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression
+o{standard input}:273:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L16"
+o{standard input}:273:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:272:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L15"
+o{standard input}:272:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression
+o{standard input}:271:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L14"
+o{standard input}:271:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression
+o{standard input}:270:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L13"
+o{standard input}:270:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression
+o{standard input}:269:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L12"
+o{standard input}:269:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:109:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L5"
+o{standard input}:109:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression
+o{standard input}:106:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L4"
+o{standard input}:106:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression
+o{standard input}:105:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L3"
+o{standard input}:105:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression
+o{standard input}:104:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L2"
+o{standard input}:104:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression
+o{standard input}:unknown:Undefined local symbol L_objc_msgSendSuper2$stub
+o{standard input}:unknown:Undefined local symbol L_objc_msgSend$stub
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_2
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_21
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_22
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_19
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_23
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_20
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_24
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_25
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_27
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_3
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_26
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_4
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_28
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_32
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_29
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_33
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_30
+o{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_31
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_34
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_35
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_36
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_37
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_38
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_39
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_5
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_40
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_41
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_6
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_42
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_44
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_43
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_45
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_46
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_47
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_49
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_48
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_50
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_51
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_52
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_53
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_54
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_55
+o{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_7
+o{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_56
+lSLF07#2@72"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m305640993#305640993#0(40890"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m: In function '-[RootViewController willPresentFullScreenModalFromAd:]':/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m:325: error: accessing unknown 'popoverController' getter method/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m:325: confused by earlier errors, bailing out{standard input}:2369:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_56" minus "L252"{standard input}:2369:symbol: "L_OBJC_SELECTOR_REFERENCES_56" can't be undefined in a subtraction expression{standard input}:2256:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L238"{standard input}:2256:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:2255:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L237"{standard input}:2255:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression{standard input}:2254:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_33" minus "L236"{standard input}:2254:symbol: "L_OBJC_SELECTOR_REFERENCES_33" can't be undefined in a subtraction expression{standard input}:2253:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L235"{standard input}:2253:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression{standard input}:2252:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L234"{standard input}:2252:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:2251:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_7" minus "L233"{standard input}:2251:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_7" can't be undefined in a subtraction expression{standard input}:2250:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L232"{standard input}:2250:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:2249:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L231"{standard input}:2249:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:2248:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L230"{standard input}:2248:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:2247:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L229"{standard input}:2247:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:2246:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L228"{standard input}:2246:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:2115:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_54" minus "L220"{standard input}:2115:symbol: "L_OBJC_SELECTOR_REFERENCES_54" can't be undefined in a subtraction expression{standard input}:2114:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L219"{standard input}:2114:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:2112:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_55" minus "L217"{standard input}:2112:symbol: "L_OBJC_SELECTOR_REFERENCES_55" can't be undefined in a subtraction expression{standard input}:2111:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_54" minus "L212"{standard input}:2111:symbol: "L_OBJC_SELECTOR_REFERENCES_54" can't be undefined in a subtraction expression{standard input}:2110:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L211"{standard input}:2110:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1983:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L206"{standard input}:1983:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:1982:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L205"{standard input}:1982:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:1981:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_52" minus "L204"{standard input}:1981:symbol: "L_OBJC_SELECTOR_REFERENCES_52" can't be undefined in a subtraction expression{standard input}:1980:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L203"{standard input}:1980:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1979:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_53" minus "L202"{standard input}:1979:symbol: "L_OBJC_SELECTOR_REFERENCES_53" can't be undefined in a subtraction expression{standard input}:1978:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L201"{standard input}:1978:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:1977:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L200"{standard input}:1977:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:1976:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L199"{standard input}:1976:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:1975:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L198"{standard input}:1975:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1973:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_50" minus "L196"{standard input}:1973:symbol: "L_OBJC_SELECTOR_REFERENCES_50" can't be undefined in a subtraction expression{standard input}:1839:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L191"{standard input}:1839:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:1838:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L190"{standard input}:1838:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:1837:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_52" minus "L189"{standard input}:1837:symbol: "L_OBJC_SELECTOR_REFERENCES_52" can't be undefined in a subtraction expression{standard input}:1836:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L188"{standard input}:1836:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1835:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_51" minus "L187"{standard input}:1835:symbol: "L_OBJC_SELECTOR_REFERENCES_51" can't be undefined in a subtraction expression{standard input}:1834:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L186"{standard input}:1834:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:1833:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L185"{standard input}:1833:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1830:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_50" minus "L182"{standard input}:1830:symbol: "L_OBJC_SELECTOR_REFERENCES_50" can't be undefined in a subtraction expression{standard input}:1693:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_48" minus "L177"{standard input}:1693:symbol: "L_OBJC_SELECTOR_REFERENCES_48" can't be undefined in a subtraction expression{standard input}:1692:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_49" minus "L176"{standard input}:1692:symbol: "L_OBJC_SELECTOR_REFERENCES_49" can't be undefined in a subtraction expression{standard input}:1691:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_47" minus "L175"{standard input}:1691:symbol: "L_OBJC_SELECTOR_REFERENCES_47" can't be undefined in a subtraction expression{standard input}:1690:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_46" minus "L174"{standard input}:1690:symbol: "L_OBJC_SELECTOR_REFERENCES_46" can't be undefined in a subtraction expression{standard input}:1689:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_41" minus "L173"{standard input}:1689:symbol: "L_OBJC_SELECTOR_REFERENCES_41" can't be undefined in a subtraction expression{standard input}:1688:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L172"{standard input}:1688:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression{standard input}:1687:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_45" minus "L171"{standard input}:1687:symbol: "L_OBJC_SELECTOR_REFERENCES_45" can't be undefined in a subtraction expression{standard input}:1685:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L169"{standard input}:1685:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression{standard input}:1684:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L168"{standard input}:1684:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1683:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_44" minus "L167"{standard input}:1683:symbol: "L_OBJC_SELECTOR_REFERENCES_44" can't be undefined in a subtraction expression{standard input}:1682:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L166"{standard input}:1682:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:1681:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L165"{standard input}:1681:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression{standard input}:1680:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_43" minus "L164"{standard input}:1680:symbol: "L_OBJC_SELECTOR_REFERENCES_43" can't be undefined in a subtraction expression{standard input}:1678:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L162"{standard input}:1678:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression{standard input}:1677:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L161"{standard input}:1677:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1676:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_44" minus "L160"{standard input}:1676:symbol: "L_OBJC_SELECTOR_REFERENCES_44" can't be undefined in a subtraction expression{standard input}:1675:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L159"{standard input}:1675:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:1674:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L158"{standard input}:1674:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression{standard input}:1673:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_42" minus "L157"{standard input}:1673:symbol: "L_OBJC_SELECTOR_REFERENCES_42" can't be undefined in a subtraction expression{standard input}:1672:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L156"{standard input}:1672:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:1671:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_6" minus "L155"{standard input}:1671:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_6" can't be undefined in a subtraction expression{standard input}:1670:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_37" minus "L154"{standard input}:1670:symbol: "L_OBJC_SELECTOR_REFERENCES_37" can't be undefined in a subtraction expression{standard input}:1669:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_41" minus "L153"{standard input}:1669:symbol: "L_OBJC_SELECTOR_REFERENCES_41" can't be undefined in a subtraction expression{standard input}:1668:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L152"{standard input}:1668:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression{standard input}:1667:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L151"{standard input}:1667:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1665:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L149"{standard input}:1665:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression{standard input}:1664:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L148"{standard input}:1664:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1662:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_40" minus "L146"{standard input}:1662:symbol: "L_OBJC_SELECTOR_REFERENCES_40" can't be undefined in a subtraction expression{standard input}:1661:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_5" minus "L145"{standard input}:1661:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_5" can't be undefined in a subtraction expression{standard input}:1660:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L144"{standard input}:1660:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression{standard input}:1659:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L143"{standard input}:1659:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression{standard input}:1658:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L142"{standard input}:1658:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:1657:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L141"{standard input}:1657:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:1656:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L140"{standard input}:1656:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1655:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_39" minus "L139"{standard input}:1655:symbol: "L_OBJC_SELECTOR_REFERENCES_39" can't be undefined in a subtraction expression{standard input}:1654:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_38" minus "L138"{standard input}:1654:symbol: "L_OBJC_SELECTOR_REFERENCES_38" can't be undefined in a subtraction expression{standard input}:1653:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_37" minus "L137"{standard input}:1653:symbol: "L_OBJC_SELECTOR_REFERENCES_37" can't be undefined in a subtraction expression{standard input}:1652:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L136"{standard input}:1652:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1651:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_36" minus "L133"{standard input}:1651:symbol: "L_OBJC_SELECTOR_REFERENCES_36" can't be undefined in a subtraction expression{standard input}:1650:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L132"{standard input}:1650:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:1208:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_35" minus "L127"{standard input}:1208:symbol: "L_OBJC_SELECTOR_REFERENCES_35" can't be undefined in a subtraction expression{standard input}:1207:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L126"{standard input}:1207:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:1206:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L125"{standard input}:1206:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:1205:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L124"{standard input}:1205:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1204:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L123"{standard input}:1204:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:1203:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L122"{standard input}:1203:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1202:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L121"{standard input}:1202:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:1201:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L120"{standard input}:1201:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1200:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L119"{standard input}:1200:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:1199:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" minus "L118"{standard input}:1199:symbol: "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1070:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_34" minus "L111"{standard input}:1070:symbol: "L_OBJC_SELECTOR_REFERENCES_34" can't be undefined in a subtraction expression{standard input}:1069:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L110"{standard input}:1069:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:1028:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_31" minus "L105"{standard input}:1028:symbol: "L_OBJC_SELECTOR_REFERENCES_31" can't be undefined in a subtraction expression{standard input}:1027:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" minus "L104"{standard input}:1027:symbol: "L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1026:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_30" minus "L102"{standard input}:1026:symbol: "L_OBJC_SELECTOR_REFERENCES_30" can't be undefined in a subtraction expression{standard input}:1025:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_33" minus "L101"{standard input}:1025:symbol: "L_OBJC_SELECTOR_REFERENCES_33" can't be undefined in a subtraction expression{standard input}:1024:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_29" minus "L100"{standard input}:1024:symbol: "L_OBJC_SELECTOR_REFERENCES_29" can't be undefined in a subtraction expression{standard input}:1023:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_32" minus "L99"{standard input}:1023:symbol: "L_OBJC_SELECTOR_REFERENCES_32" can't be undefined in a subtraction expression{standard input}:1022:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_28" minus "L98"{standard input}:1022:symbol: "L_OBJC_SELECTOR_REFERENCES_28" can't be undefined in a subtraction expression{standard input}:1021:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L97"{standard input}:1021:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:1020:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_4" minus "L96"{standard input}:1020:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_4" can't be undefined in a subtraction expression{standard input}:1019:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L93"{standard input}:1019:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression{standard input}:1018:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L92"{standard input}:1018:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:1017:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L91"{standard input}:1017:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:1016:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L90"{standard input}:1016:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:1015:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L89"{standard input}:1015:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:1014:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L88"{standard input}:1014:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:1013:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L87"{standard input}:1013:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:1012:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L86"{standard input}:1012:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:819:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_26" minus "L81"{standard input}:819:symbol: "L_OBJC_SELECTOR_REFERENCES_26" can't be undefined in a subtraction expression{standard input}:818:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_3" minus "L80"{standard input}:818:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_3" can't be undefined in a subtraction expression{standard input}:817:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_27" minus "L79"{standard input}:817:symbol: "L_OBJC_SELECTOR_REFERENCES_27" can't be undefined in a subtraction expression{standard input}:816:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L78"{standard input}:816:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:815:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_25" minus "L77"{standard input}:815:symbol: "L_OBJC_SELECTOR_REFERENCES_25" can't be undefined in a subtraction expression{standard input}:814:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L76"{standard input}:814:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:813:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_24" minus "L75"{standard input}:813:symbol: "L_OBJC_SELECTOR_REFERENCES_24" can't be undefined in a subtraction expression{standard input}:812:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L74"{standard input}:812:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:811:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L73"{standard input}:811:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:810:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L72"{standard input}:810:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:809:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L71"{standard input}:809:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:808:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L70"{standard input}:808:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:807:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L69"{standard input}:807:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:806:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L68"{standard input}:806:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:645:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_20" minus "L61"{standard input}:645:symbol: "L_OBJC_SELECTOR_REFERENCES_20" can't be undefined in a subtraction expression{standard input}:644:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_23" minus "L60"{standard input}:644:symbol: "L_OBJC_SELECTOR_REFERENCES_23" can't be undefined in a subtraction expression{standard input}:643:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L59"{standard input}:643:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:642:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" minus "L58"{standard input}:642:symbol: "L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:641:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_19" minus "L57"{standard input}:641:symbol: "L_OBJC_SELECTOR_REFERENCES_19" can't be undefined in a subtraction expression{standard input}:640:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L56"{standard input}:640:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:639:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L55"{standard input}:639:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:638:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_18" minus "L54"{standard input}:638:symbol: "L_OBJC_SELECTOR_REFERENCES_18" can't be undefined in a subtraction expression{standard input}:637:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L53"{standard input}:637:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:636:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_17" minus "L52"{standard input}:636:symbol: "L_OBJC_SELECTOR_REFERENCES_17" can't be undefined in a subtraction expression{standard input}:635:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_22" minus "L51"{standard input}:635:symbol: "L_OBJC_SELECTOR_REFERENCES_22" can't be undefined in a subtraction expression{standard input}:634:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_21" minus "L50"{standard input}:634:symbol: "L_OBJC_SELECTOR_REFERENCES_21" can't be undefined in a subtraction expression{standard input}:633:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_16" minus "L49"{standard input}:633:symbol: "L_OBJC_SELECTOR_REFERENCES_16" can't be undefined in a subtraction expression{standard input}:632:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L48"{standard input}:632:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:631:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_15" minus "L47"{standard input}:631:symbol: "L_OBJC_SELECTOR_REFERENCES_15" can't be undefined in a subtraction expression{standard input}:630:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_14" minus "L46"{standard input}:630:symbol: "L_OBJC_SELECTOR_REFERENCES_14" can't be undefined in a subtraction expression{standard input}:628:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_13" minus "L44"{standard input}:628:symbol: "L_OBJC_SELECTOR_REFERENCES_13" can't be undefined in a subtraction expression{standard input}:627:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_12" minus "L43"{standard input}:627:symbol: "L_OBJC_SELECTOR_REFERENCES_12" can't be undefined in a subtraction expression{standard input}:626:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_2" minus "L42"{standard input}:626:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_2" can't be undefined in a subtraction expression{standard input}:624:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_11" minus "L38"{standard input}:624:symbol: "L_OBJC_SELECTOR_REFERENCES_11" can't be undefined in a subtraction expression{standard input}:376:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_10" minus "L33"{standard input}:376:symbol: "L_OBJC_SELECTOR_REFERENCES_10" can't be undefined in a subtraction expression{standard input}:375:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L32"{standard input}:375:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:280:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_8" minus "L23"{standard input}:280:symbol: "L_OBJC_SELECTOR_REFERENCES_8" can't be undefined in a subtraction expression{standard input}:279:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_9" minus "L22"{standard input}:279:symbol: "L_OBJC_SELECTOR_REFERENCES_9" can't be undefined in a subtraction expression{standard input}:278:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_7" minus "L21"{standard input}:278:symbol: "L_OBJC_SELECTOR_REFERENCES_7" can't be undefined in a subtraction expression{standard input}:277:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" minus "L20"{standard input}:277:symbol: "L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:276:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_6" minus "L19"{standard input}:276:symbol: "L_OBJC_SELECTOR_REFERENCES_6" can't be undefined in a subtraction expression{standard input}:275:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_5" minus "L18"{standard input}:275:symbol: "L_OBJC_SELECTOR_REFERENCES_5" can't be undefined in a subtraction expression{standard input}:274:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_REFERENCES_$_1" minus "L17"{standard input}:274:symbol: "L_OBJC_CLASSLIST_REFERENCES_$_1" can't be undefined in a subtraction expression{standard input}:273:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L16"{standard input}:273:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:272:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_4" minus "L15"{standard input}:272:symbol: "L_OBJC_SELECTOR_REFERENCES_4" can't be undefined in a subtraction expression{standard input}:271:non-relocatable subtraction expression, "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" minus "L14"{standard input}:271:symbol: "L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr" can't be undefined in a subtraction expression{standard input}:270:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_3" minus "L13"{standard input}:270:symbol: "L_OBJC_SELECTOR_REFERENCES_3" can't be undefined in a subtraction expression{standard input}:269:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L12"{standard input}:269:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:109:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_2" minus "L5"{standard input}:109:symbol: "L_OBJC_SELECTOR_REFERENCES_2" can't be undefined in a subtraction expression{standard input}:106:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_1" minus "L4"{standard input}:106:symbol: "L_OBJC_SELECTOR_REFERENCES_1" can't be undefined in a subtraction expression{standard input}:105:non-relocatable subtraction expression, "L_OBJC_SELECTOR_REFERENCES_0" minus "L3"{standard input}:105:symbol: "L_OBJC_SELECTOR_REFERENCES_0" can't be undefined in a subtraction expression{standard input}:104:non-relocatable subtraction expression, "L_OBJC_CLASSLIST_SUP_REFS_$_0" minus "L2"{standard input}:104:symbol: "L_OBJC_CLASSLIST_SUP_REFS_$_0" can't be undefined in a subtraction expression{standard input}:unknown:Undefined local symbol L_objc_msgSendSuper2$stub{standard input}:unknown:Undefined local symbol L_objc_msgSend$stub{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_SUP_REFS_$_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_0{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_2{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_3{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.items_$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_4{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_1{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_5{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_6{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.path_$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_7{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_9{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_8{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_10{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_11{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_2{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_12{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_13{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_14{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_15{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_16{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_21{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_22{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_17{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_18{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_19{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.images_$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_23{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_20{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_24{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_25{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_27{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_3{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_26{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_4{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_28{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_32{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_29{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_33{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_30{standard input}:unknown:Undefined local symbol L_OBJC_IVAR_$_RootViewController.detailViewController$non_lazy_ptr{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_31{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_34{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_35{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_36{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_37{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_38{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_39{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_5{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_40{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_41{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_6{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_42{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_44{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_43{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_45{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_46{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_47{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_49{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_48{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_50{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_51{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_52{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_53{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_54{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_55{standard input}:unknown:Undefined local symbol L_OBJC_CLASSLIST_REFERENCES_$_7{standard input}:unknown:Undefined local symbol L_OBJC_SELECTOR_REFERENCES_562(4@51"Accessing unknown 'popoverController' getter method305640993#137#129#0(6@64"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m305640961#325#0#325#0#0"0(4@39"Confused by earlier errors, bailing out305640993#266#110#0(6@64"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m305640961#325#0#325#0#39"confused by earlier errors, bailing out0(0#0#64"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m8618776640#1707"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o1#
+
+CCompileC build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o /Users/t/t/dev/iphone/editor/Edhita/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640993.090925
+e305640993.156871
+r1
+xCompileC
+xbuild/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o
+x/Users/t/t/dev/iphone/editor/Edhita/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/t/t/dev/iphone/editor/Edhita/main.m305640993#305640993#0(0"0(0#0#42"/Users/t/t/dev/iphone/editor/Edhita/main.m8619552736#1671"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/main.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_left.png arrow_left.png
+s305640992.077059
+e305640992.151473
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_left.png
+xarrow_left.png
+lSLF07#2@73"CopyPNGFile build/Debug-iphoneos/Edhita.app/arrow_left.png arrow_left.png305640992#305640992#0(0"0(0#0#50"/Users/t/t/dev/iphone/editor/Edhita/arrow_left.png8619079328#558"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/arrow_left.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_left.png0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_right.png arrow_right.png
+s305640992.149062
+e305640992.174367
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_right.png
+xarrow_right.png
+lSLF07#2@75"CopyPNGFile build/Debug-iphoneos/Edhita.app/arrow_right.png arrow_right.png305640992#305640992#0(0"0(0#0#51"/Users/t/t/dev/iphone/editor/Edhita/arrow_right.png8618892288#560"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/arrow_right.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/arrow_right.png0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png dir.png
+s305640991.240416
+e305640992.030358
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png
+xdir.png
+lSLF07#2@59"CopyPNGFile build/Debug-iphoneos/Edhita.app/dir.png dir.png305640991#305640992#0(0"0(0#0#43"/Users/t/t/dev/iphone/editor/Edhita/dir.png8604316480#544"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/dir.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir_new.png dir_new.png
+s305640992.030463
+e305640992.075968
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir_new.png
+xdir_new.png
+lSLF07#2@67"CopyPNGFile build/Debug-iphoneos/Edhita.app/dir_new.png dir_new.png305640992#305640992#0(0"0(0#0#47"/Users/t/t/dev/iphone/editor/Edhita/dir_new.png8619580288#552"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/dir_new.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir_new.png0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png file.png
+s305640991.239430
+e305640992.028015
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png
+xfile.png
+lSLF07#2@61"CopyPNGFile build/Debug-iphoneos/Edhita.app/file.png file.png305640991#305640992#0(0"0(0#0#44"/Users/t/t/dev/iphone/editor/Edhita/file.png8606438752#546"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/file.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png0#
+
+CCopyPNGFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file_new.png file_new.png
+s305640992.028124
+e305640992.077918
+r1
+xCopyPNGFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file_new.png
+xfile_new.png
+lSLF07#2@69"CopyPNGFile build/Debug-iphoneos/Edhita.app/file_new.png file_new.png305640992#305640992#0(0"0(0#0#48"/Users/t/t/dev/iphone/editor/Edhita/file_new.png8619864928#554"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/t/t/dev/iphone/editor/Edhita/file_new.png /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file_new.png0#
+
+CCpResource build/Debug-iphoneos/Edhita.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+s305640991.156008
+e305640991.239282
+r1
+xCpResource
+xbuild/Debug-iphoneos/Edhita.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist305640991#305640991#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist8618448160#473"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app0#
+
+CCpResource build/Debug-iphoneos/Edhita.app/Settings.bundle Settings.bundle
+s305640992.076075
+e305640992.148929
+r1
+xCpResource
+xbuild/Debug-iphoneos/Edhita.app/Settings.bundle
+xSettings.bundle
+lSLF07#2@20"Copy Settings.bundle305640992#305640992#0(0"0(0#0#51"/Users/t/t/dev/iphone/editor/Edhita/Settings.bundle8619395680#435"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/t/t/dev/iphone/editor/Edhita/Settings.bundle /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app0#
+
+CGenerateDSYMFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app.dSYM /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
+s305640936.532320
+e305640936.604922
+r1
+xGenerateDSYMFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app.dSYM
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
+lSLF07#2@92"GenerateDSYMFile build/Debug-iphoneos/Edhita.app.dSYM build/Debug-iphoneos/Edhita.app/Edhita305640936#305640936#0(0"0(0#0#74"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita8619073760#350"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app.dSYM0#
+
+CLd /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita normal armv7
+s305640935.969004
+e305640936.532210
+r1
+xLd
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
+xnormal
+xarmv7
+lSLF07#2@79"Link /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita305640935#305640936#0(0"0(0#0#0"8618769504#854"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv IPHONEOS_DEPLOYMENT_TARGET 3.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -L/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -L/Users/t/t/dev/iphone/editor/Edhita/AdMob -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -filelist /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/Edhita.LinkFileList -dead_strip -miphoneos-version-min=3.2 -framework Foundation -framework UIKit -framework CoreGraphics -lAdMob -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita0#
+
+CProcessInfoPlistFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist Edhita-Info.plist
+s305640991.157126
+e305640991.161570
+r1
+xProcessInfoPlistFile
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist
+xEdhita-Info.plist
+lSLF07#2@25"Process Edhita-Info.plist305640991#305640991#0(0"0(0#0#53"/Users/t/t/dev/iphone/editor/Edhita/Edhita-Info.plist8617124928#546"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Edhita-Info.plist -genpkginfo /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/ResourceRules.plist -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist0#
+
+CProcessPCH /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch Edhita_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s305640992.174525
+e305640993.090686
+r1
+xProcessPCH
+x/var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch
+xEdhita_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@28"Precompile Edhita_Prefix.pch305640992#305640993#0(0"0(0#0#53"/Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch8618686848#1573"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources/armv7 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/DerivedSources -c /Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch -o /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch0#
+
+CProcessProductPackaging "/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision" /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+s305640994.165939
+e305640994.189684
+r1
+xProcessProductPackaging
+x/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+lSLF07#2@187"ProcessProductPackaging "/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision" build/Debug-iphoneos/Edhita.app/embedded.mobileprovision305640994#305640994#0(0"0(0#0#92"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision8619689568#412"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/t/Library/MobileDevice/Provisioning Profiles/4F211248-BA83-41E4-81AA-B1204DE9FDFC.mobileprovision" -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/t/Library/MobileDevice/Provisioning Profiles/D6663DA8-BD29-477C-BA3D-20A871DE9515.mobileprovision" /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+s304160206.241439
+e304160206.255939
+r1
+xProcessProductPackaging
+x/Users/t/Library/MobileDevice/Provisioning Profiles/D6663DA8-BD29-477C-BA3D-20A871DE9515.mobileprovision
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
+lSLF07#2@187"ProcessProductPackaging "/Users/t/Library/MobileDevice/Provisioning Profiles/D6663DA8-BD29-477C-BA3D-20A871DE9515.mobileprovision" build/Debug-iphoneos/Edhita.app/embedded.mobileprovision304160206#304160206#0(0"0(0#0#92"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision8623013600#412"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/t/Library/MobileDevice/Provisioning Profiles/D6663DA8-BD29-477C-BA3D-20A871DE9515.mobileprovision" -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
+s305640994.189779
+e305640994.213132
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+x/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
+lSLF07#2@172"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent305640994#305640994#0(0"0(0#0#95"/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent8619042880#423"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent0#
+
+CTouch /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+s305640936.605136
+e305640936.608017
+r1
+xTouch
+x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+lSLF07#2@73"Touch /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app305640936#305640936#0(0"0(0#0#0"8616887104#257"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app0#
+
