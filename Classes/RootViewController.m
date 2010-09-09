@@ -242,8 +242,18 @@
 //		adView.backgroundColor = [UIColor grayColor];
 //		self.tableView.tableFooterView = adView;
 		
-		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];
-//		AdMobView *adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
+		srand(time(NULL));
+		AdMobView *adMobView;
+		
+		switch (rand() % 2) {
+			case 0:
+				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];				
+				break;
+			case 1:
+				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
+				break;
+		}
+				
 		self.tableView.tableFooterView = adMobView;
 	}
 	return self;

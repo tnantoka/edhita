@@ -216,10 +216,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6512390A86002BC640</string>
+						<string>13645FD912392502002BC640</string>
 						<key>history</key>
 						<array>
-							<string>1356CC821237DD070038C08A</string>
+							<string>13645F78123919FA002BC640</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -235,47 +235,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>1680 121 954 534 1280 -100 1440 900 </string>
-			</dict>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>13645F48123909F7002BC640</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>EdhitaPrivateCommon.h</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>13645F49123909F7002BC640</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>EdhitaPrivateCommon.h</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>13645F6612390A86002BC640</string>
-						<key>history</key>
-						<array>
-							<string>13645F3D123908EA002BC640</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {954, 493}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 239 954 534 0 0 1280 778 </string>
+				<string>1679 121 954 534 1280 -100 1440 900 </string>
 			</dict>
 		</dict>
 		<dict>
@@ -296,7 +256,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6712390A86002BC640</string>
+						<string>13645FDA12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>13645F4B123909F7002BC640</string>
@@ -336,7 +296,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6812390A86002BC640</string>
+						<string>13645FDB12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC841237DD070038C08A</string>
@@ -376,7 +336,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6912390A86002BC640</string>
+						<string>13645FDC12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC851237DD070038C08A</string>
@@ -416,7 +376,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6A12390A86002BC640</string>
+						<string>13645FDD12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC861237DD070038C08A</string>
@@ -456,7 +416,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6B12390A86002BC640</string>
+						<string>13645FDE12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC871237DD070038C08A</string>
@@ -496,7 +456,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6C12390A86002BC640</string>
+						<string>13645FDF12392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC881237DD070038C08A</string>
@@ -536,7 +496,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>13645F6D12390A86002BC640</string>
+						<string>13645FE012392502002BC640</string>
 						<key>history</key>
 						<array>
 							<string>1356CC891237DD070038C08A</string>
@@ -633,19 +593,19 @@
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>13FC0DCD122A0C1200FB0693</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
+								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
-								<string>1CC0EA4004350EF90044410B</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>0</integer>
+									<integer>46</integer>
+									<integer>45</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {259, 539}}</string>
+							<string>{{0, 362}, {259, 539}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -680,7 +640,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EdhitaNavigationController.m</string>
+								<string>RootViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -688,11 +648,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EdhitaNavigationController.m</string>
+										<string>RootViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>13645F6412390A86002BC640</string>
+										<string>13645FD812392502002BC640</string>
 										<key>history</key>
 										<array>
 											<string>13174E081217A3BE00FC741F</string>
@@ -702,16 +662,16 @@
 											<string>13F1C1A0122AA8CC00027068</string>
 											<string>1356E92D12317E4A0082C092</string>
 											<string>13F19A001232137F008E2252</string>
-											<string>13F19A0E1232173E008E2252</string>
 											<string>130289B81237B6A70083C2BC</string>
 											<string>13F08D6F1237C4D500EC2B36</string>
 											<string>13F08D701237C4D500EC2B36</string>
 											<string>13F08D711237C4D500EC2B36</string>
-											<string>13F08D721237C4D500EC2B36</string>
 											<string>13645F43123909F7002BC640</string>
 											<string>13645F44123909F7002BC640</string>
 											<string>13645F45123909F7002BC640</string>
-											<string>130289BA1237B6A70083C2BC</string>
+											<string>13645F75123919FA002BC640</string>
+											<string>13645F76123919FA002BC640</string>
+											<string>13F08D721237C4D500EC2B36</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -909,7 +869,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>1334EEF2120EDF56000738D9</string>
 		<string>13F214FA121FFC9800F38E30</string>
@@ -919,8 +878,8 @@
 		<string>130289CA1237B6A70083C2BC</string>
 		<string>130289C61237B6A70083C2BC</string>
 		<string>13F08D771237C4D500EC2B36</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/t/t/dev/iphone/editor/Edhita/Edhita.xcodeproj</string>
-		<string>13645F48123909F7002BC640</string>
 		<string>13F1BF10122A983200027068</string>
 	</array>
 	<key>WindowString</key>
@@ -1256,6 +1215,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1268,7 +1229,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {650, 209}}</string>
 								<key>RubberWindowFrame</key>
-								<string>2071 -5 650 250 1280 -100 1440 900 </string>
+								<string>2070 -5 650 250 1280 -100 1440 900 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXDebugCLIModule</string>
@@ -1297,11 +1258,11 @@
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.consoleV3</string>
 			<key>WindowString</key>
-			<string>2071 -5 650 250 1280 -100 1440 900 </string>
+			<string>2070 -5 650 250 1280 -100 1440 900 </string>
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
