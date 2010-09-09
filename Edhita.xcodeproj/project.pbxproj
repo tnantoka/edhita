@@ -79,6 +79,7 @@
 		13174DE01217A1C600FC741F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		13174DE11217A1C600FC741F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		13174DE21217A1C600FC741F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaPrivateCommon.h; sourceTree = "<group>"; };
 		13F1C242122AAE9100027068 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		13F1C243122AAE9100027068 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		13F214EE121FFB5800F38E30 /* EdhitaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaTableViewController.h; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 				13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */,
 				13F340B9122A4C02007264FD /* EdhitaAccessoryView.h */,
 				13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */,
+				13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

@@ -9,6 +9,9 @@
 #import "RootViewController.h"
 #import "DetailViewController.h"
 
+// publisher ID用のマクロを定義
+#import "EdhitaPrivateCommon.h"
+// #define kPublisherId @""
 
 @implementation RootViewController
 
@@ -313,7 +316,7 @@
 #pragma mark AdMobDelegate methods
 
 - (NSString *)publisherIdForAd:(AdMobView *)adView {
-	return @""; // this should be prefilled; if not, get it from www.admob.com
+	return kPublisherId; // this should be prefilled; if not, get it from www.admob.com
 }
 
 - (UIViewController *)currentViewControllerForAd:(AdMobView *)adView {
