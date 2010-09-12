@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "EdhitaAccessoryView.h"
 
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate> {
+// UINavigationViewControllerDelegateを指定しないとMailのdelegateに設定した時に怒られる？
+@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate> {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
@@ -21,6 +23,10 @@
 	BOOL isKeyboardShown;
 	
 	NSString *path_;
+	UILabel *pathLabel_;
+	
+	UIWebView *webView_;
+	BOOL webViewReloaded;
 }
 
 //@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
@@ -47,5 +53,16 @@
 - (void)rightDidPush;
 
 //- (void)escapeDidPush;
+
+- (void)segmentDidPush:(UISegmentedControl *)sender;
+- (void)changeUrl;
+//- (void)safariDidPush;
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView;
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+
+- (void)mailDidPush;
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
 
 @end

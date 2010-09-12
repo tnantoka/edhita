@@ -229,7 +229,7 @@
 		
 		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
 		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
-
+		
 		NSArray *items = [NSArray arrayWithObjects:space, newFile, newDir, nil];
 		[self setToolbarItems:items];
 

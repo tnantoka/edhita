@@ -204,7 +204,7 @@
 		UIBarButtonItem *redoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRedo target:self action:@selector(redoDidPush)];
 
 		UIBarButtonItem *fixed = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-		fixed.width = 20;
+		fixed.width = 25;
 		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 		
 		UIBarButtonItem *leftButton  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_left.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(leftDidPush)];
@@ -212,13 +212,48 @@
 
 //		UIBarButtonItem *escapeButton  = [[UIBarButtonItem alloc] initWithTitle:@"&amp;" style:UIBarButtonItemStyleBordered target:self action:@selector(escapeDidPush)];
 
-		NSArray *items = [NSArray arrayWithObjects:flexible, undoButton, redoButton, fixed, leftButton, rightButton, nil];
+		UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Source", @"Browser", nil]];
+		segment.segmentedControlStyle = UISegmentedControlStyleBar;
+		segment.selectedSegmentIndex = 0;
+//		segment.frame = CGRectMake(0, 0, 130, 30);
+		[segment addTarget:self action:@selector(segmentDidPush:) forControlEvents:UIControlEventValueChanged];
+		UIBarButtonItem *segmentButton = [[UIBarButtonItem alloc] initWithCustomView:segment];
+		
+//		UIBarButtonItem *safariButton  = [[UIBarButtonItem alloc] initWithTitle:@"Safari" style:UIBarButtonItemStyleBordered target:self action:@selector(safariDidPush)];
+		UIBarButtonItem *mailButton  = [[UIBarButtonItem alloc] initWithTitle:@"Mail" style:UIBarButtonItemStyleBordered target:self action:@selector(mailDidPush)];
+
+		NSArray *items = [NSArray arrayWithObjects:flexible, undoButton, redoButton, fixed, leftButton, rightButton, flexible, segmentButton, fixed, mailButton, nil];
 		[toolbar setItems:items];
 		
 		if ([settings objectForKey:@"accessoryView"] == NULL || [settings boolForKey:@"accessoryView"]) {
 			EdhitaAccessoryView *accessoryView = [[EdhitaAccessoryView alloc] initWithTextView:textView_];
 			textView_.inputAccessoryView = accessoryView;
 		}
+		
+		// ファイル名表示用ラベル
+//		pathLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 10, self.view.frame.size.height - 40, self.view.frame.size.width / 2 - 10, 20)];
+		pathLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height - 40, self.view.frame.size.width - 40, 20)];
+		pathLabel_.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+//		pathLabel_.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+		pathLabel_.textAlignment = UITextAlignmentRight;
+		pathLabel_.lineBreakMode = UILineBreakModeMiddleTruncation;
+
+//		pathLabel_.textColor = [UIColor whiteColor];
+//		pathLabel_.text = @"test";
+		[self.view addSubview:pathLabel_];
+
+		// WebView for Preview
+		webView_ = [[UIWebView alloc] initWithFrame:CGRectMake(textView_.frame.origin.x, textView_.frame.origin.y, textView_.frame.size.width, textView_.frame.size.height)];
+		webView_.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+		webView_.delegate = self;
+		[self.view addSubview:webView_];
+		webView_.hidden = YES;
+		
+		textView_.text = @"Hello, Edhita!\n\n(c) 2010 bornneet.com";
+
+//		UIView *splash = [[UIView alloc] initWithFrame:self.view.bounds];
+//		splash.backgroundColor = [UIColor grayColor];
+//		[self.view addSubview:splash];
 		
 	}
 	return self;
@@ -273,7 +308,14 @@
 
 	path_ = [path retain];
 	NSError *error;
-	textView_.text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];		
+	textView_.text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+	
+	NSString *homeDir = NSHomeDirectory();
+	NSString *docDir = [homeDir stringByAppendingPathComponent:@"Documents"];
+	NSArray *components = [path componentsSeparatedByString:docDir];
+	pathLabel_.text = [components objectAtIndex:1];
+	
+	[self changeUrl];
 }
 
 - (void)saveContents {
@@ -431,5 +473,80 @@
 	textView_.text = mutable;
 */
 //}
+
+- (void)segmentDidPush:(UISegmentedControl *)sender {
+	
+	if (0 == sender.selectedSegmentIndex) {
+		
+		webView_.hidden = YES;
+		
+	}
+	else if (1 == sender.selectedSegmentIndex) {
+		
+		[self saveContents];
+		[self changeUrl];
+		webView_.hidden = NO;
+		
+	}
+	
+}
+
+- (void)changeUrl {
+
+	webViewReloaded = NO;
+	
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+	
+	NSURL *url = [NSURL fileURLWithPath:path_];
+	NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
+	[webView_ loadRequest:req];
+
+}
+
+// MobileSafariでローカルファイルは開けない！
+// iphoneでは開ける謎。
+/*
+- (void)safariDidPush {
+
+	NSURL *url = [NSURL fileURLWithPath:path_];
+	[[UIApplication sharedApplication] openURL:url];
+	NSLog(@"test"); 
+}
+*/
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+	
+	// cachePolicy指定してもJSやCSSをキャッシュしちゃうっぽいので、強制reload
+	if (!webViewReloaded) {
+		webViewReloaded = YES;
+		[webView_ reload];
+	}
+	else {
+		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	}
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;	
+}
+
+- (void)mailDidPush {
+	
+	if ([MFMailComposeViewController canSendMail]) {
+		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		mailViewController.delegate = self;
+
+		NSData *data = [NSData dataWithContentsOfFile:path_];
+		[mailViewController setSubject:[path_ lastPathComponent]];
+		[mailViewController setMessageBody:textView_.text isHTML:NO];
+		[mailViewController addAttachmentData:data mimeType:@"text/plain" fileName:[path_ lastPathComponent]];
+		
+		[self presentModalViewController:mailViewController animated:YES];
+	}
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+	[controller dismissModalViewControllerAnimated:YES];
+}
 
 @end
