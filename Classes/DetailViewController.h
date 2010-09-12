@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
 #import "EdhitaAccessoryView.h"
+#import <MessageUI/MessageUI.h>
 
 @interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, MFMailComposeViewControllerDelegate> {
     

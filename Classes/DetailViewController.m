@@ -478,15 +478,27 @@
 	
 	if (0 == sender.selectedSegmentIndex) {
 		
+//		[UIView beginAnimations:nil context:NULL];
+//		[UIView setAnimationDuration:0.5];
+//		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+
 		webView_.hidden = YES;
-		
+
+//		[UIView commitAnimations];
+
 	}
 	else if (1 == sender.selectedSegmentIndex) {
 		
+//		[UIView beginAnimations:nil context:NULL];
+//		[UIView setAnimationDuration:0.5];
+//		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
+		
 		[self saveContents];
 		[self changeUrl];
+		
 		webView_.hidden = NO;
 		
+//		[UIView commitAnimations];
 	}
 	
 }
@@ -543,6 +555,7 @@
 		NSData *data = [NSData dataWithContentsOfFile:path_];
 		[mailViewController setSubject:[path_ lastPathComponent]];
 		[mailViewController setMessageBody:textView_.text isHTML:NO];
+		// とりあえず全部plain textとして扱っちゃう
 		[mailViewController addAttachmentData:data mimeType:@"text/plain" fileName:[path_ lastPathComponent]];
 		
 		[self presentModalViewController:mailViewController animated:YES];
