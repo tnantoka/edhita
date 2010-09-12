@@ -497,6 +497,7 @@
 	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
+	// <meta charset="UTF-8" />しないと文字化けする
 	NSURL *url = [NSURL fileURLWithPath:path_];
 	NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
 	[webView_ loadRequest:req];
@@ -534,7 +535,10 @@
 	
 	if ([MFMailComposeViewController canSendMail]) {
 		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-		mailViewController.delegate = self;
+
+		// delegateじゃなくmailComposeDelegate
+		// delegateにするとUINavigationViewControllerDelegateを実装してないって怒られる
+		mailViewController.mailComposeDelegate = self;
 
 		NSData *data = [NSData dataWithContentsOfFile:path_];
 		[mailViewController setSubject:[path_ lastPathComponent]];

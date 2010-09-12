@@ -226,7 +226,17 @@
 
 		// 右寄せ
 		UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
+		// 画像＆文字ボタン
+//		UIButton *newFileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//		newFileButton.titleLabel.text = @"NewFile";
+//		newFileButton.titleLabel.backgroundColor = [UIColor clearColor];
+//		newFileButton.frame = CGRectMake(0, 0, 30, 30);
+//		newFileButton.backgroundColor = [UIColor grayColor];
+//		[newFileButton setBackgroundImage:[UIImage imageNamed:@"file_new.png"] forState:UIControlStateNormal];
+//		[newFileButton addTarget:self action:@selector(newFileDidPush) forControlEvents:UIControlEventTouchUpInside];
 		
+//		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithCustomView:newFileButton];
 		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
 		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
 		

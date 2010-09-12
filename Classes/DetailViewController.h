@@ -10,8 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import "EdhitaAccessoryView.h"
 
-// UINavigationViewControllerDelegateを指定しないとMailのdelegateに設定した時に怒られる？
-@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate> {
+@interface DetailViewController : UIViewController <UIPopoverControllerDelegate, UISplitViewControllerDelegate, UIWebViewDelegate, MFMailComposeViewControllerDelegate> {
     
     UIPopoverController *popoverController;
     UIToolbar *toolbar;
