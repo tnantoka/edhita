@@ -29,6 +29,10 @@
 		13028ADE1237B8E10083C2BC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13028ADD1237B8E10083C2BC /* QuartzCore.framework */; };
 		13174DE31217A1C600FC741F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE01217A1C600FC741F /* DetailViewController.m */; };
 		13174DE41217A1C700FC741F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE21217A1C600FC741F /* RootViewController.m */; };
+		13D479001250EBD20078A651 /* FTPLocalTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D478FF1250EBD20078A651 /* FTPLocalTableController.m */; };
+		13D479031250EBE30078A651 /* FTPRemoteTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479021250EBE30078A651 /* FTPRemoteTableController.m */; };
+		13D479061250EC5C0078A651 /* FTPLocalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */; };
+		13D479091250EC690078A651 /* FTPRemoteNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479081250EC690078A651 /* FTPRemoteNavigationController.m */; };
 		13F1C244122AAE9100027068 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C242122AAE9100027068 /* arrow_left.png */; };
 		13F1C245122AAE9100027068 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C243122AAE9100027068 /* arrow_right.png */; };
 		13F214F0121FFB5800F38E30 /* EdhitaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F214EF121FFB5800F38E30 /* EdhitaTableViewController.m */; };
@@ -80,6 +84,14 @@
 		13174DE11217A1C600FC741F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		13174DE21217A1C600FC741F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaPrivateCommon.h; sourceTree = "<group>"; };
+		13D478FE1250EBD20078A651 /* FTPLocalTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPLocalTableController.h; sourceTree = "<group>"; };
+		13D478FF1250EBD20078A651 /* FTPLocalTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPLocalTableController.m; sourceTree = "<group>"; };
+		13D479011250EBE30078A651 /* FTPRemoteTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPRemoteTableController.h; sourceTree = "<group>"; };
+		13D479021250EBE30078A651 /* FTPRemoteTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPRemoteTableController.m; sourceTree = "<group>"; };
+		13D479041250EC5C0078A651 /* FTPLocalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPLocalNavigationController.h; sourceTree = "<group>"; };
+		13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPLocalNavigationController.m; sourceTree = "<group>"; };
+		13D479071250EC690078A651 /* FTPRemoteNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPRemoteNavigationController.h; sourceTree = "<group>"; };
+		13D479081250EC690078A651 /* FTPRemoteNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPRemoteNavigationController.m; sourceTree = "<group>"; };
 		13F1C242122AAE9100027068 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		13F1C243122AAE9100027068 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		13F214EE121FFB5800F38E30 /* EdhitaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaTableViewController.h; sourceTree = "<group>"; };
@@ -133,6 +145,14 @@
 				13F340B9122A4C02007264FD /* EdhitaAccessoryView.h */,
 				13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */,
 				13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */,
+				13D478FE1250EBD20078A651 /* FTPLocalTableController.h */,
+				13D478FF1250EBD20078A651 /* FTPLocalTableController.m */,
+				13D479011250EBE30078A651 /* FTPRemoteTableController.h */,
+				13D479021250EBE30078A651 /* FTPRemoteTableController.m */,
+				13D479041250EC5C0078A651 /* FTPLocalNavigationController.h */,
+				13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */,
+				13D479071250EC690078A651 /* FTPRemoteNavigationController.h */,
+				13D479081250EC690078A651 /* FTPRemoteNavigationController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -326,6 +346,10 @@
 				130289721237AE8F0083C2BC /* CJSONScanner.m in Sources */,
 				130289731237AE8F0083C2BC /* CJSONSerializer.m in Sources */,
 				130289741237AE8F0083C2BC /* CSerializedJSONData.m in Sources */,
+				13D479001250EBD20078A651 /* FTPLocalTableController.m in Sources */,
+				13D479031250EBE30078A651 /* FTPRemoteTableController.m in Sources */,
+				13D479061250EC5C0078A651 /* FTPLocalNavigationController.m in Sources */,
+				13D479091250EC690078A651 /* FTPRemoteNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -239,8 +239,10 @@
 //		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithCustomView:newFileButton];
 		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
 		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
+
+		UIBarButtonItem *ftpButton = [[UIBarButtonItem alloc] initWithTitle:@"FTP" style:UIBarButtonItemStyleBordered target:self action:@selector(ftpDidPush)];
 		
-		NSArray *items = [NSArray arrayWithObjects:space, newFile, newDir, nil];
+		NSArray *items = [NSArray arrayWithObjects:ftpButton, space, newFile, newDir, nil];
 		[self setToolbarItems:items];
 
 		// 編集ボタンの表示（selfのeditButtonを設定してやるだけでいい）
@@ -359,6 +361,9 @@
 	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, nil];
 }
  
+- (void)ftpDidPush {
+	[(EdhitaAppDelegate *)[[UIApplication sharedApplication] delegate] rootViewChangesFtp];
+}
 
 @end
 

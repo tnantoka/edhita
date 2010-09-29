@@ -33,15 +33,42 @@
 
 	rootViewController.detailViewController = detailViewController;
 
-	UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
-	splitViewController.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
-	splitViewController.delegate = detailViewController;
+	splitViewController_ = [[UISplitViewController alloc] init];
+	splitViewController_.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
+	splitViewController_.delegate = detailViewController;
 	
-	[window addSubview:splitViewController.view];
+	[window addSubview:splitViewController_.view];
 	[rootViewController release];
 	[navigationController release];
 	[detailViewController release];
 	
+	// FTP
+
+	/* 生のままだと回転対応ができない
+	UITableViewController *ftpTableViewController = [[UITableViewController alloc] init];
+	UINavigationController *ftpNavViewController = [[EdhitaNavigationController alloc] initWithRootViewController:ftpTableViewController];	
+	UIViewController *ftpDetailViewController = [[UIViewController alloc] init];
+	ftpDetailViewController.view.backgroundColor = [UIColor grayColor];
+	
+	ftpViewController_ = [[UISplitViewController alloc] init];
+	ftpViewController_.viewControllers = [NSArray arrayWithObjects:ftpNavViewController, ftpDetailViewController, nil];
+	ftpViewController_.delegate = detailViewController;
+	*/
+	
+	FTPLocalTableController *localTable = [[FTPLocalTableController alloc] init];
+	FTPLocalNavigationController *localNav = [[FTPLocalNavigationController alloc] initWithRootViewController:localTable];
+
+	FTPRemoteTableController *remoteTable = [[FTPRemoteTableController alloc] init];
+	FTPLocalNavigationController *remoteNav = [[FTPLocalNavigationController alloc] initWithRootViewController:remoteTable];
+	
+	ftpViewController_ = [[UISplitViewController alloc] init];
+	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];
+	ftpViewController_.delegate = remoteNav;
+	 
+	[window addSubview:ftpViewController_.view];
+//	[ftpViewController_.view removeFromSuperview];
+	ftpViewController_.view.hidden = YES;
+
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -83,6 +110,27 @@
 - (void)dealloc {
     [window release];
     [super dealloc];
+}
+
+- (void) rootViewChangesFtp {
+
+	// 初めから表示しとかないとlandscapeで表示した時にportraitになる
+	[splitViewController_.view removeFromSuperview];
+//	splitViewController_.view.hidden = YES;
+//	[window addSubview:ftpViewController_.view];
+	ftpViewController_.view.hidden = NO;
+	
+//	splitViewController_.view.hidden = YES;
+//	ftpViewController_.view.hidden = NO;
+
+	// もどるとき
+/*
+	[ftpViewController_.view removeFromSuperview];
+	[window addSubview:splitViewController_.view];
+	[window addSubview:ftpViewController_.view];
+	ftpViewController_.view.hidden = YES;
+*/	
+	
 }
 
 
