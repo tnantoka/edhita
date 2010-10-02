@@ -64,11 +64,11 @@
 	ftpViewController_ = [[UISplitViewController alloc] init];
 	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];
 	ftpViewController_.delegate = remoteNav;
-	 
+/* TODO:FTP	 
 	[window addSubview:ftpViewController_.view];
 //	[ftpViewController_.view removeFromSuperview];
 	ftpViewController_.view.hidden = YES;
-
+*/
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -123,6 +123,9 @@
 //	splitViewController_.view.hidden = YES;
 //	ftpViewController_.view.hidden = NO;
 
+	// windowが空になると方向が反映されないのかと思ってdummyのcontrollerを
+	// rotate=YESにして非表示にしておいたけど駄目だった。	
+	
 	// もどるとき
 /*
 	[ftpViewController_.view removeFromSuperview];

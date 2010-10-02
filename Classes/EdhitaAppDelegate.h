@@ -16,7 +16,6 @@
 #import "FTPLocalNavigationController.h"
 #import "FTPRemoteNavigationController.h"
 
-
 @interface EdhitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	
