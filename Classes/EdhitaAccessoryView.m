@@ -39,15 +39,19 @@
 		NSInteger padding = 8;
 		NSInteger margin = 8;
 		NSInteger size = 46;
-		
+
 		self.frame = CGRectMake(0, 0, 768, size + padding * 2);
 		self.backgroundColor = [UIColor lightGrayColor];
 
 		NSArray *titles = [NSArray arrayWithObjects:
 // あんまりボタンを表示すると小さくせざるをえないので、使用頻度が高そうで入力しづらいやつを
+// TODO:scrollで2画面化						   
 //							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"%", @"=", @"~", @"^", @"_", @"#", @"|", @"¥", @"\\", nil];		
 							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"=", @"_", @"#", @"|", @"\\", nil];		
 		
+
+//		self.contentSize = CGSizeMake([titles count] * (size * 1.5 + margin * 1.5), 0);
+
 		UIButton *button;
 		
 		NSInteger i = 0;
@@ -67,6 +71,7 @@
 		button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		button.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
 		button.frame = CGRectMake(self.frame.size.width - size - padding, padding, size, size);
+//		button.frame = CGRectMake((size + margin) * i + padding, padding, size, size);
 		[button setTitle:@"\\t" forState:UIControlStateNormal];
 		[button addTarget:self action:@selector(tabDidPush) forControlEvents:UIControlEventTouchUpInside];
 		[self addSubview:button];

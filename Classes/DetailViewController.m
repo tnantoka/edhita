@@ -52,7 +52,7 @@
 
 - (void)splitViewController: (UISplitViewController*)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem*)barButtonItem forPopoverController: (UIPopoverController*)pc {
 
-    barButtonItem.title = @"Root List";
+    barButtonItem.title = @"Documents";
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items insertObject:barButtonItem atIndex:0];
     [toolbar setItems:items animated:YES];
@@ -214,7 +214,7 @@
 
 		UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Source", @"Browser", nil]];
 		segment.segmentedControlStyle = UISegmentedControlStyleBar;
-		segment.selectedSegmentIndex = 0;
+		segment.selectedSegmentIndex = 1;
 //		segment.frame = CGRectMake(0, 0, 130, 30);
 		[segment addTarget:self action:@selector(segmentDidPush:) forControlEvents:UIControlEventValueChanged];
 		UIBarButtonItem *segmentButton = [[UIBarButtonItem alloc] initWithCustomView:segment];
@@ -249,7 +249,8 @@
 		[self.view addSubview:webView_];
 		webView_.hidden = YES;
 		
-		textView_.text = @"Hello, Edhita!\n\n(c) 2010 bornneet.com";
+//		textView_.text = @"Hello, Edhita!\n\n(c) 2010 bornneet.com";
+		webView_.hidden = NO;
 
 //		UIView *splash = [[UIView alloc] initWithFrame:self.view.bounds];
 //		splash.backgroundColor = [UIColor grayColor];
@@ -311,8 +312,8 @@
 	textView_.text = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
 	
 	NSString *homeDir = NSHomeDirectory();
-	NSString *docDir = [homeDir stringByAppendingPathComponent:@"Documents"];
-	NSArray *components = [path componentsSeparatedByString:docDir];
+//	NSString *docDir = [homeDir stringByAppendingPathComponent:@"Documents"];
+	NSArray *components = [path componentsSeparatedByString:homeDir];
 	pathLabel_.text = [components objectAtIndex:1];
 	
 	[self changeUrl];
@@ -530,13 +531,17 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
 	
 	// cachePolicy指定してもJSやCSSをキャッシュしちゃうっぽいので、強制reload
+	// ちゃんとキャッシュしないようになってるっぽいので、とりあえずコメントアウト
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+/*
 	if (!webViewReloaded) {
 		webViewReloaded = YES;
-		[webView_ reload];
+//		[webView_ reload];
 	}
 	else {
 		[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	}
+*/
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {

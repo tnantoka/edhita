@@ -27,7 +27,7 @@
 
 - (void)newFileDidPush;
 - (void)newDirDidPush;
-- (NSString *)nextFileName:fileName;
+- (NSString *)nextFileName:fileName withExtension:(NSString *)extenstion;
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 - (CGSize)contentSizeForViewInPopover;

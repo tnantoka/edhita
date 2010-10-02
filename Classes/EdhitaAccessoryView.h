@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface EdhitaAccessoryView : UIView {
+@interface EdhitaAccessoryView : UIScrollView {
 	UITextView *textView_;
 }
 

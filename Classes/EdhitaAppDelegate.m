@@ -24,12 +24,34 @@
 
 	NSString *homeDir = NSHomeDirectory();
 	NSString *path = [homeDir stringByAppendingPathComponent:@"Documents"];
+
+	// サンプルファイル作成
+	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
+	if ([settings boolForKey:@"initialized"] != YES) {
+
+		[settings setBool:YES forKey:@"initialized"];
+		
+		NSError *error;
+
+		NSString *examples = [path stringByAppendingPathComponent:@"Examples"];
+		[[NSFileManager defaultManager] createDirectoryAtPath:examples withIntermediateDirectories:NO attributes:nil error:&error];
+
+		NSString *index = [examples stringByAppendingPathComponent:@"index.html"];
+		[[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"] toPath:index error:&error];
+		NSString *style = [examples stringByAppendingPathComponent:@"style.css"];
+		[[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"style" ofType:@"css"] toPath:style error:&error];
+		NSString *script = [examples stringByAppendingPathComponent:@"script.js"];
+		[[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"script" ofType:@"js"] toPath:script error:&error];
+	}
+
 	RootViewController *rootViewController = [[RootViewController alloc] initWithPath:path];
 	// tableview単体じゃ仕方ないのでnavviewでwrap
 //	rootViewController.title = @"Documents";
 	EdhitaNavigationController* navigationController = [[EdhitaNavigationController alloc] initWithRootViewController:rootViewController];
 	
 	DetailViewController *detailViewController = [[DetailViewController alloc] init];
+	NSString *welcome = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"html"];
+	detailViewController.path = welcome;
 
 	rootViewController.detailViewController = detailViewController;
 

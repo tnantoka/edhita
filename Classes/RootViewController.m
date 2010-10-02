@@ -279,7 +279,7 @@
 	NSError *error;
 
 	// 連番のファイル名を取得
-	NSString *fileName = [self nextFileName:@"untitled file"];
+	NSString *fileName = [self nextFileName:@"untitled" withExtension:@"txt"];
 	NSString *fileContents = @"";
 
 	NSString *filePath = [path_ stringByAppendingPathComponent:fileName];
@@ -295,7 +295,7 @@
 	NSError *error;
 	
 	// 連番のディレクトリ名を取得
-	NSString *dirName = [self nextFileName:@"untitled folder"];
+	NSString *dirName = [self nextFileName:@"untitled" withExtension:@"d"];
 
 	NSString *dirPath = [path_ stringByAppendingPathComponent:dirName];
 	[[NSFileManager defaultManager] createDirectoryAtPath:dirPath withIntermediateDirectories:NO attributes:nil error:&error];
@@ -304,22 +304,22 @@
 	[self.tableView reloadData];
 }
 
-- (NSString *)nextFileName:fileName {
+- (NSString *)nextFileName:fileName withExtension:(NSString *)extenstion {
 	// ちゃんとNSNotFoundと比較しないとうまくうごかん（!とかBOOLでやっちゃダメ）
-	if ([items_ indexOfObject:fileName] != NSNotFound) {
+	if ([items_ indexOfObject:[fileName stringByAppendingFormat:@".%@", extenstion]] != NSNotFound) {
 		
 		int i = 2;		
 		NSString *newFileName;
 		
 		while (i < 1024) {
-			newFileName = [fileName stringByAppendingFormat:@" %d", i];
+			newFileName = [fileName stringByAppendingFormat:@" %d.%@", i, extenstion];
 			if([items_ indexOfObject:newFileName] == NSNotFound) {
 				return newFileName;
 			}
 			i++;
 		}
 	}
-	return fileName;
+	return [fileName stringByAppendingFormat:@".%@", extenstion];
 }
 
 // アクセサリボタンがタップされた時はファイル情報表示画面に遷移する
