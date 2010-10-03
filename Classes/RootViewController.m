@@ -7,11 +7,6 @@
 //
 
 #import "RootViewController.h"
-#import "DetailViewController.h"
-
-// publisher ID用のマクロを定義
-#import "EdhitaPrivateCommon.h"
-// #define kPublisherId @""
 
 @implementation RootViewController
 
@@ -116,6 +111,8 @@
 	// Cellが削除された時、ファイルとitemsからも削除する
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 		
+		detailViewController.path = [[NSBundle mainBundle] pathForResource:@"delete" ofType:@"txt"];
+
 		NSString *path = [path_ stringByAppendingPathComponent:[items_ objectAtIndex:indexPath.row]];
 		NSError* error;
 		
@@ -125,7 +122,7 @@
 		[items_ removeObjectAtIndex:indexPath.row];
 		
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];		
     }   
 /*
 	else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -173,10 +170,15 @@
 		// detailはrootがもつ必要ないんじゃ？（navあたりに持たせればいい）
 		rootViewController.detailViewController = self.detailViewController;
 		[self.navigationController pushViewController:rootViewController animated:YES];
+		detailViewController.path = [[NSBundle mainBundle] pathForResource:@"direcotry" ofType:@"txt"];
 	}
 	// ファイルだった場合はDetailに内容を表示
+	// popoverは非表示に
 	else {
-		detailViewController.path = path;		
+		detailViewController.path = path;
+		if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
+			[detailViewController.popoverController dismissPopoverAnimated:YES];
+		}
 	}
 
 	
@@ -244,7 +246,10 @@
 		
 		NSArray *items = [NSArray arrayWithObjects:ftpButton, space, newFile, newDir, nil];
 */
-		NSArray *items = [NSArray arrayWithObjects:space, newFile, newDir, nil];
+		UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
+		
+		
+		NSArray *items = [NSArray arrayWithObjects:downloadButton, space, newFile, newDir, nil];
 		[self setToolbarItems:items];
 
 		// 編集ボタンの表示（selfのeditButtonを設定してやるだけでいい）
@@ -269,6 +274,32 @@
 		}
 				
 		self.tableView.tableFooterView = adMobView;
+		
+		
+		// download
+		downloadView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+		downloadView_.backgroundColor = [UIColor grayColor];
+		downloadView_.opaque = NO;
+		
+		urlField_ = [[UITextField alloc] initWithFrame:CGRectMake(10, 10, 245, 30)];
+		urlField_.borderStyle = UITextBorderStyleRoundedRect;
+		urlField_.placeholder = @"url";
+		urlField_.text = @"http://";
+		
+		UIButton *dlButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+		[dlButton setTitle:@"DL" forState:UIControlStateNormal];
+		[dlButton sizeToFit];
+		dlButton.frame = CGRectMake(265, 10, 45, 30);
+		[dlButton addTarget:self action:@selector(dlDidPush) forControlEvents:UIControlEventTouchUpInside];
+		
+		messageLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(10, 50, 300, 20) ];
+		messageLabel_.backgroundColor = [UIColor clearColor];
+		messageLabel_.textAlignment = UITextAlignmentCenter;
+		
+		[downloadView_ addSubview:urlField_];
+		[downloadView_ addSubview:dlButton];
+		[downloadView_ addSubview:messageLabel_];
+
 	}
 	return self;
 }
@@ -312,7 +343,7 @@
 		NSString *newFileName;
 		
 		while (i < 1024) {
-			newFileName = [fileName stringByAppendingFormat:@" %d.%@", i, extenstion];
+			newFileName = [fileName stringByAppendingFormat:@"(%d).%@", i, extenstion];
 			if([items_ indexOfObject:newFileName] == NSNotFound) {
 				return newFileName;
 			}
@@ -327,6 +358,7 @@
 
 	NSString *path = [path_ stringByAppendingPathComponent: [items_ objectAtIndex:indexPath.row]];
 	EdhitaTableViewController *tableViewController = [[EdhitaTableViewController alloc] initWithPath:path];
+	tableViewController.detailViewController = self.detailViewController;
 	[self.navigationController pushViewController:tableViewController animated:YES];
 	[tableViewController release];	
 }
@@ -366,6 +398,53 @@
 - (void)ftpDidPush {
 	[(EdhitaAppDelegate *)[[UIApplication sharedApplication] delegate] rootViewChangesFtp];
 }
+
+- (void)downloadDidPush {
+
+	if (self.tableView.tableHeaderView == nil) {
+		self.tableView.tableHeaderView = downloadView_;
+		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+	} else {
+		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+	}
+	
+}
+
+- (void)dlDidPush {
+	
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+	
+	NSString *name = [urlField_.text lastPathComponent];
+	NSURL *url = [NSURL URLWithString:urlField_.text];
+
+	NSError *error;
+	NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding	error:&error]; 
+
+	self.tableView.tableHeaderView = nil;
+	downloadView_.frame = CGRectMake(0, 0, 320, 80);
+	self.tableView.tableHeaderView = downloadView_;
+
+	if (content) {
+		[content writeToFile:[path_ stringByAppendingPathComponent:name] atomically:YES encoding:NSUTF8StringEncoding error:&error];
+		messageLabel_.textColor = [UIColor cyanColor];
+		messageLabel_.text = [NSString stringWithFormat:@"Saved as \"%@\"", name];
+		[items_ addObject:name];
+		[self.tableView reloadData];
+	}
+	else {
+		messageLabel_.textColor = [UIColor orangeColor];	
+		if (error) {
+			messageLabel_.text = [error localizedDescription];
+		}
+		else {
+			messageLabel_.text = @"Something Wrong";
+		}
+	}
+
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
+}
+
 
 @end
 

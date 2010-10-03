@@ -212,12 +212,12 @@
 
 //		UIBarButtonItem *escapeButton  = [[UIBarButtonItem alloc] initWithTitle:@"&amp;" style:UIBarButtonItemStyleBordered target:self action:@selector(escapeDidPush)];
 
-		UISegmentedControl *segment = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Source", @"Browser", nil]];
-		segment.segmentedControlStyle = UISegmentedControlStyleBar;
-		segment.selectedSegmentIndex = 1;
+		segment_ = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:@"Source", @"Browser", nil]];
+		segment_.segmentedControlStyle = UISegmentedControlStyleBar;
+		segment_.selectedSegmentIndex = 1;
 //		segment.frame = CGRectMake(0, 0, 130, 30);
-		[segment addTarget:self action:@selector(segmentDidPush:) forControlEvents:UIControlEventValueChanged];
-		UIBarButtonItem *segmentButton = [[UIBarButtonItem alloc] initWithCustomView:segment];
+		[segment_ addTarget:self action:@selector(segmentDidPush:) forControlEvents:UIControlEventValueChanged];
+		UIBarButtonItem *segmentButton = [[UIBarButtonItem alloc] initWithCustomView:segment_];
 		
 //		UIBarButtonItem *safariButton  = [[UIBarButtonItem alloc] initWithTitle:@"Safari" style:UIBarButtonItemStyleBordered target:self action:@selector(safariDidPush)];
 		UIBarButtonItem *mailButton  = [[UIBarButtonItem alloc] initWithTitle:@"Mail" style:UIBarButtonItemStyleBordered target:self action:@selector(mailDidPush)];
@@ -234,7 +234,7 @@
 //		pathLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width / 2 - 10, self.view.frame.size.height - 40, self.view.frame.size.width / 2 - 10, 20)];
 		pathLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height - 40, self.view.frame.size.width - 40, 20)];
 		pathLabel_.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-//		pathLabel_.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+		pathLabel_.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
 		pathLabel_.textAlignment = UITextAlignmentRight;
 		pathLabel_.lineBreakMode = UILineBreakModeMiddleTruncation;
 
@@ -316,7 +316,10 @@
 	NSArray *components = [path componentsSeparatedByString:homeDir];
 	pathLabel_.text = [components objectAtIndex:1];
 	
-	[self changeUrl];
+	if (segment_.selectedSegmentIndex == 1) {
+		[self changeUrl];		
+	}
+	
 }
 
 - (void)saveContents {

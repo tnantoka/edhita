@@ -13,13 +13,20 @@
 #import "AdMobView.h"
 #import "EdhitaAppDelegate.h"
 
-@class DetailViewController;
+// publisher ID用のマクロを定義
+#import "EdhitaPrivateCommon.h"
+// #define kPublisherId @""
+
+#import "DetailViewController.h"
 
 @interface RootViewController : UITableViewController <AdMobDelegate> {
     DetailViewController *detailViewController;
 	NSMutableArray *items_;
 	NSArray *images_;
 	NSString *path_;
+	UIView *downloadView_;
+	UITextField *urlField_;
+	UILabel *messageLabel_;
 }
 
 //@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;
@@ -33,5 +40,7 @@
 - (CGSize)contentSizeForViewInPopover;
 
 - (void)ftpDidPush;
+- (void)downloadDidPush;
+- (void)dlDidPush;
 
 @end

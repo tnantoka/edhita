@@ -1,3 +1,6 @@
 window.addEventListener('load', function() {
-						alert('test');
+	document.getElementById('test').addEventListener('click', function() {
+		alert('Hello, Edhita!');
+		return false;
+	}, false);
 }, false);

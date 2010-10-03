@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdMobDelegateProtocol.h"
+#import "AdMobView.h"
+#import "EdhitaPrivateCommon.h"
+#import "DetailViewController.h"
 
-
-@interface EdhitaTableViewController : UITableViewController <UITextFieldDelegate> {
+@interface EdhitaTableViewController : UITableViewController <UITextFieldDelegate, AdMobDelegate> {
 	NSArray *items_;
 	NSString *path_;
 	UITextField *textField_;
+	DetailViewController *detailViewController;
 }
+
+@property (nonatomic, retain) DetailViewController *detailViewController;
 
 - (id)initWithPath:(NSString *)path;
 

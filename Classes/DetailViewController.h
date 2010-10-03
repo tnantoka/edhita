@@ -26,6 +26,8 @@
 	
 	UIWebView *webView_;
 	BOOL webViewReloaded;
+	
+	UISegmentedControl *segment_;
 }
 
 //@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;

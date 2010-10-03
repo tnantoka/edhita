@@ -8,9 +8,9 @@
 
 #import "EdhitaTableViewController.h"
 
-
 @implementation EdhitaTableViewController
 
+@synthesize detailViewController;
 
 #pragma mark -
 #pragma mark Initialization
@@ -223,6 +223,21 @@
 		path_ = [path retain];
 		self.title = [path_ lastPathComponent];
 		textField_ = [[UITextField alloc] init];
+		
+		srand(time(NULL));
+		AdMobView *adMobView;
+		
+		switch (rand() % 2) {
+			case 0:
+				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];				
+				break;
+			case 1:
+				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
+		}
+		
+		self.tableView.tableFooterView = adMobView;
+		
+		
 	}
 	return self;
 }
@@ -247,6 +262,34 @@
 // 勝手にサイズが変わらないようにkeyboad（日本語）表示状態のheightで固定
 - (CGSize)contentSizeForViewInPopover {
 	return CGSizeMake(320, 527);
+}
+
+
+#pragma mark -
+#pragma mark AdMobDelegate methods
+
+- (NSString *)publisherIdForAd:(AdMobView *)adView {
+	return kPublisherId; // this should be prefilled; if not, get it from www.admob.com
+}
+
+- (UIViewController *)currentViewControllerForAd:(AdMobView *)adView {
+	// Return the top level view controller if possible. In this case, it is
+	// the split view controller
+	return self.splitViewController;
+	//	return self.navigationController.parentViewController;
+}
+
+- (void)willPresentFullScreenModalFromAd:(AdMobView *)adView {
+	// IMPORTANT!!! IMPORTANT!!!
+	// If we are about to get a full screen modal and we have a popover controller, dimiss it.
+	// Otherwise, you may see the popover on top of the landing page.
+	if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
+		[detailViewController.popoverController dismissPopoverAnimated:YES];
+	}
+}
+
+- (NSArray *)testDevices {
+	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, nil];
 }
 
 

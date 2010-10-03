@@ -77,6 +77,7 @@
 	ftpViewController_.delegate = detailViewController;
 	*/
 	
+/* TODO:FTP	 
 	FTPLocalTableController *localTable = [[FTPLocalTableController alloc] init];
 	FTPLocalNavigationController *localNav = [[FTPLocalNavigationController alloc] initWithRootViewController:localTable];
 
@@ -86,7 +87,7 @@
 	ftpViewController_ = [[UISplitViewController alloc] init];
 	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];
 	ftpViewController_.delegate = remoteNav;
-/* TODO:FTP	 
+
 	[window addSubview:ftpViewController_.view];
 //	[ftpViewController_.view removeFromSuperview];
 	ftpViewController_.view.hidden = YES;

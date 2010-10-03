@@ -24,6 +24,10 @@
 		<data>
 		11AWlLkc9GW1WkAsl3xQ6MXT3Ds=
 		</data>
+		<key>delete.txt</key>
+		<data>
+		bZIavi3jZCvatRyXXk17DPM62kk=
+		</data>
 		<key>dir.png</key>
 		<data>
 		MAAwJwHkZe48oIsPfbICyp6IzGM=
@@ -31,6 +35,14 @@
 		<key>dir_new.png</key>
 		<data>
 		8m+vbZhwCY6IS3KfqgWF2z1WP+A=
+		</data>
+		<key>direcotry.txt</key>
+		<data>
+		SmY+GH52eT2KdGsLsfXcAKzm1NM=
+		</data>
+		<key>download.png</key>
+		<data>
+		tMI5wYFye2i1w2z27YcWIPa2jQI=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -43,6 +55,22 @@
 		<key>file_new.png</key>
 		<data>
 		pCsoxQRzPHPGlrjXX1R+/9VRPps=
+		</data>
+		<key>index.html</key>
+		<data>
+		TulLYc3hZISHlFSsLDxZ3PslWPw=
+		</data>
+		<key>script.js</key>
+		<data>
+		sa4SfCUENQ1mSQ/NwBIh3dJM0jQ=
+		</data>
+		<key>style.css</key>
+		<data>
+		NJ9nJjxW5XQrFiRvyv9CjBt+3uU=
+		</data>
+		<key>welcome.html</key>
+		<data>
+		R9USo2CLkdowA7tMxzKdAXGiGJk=
 		</data>
 	</dict>
 	<key>rules</key>
