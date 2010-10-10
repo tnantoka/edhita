@@ -9,15 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "EdhitaAppDelegate.h"
 #import "FTPRemoteTableController.h"
+#import "FTPRemoteNavigationController.h"
 
 @interface FTPLocalTableController : UITableViewController {
 	NSString *path_;
 	NSMutableArray *items_;
 	NSArray *images_;
-	FTPRemoteTableController *remoteController_;
+	FTPRemoteNavigationController *remoteController_;
 }
 
-@property (nonatomic, retain) FTPRemoteTableController *remoteController;
+@property (nonatomic, retain) FTPRemoteNavigationController *remoteController;
 @property (nonatomic, retain) NSMutableArray *items;
 
 - (void)refresh;

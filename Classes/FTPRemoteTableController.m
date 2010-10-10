@@ -10,7 +10,7 @@
 
 @implementation FTPRemoteTableController
 
-@synthesize popoverController, localPath = localPath_, localItems = localItems_, localTableView = localTableView_;
+@synthesize popoverController, localPath = localPath_, localItems = localItems_, localTableView = localTableView_, urlString = urlString_;
 
 #pragma mark -
 #pragma mark Initialization
@@ -154,6 +154,27 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	
+	NSDictionary *item = [items_ objectAtIndex:indexPath.row];
+	NSString *name = [item objectForKey:(id)kCFFTPResourceName];
+	NSInteger type = [(NSNumber *)[item objectForKey:(id)kCFFTPResourceType] integerValue];
+
+	// isDirectory
+	if (type == 4) {
+		FTPRemoteTableController *remoteViewController = [[FTPRemoteTableController alloc] initWithUrlString:[urlString_ stringByAppendingPathComponent:name]];
+
+		remoteViewController.localPath = localPath_;
+		remoteViewController.localItems = localItems_;
+		remoteViewController.localTableView = localTableView_;
+		
+		[self.navigationController pushViewController:remoteViewController animated:YES];
+	}
+	// isFile
+	else if (type == 8) {
+
+		NSLog(@"file");
+	}
+
 }
 
 
@@ -177,8 +198,12 @@
     [super dealloc];
 }
 
-- (id)init {
+- (id)initWithUrlString:(NSString *)urlString {
 	if (self = [super init]) {
+		
+		urlString_ = [urlString retain];
+		self.title = [urlString lastPathComponent];	
+		
 		items_ = [[NSMutableArray array] retain];
 		
 		messageLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 48)];
@@ -190,19 +215,14 @@
 		UIImage* dirImage = [UIImage imageNamed:@"dir.png"];
 		images_ = [[NSMutableDictionary dictionary] retain];
 		[images_ setObject:fileImage forKey:[NSNumber numberWithInteger:8]];
-		[images_ setObject:dirImage forKey:[NSNumber numberWithInteger:4]];
-		
+		[images_ setObject:dirImage forKey:[NSNumber numberWithInteger:4]];		
 		
 		UIBarButtonItem *getButton  = [[UIBarButtonItem alloc] initWithTitle:@"GET" style:UIBarButtonItemStyleBordered target:self action:@selector(getDidPush)];
 		
 		NSArray *items = [NSArray arrayWithObjects:getButton, nil];
 		[self setToolbarItems:items];
 		
-		NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-		NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
-		self.title = server;	
-		
-		path_ = @"/";
+		file_ = @"";
 	}
 
 	return self;
@@ -237,10 +257,12 @@
 	switch (eventCode) {
 		case NSStreamEventOpenCompleted:
 //			[self updateMessage_:@"Connection Opened"];
+			NSLog(@"open");
 			break;
 		case NSStreamEventHasBytesAvailable:{
 // 1行目に変数宣言が来るとエラーになるので括弧で囲む
 //			[self updateMessage_:@"Data Receiving..."];
+			NSLog(@"Receiving...");
 			
 			uint8_t buffer[32768];
 			NSInteger bytesRead = [inputStream_ read:buffer maxLength:sizeof(buffer)];
@@ -255,11 +277,12 @@
 					NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 					NSDictionary *item = [items_ objectAtIndex:indexPath.row];
 					NSString *file = [item objectForKey:(id)kCFFTPResourceName];
-										
-					[localItems_ addObject:file];
-					[localTableView_ reloadData];
 					
-					[localTableView_ scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:localItems_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+					if ([localItems_ containsObject:file] != YES) {
+						[localItems_ addObject:file];
+						[localTableView_ reloadData];
+						[localTableView_ scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:localItems_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+					}					
 				}
 			}
 			else {
@@ -403,9 +426,10 @@
 //		self.tableView.tableHeaderView = messageLabel_;
 	}
 	else {
+		NSLog(message);
 		messageLabel_.textColor = [UIColor redColor];
 		self.tableView.tableHeaderView = messageLabel_;
-		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	}
 	messageLabel_.text = message;
 }
@@ -420,18 +444,13 @@
 
 	ftpMode_ = kEdhitaFTPModeLIST;
 
-	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
-	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
-	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ftp://%@:%@@%@/", userId, pass, server]];
-	NSLog(@"ftp://%@:%@@%@/", userId, pass, server);
-
 	if (listData_) {
 		[listData_ release];
 	}
 	listData_ = [[NSMutableData data] retain];
 		
+	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ftp://%@/", urlString_]];
+	NSLog([url description]);
 	CFReadStreamRef ftpStream = CFReadStreamCreateWithFTPURL(NULL, (CFURLRef) url);
 	
 	inputStream_ = (NSInputStream *)ftpStream;
@@ -451,39 +470,31 @@
 
 	ftpMode_ = kEdhitaFTPModeGET;
 	
-	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
-	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
-	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
-
 	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 	NSDictionary *item = [items_ objectAtIndex:indexPath.row];
 	NSString *file = [item objectForKey:(id)kCFFTPResourceName];
-	NSString *remotePath = [path_ stringByAppendingPathComponent:file];
-
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ftp://%@:%@@%@%@", userId, pass, server, remotePath]];
-	NSLog([url description]);
-
+	
+	NSString *remotePath = [NSString stringWithFormat:@"ftp://%@", [urlString_ stringByAppendingPathComponent:file]];
 	NSString *localPath = [localPath_ stringByAppendingPathComponent:file];
-	NSLog(localPath);
-
+	
 	fileStream_ = [[NSOutputStream outputStreamToFileAtPath:localPath append:NO] retain];
 	[fileStream_ open];	
+	
+	NSLog(remotePath);
 
-	CFReadStreamRef ftpStream = CFReadStreamCreateWithFTPURL(NULL, (CFURLRef) url);
+	CFReadStreamRef ftpStream = CFReadStreamCreateWithFTPURL(NULL, (CFURLRef)[NSURL URLWithString:remotePath]);
 	
 	inputStream_ = (NSInputStream *)ftpStream;
 	inputStream_.delegate = self;
 	[inputStream_ scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-	
+
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	[inputStream_ open];
 
-	[self updateMessage_:nil];
-	
 	CFRelease(ftpStream);
 
+	[self updateMessage_:nil];
 }
 
 

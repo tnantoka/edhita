@@ -1,7 +1,7 @@
 TEdhita
 v7
 r0
-t308400614.191644
+t308411450.585197
 cCheck dependencies
 cProcessInfoPlistFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Info.plist Edhita-Info.plist
 cCpResource build/Debug-iphonesimulator/Edhita.app/file.png file.png
@@ -181,9 +181,9 @@ i"FTPSplitViewController.h"
 i"EditorSplitViewController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m
-c000000004CB187860000000000001979
-t1286702982
-s6521
+c000000004CB1C2EE0000000000001B79
+t1286718190
+s7033
 i"EdhitaAppDelegate.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaDummyViewController.h
@@ -273,17 +273,18 @@ s1672
 i"FTPLocalNavigationController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.h
-c000000004CB1974F000000000000022B
-t1286707023
-s555
+c000000004CB1C3FF000000000000025F
+t1286718463
+s607
 i<UIKit/UIKit.h>
 i"EdhitaAppDelegate.h"
 i"FTPRemoteTableController.h"
+i"FTPRemoteNavigationController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m
-c000000004CB1982D0000000000001D28
-t1286707245
-s7464
+c000000004CB1C4B00000000000001E85
+t1286718640
+s7813
 i"FTPLocalTableController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteNavigationController.h
@@ -299,17 +300,17 @@ s2017
 i"FTPRemoteNavigationController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.h
-c000000004CB189C70000000000000522
-t1286703559
-s1314
+c000000004CB1B96C000000000000059A
+t1286715756
+s1434
 i<UIKit/UIKit.h>
 i"FTPSplitViewController.h"
 i<CFNetwork/CFNetwork.h>
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m
-c000000004CB199E50000000000003A1C
-t1286707685
-s14876
+c000000004CB1C221000000000000399D
+t1286717985
+s14749
 i"FTPRemoteTableController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPSplitViewController.h
@@ -349,9 +350,9 @@ i"EdhitaPrivateCommon.h"
 i"DetailViewController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m
-c000000004CB19A480000000000004088
-t1286707784
-s16520
+c000000004CB19A760000000000004089
+t1286707830
+s16521
 i"RootViewController.h"
 
 N/Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch
@@ -522,16 +523,16 @@ t1283094243
 s246
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app
-t1286707787
+t1286718642
 s680
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app.dSYM
-t1286707787
+t1286718642
 s102
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita
-t1286707787
-s572008
+t1286718642
+s572460
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Icon.png
 t1286640385
@@ -651,8 +652,8 @@ t1286640387
 s31620
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.o
-t1286707137
-s60196
+t1286718465
+s61464
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.s
 t1281855723
@@ -683,16 +684,16 @@ t1286701602
 s37476
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalTableController.o
-t1286707249
-s59172
+t1286718642
+s60548
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteNavigationController.o
 t1286679329
 s37504
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteTableController.o
-t1286707710
-s76512
+t1286717989
+s77184
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPSplitViewController.o
 t1286705704
@@ -715,7 +716,7 @@ t1286640388
 s13528
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/RootViewController.o
-t1286707787
+t1286708725
 s91340
 
 N/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/main.o
@@ -812,7 +813,7 @@ lSLF07#2@71"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegat
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies308400614#308400614#0(0"0(0#1#0"8631470016#0"0#
+lSLF07#2@18"Check dependencies308411450#308411450#0(0"0(0#1#0"8643035328#0"0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/CDataScanner.o /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/CDataScanner.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s308333187.903470
@@ -932,8 +933,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@73"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m308333187#308333187#0(0"0(0#0#65"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m8630768064#1886"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAccessoryView.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAccessoryView.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s308399936.694173
-e308399937.056066
+s308411265.330648
+e308411265.504600
 r1
 xCompileC
 xbuild/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.o
@@ -942,7 +943,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@71"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m308399936#308399937#0(0"0(0#0#63"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m8638877760#1882"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.o0#
+lSLF07#2@71"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m308411265#308411265#0(0"0(0#0#63"/Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m8643221472#1882"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaAppDelegate.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaAppDelegate.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/EdhitaDummyViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/EdhitaDummyViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s307722624.622450
@@ -1023,8 +1024,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@82"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalNavigationController.m308394402#308394402#0(0"0(0#0#74"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalNavigationController.m8637876160#1904"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalNavigationController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalNavigationController.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalTableController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s308400049.476159
-e308400049.803809
+s308411442.346286
+e308411442.502000
 r1
 xCompileC
 xbuild/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalTableController.o
@@ -1033,7 +1034,9 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@77"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m308400049#308400050#0(0"0(0#0#69"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m8637247584#1894"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalTableController.o0#
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m: In function '-[FTPLocalTableController putDidPush]':
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m:229: warning: unused variable 'indexPath'
+lSLF07#2@77"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m308411442#308411442#0(236"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m: In function '-[FTPLocalTableController putDidPush]':/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m:229: warning: unused variable 'indexPath'1(22@27"Unused variable 'indexPath'308411442#124#112#0(6@69"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m308411440#229#0#229#0#19"unused variable '*'0(0#0#69"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m8653864224#1894"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPLocalTableController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPLocalTableController.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteNavigationController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteNavigationController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s308372129.772917
@@ -1049,8 +1052,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@83"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteNavigationController.m308372129#308372129#0(0"0(0#0#75"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteNavigationController.m8630106752#1906"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteNavigationController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteNavigationController.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteTableController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s308400510.408268
-e308400510.760959
+s308410788.932095
+e308410789.135839
 r1
 xCompileC
 xbuild/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteTableController.o
@@ -1059,10 +1062,13 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController updateMessage_:]':
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:429: warning: format not a string literal and no format arguments
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController listByFTP]':
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:453: warning: format not a string literal and no format arguments
 o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController getByFTP]':
-o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:465: warning: format not a string literal and no format arguments
-o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:468: warning: format not a string literal and no format arguments
-lSLF07#2@78"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308400510#308400510#0(398"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController getByFTP]':/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:465: warning: format not a string literal and no format arguments/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:468: warning: format not a string literal and no format arguments2(22@51"Format not a string literal and no format arguments308400510#124#137#0(6@70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308400485#465#0#465#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments308400510#261#137#0(6@70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308400485#468#0#468#0#51"format not a string literal and no format arguments0(0#0#70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m8640101376#1896"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteTableController.o0#
+o/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:483: warning: format not a string literal and no format arguments
+lSLF07#2@78"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308410788#308410789#0(791"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController updateMessage_:]':/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:429: warning: format not a string literal and no format arguments/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController listByFTP]':/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:453: warning: format not a string literal and no format arguments/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m: In function '-[FTPRemoteTableController getByFTP]':/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m:483: warning: format not a string literal and no format arguments3(22@51"Format not a string literal and no format arguments308410789#131#137#0(6@70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308410785#429#0#429#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments308410789#393#137#0(6@70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308410785#453#0#453#0#51"format not a string literal and no format arguments0(22@51"Format not a string literal and no format arguments308410789#654#137#0(6@70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m308410785#483#0#483#0#51"format not a string literal and no format arguments0(0#0#70"/Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m8631040064#1896"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPRemoteTableController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPRemoteTableController.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/FTPSplitViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/FTPSplitViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s308398504.112581
@@ -1132,8 +1138,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@87"Compile /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m308333188#308333188#0(0"0(0#0#79"/Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m8600084448#1901"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/TouchJSON/Extensions/NSScanner_Extensions.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/NSScanner_Extensions.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/RootViewController.o /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s308400586.806613
-e308400587.148469
+s308401525.035158
+e308401525.644794
 r1
 xCompileC
 xbuild/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/RootViewController.o
@@ -1142,7 +1148,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m308400586#308400587#0(0"0(0#0#64"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m8638570976#1884"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/RootViewController.o0#
+lSLF07#2@72"Compile /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m308401525#308401525#0(0"0(0#0#64"/Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m8640053536#1884"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -include /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch -c /Users/t/t/dev/iphone/editor/Edhita/Classes/RootViewController.m -o /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/main.o /Users/t/t/dev/iphone/editor/Edhita/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s308333187.142648
@@ -1319,23 +1325,23 @@ xwelcome.html
 lSLF07#2@17"Copy welcome.html308333185#308333185#0(0"0(0#0#48"/Users/t/t/dev/iphone/editor/Edhita/welcome.html8628295072#446"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/t/t/dev/iphone/editor/Edhita/welcome.html /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app0#
 
 CGenerateDSYMFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app.dSYM /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita
-s308400587.619156
-e308400587.695285
+s308411442.699811
+e308411442.770802
 r1
 xGenerateDSYMFile
 x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app.dSYM
 x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita
-lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/Edhita.app.dSYM build/Debug-iphonesimulator/Edhita.app/Edhita308400587#308400587#0(0"0(0#0#81"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita8640083680#371"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app.dSYM0#
+lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/Edhita.app.dSYM build/Debug-iphonesimulator/Edhita.app/Edhita308411442#308411442#0(0"0(0#0#81"/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita8647605504#371"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app.dSYM0#
 
 CLd /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita normal i386
-s308400587.148579
-e308400587.619033
+s308411442.502109
+e308411442.699698
 r1
 xLd
 x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita
 xnormal
 xi386
-lSLF07#2@86"Link /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita308400587#308400587#0(0"0(0#0#0"8645242176#1043"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -L/Users/t/t/dev/iphone/editor/Edhita/AdMob -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -filelist /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/Edhita.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -lAdMob -framework AudioToolbox -framework MediaPlayer -framework MessageUI -framework QuartzCore -framework CFNetwork -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita0#
+lSLF07#2@86"Link /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita308411442#308411442#0(0"0(0#0#0"8643842464#1043"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -L/Users/t/t/dev/iphone/editor/Edhita/AdMob -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -filelist /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Objects-normal/i386/Edhita.LinkFileList -mmacosx-version-min=10.5 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -lAdMob -framework AudioToolbox -framework MediaPlayer -framework MessageUI -framework QuartzCore -framework CFNetwork -o /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Edhita0#
 
 CProcessInfoPlistFile /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app/Info.plist Edhita-Info.plist
 s308333184.707036
@@ -1360,10 +1366,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@28"Precompile Edhita_Prefix.pch308333185#308333187#0(0"0(0#0#53"/Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch8631161056#1744"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-generated-files.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-own-target-headers.hmap -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-all-target-headers.hmap -iquote /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/Edhita-project-headers.hmap -F/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator -I/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/include -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources/i386 -I/Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphonesimulator/Edhita.build/DerivedSources -c /Users/t/t/dev/iphone/editor/Edhita/Edhita_Prefix.pch -o /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-efqsswhejzkkwzfhpiklsrbahnge/Edhita_Prefix.pch.gch0#
 
 CTouch /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app
-s308400587.695395
-e308400587.698859
+s308411442.770910
+e308411442.775546
 r1
 xTouch
 x/Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app
-lSLF07#2@80"Touch /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app308400587#308400587#0(0"0(0#0#0"8641046432#271"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app0#
+lSLF07#2@80"Touch /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app308411442#308411442#0(0"0(0#0#0"8643863968#271"    cd /Users/t/t/dev/iphone/editor/Edhita    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphonesimulator/Edhita.app0#
 

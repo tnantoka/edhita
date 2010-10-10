@@ -78,12 +78,18 @@
 	FTPLocalTableController *localTable = [[FTPLocalTableController alloc] initWithPath:path];
 	FTPLocalNavigationController *localNav = [[FTPLocalNavigationController alloc] initWithRootViewController:localTable];
 
-	FTPRemoteTableController *remoteTable = [[FTPRemoteTableController alloc] init];
+	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
+	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
+	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
+	NSString *urlString = [NSString stringWithFormat:@"%@:%@@%@", userId, pass, server];
+	
+	FTPRemoteTableController *remoteTable = [[FTPRemoteTableController alloc] initWithUrlString:urlString];
+	remoteTable.title = server; // URLがそのまま見えちゃわないように
 	FTPRemoteNavigationController *remoteNav = [[FTPRemoteNavigationController alloc] initWithRootViewController:remoteTable];
 	remoteTable.localPath = path;
 	remoteTable.localItems = localTable.items;
 	remoteTable.localTableView = localTable.tableView;
-	localTable.remoteController = remoteTable;
+	localTable.remoteController = remoteNav;
 	
 	ftpViewController_ = [[FTPSplitViewController alloc] init];
 	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];

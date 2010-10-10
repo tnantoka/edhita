@@ -30,14 +30,15 @@ enum kEdhitaFTPMode {
 	NSString* localPath_;
 	NSMutableArray *localItems_;
 	UITableView *localTableView_;
-	NSString* path_;
-
+	NSString* urlString_;
+	NSString* file_;
 }
 
 @property (nonatomic, retain) UIPopoverController *popoverController;
 @property (nonatomic, retain) NSString *localPath;
 @property (nonatomic, retain) NSMutableArray *localItems;
 @property (nonatomic, retain) UITableView *localTableView;
+@property (nonatomic, retain) NSString *urlString;
 
 - (void)parseListData_;
 - (NSDictionary *)entryByReencodingNameInEntry_:(NSDictionary *)entry encoding:(NSStringEncoding)newEncoding;
@@ -49,5 +50,6 @@ enum kEdhitaFTPMode {
 - (void)listByFTP;
 - (void)getByFTP;
 
+- (id)initWithUrlString:(NSString *)urlString;
 
 @end
