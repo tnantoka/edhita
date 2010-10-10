@@ -7,7 +7,6 @@
 //
 
 #import "DetailViewController.h"
-#import "RootViewController.h"
 
 @interface DetailViewController ()
 //プライベートメソッドの解除（AdMobから使うので）
@@ -58,6 +57,7 @@
     [toolbar setItems:items animated:YES];
     [items release];
     self.popoverController = pc;
+	NSLog(@"popover show");
 }
 
 
@@ -103,6 +103,14 @@
 */
 
 - (void)viewWillDisappear:(BOOL)animated {
+	// FTPから復帰したときにもPopoverが追加されちゃうので消しとく
+	if (self.popoverController != nil) {
+		NSMutableArray *items = [[toolbar items] mutableCopy];
+		[items removeObjectAtIndex:0];
+		[toolbar setItems:items animated:YES];
+		[items release];
+	}
+
 	[self saveContents];
     [super viewWillDisappear:animated];
 }
@@ -146,7 +154,8 @@
 		self.view.backgroundColor = [UIColor whiteColor];
 		
 		toolbar = [[UIToolbar alloc] init];
-		toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//		toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
 		[toolbar sizeToFit];		
 		[self.view addSubview:toolbar];
 		// これやっとかないとpopview出すボタンが追加できない（[toolbar items]がnullになるから）
@@ -255,7 +264,11 @@
 //		UIView *splash = [[UIView alloc] initWithFrame:self.view.bounds];
 //		splash.backgroundColor = [UIColor grayColor];
 //		[self.view addSubview:splash];
-		
+
+		NSString *welcome = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"html"];
+		self.path = welcome;
+		segment_.selectedSegmentIndex = 1;
+		webView_.hidden = NO;
 	}
 	return self;
 }
@@ -315,11 +328,15 @@
 //	NSString *docDir = [homeDir stringByAppendingPathComponent:@"Documents"];
 	NSArray *components = [path componentsSeparatedByString:homeDir];
 	pathLabel_.text = [components objectAtIndex:1];
-	
+
+	/*
 	if (segment_.selectedSegmentIndex == 1) {
 		[self changeUrl];		
 	}
+	*/
 	
+	segment_.selectedSegmentIndex = 0;
+	webView_.hidden = YES;
 }
 
 - (void)saveContents {
@@ -496,7 +513,8 @@
 //		[UIView beginAnimations:nil context:NULL];
 //		[UIView setAnimationDuration:0.5];
 //		[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
-		
+
+		// 実行する前に保存
 		[self saveContents];
 		[self changeUrl];
 		

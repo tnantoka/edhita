@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EdhitaTableViewController.h"
+#import "EdhitaFileViewController.h"
 //#import "DetailViewController.h"
 #import "AdMobDelegateProtocol.h"
 #import "AdMobView.h"

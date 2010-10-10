@@ -1,3 +1,7 @@
+df0b0a4e613810422c37b91ba36c4398 346319f8c00d782017d3d53faf7341db ffffffffffffffffffffffffffffffff 412 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
+39d36c6c307681cbc2c12911685b1c38 259e4e42ab58e1136a46c9488f7fc90a ffffffffffffffffffffffffffffffff 816 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
+00000000000000000000000000000000 df0b0a4e613810422c37b91ba36c4398 ffffffffffffffffffffffffffffffff 8 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/PkgInfo
+00000000000000000000000000000000 df0b0a4e613810422c37b91ba36c4398 ffffffffffffffffffffffffffffffff 929 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist
 3c61ed07241bf6fd3cc28df3f67839cf d597440be0eb1773c2fcb031877549fc ffffffffffffffffffffffffffffffff 36012 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/FTPRemoteNavigationController.o
 3c61ed07241bf6c93cc28df3f67839c2 7b49bab6ce403efd6f71aa42043da814 ffffffffffffffffffffffffffffffff 35996 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/FTPLocalNavigationController.o
 3c61ed07241bf6903cc28df3f6782e22 1e893be38b40fa0b4cf09e1be4a3efd3 ffffffffffffffffffffffffffffffff 37640 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/FTPRemoteTableController.o
@@ -15,16 +19,15 @@
 3c61ed07241bf3503cc28df3f6782b03 9c77650d175014ceebe630c175f1af8a ffffffffffffffffffffffffffffffff 30516 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAccessoryView.o
 3c61ed0724bcdbdb3cc28df3f6783188 11f27ebc8b7b2a6167d437b8e7df6680 ffffffffffffffffffffffffffffffff 63208 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaTableViewController.o
 3c61ed07240ebfc53cc28df3f6783a09 96f89a65d6bec361ee98feedbb97f4e3 ffffffffffffffffffffffffffffffff 36728 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaNavigationController.o
-3c61ed076814ae993cc28df3f6780ca2 d2a6773712cada6dbe77e0ad1635a92b ffffffffffffffffffffffffffffffff 81748 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o
-3c61ed07241bfe6b3cc28df3f67879dc bc5a3ed19aec1f899755304b722121a6 ffffffffffffffffffffffffffffffff 88204 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o
-3c61ed0724d393973cc28df3f67823d9 fe888f43d3a93c3a4d1d6f7f0e5c8a1b ffffffffffffffffffffffffffffffff 55684 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o
+3c61ed07681450623cc28df3f6780d4d d2a6773712cada6dbe77e0ad1635a92b ffffffffffffffffffffffffffffffff 82216 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/RootViewController.o
+3c61ed07241beecc3cc28df3f67866d6 bc5a3ed19aec1f899755304b722121a6 ffffffffffffffffffffffffffffffff 88888 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/DetailViewController.o
+3c61ed0724d380663cc28df3f678235b fe888f43d3a93c3a4d1d6f7f0e5c8a1b ffffffffffffffffffffffffffffffff 55364 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/EdhitaAppDelegate.o
 3c61ed0768454eb43cc28df3f6783d3a 827e23ab0b9dba47d0701cf66806d8f5 ffffffffffffffffffffffffffffffff 6600 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Objects-normal/armv7/main.o
-df0b0a4e613810422c37b91ba36c4398 346319f8c00d782017d3d53faf7341db ffffffffffffffffffffffffffffffff 412 /Users/t/t/dev/iphone/editor/Edhita/build/Edhita.build/Debug-iphoneos/Edhita.build/Edhita.xcent
 00000000000000000000000000000000 92ff7de9e36e0e83ffa1ef1283864d3b ffffffffffffffffffffffffffffffff 102 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app.dSYM
-1daaaa8452bf1ebbf4868d0a91a644a6 259e4e42ab58e1136a46c9488f7fc90a ffffffffffffffffffffffffffffffff 782 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app
 00000000000000000000000000000000 47cfa54288fea06134f71e9d1474dd6b ffffffffffffffffffffffffffffffff 7235 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/embedded.mobileprovision
-be62233fa450b76997d6ed80528f74b3 5d8264cd305aee9bbdf9dcd2c2b3fe91 ffffffffffffffffffffffffffffffff 427920 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
+be62233fa4504ac497d6ed80528f6ad4 5d8264cd305aee9bbdf9dcd2c2b3fe91 ffffffffffffffffffffffffffffffff 427920 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Edhita
 000000004c5e99d00000000000001a6f 3c61ed072445091f3cc28df3f6782f71 ffffffffffffffffffffffffffffffff 9421460 /var/folders/v+/v+f0IzhiHta61lwnTePV7k+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Edhita_Prefix-acaqtmwflikeuneguyutrbbwnbzv/Edhita_Prefix.pch.gch
+ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff ffffffffffffffffffffffffffffffff 1911 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Icon.png
 00000000000000000000000000000000 a5d90dfb199c36b871f89f307c82d12c ffffffffffffffffffffffffffffffff 16 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/delete.txt
 00000000000000000000000000000000 319443e0cb79d6601b512b02f14a9eb5 ffffffffffffffffffffffffffffffff 26 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/direcotry.txt
 00000000000000000000000000000000 d3797b7445b321ab062470c47fc50319 ffffffffffffffffffffffffffffffff 258 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/download.png
@@ -39,6 +42,5 @@ be62233fa450b76997d6ed80528f74b3 5d8264cd305aee9bbdf9dcd2c2b3fe91 ffffffffffffff
 00000000000000000000000000000000 4ba78b56dfba8cd091fba9618dd43f68 ffffffffffffffffffffffffffffffff 794 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/dir.png
 00000000000000000000000000000000 4182d4c40c05a471bddd757525492692 ffffffffffffffffffffffffffffffff 182 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/script.js
 00000000000000000000000000000000 5982d9deec86612bd84477d08c42e140 ffffffffffffffffffffffffffffffff 332 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/file.png
-00000000000000000000000000000000 df0b0a4e613810422c37b91ba36c4398 ffffffffffffffffffffffffffffffff 8 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/PkgInfo
-00000000000000000000000000000000 df0b0a4e613810422c37b91ba36c4398 ffffffffffffffffffffffffffffffff 895 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/Info.plist
 00000000000000000000000000000000 a0a8a8169229c30a63332941b963d8ce ffffffffffffffffffffffffffffffff 485 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/ResourceRules.plist
+00000000000000000000000000000000 bbbd0e17770cb97a4db0077a70254419 ffffffffffffffffffffffffffffffff 1911 /Users/t/t/dev/iphone/editor/Edhita/build/Debug-iphoneos/Edhita.app/icon.png

@@ -241,15 +241,14 @@
 //		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithCustomView:newFileButton];
 		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
 		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
-/* TODO:FTP		
+
+		// FTP
 		UIBarButtonItem *ftpButton = [[UIBarButtonItem alloc] initWithTitle:@"FTP" style:UIBarButtonItemStyleBordered target:self action:@selector(ftpDidPush)];
-		
-		NSArray *items = [NSArray arrayWithObjects:ftpButton, space, newFile, newDir, nil];
-*/
+
+		// HTTP 
 		UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
-		
-		
-		NSArray *items = [NSArray arrayWithObjects:downloadButton, space, newFile, newDir, nil];
+				
+		NSArray *items = [NSArray arrayWithObjects:downloadButton, ftpButton, space, newFile, newDir, nil];
 		[self setToolbarItems:items];
 
 		// 編集ボタンの表示（selfのeditButtonを設定してやるだけでいい）
@@ -357,7 +356,7 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
 
 	NSString *path = [path_ stringByAppendingPathComponent: [items_ objectAtIndex:indexPath.row]];
-	EdhitaTableViewController *tableViewController = [[EdhitaTableViewController alloc] initWithPath:path];
+	EdhitaFileViewController *tableViewController = [[EdhitaFileViewController alloc] initWithPath:path];
 	tableViewController.detailViewController = self.detailViewController;
 	[self.navigationController pushViewController:tableViewController animated:YES];
 	[tableViewController release];	
@@ -396,6 +395,22 @@
 }
  
 - (void)ftpDidPush {
+	
+	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
+	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
+	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
+	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
+
+	if ([server isEqualToString:@""] || [userId isEqualToString:@""] || [pass isEqualToString:@""]) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"FTP Settings Not Found!" message:@"Please set Server/ID/Pass by Settings App." delegate:nil cancelButtonTitle:@"test" otherButtonTitles:nil];
+		[alert show];
+		return;
+	}
+		
+	if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
+		[detailViewController.popoverController dismissPopoverAnimated:YES];
+	}
+	
 	[(EdhitaAppDelegate *)[[UIApplication sharedApplication] delegate] rootViewChangesFtp];
 }
 
@@ -405,6 +420,10 @@
 		self.tableView.tableHeaderView = downloadView_;
 		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	} else {
+		self.tableView.tableHeaderView = nil;
+		downloadView_.frame = CGRectMake(0, 0, 320, 50);
+		messageLabel_.text = @"";
+		self.tableView.tableHeaderView = downloadView_;
 		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	}
 	

@@ -1,4 +1,4 @@
-    //
+//
 //  FTPLocalNavigationController.m
 //  Edhita
 //
@@ -7,7 +7,6 @@
 //
 
 #import "FTPLocalNavigationController.h"
-
 
 @implementation FTPLocalNavigationController
 
@@ -60,5 +59,12 @@
     [super dealloc];
 }
 
+- (id)init {
+	if (self = [super init]) {
+		self.toolbarHidden = NO;
+		self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+	}
+	return self;
+}
 
 @end

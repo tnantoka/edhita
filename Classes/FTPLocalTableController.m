@@ -11,6 +11,7 @@
 
 @implementation FTPLocalTableController
 
+@synthesize remoteController = remoteController_, items = items_;
 
 #pragma mark -
 #pragma mark Initialization
@@ -40,11 +41,12 @@
 }
 */
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	[self refresh];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -79,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return items_.count;
 }
 
 
@@ -94,7 +96,13 @@
     }
     
     // Configure the cell...
-    
+	NSString *text = [items_ objectAtIndex:indexPath.row];
+	cell.textLabel.text = text;
+	BOOL isDir;
+	NSString *path = [path_ stringByAppendingPathComponent:text];
+	[[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
+	cell.imageView.image = [images_ objectAtIndex:isDir];
+	
     return cell;
 }
 
@@ -151,6 +159,19 @@
 	 [self.navigationController pushViewController:detailViewController animated:YES];
 	 [detailViewController release];
 	 */
+	NSString *path = [path_ stringByAppendingPathComponent:[items_ objectAtIndex:indexPath.row]];
+	remoteController_.localPath = path;
+	BOOL isDir;
+	[[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
+	if (isDir) {		
+		FTPLocalTableController *localViewController = [[FTPLocalTableController alloc] initWithPath:path];
+		localViewController.remoteController = remoteController_;
+		[localViewController refresh];
+		[self.navigationController pushViewController:localViewController animated:YES];
+	}
+	else {
+	}
+	
 }
 
 
@@ -174,6 +195,49 @@
     [super dealloc];
 }
 
+- (id)initWithPath:(NSString *)path {
+	if (self = [super init]) {
+		
+		path_ = [path retain];
+		self.title = [path lastPathComponent];
+
+		NSError *error;
+		items_ = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:&error] mutableCopy];
+		
+		// toolbar
+		EdhitaAppDelegate *appDelegate = (EdhitaAppDelegate *)[UIApplication sharedApplication].delegate;
+		UIBarButtonItem *editorButton  = [[UIBarButtonItem alloc] initWithTitle:@"Editor" style:UIBarButtonItemStyleBordered target:appDelegate action:@selector(rootViewChangesEditor)];
+		UIBarButtonItem *putButton  = [[UIBarButtonItem alloc] initWithTitle:@"PUT" style:UIBarButtonItemStyleBordered target:self action:@selector(putDidPush)];
+		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
+		NSArray *items = [NSArray arrayWithObjects:editorButton, flexible, putButton, nil];
+		[self setToolbarItems:items];
+
+		// 編集はいらん
+//		self.navigationItem.rightBarButtonItem = [self editButtonItem];
+		
+		UIImage* fileImage = [UIImage imageNamed:@"file.png"];
+		UIImage* dirImage = [UIImage imageNamed:@"dir.png"];
+		images_ = [[NSArray arrayWithObjects:fileImage, dirImage, nil] retain];
+		
+	}
+	return self;
+}
+
+- (void)putDidPush {
+	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"test" message:[items_ objectAtIndex:indexPath.row] delegate:nil cancelButtonTitle:@"test" otherButtonTitles:nil];
+	[alert show];	
+}
+
+- (void)refresh {
+	NSError *error;
+	items_ = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path_ error:&error] mutableCopy];
+	[self.tableView reloadData];
+	remoteController_.localItems = items_;
+	remoteController_.localTableView = self.tableView;
+	remoteController_.localPath = path_;
+}
 
 @end
 

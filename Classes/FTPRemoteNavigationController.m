@@ -8,7 +8,6 @@
 
 #import "FTPRemoteNavigationController.h"
 
-
 @implementation FTPRemoteNavigationController
 
 /*
@@ -58,6 +57,22 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+- (id)init {
+	if (self = [super init]) {
+		
+		// Navからボタンとか追加しても効かないのでTableViewからやる
+		// UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:nil action:nil];
+		// self.navigationItem.leftBarButtonItem = button;
+		// [self setTitle:@"test"];
+		
+		self.toolbarHidden = NO;
+//		[self.toolbar sizeToFit];
+		self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+
+	}
+	return self;
 }
 
 

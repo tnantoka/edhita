@@ -15,17 +15,20 @@
 #import "FTPRemoteTableController.h"
 #import "FTPLocalNavigationController.h"
 #import "FTPRemoteNavigationController.h"
+#import "FTPSplitViewController.h"
+#import "EditorSplitViewController.h"
 
 @interface EdhitaAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
 	
-	UISplitViewController *splitViewController_;
-	UISplitViewController *ftpViewController_;
+	EditorSplitViewController *splitViewController_;
+	FTPSplitViewController *ftpViewController_;
 }
 
 //@property (nonatomic, retain) IBOutlet UIWindow *window;
 
 - (void) rootViewChangesFtp;
+- (void) rootViewChangesEditor;
 
 @end
 

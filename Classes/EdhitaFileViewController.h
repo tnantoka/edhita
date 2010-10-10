@@ -12,7 +12,7 @@
 #import "EdhitaPrivateCommon.h"
 #import "DetailViewController.h"
 
-@interface EdhitaTableViewController : UITableViewController <UITextFieldDelegate, AdMobDelegate> {
+@interface EdhitaFileViewController : UITableViewController <UITextFieldDelegate, AdMobDelegate> {
 	NSArray *items_;
 	NSString *path_;
 	UITextField *textField_;

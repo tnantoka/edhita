@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface FTPLocalNavigationController : UINavigationController {
-
+	
 }
 
 @end

@@ -50,12 +50,10 @@
 	EdhitaNavigationController* navigationController = [[EdhitaNavigationController alloc] initWithRootViewController:rootViewController];
 	
 	DetailViewController *detailViewController = [[DetailViewController alloc] init];
-	NSString *welcome = [[NSBundle mainBundle] pathForResource:@"welcome" ofType:@"html"];
-	detailViewController.path = welcome;
 
 	rootViewController.detailViewController = detailViewController;
 
-	splitViewController_ = [[UISplitViewController alloc] init];
+	splitViewController_ = [[EditorSplitViewController alloc] init];
 	splitViewController_.viewControllers = [NSArray arrayWithObjects:navigationController, detailViewController, nil];
 	splitViewController_.delegate = detailViewController;
 	
@@ -77,21 +75,25 @@
 	ftpViewController_.delegate = detailViewController;
 	*/
 	
-/* TODO:FTP	 
-	FTPLocalTableController *localTable = [[FTPLocalTableController alloc] init];
+	FTPLocalTableController *localTable = [[FTPLocalTableController alloc] initWithPath:path];
 	FTPLocalNavigationController *localNav = [[FTPLocalNavigationController alloc] initWithRootViewController:localTable];
 
 	FTPRemoteTableController *remoteTable = [[FTPRemoteTableController alloc] init];
-	FTPLocalNavigationController *remoteNav = [[FTPLocalNavigationController alloc] initWithRootViewController:remoteTable];
+	FTPRemoteNavigationController *remoteNav = [[FTPRemoteNavigationController alloc] initWithRootViewController:remoteTable];
+	remoteTable.localPath = path;
+	remoteTable.localItems = localTable.items;
+	remoteTable.localTableView = localTable.tableView;
+	localTable.remoteController = remoteTable;
 	
-	ftpViewController_ = [[UISplitViewController alloc] init];
+	ftpViewController_ = [[FTPSplitViewController alloc] init];
 	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];
-	ftpViewController_.delegate = remoteNav;
+	ftpViewController_.delegate = remoteTable;
 
+	/*
 	[window addSubview:ftpViewController_.view];
 //	[ftpViewController_.view removeFromSuperview];
 	ftpViewController_.view.hidden = YES;
-*/
+	 */
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -137,6 +139,10 @@
 
 - (void) rootViewChangesFtp {
 
+	[splitViewController_.view removeFromSuperview];
+	[window addSubview:ftpViewController_.view];
+
+	/*
 	// 初めから表示しとかないとlandscapeで表示した時にportraitになる
 	[splitViewController_.view removeFromSuperview];
 //	splitViewController_.view.hidden = YES;
@@ -148,6 +154,7 @@
 
 	// windowが空になると方向が反映されないのかと思ってdummyのcontrollerを
 	// rotate=YESにして非表示にしておいたけど駄目だった。	
+	*/
 	
 	// もどるとき
 /*
@@ -156,6 +163,13 @@
 	[window addSubview:ftpViewController_.view];
 	ftpViewController_.view.hidden = YES;
 */	
+	
+}
+
+- (void) rootViewChangesEditor {
+	[ftpViewController_.view removeFromSuperview];
+	[window addSubview:splitViewController_.view];
+	[splitViewController_ setupViewWithOrientation:ftpViewController_.interfaceOrientation];
 	
 }
 

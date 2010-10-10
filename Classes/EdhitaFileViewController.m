@@ -6,9 +6,9 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "EdhitaTableViewController.h"
+#import "EdhitaFileViewController.h"
 
-@implementation EdhitaTableViewController
+@implementation EdhitaFileViewController
 
 @synthesize detailViewController;
 
