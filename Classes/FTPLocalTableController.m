@@ -161,7 +161,6 @@
 	 */
 	NSString *path = [path_ stringByAppendingPathComponent:[items_ objectAtIndex:indexPath.row]];
 	FTPRemoteTableController *tableController = (FTPRemoteTableController *)remoteController_.topViewController;
-	tableController.localPath = path;
 	BOOL isDir;
 	[[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDir];
 	if (isDir) {		
@@ -169,8 +168,11 @@
 		localViewController.remoteController = remoteController_;
 		[localViewController refresh];
 		[self.navigationController pushViewController:localViewController animated:YES];
+		tableController.localFile = @"";
+		tableController.localPath = path;
 	}
 	else {
+		tableController.localFile = [path lastPathComponent];
 	}
 	
 }
@@ -227,10 +229,9 @@
 
 - (void)putDidPush {
 	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+
 	FTPRemoteTableController *tableController = (FTPRemoteTableController *)remoteController_.topViewController;
-	NSString *remotePath = tableController.urlString;
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"test" message:remotePath delegate:nil cancelButtonTitle:@"test" otherButtonTitles:nil];
-	[alert show];	
+	[tableController putByFtp];
 }
 
 - (void)refresh {
@@ -243,6 +244,7 @@
 	tableController.localItems = items_;
 	tableController.localTableView = self.tableView;
 	tableController.localPath = path_;
+	tableController.localFile = @"";
 }
 
 @end
