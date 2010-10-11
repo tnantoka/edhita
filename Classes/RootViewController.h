@@ -27,6 +27,9 @@
 	UIView *downloadView_;
 	UITextField *urlField_;
 	UILabel *messageLabel_;
+	
+	// HTTP
+	NSMutableData *downloadBuffer_;
 }
 
 //@property (nonatomic, retain) IBOutlet DetailViewController *detailViewController;

@@ -432,7 +432,8 @@
 - (void)dlDidPush {
 	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-	
+
+	/* NSStringでやる場合
 	NSString *name = [urlField_.text lastPathComponent];
 	NSURL *url = [NSURL URLWithString:urlField_.text];
 
@@ -461,9 +462,64 @@
 	}
 
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	*/
 
+	self.tableView.tableHeaderView = nil;
+	downloadView_.frame = CGRectMake(0, 0, 320, 80);
+	self.tableView.tableHeaderView = downloadView_;
+	
+	NSURL *url = [NSURL URLWithString:urlField_.text];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0];
+	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+
+	if (connection) {
+		NSLog(@"connected.");
+	} else {
+		messageLabel_.textColor = [UIColor orangeColor];	
+		messageLabel_.text = @"Can't Connect";		
+	}
 }
 
+// Start Download
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+	downloadBuffer_ = [[NSMutableData data] retain];
+}
+
+// Progress
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[downloadBuffer_ appendData: data];
+}
+
+// Finish
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+
+	NSString *name = [urlField_.text lastPathComponent];
+	BOOL success = [downloadBuffer_ writeToFile:[path_ stringByAppendingPathComponent:name] atomically:YES];
+
+	if (success) {
+		if ([items_ containsObject:name] != YES) {
+			[items_ addObject:name];
+			[self.tableView reloadData];
+			[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:items_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+		}
+		messageLabel_.textColor = [UIColor cyanColor];	
+		messageLabel_.text = [NSString stringWithFormat:@"Saved as \"%@\"", name];
+	}
+	else {
+		messageLabel_.textColor = [UIColor orangeColor];	
+		messageLabel_.text = @"Something Wrong";		
+	}
+}
+
+// error
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [connection release];
+    [downloadBuffer_ release];
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	messageLabel_.textColor = [UIColor orangeColor];	
+	messageLabel_.text = [error localizedDescription];		
+}
 
 @end
 

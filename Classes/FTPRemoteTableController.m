@@ -480,11 +480,12 @@
 	if (message == nil) {
 //		message = @"Suceeded";
 		self.tableView.tableHeaderView = nil;
+//		messageLabel_.textColor = [UIColor cyanColor];
 //		self.tableView.tableHeaderView = messageLabel_;
 	}
 	else {
 		NSLog(message);
-		messageLabel_.textColor = [UIColor redColor];
+		messageLabel_.textColor = [UIColor orangeColor];
 		self.tableView.tableHeaderView = messageLabel_;
 //		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	}

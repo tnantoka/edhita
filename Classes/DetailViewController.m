@@ -533,7 +533,7 @@
 	
 	// <meta charset="UTF-8" />しないと文字化けする
 	NSURL *url = [NSURL fileURLWithPath:path_];
-	NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:60];
+	NSURLRequest *req = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0];
 	[webView_ loadRequest:req];
 
 }
