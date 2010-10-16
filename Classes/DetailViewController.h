@@ -27,7 +27,9 @@
 	UIWebView *webView_;
 	BOOL webViewReloaded;
 	
-	UISegmentedControl *segment_;
+	UISegmentedControl *segment_;	
+	
+	EdhitaAccessoryView *accessoryView_;
 }
 
 //@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
@@ -43,6 +45,8 @@
 
 - (void)keyboardWasShown:(NSNotification *)aNotification;
 - (void)keyboardWasHidden:(NSNotification *)aNotification;
+- (void)enableButton_;
+- (void)disableButton_;
 
 - (void)saveContents;
 - (UIColor *)getColorWithIndex:(NSInteger)index;

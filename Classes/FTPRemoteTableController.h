@@ -59,8 +59,8 @@ enum {
 
 - (void)parseListData_;
 - (NSDictionary *)entryByReencodingNameInEntry_:(NSDictionary *)entry encoding:(NSStringEncoding)newEncoding;
-- (void)stopFTP_:(NSString *)statusString;
-- (void)updateMessage_:(NSString *)message;
+- (void)stopFTP_;
+- (void)updateMessage_:(NSString *)message success:(BOOL)success;
 
 - (void)getDidPush;
 
@@ -69,5 +69,7 @@ enum {
 - (void)putByFtp;
 
 - (id)initWithUrlString:(NSString *)urlString;
+
+- (NSString *)encodeURI:(NSString *)string;
 
 @end

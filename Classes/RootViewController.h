@@ -46,4 +46,6 @@
 - (void)downloadDidPush;
 - (void)dlDidPush;
 
+- (NSString *)encodeURI:(NSString *)string;
+
 @end

@@ -104,6 +104,7 @@
 	NSDictionary *attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:path_ error:&error];
 	
 	// switch内では変数宣言できないからif文の方が楽。
+	// 嘘。ブロックで囲えば変数宣言できる。いずれ直す
     if (indexPath.row == 0) {
 		textField_ = [[UITextField alloc] initWithFrame:CGRectMake(cell.frame.size.width * 0.3, 0, cell.frame.size.width * 0.6, cell.frame.size.height)];
 		textField_.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -114,6 +115,8 @@
 		textField_.clearButtonMode = UITextFieldViewModeWhileEditing;
 		[textField_ becomeFirstResponder];		
 		[cell.contentView addSubview:textField_];
+		textField_.autocorrectionType = UITextAutocorrectionTypeNo;
+		textField_.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	}
 	else {
 		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.frame.size.width * 0.3, 0, cell.frame.size.width * 0.6, cell.frame.size.height)];

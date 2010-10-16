@@ -36,45 +36,66 @@
 		
 		textView_ = textView;
 
+		NSArray *titles = [NSArray arrayWithObjects:
+// あんまりボタンを表示すると小さくせざるをえないので、使用頻度が高そうで入力しづらいやつを
+//							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"%", @"=", @"~", @"^", @"_", @"#", @"|", @"¥", @"\\", nil];		
+//							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"=", @"_", @"#", @"|", @"\\", nil];		
+		
+						   
+							// 一番入力しづらい（17）
+//							@"[", @"]", @"{", @"}", @"#", @"%", @"^", @"*", @"+", @"=", 
+//							@"_", @"\\", @"|", @"~", @"<", @">", @"¥",
+							// タブ（1）
+//							@"\t", 
+							// わりと入力しやすい（11）
+//						    @"-", @"/", @":", @";", @"(", @")", @"$", @"&", @"@", @"'", @"\"", 
+						    // 1ページ目にあるのでいらん（4）
+//							@",", @".", @"!", @"?", 
+
+						   
+						   // ¥をボツにしてこれぐらいか
+						   @"-", @"/", @":", @";", @"(", @")", @"$", @"&", @"@", @"'", @"\"", @"<", @">",
+						   @"\\t", 
+						   @"[", @"]", @"{", @"}", @"#", @"%", @"^", @"*", @"+", @"=", @"_", @"\\", @"|", @"~",  
+							nil];
+		
+		
 		NSInteger padding = 8;
 		NSInteger margin = 8;
 		NSInteger size = 46;
-
+		
 		self.frame = CGRectMake(0, 0, 768, size + padding * 2);
 		self.backgroundColor = [UIColor lightGrayColor];
+		// 横スクロール
+		self.contentSize = CGSizeMake(768 * 2, 0);
 
-		NSArray *titles = [NSArray arrayWithObjects:
-// あんまりボタンを表示すると小さくせざるをえないので、使用頻度が高そうで入力しづらいやつを
-// TODO:scrollで2画面化						   
-//							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"%", @"=", @"~", @"^", @"_", @"#", @"|", @"¥", @"\\", nil];		
-							@"{", @"}" ,@"<", @">", @"[", @"]", @"+", @"*", @"=", @"_", @"#", @"|", @"\\", nil];		
-		
-
-//		self.contentSize = CGSizeMake([titles count] * (size * 1.5 + margin * 1.5), 0);
-
-		UIButton *button;
-		
 		NSInteger i = 0;
 		for (NSString *title in titles) {
 
-			button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 			button.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-			button.frame = CGRectMake((size + margin) * i + padding, padding, size, size);
-			[button setTitle:title forState:UIControlStateNormal];
-			[button addTarget:self action:@selector(insertDidPush:) forControlEvents:UIControlEventTouchUpInside];
+
+			if (i < 14) {
+				button.frame = CGRectMake((size + margin) * i + padding, padding, size, size);
+			}
+			else {
+				button.frame = CGRectMake((size + margin) * i + padding + padding + padding, padding, size, size);
+			}
+			
+			
 			button.titleLabel.font = [UIFont systemFontOfSize: 20];
+			[button setTitle:title forState:UIControlStateNormal];
+			
+			if ([title isEqualToString:@"\\t"] != YES) {
+				[button addTarget:self action:@selector(insertDidPush:) forControlEvents:UIControlEventTouchUpInside];				
+			} 
+			else {
+				[button addTarget:self action:@selector(tabDidPush) forControlEvents:UIControlEventTouchUpInside];
+			}
+			
 			[self addSubview:button];
 			i++;
 		}
-
-
-		button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-		button.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-		button.frame = CGRectMake(self.frame.size.width - size - padding, padding, size, size);
-//		button.frame = CGRectMake((size + margin) * i + padding, padding, size, size);
-		[button setTitle:@"\\t" forState:UIControlStateNormal];
-		[button addTarget:self action:@selector(tabDidPush) forControlEvents:UIControlEventTouchUpInside];
-		[self addSubview:button];
 
 
 		//なんかうまくいかんし、必須じゃないのでescapeは後回しｚ

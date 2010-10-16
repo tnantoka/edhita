@@ -63,8 +63,8 @@
 		
 		UIViewController *detail = [self.viewControllers objectAtIndex:1];
 		detail.view.frame = CGRectMake(0, 0, 768, 1024 - 48);
-		NSLog(@"detail:w=%f, h=%f", detail.view.frame.size.width, detail.view.frame.size.height);
-		NSLog(@"split:w=%f, h=%f", self.view.frame.size.width, self.view.frame.size.height);
+//		NSLog(@"detail:w=%f, h=%f", detail.view.frame.size.width, detail.view.frame.size.height);
+//		NSLog(@"split:w=%f, h=%f", self.view.frame.size.width, self.view.frame.size.height);
 		
 	}
 	else {
@@ -73,9 +73,9 @@
 		UIViewController *detail = [self.viewControllers objectAtIndex:1];
 		root.view.frame = CGRectMake(0, 0, 320, 768 - 20);
 		detail.view.frame = CGRectMake(321, 0, 704, 768 - 20);
-		NSLog(@"root:w=%f, h=%f", root.view.frame.size.width, root.view.frame.size.height);
-		NSLog(@"detail:w=%f, h=%f", detail.view.frame.size.width, detail.view.frame.size.height);
-		NSLog(@"split:w=%f, h=%f", self.view.frame.size.width, self.view.frame.size.height);
+//		NSLog(@"root:w=%f, h=%f", root.view.frame.size.width, root.view.frame.size.height);
+//		NSLog(@"detail:w=%f, h=%f", detail.view.frame.size.width, detail.view.frame.size.height);
+//		NSLog(@"split:w=%f, h=%f", self.view.frame.size.width, self.view.frame.size.height);
 	}
 }
 

@@ -218,8 +218,10 @@
 		[images_ setObject:dirImage forKey:[NSNumber numberWithInteger:4]];		
 		
 		UIBarButtonItem *getButton  = [[UIBarButtonItem alloc] initWithTitle:@"GET" style:UIBarButtonItemStyleBordered target:self action:@selector(getDidPush)];
+		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+		UIBarButtonItem *refreshButton  = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStyleBordered target:self action:@selector(listByFTP)];
 		
-		NSArray *items = [NSArray arrayWithObjects:getButton, nil];
+		NSArray *items = [NSArray arrayWithObjects:getButton, flexible, refreshButton, nil];
 		[self setToolbarItems:items];
 		
 		file_ = @"";
@@ -258,25 +260,26 @@
 			
 		case NSStreamEventOpenCompleted:
 //			[self updateMessage_:@"Connection Opened"];
-			NSLog(@"open");
+//			NSLog(@"open");
 			break;
 			
 		case NSStreamEventHasBytesAvailable:{
 
 			// 1行目に変数宣言が来るとエラーになるので括弧で囲む（他の文があればエラーにならない？）
 			// [self updateMessage_:@"Data Receiving..."];
-			NSLog(@"Receiving...");
+//			NSLog(@"Receiving...");
 			
 			uint8_t buffer[32768];
 			NSInteger bytesRead = [nwInputStream_ read:buffer maxLength:sizeof(buffer)];
 			
 			if (bytesRead < 0) {
-				[self stopFTP_:@"Receive Error"];
+				[self stopFTP_];
+				[self updateMessage_:@"Receive Error" success:NO];
 			}
 			else if (bytesRead == 0) {
-				[self stopFTP_:nil];
+				[self stopFTP_];
 				
-				NSLog(@"Received!!");
+//				NSLog(@"Received!!");
 				
 				if (ftpMode_ == kEdhitaFTPModeGET) {
 				
@@ -284,6 +287,10 @@
 						[localItems_ addObject:file_];
 						[localTableView_ reloadData];
 						[localTableView_ scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:localItems_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+
+						[self updateMessage_:[NSString stringWithFormat:@"Saved as \"%@\"", file_] success:YES];
+					} else {
+						[self updateMessage_:[NSString stringWithFormat:@"\"%@\" is overwritten", file_] success:YES];
 					}					
 				}
 			}
@@ -302,7 +309,8 @@
 						while (bytesWrittenSoFar != bytesRead) {
 							bytesWritten = [fileOutputStream_ write:&buffer[bytesWrittenSoFar] maxLength:bytesRead - bytesWrittenSoFar];
 							if (bytesWritten == -1) {
-								[self stopFTP_:@"File write error"];
+								[self stopFTP_];
+								[self updateMessage_:@"File write error" success:NO];
 								break;
 							} else {
 								bytesWrittenSoFar += bytesWritten;
@@ -319,17 +327,18 @@
 		// Sends a data for PUT
 		case NSStreamEventHasSpaceAvailable: {
 
-			NSLog(@"Sending...");
+//			NSLog(@"Sending...");
 
 			if (bufferOffset_ == bufferLimit_) {
 				NSInteger bytesRead = [fileInputStream_ read:buffer_ maxLength:kSendBufferSize];
 				
 				if (bytesRead == -1) {
-					[self stopFTP_:@"File read error"];
+					[self stopFTP_];
+					[self updateMessage_:@"File read error" success:NO];
 				} else if (bytesRead == 0) {
-					[self stopFTP_:nil];
+					[self stopFTP_];
 						
-					NSLog(@"Succeeded!");
+//					NSLog(@"Succeeded!");
 
 					/* だめだ、itemsがDictionaryのArrayなの忘れてた。
 					if ([items_ containsObject:localFile_] != YES) {
@@ -340,7 +349,7 @@
 					*/
 					[self listByFTP];
 					
-					NSLog(@"added!!!");
+//					NSLog(@"added!!!");
 						
 				} else {
 					bufferOffset_ = 0;
@@ -352,7 +361,8 @@
 				NSInteger bytesWritten;
 				bytesWritten = [nwOutputStream_ write:&buffer_[bufferOffset_] maxLength:bufferLimit_ - bufferOffset_];
 				if (bytesWritten == -1) {
-					[self stopFTP_:@"Network write error"];
+					[self stopFTP_];
+					[self updateMessage_:@"Network write error" success:NO];
 				} else {
 					bufferOffset_ += bytesWritten;
 				}
@@ -361,7 +371,8 @@
 		} break;
 			
 		case NSStreamEventErrorOccurred:
-			[self stopFTP_:@"Connection Error"];
+			[self stopFTP_];
+			[self updateMessage_:@"Connection Error" success:NO];
 			break;
 		default:
 			break;
@@ -397,13 +408,14 @@
         if (bytesConsumed == 0) {
             break;
         } else if (bytesConsumed < 0) {
-			[self stopFTP_:@"Parse Error"];
+			[self stopFTP_];
+			[self updateMessage_:@"Data Parse Error" success:NO];
             break;
         }		
 	}
 
 	if (newEntries.count != 0) {
-		NSLog(@"%@", [newEntries description]);
+//		NSLog(@"%@", [newEntries description]);
         [items_ addObjectsFromArray:newEntries];
 		[self.tableView reloadData];
     }
@@ -446,7 +458,7 @@
 }
 
 
-- (void)stopFTP_:(NSString *)message {
+- (void)stopFTP_ {
 	// LIST(& GET)
 	if (nwInputStream_ != nil) {
 		[nwInputStream_ removeFromRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
@@ -454,7 +466,6 @@
 		[nwInputStream_ close];
 		nwInputStream_ = nil;
 	}
-	[self updateMessage_:message];
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	listData_ = nil;
 
@@ -476,15 +487,16 @@
     }	
 }
 
-- (void)updateMessage_:(NSString *)message {
+- (void)updateMessage_:(NSString *)message success:(BOOL)success {
 	if (message == nil) {
-//		message = @"Suceeded";
 		self.tableView.tableHeaderView = nil;
-//		messageLabel_.textColor = [UIColor cyanColor];
-//		self.tableView.tableHeaderView = messageLabel_;
+		return;
+	}
+	if (success) {
+		messageLabel_.textColor = [UIColor cyanColor];
+		self.tableView.tableHeaderView = messageLabel_;
 	}
 	else {
-		NSLog(message);
 		messageLabel_.textColor = [UIColor orangeColor];
 		self.tableView.tableHeaderView = messageLabel_;
 //		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
@@ -512,8 +524,8 @@
 	}
 	listData_ = [[NSMutableData data] retain];
 		
-	NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ftp://%@/", urlString_]];
-	NSLog([url description]);
+	NSURL *url = [NSURL URLWithString:[self encodeURI:[NSString stringWithFormat:@"ftp://%@/", urlString_]]];
+//	NSLog([url description]);
 	CFReadStreamRef ftpStream = CFReadStreamCreateWithFTPURL(NULL, (CFURLRef) url);
 	
 	nwInputStream_ = (NSInputStream *)ftpStream;
@@ -524,7 +536,7 @@
 	
 	[nwInputStream_ open];
 	//	[self updateMessage_:@"Connecting..."];
-	[self updateMessage_:nil];
+	[self updateMessage_:nil success:NO];
 	
 	CFRelease(ftpStream);	
 }
@@ -549,7 +561,7 @@
 	
 	[nwInputStream_ open];
 
-	[self updateMessage_:nil];
+	[self updateMessage_:nil success:NO];
 
 	CFRelease(ftpStream);
 }
@@ -562,7 +574,7 @@
 	NSString *remotePath = [NSString stringWithFormat:@"ftp://%@", [urlString_ stringByAppendingPathComponent:localFile_]];
 	NSString *localPath = [localPath_ stringByAppendingPathComponent:localFile_];
 	
-	NSLog(localPath);
+//	NSLog(localPath);
 	fileInputStream_ = [[NSInputStream inputStreamWithFileAtPath:localPath] retain];
 	[fileInputStream_ open];	
 	
@@ -575,11 +587,15 @@
 	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
-	[self updateMessage_:nil];
+	[self updateMessage_:nil success:NO];
 	
 	CFRelease(ftpStream);
 }
 
+- (NSString *)encodeURI:(NSString *)string {
+	NSString *escaped = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, NULL, kCFStringEncodingUTF8);
+	return escaped;
+}
 
 @end
 

@@ -57,7 +57,6 @@
     [toolbar setItems:items animated:YES];
     [items release];
     self.popoverController = pc;
-	NSLog(@"popover show");
 }
 
 
@@ -91,11 +90,12 @@
 }
  */
 
-/*
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	
+	[self disableButton_];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -209,15 +209,15 @@
 		textView_.backgroundColor = [self getColorWithIndex:backgroundColor];
 		
 		// targetとactionをnilにしたら勝手にundo,redoしてくれるっぽいけど保証されるかわからんのでやめとく
-		UIBarButtonItem *undoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(undoDidPush)];
-		UIBarButtonItem *redoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRedo target:self action:@selector(redoDidPush)];
+		UIBarButtonItem *undoButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(undoDidPush)];
+		UIBarButtonItem *redoButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRedo target:self action:@selector(redoDidPush)];
 
 		UIBarButtonItem *fixed = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
 		fixed.width = 25;
 		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 		
-		UIBarButtonItem *leftButton  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_left.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(leftDidPush)];
-		UIBarButtonItem *rightButton  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_right.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(rightDidPush)];
+		UIBarButtonItem *leftButton_  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_left.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(leftDidPush)];
+		UIBarButtonItem *rightButton_  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_right.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(rightDidPush)];
 
 //		UIBarButtonItem *escapeButton  = [[UIBarButtonItem alloc] initWithTitle:@"&amp;" style:UIBarButtonItemStyleBordered target:self action:@selector(escapeDidPush)];
 
@@ -231,12 +231,12 @@
 //		UIBarButtonItem *safariButton  = [[UIBarButtonItem alloc] initWithTitle:@"Safari" style:UIBarButtonItemStyleBordered target:self action:@selector(safariDidPush)];
 		UIBarButtonItem *mailButton  = [[UIBarButtonItem alloc] initWithTitle:@"Mail" style:UIBarButtonItemStyleBordered target:self action:@selector(mailDidPush)];
 
-		NSArray *items = [NSArray arrayWithObjects:flexible, undoButton, redoButton, fixed, leftButton, rightButton, flexible, segmentButton, fixed, mailButton, nil];
+		NSArray *items = [NSArray arrayWithObjects:flexible, undoButton_, redoButton_, fixed, leftButton_, rightButton_, flexible, segmentButton, fixed, mailButton, nil];
 		[toolbar setItems:items];
 		
 		if ([settings objectForKey:@"accessoryView"] == NULL || [settings boolForKey:@"accessoryView"]) {
-			EdhitaAccessoryView *accessoryView = [[EdhitaAccessoryView alloc] initWithTextView:textView_];
-			textView_.inputAccessoryView = accessoryView;
+			accessoryView_ = [[EdhitaAccessoryView alloc] initWithTextView:textView_];
+			textView_.inputAccessoryView = accessoryView_;
 		}
 		
 		// ファイル名表示用ラベル
@@ -301,6 +301,8 @@
 
 		}		
 	}
+	
+	[self enableButton_];
 }
 
 - (void)keyboardWasHidden:(NSNotification *)aNotification {
@@ -310,10 +312,31 @@
 	CGRect textFrame = textView_.frame;
 	textFrame.size.height += frameEnd.size.height;
 	textView_.frame = textFrame;
-	NSLog(@"hidden");
 	
 	isKeyboardShown = NO;
+	[self disableButton_];
 }
+
+- (void)enableButton_ {
+    NSArray *items = [toolbar items];
+	((UIBarButtonItem *)[items objectAtIndex:1]).enabled = YES;
+	((UIBarButtonItem *)[items objectAtIndex:2]).enabled = YES;
+	((UIBarButtonItem *)[items objectAtIndex:3]).enabled = YES;
+	((UIBarButtonItem *)[items objectAtIndex:4]).enabled = YES;
+	((UIBarButtonItem *)[items objectAtIndex:5]).enabled = YES;
+	((UIBarButtonItem *)[items objectAtIndex:6]).enabled = YES;
+} 
+
+- (void)disableButton_ {
+    NSArray *items = [toolbar items];
+	((UIBarButtonItem *)[items objectAtIndex:1]).enabled = NO;
+	((UIBarButtonItem *)[items objectAtIndex:2]).enabled = NO;
+	((UIBarButtonItem *)[items objectAtIndex:3]).enabled = NO;
+	((UIBarButtonItem *)[items objectAtIndex:4]).enabled = NO;
+	((UIBarButtonItem *)[items objectAtIndex:5]).enabled = NO;
+	((UIBarButtonItem *)[items objectAtIndex:6]).enabled = NO;
+}
+
 
 // pathプロパティが変化した時にTextViewの内容を変更する
 - (void)setPath:(NSString *)path {
@@ -590,6 +613,19 @@
 
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	[controller dismissModalViewControllerAnimated:YES];
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+										 duration:(NSTimeInterval)duration {
+	[super willAnimateRotationToInterfaceOrientation:interfaceOrientation
+											duration:duration];
+	if (interfaceOrientation == UIInterfaceOrientationPortrait ||
+		interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+		accessoryView_.contentSize = CGSizeMake(768 * 2, 0);
+	}
+	else {
+		accessoryView_.contentSize = CGSizeMake(1024 * 2, 0);
+	}
 }
 
 @end

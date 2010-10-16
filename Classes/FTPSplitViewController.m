@@ -19,7 +19,7 @@
 		UIViewController *detail = [self.viewControllers objectAtIndex:1];
 		[self keepRootInPortrait:root detail:detail];
 	}	
-	NSLog(@"show ftp");
+//	NSLog(@"show ftp");
 
 	// FTP表示のタイミングでファイル更新を反映
 	UIViewController *root = [self.viewControllers objectAtIndex:0];

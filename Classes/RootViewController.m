@@ -418,13 +418,13 @@
 
 	if (self.tableView.tableHeaderView == nil) {
 		self.tableView.tableHeaderView = downloadView_;
-		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	} else {
 		self.tableView.tableHeaderView = nil;
 		downloadView_.frame = CGRectMake(0, 0, 320, 50);
 		messageLabel_.text = @"";
 		self.tableView.tableHeaderView = downloadView_;
-		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//		[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 	}
 	
 }
@@ -468,12 +468,12 @@
 	downloadView_.frame = CGRectMake(0, 0, 320, 80);
 	self.tableView.tableHeaderView = downloadView_;
 	
-	NSURL *url = [NSURL URLWithString:urlField_.text];
+	NSURL *url = [NSURL URLWithString:[self encodeURI:urlField_.text]];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30.0];
 	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 
 	if (connection) {
-		NSLog(@"connected.");
+//		NSLog(@"connected.");
 	} else {
 		messageLabel_.textColor = [UIColor orangeColor];	
 		messageLabel_.text = @"Can't Connect";		
@@ -501,14 +501,18 @@
 		if ([items_ containsObject:name] != YES) {
 			[items_ addObject:name];
 			[self.tableView reloadData];
-			[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:items_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+//			[self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:items_.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
+
+			messageLabel_.textColor = [UIColor cyanColor];	
+			messageLabel_.text = [NSString stringWithFormat:@"Saved as \"%@\"", name];
+		} else {
+			messageLabel_.textColor = [UIColor cyanColor];	
+			messageLabel_.text = [NSString stringWithFormat:@"\"%@\" is overwritten", name];
 		}
-		messageLabel_.textColor = [UIColor cyanColor];	
-		messageLabel_.text = [NSString stringWithFormat:@"Saved as \"%@\"", name];
 	}
 	else {
 		messageLabel_.textColor = [UIColor orangeColor];	
-		messageLabel_.text = @"Something Wrong";		
+		messageLabel_.text = @"Donwload Error";		
 	}
 }
 
@@ -519,6 +523,11 @@
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	messageLabel_.textColor = [UIColor orangeColor];	
 	messageLabel_.text = [error localizedDescription];		
+}
+
+- (NSString *)encodeURI:(NSString *)string {
+	NSString *escaped = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, NULL, kCFStringEncodingUTF8);
+	return escaped;
 }
 
 @end

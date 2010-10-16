@@ -228,8 +228,6 @@
 }
 
 - (void)putDidPush {
-	NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-
 	FTPRemoteTableController *tableController = (FTPRemoteTableController *)remoteController_.topViewController;
 	[tableController putByFtp];
 }
