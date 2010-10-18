@@ -142,7 +142,7 @@
 //	NSLog(@"before %@", textView_.text);
 	textView_.text = text;
 //	NSLog(@"after %@", textView_.text);
-	textView_.selectedRange = NSMakeRange(range.location + 1, range.length);
+	textView_.selectedRange = NSMakeRange(range.location + 1, 1);
 //	NSLog(@"after %@", textView_.text);
 
 	// undo登録

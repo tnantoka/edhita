@@ -284,6 +284,8 @@
 		urlField_.borderStyle = UITextBorderStyleRoundedRect;
 		urlField_.placeholder = @"url";
 		urlField_.text = @"http://";
+		urlField_.keyboardType = UIKeyboardTypeURL;
+		urlField_.clearButtonMode = UITextFieldViewModeWhileEditing;
 		
 		UIButton *dlButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[dlButton setTitle:@"DL" forState:UIControlStateNormal];
@@ -391,7 +393,7 @@
 }
 
 - (NSArray *)testDevices {
-	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, nil];
+	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, kTestIPadId, nil];
 }
  
 - (void)ftpDidPush {

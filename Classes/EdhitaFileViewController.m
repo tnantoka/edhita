@@ -292,7 +292,7 @@
 }
 
 - (NSArray *)testDevices {
-	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, nil];
+	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, kTestIPadId, nil];
 }
 
 
