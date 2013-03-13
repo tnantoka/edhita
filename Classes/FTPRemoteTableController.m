@@ -43,6 +43,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 	[self listByFTP];
+    [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
 /*

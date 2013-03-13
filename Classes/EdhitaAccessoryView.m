@@ -142,11 +142,11 @@
 //	NSLog(@"before %@", textView_.text);
 	textView_.text = text;
 //	NSLog(@"after %@", textView_.text);
-	textView_.selectedRange = NSMakeRange(range.location + 1, 1);
+	textView_.selectedRange = NSMakeRange(range.location + 1, range.length);
 //	NSLog(@"after %@", textView_.text);
 
 	// undo登録
-	[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(backSpace:) object:string];
+	//[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(backSpace:) object:string];
     
     [text release];
 }
@@ -161,10 +161,10 @@
 	[text replaceCharactersInRange:textView_.selectedRange withString:@""];
 	textView_.text = text;
 	
-	textView_.selectedRange = NSMakeRange(range.location - 1, 0);
+	textView_.selectedRange = NSMakeRange(range.location - 1, range.length);
 	
 	// redo登録
-	[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(insertString:) object:string];
+	//[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(insertString:) object:string];
     
     [text release];
 }

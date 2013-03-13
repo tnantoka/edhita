@@ -416,44 +416,6 @@
 			<key>DefaultValue</key>
 			<true/>
 		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>FTP</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Server</string>
-			<key>Key</key>
-			<string>ftpServer</string>
-			<key>DefaultValue</key>
-			<string>localhost</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>User ID</string>
-			<key>Key</key>
-			<string>ftpId</string>
-			<key>DefaultValue</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Password</string>
-			<key>Key</key>
-			<string>ftpPass</string>
-			<key>DefaultValue</key>
-			<string></string>
-			<key>IsSecure</key>
-			<true/>
-		</dict>
 	</array>
 </dict>
 </plist>

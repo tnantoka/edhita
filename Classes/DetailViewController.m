@@ -55,14 +55,16 @@
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items insertObject:barButtonItem atIndex:0];
     [toolbar setItems:items animated:YES];
-    [items release];
     self.popoverController = pc;
+    
+    [items release];
+
 }
 
 
 // Called when the view is shown again in the split view, invalidating the button and popover controller.
 - (void)splitViewController: (UISplitViewController*)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
-    
+
     NSMutableArray *items = [[toolbar items] mutableCopy];
     [items removeObjectAtIndex:0];
     [toolbar setItems:items animated:YES];
@@ -103,16 +105,19 @@
 */
 
 - (void)viewWillDisappear:(BOOL)animated {
-	// FTPから復帰したときにもPopoverが追加されちゃうので消しとく
+    [super viewWillDisappear:animated];
+
+    // FTPから復帰したときにもPopoverが追加されちゃうので消しとく
+    /*
 	if (self.popoverController != nil) {
 		NSMutableArray *items = [[toolbar items] mutableCopy];
 		[items removeObjectAtIndex:0];
 		[toolbar setItems:items animated:YES];
 		[items release];
 	}
+    */
 
 	[self saveContents];
-    [super viewWillDisappear:animated];
 }
 
 /*
@@ -155,8 +160,12 @@
 		
 		toolbar = [[UIToolbar alloc] init];
 //		toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
-		[toolbar sizeToFit];		
+		//self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+		self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+		//[toolbar sizeToFit];
+
+        self.toolbar.frame = CGRectMake(0, 0, self.view.bounds.size.width, 44.0f);
+
 		[self.view addSubview:toolbar];
 		// これやっとかないとpopview出すボタンが追加できない（[toolbar items]がnullになるから）
 //		[toolbar setItems:[NSArray array]];
@@ -269,6 +278,8 @@
 		self.path = welcome;
 		segment_.selectedSegmentIndex = 1;
 		webView_.hidden = NO;
+        NSLog(@"welcome: %@", welcome);
+        [self changeUrl];
 	}
 	return self;
 }
@@ -520,6 +531,8 @@
 
 - (void)segmentDidPush:(UISegmentedControl *)sender {
 	
+    NSLog(@"segment did push");
+    
 	if (0 == sender.selectedSegmentIndex) {
 		
 //		[UIView beginAnimations:nil context:NULL];
@@ -549,6 +562,8 @@
 }
 
 - (void)changeUrl {
+    
+    NSLog(@"change url");
 
 	webViewReloaded = NO;
 	

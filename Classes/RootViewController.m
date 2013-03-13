@@ -30,6 +30,8 @@
 	[items_ release];
 	items_ = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:path_ error:&error] mutableCopy];
 	[self.tableView reloadData];
+    
+    [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
 /*
@@ -239,16 +241,20 @@
 //		[newFileButton addTarget:self action:@selector(newFileDidPush) forControlEvents:UIControlEventTouchUpInside];
 		
 //		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithCustomView:newFileButton];
-		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
-		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
+		//UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
+		//UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
+
+        UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithTitle:@"File＋" style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
+		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithTitle:@"Dir＋" style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
 
 		// FTP
-		UIBarButtonItem *ftpButton = [[UIBarButtonItem alloc] initWithTitle:@"FTP" style:UIBarButtonItemStyleBordered target:self action:@selector(ftpDidPush)];
+		//UIBarButtonItem *ftpButton = [[UIBarButtonItem alloc] initWithTitle:@"FTP" style:UIBarButtonItemStyleBordered target:self action:@selector(ftpDidPush)];
 
 		// HTTP 
-		UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
+		//UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
+		UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithTitle:@"DL" style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
 				
-		NSArray *items = [NSArray arrayWithObjects:downloadButton, ftpButton, space, newFile, newDir, nil];
+		NSArray *items = [NSArray arrayWithObjects:downloadButton/*, ftpButton*/, space, newFile, newDir, nil];
 		[self setToolbarItems:items];
 
 		// 編集ボタンの表示（selfのeditButtonを設定してやるだけでいい）
@@ -261,6 +267,7 @@
 //		self.tableView.tableFooterView = adView;
 		
 		srand(time(NULL));
+        /*
 		AdMobView *adMobView = nil;
 		
 		switch (rand() % 2) {
@@ -273,7 +280,7 @@
 		}
 				
 		self.tableView.tableFooterView = adMobView;
-		
+		*/
 		
 		// download
 		downloadView_ = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
@@ -404,7 +411,7 @@
 	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
 
 	if ([server isEqualToString:@""] || [userId isEqualToString:@""] || [pass isEqualToString:@""]) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"FTP Settings Not Found!" message:@"Please set Server/ID/Pass by Settings App." delegate:nil cancelButtonTitle:@"test" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"FTP Settings Not Found!" message:@"Please set Server/ID/Pass by Settings App." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 		[alert show];
 		return;
 	}

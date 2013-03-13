@@ -40,11 +40,13 @@
 }
 */
 
-/*
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [self.navigationController setToolbarHidden:YES animated:YES];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -228,6 +230,7 @@
 		textField_ = [[UITextField alloc] init];
 		
 		srand(time(NULL));
+        /*
 		AdMobView *adMobView = nil;
 		
 		switch (rand() % 2) {
@@ -239,7 +242,7 @@
 		}
 		
 		self.tableView.tableFooterView = adMobView;
-		
+		*/
 		
 	}
 	return self;

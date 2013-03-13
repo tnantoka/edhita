@@ -100,6 +100,7 @@
 //	[ftpViewController_.view removeFromSuperview];
 	ftpViewController_.view.hidden = YES;
 	 */
+    [self rootViewChangesEditor];
     [window makeKeyAndVisible];
 	
 	return YES;
@@ -146,8 +147,9 @@
 - (void) rootViewChangesFtp {
 
 	[splitViewController_.view removeFromSuperview];
-	[window addSubview:ftpViewController_.view];
-
+	//[window addSubview:ftpViewController_.view];
+    window.rootViewController = ftpViewController_;
+    
 	/*
 	// 初めから表示しとかないとlandscapeで表示した時にportraitになる
 	[splitViewController_.view removeFromSuperview];
@@ -174,8 +176,9 @@
 
 - (void) rootViewChangesEditor {
 	[ftpViewController_.view removeFromSuperview];
-	[window addSubview:splitViewController_.view];
-	[splitViewController_ setupViewWithOrientation:ftpViewController_.interfaceOrientation];
+	//[window addSubview:splitViewController_.view];
+    window.rootViewController = splitViewController_;
+	//[splitViewController_ setupViewWithOrientation:ftpViewController_.interfaceOrientation];
 	
 }
 
