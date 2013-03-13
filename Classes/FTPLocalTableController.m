@@ -211,7 +211,7 @@
 		EdhitaAppDelegate *appDelegate = (EdhitaAppDelegate *)[UIApplication sharedApplication].delegate;
 		UIBarButtonItem *editorButton  = [[UIBarButtonItem alloc] initWithTitle:@"Editor" style:UIBarButtonItemStyleBordered target:appDelegate action:@selector(rootViewChangesEditor)];
 		UIBarButtonItem *putButton  = [[UIBarButtonItem alloc] initWithTitle:@"PUT" style:UIBarButtonItemStyleBordered target:self action:@selector(putDidPush)];
-		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+		UIBarButtonItem *flexible = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 
 		NSArray *items = [NSArray arrayWithObjects:editorButton, flexible, putButton, nil];
 		[self setToolbarItems:items];

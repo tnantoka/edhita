@@ -48,4 +48,6 @@
 
 - (NSString *)encodeURI:(NSString *)string;
 
+- (id)initWithPath:(NSString *)path;
+
 @end

@@ -147,6 +147,8 @@
 
 	// undo登録
 	[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(backSpace:) object:string];
+    
+    [text release];
 }
 
 - (void)backSpace:(NSString *)string {
@@ -163,6 +165,8 @@
 	
 	// redo登録
 	[[textView_ undoManager] registerUndoWithTarget:self selector:@selector(insertString:) object:string];
+    
+    [text release];
 }
 
 /*

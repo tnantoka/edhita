@@ -227,7 +227,7 @@
 		images_ = [[NSArray arrayWithObjects:fileImage, dirImage, nil] retain];
 
 		// 右寄せ
-		UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+		UIBarButtonItem *space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 
 		// 画像＆文字ボタン
 //		UIButton *newFileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -261,7 +261,7 @@
 //		self.tableView.tableFooterView = adView;
 		
 		srand(time(NULL));
-		AdMobView *adMobView;
+		AdMobView *adMobView = nil;
 		
 		switch (rand() % 2) {
 			case 0:
@@ -529,6 +529,7 @@
 
 - (NSString *)encodeURI:(NSString *)string {
 	NSString *escaped = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, NULL, kCFStringEncodingUTF8);
+    [escaped autorelease];
 	return escaped;
 }
 

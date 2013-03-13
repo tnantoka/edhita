@@ -8,7 +8,7 @@
 
 #import "FTPRemoteTableController.h"
 
-@implementation FTPRemoteTableController
+@implementation FTPRemoteTableController 
 
 @synthesize popoverController, localPath = localPath_, localItems = localItems_, localTableView = localTableView_, urlString = urlString_, localFile = localFile_;
 
@@ -218,7 +218,7 @@
 		[images_ setObject:dirImage forKey:[NSNumber numberWithInteger:4]];		
 		
 		UIBarButtonItem *getButton  = [[UIBarButtonItem alloc] initWithTitle:@"GET" style:UIBarButtonItemStyleBordered target:self action:@selector(getDidPush)];
-		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+		UIBarButtonItem *flexible = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 		UIBarButtonItem *refreshButton  = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStyleBordered target:self action:@selector(listByFTP)];
 		
 		NSArray *items = [NSArray arrayWithObjects:getButton, flexible, refreshButton, nil];
@@ -594,6 +594,7 @@
 
 - (NSString *)encodeURI:(NSString *)string {
 	NSString *escaped = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)string, NULL, NULL, kCFStringEncodingUTF8);
+    [escaped autorelease];
 	return escaped;
 }
 

@@ -23,4 +23,6 @@
 
 - (void)refresh;
 
+- (id)initWithPath:(NSString *)path;
+
 @end

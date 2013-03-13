@@ -119,7 +119,7 @@
 		textField_.autocapitalizationType = UITextAutocapitalizationTypeNone;
 	}
 	else {
-		UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.frame.size.width * 0.3, 0, cell.frame.size.width * 0.6, cell.frame.size.height)];
+		UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(cell.frame.size.width * 0.3, 0, cell.frame.size.width * 0.6, cell.frame.size.height)] autorelease];
 		label.textAlignment = UITextAlignmentRight;
 		label.backgroundColor = [UIColor clearColor];
 		[cell.contentView addSubview:label];
@@ -132,7 +132,7 @@
 // documentに載ってるくせに。
 //			textField.text = [[attributes objectForKey:NSFileModificationDate] descriptionWithCalendarFormat:@"%Y-%m-%d %H:%M:%S" timeZone:nil locale:nil];
 
-			NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+			NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 			[dateFormatter setDateFormat:@"Y-MM-dd HH:mm:ss"];
 			label.text = [dateFormatter stringFromDate:[attributes objectForKey:NSFileModificationDate]];						
 		}
@@ -228,7 +228,7 @@
 		textField_ = [[UITextField alloc] init];
 		
 		srand(time(NULL));
-		AdMobView *adMobView;
+		AdMobView *adMobView = nil;
 		
 		switch (rand() % 2) {
 			case 0:

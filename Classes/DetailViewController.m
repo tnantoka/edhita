@@ -212,9 +212,9 @@
 		UIBarButtonItem *undoButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(undoDidPush)];
 		UIBarButtonItem *redoButton_ = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRedo target:self action:@selector(redoDidPush)];
 
-		UIBarButtonItem *fixed = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+		UIBarButtonItem *fixed = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil] autorelease];
 		fixed.width = 25;
-		UIBarButtonItem *flexible = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+		UIBarButtonItem *flexible = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 		
 		UIBarButtonItem *leftButton_  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_left.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(leftDidPush)];
 		UIBarButtonItem *rightButton_  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"arrow_right.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(rightDidPush)];
@@ -226,7 +226,7 @@
 		segment_.selectedSegmentIndex = 1;
 //		segment.frame = CGRectMake(0, 0, 130, 30);
 		[segment_ addTarget:self action:@selector(segmentDidPush:) forControlEvents:UIControlEventValueChanged];
-		UIBarButtonItem *segmentButton = [[UIBarButtonItem alloc] initWithCustomView:segment_];
+		UIBarButtonItem *segmentButton = [[[UIBarButtonItem alloc] initWithCustomView:segment_] autorelease];
 		
 //		UIBarButtonItem *safariButton  = [[UIBarButtonItem alloc] initWithTitle:@"Safari" style:UIBarButtonItemStyleBordered target:self action:@selector(safariDidPush)];
 		UIBarButtonItem *mailButton  = [[UIBarButtonItem alloc] initWithTitle:@"Mail" style:UIBarButtonItemStyleBordered target:self action:@selector(mailDidPush)];

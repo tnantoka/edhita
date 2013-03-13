@@ -20,7 +20,7 @@ enum {
 };
 #define kSendBufferSize 32768
 
-@interface FTPRemoteTableController : UITableViewController <UISplitViewControllerDelegate> {
+@interface FTPRemoteTableController : UITableViewController <UISplitViewControllerDelegate, NSStreamDelegate> {
 	UIPopoverController *popoverController;
 	NSMutableArray *items_;
 	UILabel *messageLabel_;
