@@ -8,7 +8,12 @@
 
 #import "EdhitaFileViewController.h"
 
-@implementation EdhitaFileViewController
+#import "GADBannerView.h"
+
+@implementation EdhitaFileViewController {
+    GADBannerView *bannerView_;
+}
+
 
 @synthesize detailViewController;
 
@@ -219,6 +224,7 @@
 
 
 - (void)dealloc {
+    [bannerView_ release];
     [super dealloc];
 }
 
@@ -243,7 +249,32 @@
 		
 		self.tableView.tableFooterView = adMobView;
 		*/
-		
+
+        bannerView_ = nil;
+        switch (rand() % 2) {
+			case 0:
+                bannerView_ = [[GADBannerView alloc]
+                               initWithAdSize:kGADAdSizeMediumRectangle];
+                bannerView_.frame = CGRectOffset(bannerView_.frame, 10.0f, 0);
+				break;
+			case 1:
+                bannerView_ = [[GADBannerView alloc]
+                               initWithAdSize:kGADAdSizeBanner];
+				break;
+		}
+        bannerView_.adUnitID = kPublisherId;
+        bannerView_.rootViewController = self;
+        [self.view addSubview:bannerView_];
+        
+        GADRequest *request = [GADRequest request];
+#ifdef DEBUG
+        NSLog(@"debug");
+        request.testing = YES;
+#endif
+        [bannerView_ loadRequest:request];
+        
+		self.tableView.tableFooterView = bannerView_;
+
 	}
 	return self;
 }
@@ -270,7 +301,7 @@
 	return CGSizeMake(320, 527);
 }
 
-
+/*
 #pragma mark -
 #pragma mark AdMobDelegate methods
 
@@ -297,7 +328,7 @@
 - (NSArray *)testDevices {
 	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, kTestIPadId, nil];
 }
-
+*/
 
 @end
 

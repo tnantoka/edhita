@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "EdhitaFileViewController.h"
 //#import "DetailViewController.h"
-#import "AdMobDelegateProtocol.h"
-#import "AdMobView.h"
 #import "EdhitaAppDelegate.h"
 
 // publisher ID用のマクロを定義
@@ -19,7 +17,7 @@
 
 #import "DetailViewController.h"
 
-@interface RootViewController : UITableViewController <AdMobDelegate> {
+@interface RootViewController : UITableViewController {
     DetailViewController *detailViewController;
 	NSMutableArray *items_;
 	NSArray *images_;
