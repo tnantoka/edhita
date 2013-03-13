@@ -18,45 +18,13 @@
 @synthesize detailViewController;
 
 #pragma mark -
-#pragma mark Initialization
-
-/*
-- (id)initWithStyle:(UITableViewStyle)style {
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-    if ((self = [super initWithStyle:style])) {
-    }
-    return self;
-}
-*/
-
-
-#pragma mark -
 #pragma mark View lifecycle
-
-/*
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-*/
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self.navigationController setToolbarHidden:YES animated:YES];
 }
-
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
 
 - (void)viewWillDisappear:(BOOL)animated {
 	[self renameFile];
@@ -132,13 +100,6 @@
 		[cell.contentView addSubview:label];
 
 		if(indexPath.row == 1) {
-// timezoneが入ってくるので却下
-//			textField.text = [[attributes objectForKey:NSFileModificationDate] description];
-//			textField.text = [[attributes objectForKey:NSFileModificationDate] descriptionWithLocale:nil];
-
-// documentに載ってるくせに。
-//			textField.text = [[attributes objectForKey:NSFileModificationDate] descriptionWithCalendarFormat:@"%Y-%m-%d %H:%M:%S" timeZone:nil locale:nil];
-
 			NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
 			[dateFormatter setDateFormat:@"Y-MM-dd HH:mm:ss"];
 			label.text = [dateFormatter stringFromDate:[attributes objectForKey:NSFileModificationDate]];						
@@ -152,58 +113,11 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark -
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-	/*
-	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-	 [self.navigationController pushViewController:detailViewController animated:YES];
-	 [detailViewController release];
-	 */
 }
 
 
@@ -235,20 +149,8 @@
 		self.title = [path_ lastPathComponent];
 		textField_ = [[UITextField alloc] init];
 		
+        // AdMob
 		srand(time(NULL));
-        /*
-		AdMobView *adMobView = nil;
-		
-		switch (rand() % 2) {
-			case 0:
-				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];				
-				break;
-			case 1:
-				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
-		}
-		
-		self.tableView.tableFooterView = adMobView;
-		*/
 
         bannerView_ = nil;
         switch (rand() % 2) {
@@ -264,7 +166,6 @@
 		}
         bannerView_.adUnitID = kPublisherId;
         bannerView_.rootViewController = self;
-        [self.view addSubview:bannerView_];
         
         GADRequest *request = [GADRequest request];
 #ifdef DEBUG
@@ -301,34 +202,6 @@
 	return CGSizeMake(320, 527);
 }
 
-/*
-#pragma mark -
-#pragma mark AdMobDelegate methods
-
-- (NSString *)publisherIdForAd:(AdMobView *)adView {
-	return kPublisherId; // this should be prefilled; if not, get it from www.admob.com
-}
-
-- (UIViewController *)currentViewControllerForAd:(AdMobView *)adView {
-	// Return the top level view controller if possible. In this case, it is
-	// the split view controller
-	return self.splitViewController;
-	//	return self.navigationController.parentViewController;
-}
-
-- (void)willPresentFullScreenModalFromAd:(AdMobView *)adView {
-	// IMPORTANT!!! IMPORTANT!!!
-	// If we are about to get a full screen modal and we have a popover controller, dimiss it.
-	// Otherwise, you may see the popover on top of the landing page.
-	if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
-		[detailViewController.popoverController dismissPopoverAnimated:YES];
-	}
-}
-
-- (NSArray *)testDevices {
-	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, kTestIPadId, nil];
-}
-*/
 
 @end
 

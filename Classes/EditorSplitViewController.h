@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FTPSplitViewController.h"
 
 @interface EditorSplitViewController : UISplitViewController {
 
 }
-
-- (void)setupViewWithOrientation:(UIInterfaceOrientation)orientation;
 
 @end

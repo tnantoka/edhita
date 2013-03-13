@@ -62,44 +62,6 @@
 	[navigationController release];
 	[detailViewController release];
 	
-	// FTP
-
-	/* 生のままだと回転対応ができない
-	UITableViewController *ftpTableViewController = [[UITableViewController alloc] init];
-	UINavigationController *ftpNavViewController = [[EdhitaNavigationController alloc] initWithRootViewController:ftpTableViewController];	
-	UIViewController *ftpDetailViewController = [[UIViewController alloc] init];
-	ftpDetailViewController.view.backgroundColor = [UIColor grayColor];
-	
-	ftpViewController_ = [[UISplitViewController alloc] init];
-	ftpViewController_.viewControllers = [NSArray arrayWithObjects:ftpNavViewController, ftpDetailViewController, nil];
-	ftpViewController_.delegate = detailViewController;
-	*/
-	
-	FTPLocalTableController *localTable = [[[FTPLocalTableController alloc] initWithPath:path] autorelease];
-	FTPLocalNavigationController *localNav = [[[FTPLocalNavigationController alloc] initWithRootViewController:localTable] autorelease];
-
-	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
-	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
-	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
-	NSString *urlString = [NSString stringWithFormat:@"%@:%@@%@", userId, pass, server];
-	
-	FTPRemoteTableController *remoteTable = [[[FTPRemoteTableController alloc] initWithUrlString:urlString] autorelease];
-	remoteTable.title = server; // URLがそのまま見えちゃわないように
-	FTPRemoteNavigationController *remoteNav = [[[FTPRemoteNavigationController alloc] initWithRootViewController:remoteTable] autorelease];
-	remoteTable.localPath = path;
-	remoteTable.localItems = localTable.items;
-	remoteTable.localTableView = localTable.tableView;
-	localTable.remoteController = remoteNav;
-	
-	ftpViewController_ = [[FTPSplitViewController alloc] init];
-	ftpViewController_.viewControllers = [NSArray arrayWithObjects:localNav, remoteNav, nil];
-	ftpViewController_.delegate = remoteTable;
-
-	/*
-	[window addSubview:ftpViewController_.view];
-//	[ftpViewController_.view removeFromSuperview];
-	ftpViewController_.view.hidden = YES;
-	 */
     [self rootViewChangesEditor];
     [window makeKeyAndVisible];
 	
@@ -144,42 +106,10 @@
     [super dealloc];
 }
 
-- (void) rootViewChangesFtp {
-
-	[splitViewController_.view removeFromSuperview];
-	//[window addSubview:ftpViewController_.view];
-    window.rootViewController = ftpViewController_;
-    
-	/*
-	// 初めから表示しとかないとlandscapeで表示した時にportraitになる
-	[splitViewController_.view removeFromSuperview];
-//	splitViewController_.view.hidden = YES;
-//	[window addSubview:ftpViewController_.view];
-	ftpViewController_.view.hidden = NO;
-	
-//	splitViewController_.view.hidden = YES;
-//	ftpViewController_.view.hidden = NO;
-
-	// windowが空になると方向が反映されないのかと思ってdummyのcontrollerを
-	// rotate=YESにして非表示にしておいたけど駄目だった。	
-	*/
-	
-	// もどるとき
-/*
-	[ftpViewController_.view removeFromSuperview];
-	[window addSubview:splitViewController_.view];
-	[window addSubview:ftpViewController_.view];
-	ftpViewController_.view.hidden = YES;
-*/	
-	
-}
-
 - (void) rootViewChangesEditor {
-	[ftpViewController_.view removeFromSuperview];
 	//[window addSubview:splitViewController_.view];
     window.rootViewController = splitViewController_;
 	//[splitViewController_ setupViewWithOrientation:ftpViewController_.interfaceOrientation];
-	
 }
 
 

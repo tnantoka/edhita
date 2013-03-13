@@ -40,7 +40,6 @@
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath;
 - (CGSize)contentSizeForViewInPopover;
 
-- (void)ftpDidPush;
 - (void)downloadDidPush;
 - (void)dlDidPush;
 

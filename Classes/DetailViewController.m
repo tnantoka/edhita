@@ -107,16 +107,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
-    // FTPから復帰したときにもPopoverが追加されちゃうので消しとく
-    /*
-	if (self.popoverController != nil) {
-		NSMutableArray *items = [[toolbar items] mutableCopy];
-		[items removeObjectAtIndex:0];
-		[toolbar setItems:items animated:YES];
-		[items release];
-	}
-    */
-
 	[self saveContents];
 }
 
@@ -278,7 +268,6 @@
 		self.path = welcome;
 		segment_.selectedSegmentIndex = 1;
 		webView_.hidden = NO;
-        NSLog(@"welcome: %@", welcome);
         [self changeUrl];
 	}
 	return self;
@@ -530,9 +519,7 @@
 //}
 
 - (void)segmentDidPush:(UISegmentedControl *)sender {
-	
-    NSLog(@"segment did push");
-    
+	    
 	if (0 == sender.selectedSegmentIndex) {
 		
 //		[UIView beginAnimations:nil context:NULL];
@@ -563,8 +550,6 @@
 
 - (void)changeUrl {
     
-    NSLog(@"change url");
-
 	webViewReloaded = NO;
 	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;

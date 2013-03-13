@@ -23,17 +23,12 @@
 		130F35981258AF57007861E2 /* delete.txt in Resources */ = {isa = PBXBuildFile; fileRef = 130F35971258AF57007861E2 /* delete.txt */; };
 		13174DE31217A1C600FC741F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE01217A1C600FC741F /* DetailViewController.m */; };
 		13174DE41217A1C700FC741F /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13174DE21217A1C600FC741F /* RootViewController.m */; };
-		13D479001250EBD20078A651 /* FTPLocalTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D478FF1250EBD20078A651 /* FTPLocalTableController.m */; };
-		13D479031250EBE30078A651 /* FTPRemoteTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479021250EBE30078A651 /* FTPRemoteTableController.m */; };
-		13D479061250EC5C0078A651 /* FTPLocalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */; };
-		13D479091250EC690078A651 /* FTPRemoteNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13D479081250EC690078A651 /* FTPRemoteNavigationController.m */; };
 		13F0F5401257C39D007D7386 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F0F53F1257C39D007D7386 /* download.png */; };
 		13F1C244122AAE9100027068 /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C242122AAE9100027068 /* arrow_left.png */; };
 		13F1C245122AAE9100027068 /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F1C243122AAE9100027068 /* arrow_right.png */; };
 		13F214F0121FFB5800F38E30 /* EdhitaFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F214EF121FFB5800F38E30 /* EdhitaFileViewController.m */; };
 		13F340BB122A4C02007264FD /* EdhitaAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */; };
 		13F43A0312618DC000678F48 /* EditorSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F43A0212618DC000678F48 /* EditorSplitViewController.m */; };
-		13F9A46D1260A70200383AD7 /* FTPSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F9A46C1260A70200383AD7 /* FTPSplitViewController.m */; };
 		13F9A6B11260CB0000383AD7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F9A6B01260CB0000383AD7 /* CFNetwork.framework */; };
 		13FC0DCE122A0C1200FB0693 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 13FC0DCD122A0C1200FB0693 /* Settings.bundle */; };
 		1D3623260D0F684500981E51 /* EdhitaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* EdhitaAppDelegate.m */; };
@@ -75,14 +70,6 @@
 		13174DE11217A1C600FC741F /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		13174DE21217A1C600FC741F /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdhitaPrivateCommon.h; sourceTree = "<group>"; };
-		13D478FE1250EBD20078A651 /* FTPLocalTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPLocalTableController.h; sourceTree = "<group>"; };
-		13D478FF1250EBD20078A651 /* FTPLocalTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPLocalTableController.m; sourceTree = "<group>"; };
-		13D479011250EBE30078A651 /* FTPRemoteTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPRemoteTableController.h; sourceTree = "<group>"; };
-		13D479021250EBE30078A651 /* FTPRemoteTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPRemoteTableController.m; sourceTree = "<group>"; };
-		13D479041250EC5C0078A651 /* FTPLocalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPLocalNavigationController.h; sourceTree = "<group>"; };
-		13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPLocalNavigationController.m; sourceTree = "<group>"; };
-		13D479071250EC690078A651 /* FTPRemoteNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPRemoteNavigationController.h; sourceTree = "<group>"; };
-		13D479081250EC690078A651 /* FTPRemoteNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPRemoteNavigationController.m; sourceTree = "<group>"; };
 		13F0F53F1257C39D007D7386 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
 		13F1C242122AAE9100027068 /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
 		13F1C243122AAE9100027068 /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
@@ -92,8 +79,6 @@
 		13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdhitaAccessoryView.m; sourceTree = "<group>"; };
 		13F43A0112618DC000678F48 /* EditorSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorSplitViewController.h; sourceTree = "<group>"; };
 		13F43A0212618DC000678F48 /* EditorSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorSplitViewController.m; sourceTree = "<group>"; };
-		13F9A46B1260A70200383AD7 /* FTPSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPSplitViewController.h; sourceTree = "<group>"; };
-		13F9A46C1260A70200383AD7 /* FTPSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPSplitViewController.m; sourceTree = "<group>"; };
 		13F9A6B01260CB0000383AD7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		13FC0DCD122A0C1200FB0693 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -167,16 +152,6 @@
 				13F340B9122A4C02007264FD /* EdhitaAccessoryView.h */,
 				13F340BA122A4C02007264FD /* EdhitaAccessoryView.m */,
 				13645F3C123908E6002BC640 /* EdhitaPrivateCommon.h */,
-				13D478FE1250EBD20078A651 /* FTPLocalTableController.h */,
-				13D478FF1250EBD20078A651 /* FTPLocalTableController.m */,
-				13D479011250EBE30078A651 /* FTPRemoteTableController.h */,
-				13D479021250EBE30078A651 /* FTPRemoteTableController.m */,
-				13D479041250EC5C0078A651 /* FTPLocalNavigationController.h */,
-				13D479051250EC5C0078A651 /* FTPLocalNavigationController.m */,
-				13D479071250EC690078A651 /* FTPRemoteNavigationController.h */,
-				13D479081250EC690078A651 /* FTPRemoteNavigationController.m */,
-				13F9A46B1260A70200383AD7 /* FTPSplitViewController.h */,
-				13F9A46C1260A70200383AD7 /* FTPSplitViewController.m */,
 				13F43A0112618DC000678F48 /* EditorSplitViewController.h */,
 				13F43A0212618DC000678F48 /* EditorSplitViewController.m */,
 				9B6445A416F0802D00517432 /* EdhitaGlobal.h */,
@@ -362,11 +337,6 @@
 				1301C44B121F63BF009C9FFE /* EdhitaNavigationController.m in Sources */,
 				13F214F0121FFB5800F38E30 /* EdhitaFileViewController.m in Sources */,
 				13F340BB122A4C02007264FD /* EdhitaAccessoryView.m in Sources */,
-				13D479001250EBD20078A651 /* FTPLocalTableController.m in Sources */,
-				13D479031250EBE30078A651 /* FTPRemoteTableController.m in Sources */,
-				13D479061250EC5C0078A651 /* FTPLocalNavigationController.m in Sources */,
-				13D479091250EC690078A651 /* FTPRemoteNavigationController.m in Sources */,
-				13F9A46D1260A70200383AD7 /* FTPSplitViewController.m in Sources */,
 				13F43A0312618DC000678F48 /* EditorSplitViewController.m in Sources */,
 				9B6445A616F0802D00517432 /* EdhitaGlobal.m in Sources */,
 			);
@@ -394,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tatsuya Tobioka";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Edhita_Prefix.pch;
@@ -405,6 +376,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Edhita;
+				PROVISIONING_PROFILE = "75720355-0280-4367-B4EE-EC1F25D46965";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -438,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tatsuya Tobioka";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Edhita_Prefix.pch;
@@ -449,6 +422,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Edhita;
+				PROVISIONING_PROFILE = "75720355-0280-4367-B4EE-EC1F25D46965";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

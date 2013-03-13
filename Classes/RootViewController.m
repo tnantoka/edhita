@@ -38,22 +38,6 @@
     [self.navigationController setToolbarHidden:NO animated:YES];
 }
 
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-}
-*/
-
 // Ensure that the view controller supports rotation and that the split view can therefore show in both portrait and landscape.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return YES;
@@ -83,12 +67,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-//        cell.accessoryType = UITableViewCellAccessoryNone;
 		cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     }
     
     // Configure the cell.
-//    cell.textLabel.text = [NSString stringWithFormat:@"Row %d", indexPath.row];
 	NSString *text = [items_ objectAtIndex:indexPath.row];
 	cell.textLabel.text = text;
 	BOOL isDir;
@@ -100,16 +82,6 @@
 
 
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,29 +101,8 @@
 		
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];		
-    }   
-/*
-	else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }
-*/
 }
-
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark -
@@ -162,8 +113,6 @@
     /*
      When a row is selected, set the detail view controller's detail item to the item associated with the selected row.
      */
- //   detailViewController.detailItem = [NSString stringWithFormat:@"Row %d", indexPath.row];
-	
 	NSString *path = [path_ stringByAppendingPathComponent:[items_ objectAtIndex:indexPath.row]];
 
 	BOOL isDir;
@@ -186,7 +135,6 @@
 			[detailViewController.popoverController dismissPopoverAnimated:YES];
 		}
 	}
-
 	
 }
 
@@ -237,23 +185,8 @@
 		UIBarButtonItem *space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 
 		// 画像＆文字ボタン
-//		UIButton *newFileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//		newFileButton.titleLabel.text = @"NewFile";
-//		newFileButton.titleLabel.backgroundColor = [UIColor clearColor];
-//		newFileButton.frame = CGRectMake(0, 0, 30, 30);
-//		newFileButton.backgroundColor = [UIColor grayColor];
-//		[newFileButton setBackgroundImage:[UIImage imageNamed:@"file_new.png"] forState:UIControlStateNormal];
-//		[newFileButton addTarget:self action:@selector(newFileDidPush) forControlEvents:UIControlEventTouchUpInside];
-		
-//		UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithCustomView:newFileButton];
-		//UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"file_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
-		//UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"dir_new.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
-
         UIBarButtonItem *newFile  = [[UIBarButtonItem alloc] initWithTitle:@"File＋" style:UIBarButtonItemStyleBordered target:self action:@selector(newFileDidPush)];
 		UIBarButtonItem *newDir  = [[UIBarButtonItem alloc] initWithTitle:@"Dir＋" style:UIBarButtonItemStyleBordered target:self action:@selector(newDirDidPush)];
-
-		// FTP
-		//UIBarButtonItem *ftpButton = [[UIBarButtonItem alloc] initWithTitle:@"FTP" style:UIBarButtonItemStyleBordered target:self action:@selector(ftpDidPush)];
 
 		// HTTP 
 		//UIBarButtonItem *downloadButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"download.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(downloadDidPush)];
@@ -265,28 +198,10 @@
 		// 編集ボタンの表示（selfのeditButtonを設定してやるだけでいい）
 		self.navigationItem.rightBarButtonItem = [self editButtonItem];
 		
-		// 広告領域テスト
-//		UIView *adView = [[UIView alloc] init];
-//		adView.frame = CGRectMake(0, 0, self.view.frame.size.width, 48);
-//		adView.backgroundColor = [UIColor grayColor];
-//		self.tableView.tableFooterView = adView;
 		
+        // AdMob
 		srand(time(NULL));
-        /*
-		AdMobView *adMobView = nil;
-		
-		switch (rand() % 2) {
-			case 0:
-				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x270 withDelegate:self];				
-				break;
-			case 1:
-				adMobView = [AdMobView requestAdOfSize:ADMOB_SIZE_320x48 withDelegate:self];
-				break;
-		}
-				
-		self.tableView.tableFooterView = adMobView;
-		*/
-        
+
         bannerView_ = nil;
         switch (rand() % 2) {
 			case 0:
@@ -301,7 +216,6 @@
 		}
         bannerView_.adUnitID = kPublisherId;
         bannerView_.rootViewController = self;
-        [self.view addSubview:bannerView_];
         
         GADRequest *request = [GADRequest request];
 #ifdef DEBUG
@@ -323,6 +237,8 @@
 		urlField_.text = @"http://";
 		urlField_.keyboardType = UIKeyboardTypeURL;
 		urlField_.clearButtonMode = UITextFieldViewModeWhileEditing;
+        urlField_.autocorrectionType = UITextAutocorrectionTypeNo;
+        urlField_.autocapitalizationType = UITextAutocapitalizationTypeNone;
 		
 		UIButton *dlButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 		[dlButton setTitle:@"DL" forState:UIControlStateNormal];
@@ -406,55 +322,6 @@
 	return CGSizeMake(320, 527);
 }
 
-/*
-#pragma mark -
-#pragma mark AdMobDelegate methods
-
-- (NSString *)publisherIdForAd:(AdMobView *)adView {
-	return kPublisherId; // this should be prefilled; if not, get it from www.admob.com
-}
-
-- (UIViewController *)currentViewControllerForAd:(AdMobView *)adView {
-	// Return the top level view controller if possible. In this case, it is
-	// the split view controller
-	return self.splitViewController;
-//	return self.navigationController.parentViewController;
-}
-
-- (void)willPresentFullScreenModalFromAd:(AdMobView *)adView {
-	// IMPORTANT!!! IMPORTANT!!!
-	// If we are about to get a full screen modal and we have a popover controller, dimiss it.
-	// Otherwise, you may see the popover on top of the landing page.
-	if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
-		[detailViewController.popoverController dismissPopoverAnimated:YES];
-	}
-}
-
-- (NSArray *)testDevices {
-	return [NSArray arrayWithObjects: ADMOB_SIMULATOR_ID, kTestIPadId, nil];
-}
- */
-
-- (void)ftpDidPush {
-	
-	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	NSString *server = [settings objectForKey: @"ftpServer"] != NULL ? [settings stringForKey:@"ftpServer"] : @"";
-	NSString *userId = [settings objectForKey: @"ftpId"] != NULL ? [settings stringForKey:@"ftpId"] : @"";
-	NSString *pass = [settings objectForKey: @"ftpPass"] != NULL ? [settings stringForKey:@"ftpPass"] : @"";
-
-	if ([server isEqualToString:@""] || [userId isEqualToString:@""] || [pass isEqualToString:@""]) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"FTP Settings Not Found!" message:@"Please set Server/ID/Pass by Settings App." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-		[alert show];
-		return;
-	}
-		
-	if (detailViewController.popoverController && detailViewController.popoverController.popoverVisible) {
-		[detailViewController.popoverController dismissPopoverAnimated:YES];
-	}
-	
-	[(EdhitaAppDelegate *)[[UIApplication sharedApplication] delegate] rootViewChangesFtp];
-}
-
 - (void)downloadDidPush {
 
 	if (self.tableView.tableHeaderView == nil) {
@@ -473,37 +340,6 @@
 - (void)dlDidPush {
 	
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-
-	/* NSStringでやる場合
-	NSString *name = [urlField_.text lastPathComponent];
-	NSURL *url = [NSURL URLWithString:urlField_.text];
-
-	NSError *error;
-	NSString *content = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding	error:&error]; 
-
-	self.tableView.tableHeaderView = nil;
-	downloadView_.frame = CGRectMake(0, 0, 320, 80);
-	self.tableView.tableHeaderView = downloadView_;
-
-	if (content) {
-		[content writeToFile:[path_ stringByAppendingPathComponent:name] atomically:YES encoding:NSUTF8StringEncoding error:&error];
-		messageLabel_.textColor = [UIColor cyanColor];
-		messageLabel_.text = [NSString stringWithFormat:@"Saved as \"%@\"", name];
-		[items_ addObject:name];
-		[self.tableView reloadData];
-	}
-	else {
-		messageLabel_.textColor = [UIColor orangeColor];	
-		if (error) {
-			messageLabel_.text = [error localizedDescription];
-		}
-		else {
-			messageLabel_.text = @"Something Wrong";
-		}
-	}
-
-	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-	*/
 
 	self.tableView.tableHeaderView = nil;
 	downloadView_.frame = CGRectMake(0, 0, 320, 80);
