@@ -1,8 +1,0 @@
-.DS_Store
-*~
-
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcworkspace/contents.xcworkspacedata
-Classes/EdhitaPrivateCommon.h
-build/
