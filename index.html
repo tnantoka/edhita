@@ -1,1 +1,65 @@
-Edhita
+---
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="shortcut icon" href="assets/favicon.ico"> 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="media">
+        <div class="pull-left">
+          <img src="assets/logo.png" class="media-object">
+        </div>
+        <div class="media-body">
+          <h1 class="media-heading">{{ site.title }}</h1>
+          <p class="lead">{{ site.lead }}</p>
+        </div>
+      </div>
+    </header>
+
+    <p>
+
+    </p>
+
+    <p>
+      <a href="https://itunes.apple.com/us/app/edhita-open-source-text-editor/id398896655"><img src="vendor/appstore.png"></a>
+    </p>
+
+    <footer>
+      <p>
+        <small>
+          &copy; 2010-2014 <a href="https://twitter.com/tnantoka">tnantoka</a>
+        </small>
+        <a href="https://github.com/tnantoka/edhita"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+        </p>
+      </footer>
+  </div>
+
+  <script src="vendor/jquery-1.11.1.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/script.js"></script>
+
+  {% if site.safe %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55579308-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  {% endif %}
+</body>
+</html>
+
