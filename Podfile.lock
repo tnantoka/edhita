@@ -1,0 +1,57 @@
+PODS:
+  - Colours (5.5.0)
+  - EDHFinder (0.1.0):
+    - EDHUtility (~> 0.1)
+    - FCFileManager (~> 1.0)
+    - FontAwesomeKit (~> 2.1)
+    - MGSwipeTableCell (~> 1.1)
+  - EDHFontSelector (0.1.0):
+    - EDHUtility (~> 0.1)
+  - EDHInputAccessoryView (0.1.0):
+    - EDHUtility (~> 0.1)
+    - FontAwesomeKit (~> 2.1)
+  - EDHUtility (0.1.0)
+  - FCFileManager (1.0.5)
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
+  - FXForms (1.2.3)
+  - GHMarkdownParser (0.1.2)
+  - Google-Mobile-Ads-SDK (6.12.0)
+  - MGSwipeTableCell (1.1.1)
+
+DEPENDENCIES:
+  - Colours (~> 5.5)
+  - EDHFinder (~> 0.1)
+  - EDHFontSelector (~> 0.1)
+  - EDHInputAccessoryView (~> 0.1)
+  - FXForms (~> 1.2)
+  - GHMarkdownParser (~> 0.1)
+  - Google-Mobile-Ads-SDK (~> 6.12)
+
+SPEC CHECKSUMS:
+  Colours: 7abeb0fdebe2da3d8bd7305aee0798375f51f5d8
+  EDHFinder: c5268437ffe60c2e2df932c2f4eca34263261026
+  EDHFontSelector: 9f6a0d3738ae9db900c90960f4d65a362b10aaac
+  EDHInputAccessoryView: 2ba651b1d620c5288f968f82374b79e0628511c5
+  EDHUtility: e1caa398347bbdd67b742248c38abc61b56a72f0
+  FCFileManager: 63b3cc33188a72da88d1cbce69978523aa5f6320
+  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
+  FXForms: 1ce92711525fb35950e18bc197dbe0fcd02e01c6
+  GHMarkdownParser: 4d51786390a786f8af4d556585f9b6ebd437e428
+  Google-Mobile-Ads-SDK: b1b5cfd1b604a8412faa5536586b13a4b640f344
+  MGSwipeTableCell: fe8f11999f6d99c707675693ae90745bf45086ac
+
+COCOAPODS: 0.34.1
