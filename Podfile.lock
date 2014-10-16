@@ -30,6 +30,7 @@ PODS:
     - FontAwesomeKit/Core
   - FXForms (1.2.3)
   - GHMarkdownParser (0.1.2)
+  - github-markdown-css (0.1.0)
   - Google-Mobile-Ads-SDK (6.12.0)
   - Megrim (0.1.0)
   - MGSwipeTableCell (1.1.1)
@@ -43,6 +44,7 @@ DEPENDENCIES:
   - EDHInputAccessoryView (~> 0.1)
   - FXForms (~> 1.2)
   - GHMarkdownParser (~> 0.1)
+  - github-markdown-css (from `https://raw.githubusercontent.com/tnantoka/Podspecs/master/github-markdown-css/github-markdown-css.podspec`)
   - Google-Mobile-Ads-SDK (~> 6.12)
   - Megrim (from `https://raw.githubusercontent.com/tnantoka/Podspecs/master/Megrim/Megrim.podspec`)
   - VTAcknowledgementsViewController (~> 0.12)
@@ -50,6 +52,8 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   Bootstrap:
     :podspec: https://raw.githubusercontent.com/tnantoka/Podspecs/master/Bootstrap/Bootstrap.podspec
+  github-markdown-css:
+    :podspec: https://raw.githubusercontent.com/tnantoka/Podspecs/master/github-markdown-css/github-markdown-css.podspec
   Megrim:
     :podspec: https://raw.githubusercontent.com/tnantoka/Podspecs/master/Megrim/Megrim.podspec
 
@@ -64,6 +68,7 @@ SPEC CHECKSUMS:
   FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   FXForms: 1ce92711525fb35950e18bc197dbe0fcd02e01c6
   GHMarkdownParser: 4d51786390a786f8af4d556585f9b6ebd437e428
+  github-markdown-css: 6e1aba9c5d66525138c43f2ad5e1576df26468c4
   Google-Mobile-Ads-SDK: b1b5cfd1b604a8412faa5536586b13a4b640f344
   Megrim: c0e703085b6f0d30ba4f2c00113df46d799158dc
   MGSwipeTableCell: fe8f11999f6d99c707675693ae90745bf45086ac

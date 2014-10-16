@@ -4,6 +4,8 @@ Edhita
 Fully open source text editor for iOS written in Swift.  
 http://edhita.bornneet.com/
 
+![](/screenshot.png)
+
 ## AppSecret.swift
 
 Here is an example.

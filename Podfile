@@ -13,6 +13,7 @@ pod 'VTAcknowledgementsViewController', '~> 0.12'
 
 pod 'Bootstrap', podspec: 'https://raw.githubusercontent.com/tnantoka/Podspecs/master/Bootstrap/Bootstrap.podspec'
 pod 'Megrim', podspec: 'https://raw.githubusercontent.com/tnantoka/Podspecs/master/Megrim/Megrim.podspec'
+pod 'github-markdown-css', podspec: 'https://raw.githubusercontent.com/tnantoka/Podspecs/master/github-markdown-css/github-markdown-css.podspec'
 
 post_install do |installer|
   require 'fileutils'

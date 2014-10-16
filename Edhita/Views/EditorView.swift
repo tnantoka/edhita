@@ -43,7 +43,7 @@ class EditorView: UIView, UITextViewDelegate {
 
         self.webView = UIWebView(frame: self.bounds)
         self.webView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
-        self.webView.scalesPageToFit = true
+        //self.webView.scalesPageToFit = true
         self.addSubview(self.webView)
     }
 
@@ -75,7 +75,7 @@ class EditorView: UIView, UITextViewDelegate {
             self.textView.hidden = false
             self.webView.hidden = true
 
-            self.textView.becomeFirstResponder()
+            //self.textView.becomeFirstResponder()
             self.loadBlank()
         case .Preview:
             self.textView.hidden = true
@@ -145,10 +145,8 @@ class EditorView: UIView, UITextViewDelegate {
     func preview() {
         if let item = self.finderItem {
             if item.mimeType? == "text/markdown" {
-                let parser = GHMarkdownParser()
-                parser.options = kGHMarkdownAutoLink
-                parser.githubFlavored = true
-                self.loadHTML(parser.HTMLStringFromMarkdownString(item.content()), baseURL: item.parent().fileURL())
+                println(self.renderMarkdown(item.content()))
+                self.loadHTML(self.renderMarkdown(item.content()), baseURL: item.parent().fileURL())
             } else {
 //                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
 //                let indexItem = EDHFinderItem(path: indexPath)
@@ -172,5 +170,17 @@ class EditorView: UIView, UITextViewDelegate {
     
     func reload() {
         self.webView.reload()
+    }
+    
+    func renderMarkdown(content: NSString) -> NSString {
+        let parser = GHMarkdownParser()
+        parser.options = kGHMarkdownAutoLink
+        parser.githubFlavored = true
+        let rendered = parser.HTMLStringFromMarkdownString(content)
+        let body = "<article class=\"markdown-body\">\(rendered)</article>"
+        let path = NSBundle.mainBundle().pathForResource("github-markdown", ofType: "css")
+        let url = NSURL.fileURLWithPath(path!)
+        let style = "<link rel=\"stylesheet\" href=\"\((url?.absoluteString)!)\">"
+        return "\(style)\(body)"
     }
 }
