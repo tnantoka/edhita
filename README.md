@@ -25,6 +25,19 @@ class AppSecret: NSObject {
 Edhita 1.0 was written in Objective-C.  
 The source code is available on [Objective-C branch](https://github.com/tnantoka/edhita/tree/Objective-C).
 
+## Spin-offs
+
+Some pods from Edhita.
+
+* [EDHFinder](https://github.com/tnantoka/EDHFinder)
+* [EDHFontSelector](https://github.com/tnantoka/EDHFontSelector)
+* [EDHInputAccessoryView](https://github.com/tnantoka/EDHInputAccessoryView)
+* [EDHUtility](https://github.com/tnantoka/EDHUtility)
+
+## License
+
+[The MIT license](/LICENSE)
+
 ## Author
 
 [@tnantoka](https://twitter.com/tnantoka)

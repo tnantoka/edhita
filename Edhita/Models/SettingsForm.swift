@@ -45,7 +45,13 @@ public class SettingsForm: NSObject, FXForm {
                 FXFormFieldType : FXFormFieldTypeLabel,
                 FXFormFieldAction : "fontDidTap:",
                 FXFormFieldTitle : NSLocalizedString("Font", comment: ""),
-            ]
+            ],
+            [
+                FXFormFieldHeader : "",
+                FXFormFieldType : FXFormFieldTypeLabel,
+                FXFormFieldAction : "acknowledgementsDidTap:",
+                FXFormFieldTitle : NSLocalizedString("Acknowledgements", comment: ""),
+            ],
         ]
     }
 }

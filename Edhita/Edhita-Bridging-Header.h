@@ -13,3 +13,4 @@
 #import "FXForms.h"
 #import "FCFileManager.h"
 #import "GHMarkdownParser.h"
+#import "VTAcknowledgementsViewController.h"

@@ -45,7 +45,13 @@ class SettingsViewController: FXFormViewController {
         let fontController = EDHFontSelector.sharedSelector().settingsViewController()
         self.navigationController?.pushViewController(fontController, animated: true)
     }
-    
+
+    func acknowledgementsDidTap(sender: AnyObject) {
+        let acknowledgementsController = VTAcknowledgementsViewController(acknowledgementsPlistPath: NSBundle.mainBundle().pathForResource("Pods-acknowledgements", ofType: "plist"))
+        //let acknowledgementsController = VTAcknowledgementsViewController() // Doesn't work
+        self.navigationController?.pushViewController(acknowledgementsController, animated: true)
+    }
+
     func doneItemDidTap(sender: AnyObject) {
         self.close()
     }

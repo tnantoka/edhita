@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10CC7D6972BD29B5E3692D10 /* libPods-Edhita.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7824AB17A349C1629A0CAD03 /* libPods-Edhita.a */; };
+		2C57D3C6AE15707C07696D92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B492F08361222755B88DE50C /* libPods.a */; };
+		9B0AB62719EDEAAC00F4C53F /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B0AB62619EDEAAC00F4C53F /* Pods-acknowledgements.plist */; };
 		9B2E0A5619E683CC002E9CA4 /* SettingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0A5519E683CC002E9CA4 /* SettingsForm.swift */; };
 		9B2E0A5819E6C876002E9CA4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2E0A5719E6C876002E9CA4 /* SettingsViewController.swift */; };
 		9B2E0A6119E76AE3002E9CA4 /* bootstrap in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E0A6019E76AE3002E9CA4 /* bootstrap */; };
+		9B372B0F19EFF6BB00295862 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B372B1119EFF6BB00295862 /* Localizable.strings */; };
 		9B6E1E9319E2EB2100C72D13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9219E2EB2100C72D13 /* AppDelegate.swift */; };
 		9B6E1E9C19E2EB2100C72D13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9B19E2EB2100C72D13 /* Images.xcassets */; };
 		9B6E1E9F19E2EB2100C72D13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9D19E2EB2100C72D13 /* LaunchScreen.xib */; };
@@ -33,10 +35,15 @@
 
 /* Begin PBXFileReference section */
 		2376D4B854B181824E65A52E /* Pods-Edhita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edhita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edhita/Pods-Edhita.debug.xcconfig"; sourceTree = "<group>"; };
+		58749BBE47F8FDA6EE7F23AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		630E6D7BA96A6D4BE7F7F38B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7824AB17A349C1629A0CAD03 /* libPods-Edhita.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Edhita.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B0AB62619EDEAAC00F4C53F /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		9B2E0A5519E683CC002E9CA4 /* SettingsForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsForm.swift; sourceTree = "<group>"; };
 		9B2E0A5719E6C876002E9CA4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9B2E0A6019E76AE3002E9CA4 /* bootstrap */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bootstrap; sourceTree = "<group>"; };
+		9B372B1019EFF6BB00295862 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9B372B1219EFF6C700295862 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9B6E1E8D19E2EB2100C72D13 /* Edhita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edhita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6E1E9119E2EB2100C72D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6E1E9219E2EB2100C72D13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		9B6E1EBE19E423A100C72D13 /* FinderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderListViewController.swift; sourceTree = "<group>"; };
 		9B91999019E429B0003751FA /* AppSecret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecret.swift; sourceTree = "<group>"; };
 		9B91999319E5185C003751FA /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		B492F08361222755B88DE50C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A0558F7406E080FC81F80F /* Pods-Edhita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edhita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edhita/Pods-Edhita.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10CC7D6972BD29B5E3692D10 /* libPods-Edhita.a in Frameworks */,
+				2C57D3C6AE15707C07696D92 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				7824AB17A349C1629A0CAD03 /* libPods-Edhita.a */,
+				B492F08361222755B88DE50C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -85,6 +94,8 @@
 			children = (
 				2376D4B854B181824E65A52E /* Pods-Edhita.debug.xcconfig */,
 				C2A0558F7406E080FC81F80F /* Pods-Edhita.release.xcconfig */,
+				58749BBE47F8FDA6EE7F23AE /* Pods.debug.xcconfig */,
+				630E6D7BA96A6D4BE7F7F38B /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -92,6 +103,7 @@
 		9B2E0A5F19E766E4002E9CA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9B0AB62619EDEAAC00F4C53F /* Pods-acknowledgements.plist */,
 				9B2E0A6019E76AE3002E9CA4 /* bootstrap */,
 			);
 			path = Assets;
@@ -136,6 +148,7 @@
 		9B6E1E9019E2EB2100C72D13 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9B372B1119EFF6BB00295862 /* Localizable.strings */,
 				9B6E1E9119E2EB2100C72D13 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -251,6 +264,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 9B6E1E8419E2EB2100C72D13;
 			productRefGroup = 9B6E1E8E19E2EB2100C72D13 /* Products */;
@@ -268,9 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B372B0F19EFF6BB00295862 /* Localizable.strings in Resources */,
 				9B6E1E9F19E2EB2100C72D13 /* LaunchScreen.xib in Resources */,
 				9B6E1E9C19E2EB2100C72D13 /* Images.xcassets in Resources */,
 				9B2E0A6119E76AE3002E9CA4 /* bootstrap in Resources */,
+				9B0AB62719EDEAAC00F4C53F /* Pods-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edhita/Pods-Edhita-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B40B8565FA48D74B9CA98321 /* Check Pods Manifest.lock */ = {
@@ -350,6 +366,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9B372B1119EFF6BB00295862 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B372B1019EFF6BB00295862 /* en */,
+				9B372B1219EFF6C700295862 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9B6E1E9D19E2EB2100C72D13 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +467,7 @@
 		};
 		9B6E1EAF19E2EB2200C72D13 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2376D4B854B181824E65A52E /* Pods-Edhita.debug.xcconfig */;
+			baseConfigurationReference = 58749BBE47F8FDA6EE7F23AE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -456,7 +481,7 @@
 		};
 		9B6E1EB019E2EB2200C72D13 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2A0558F7406E080FC81F80F /* Pods-Edhita.release.xcconfig */;
+			baseConfigurationReference = 630E6D7BA96A6D4BE7F7F38B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
