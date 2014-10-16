@@ -42,7 +42,7 @@ class EditorView: UIView, UITextViewDelegate {
         self.addSubview(self.textView)
 
         self.webView = UIWebView(frame: self.bounds)
-        self.webView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        //self.webView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
         //self.webView.scalesPageToFit = true
         self.addSubview(self.webView)
     }
@@ -55,16 +55,25 @@ class EditorView: UIView, UITextViewDelegate {
         switch self.mode {
         case .Edit:
             self.textView.frame = self.bounds
-            self.webView.frame = self.bounds
+            //self.webView.frame = self.bounds
+            self.updateWebViewFrame(self.bounds)
         case .Preview:
             self.textView.frame = self.bounds
-            self.webView.frame = self.bounds
+            // self.webView.frame = self.bounds
+            self.updateWebViewFrame(self.bounds)
         case .Split:
             self.textView.frame = CGRect(x: 0.0, y: 0.0, width: CGRectGetMidX(self.bounds), height: CGRectGetHeight(self.bounds))
-            self.webView.frame = CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds))
+            //self.webView.frame = CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds))
+            self.updateWebViewFrame(CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds)))
         default:
             break
         }
+    }
+    
+    // Web view gets smaller and smaller with decimal fraction
+    func updateWebViewFrame(var frame: CGRect) {
+        frame.size.width = ceil(CGRectGetWidth(frame))
+        self.webView.frame = frame
     }
     
     func updateControls() {
@@ -145,7 +154,6 @@ class EditorView: UIView, UITextViewDelegate {
     func preview() {
         if let item = self.finderItem {
             if item.mimeType? == "text/markdown" {
-                println(self.renderMarkdown(item.content()))
                 self.loadHTML(self.renderMarkdown(item.content()), baseURL: item.parent().fileURL())
             } else {
 //                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
