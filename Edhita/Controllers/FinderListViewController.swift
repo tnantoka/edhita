@@ -15,7 +15,7 @@ class FinderListViewController: EDHFinderListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.initAd()
+        self.initAd()
     }
 
     override func viewWillAppear(animated: Bool) {

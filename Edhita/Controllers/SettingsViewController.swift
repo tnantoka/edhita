@@ -39,7 +39,7 @@ class SettingsViewController: FXFormViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Actioins
+    // MARK: - Actions
     
     func fontDidTap(sender: AnyObject) {
         let fontController = EDHFontSelector.sharedSelector().settingsViewController()
