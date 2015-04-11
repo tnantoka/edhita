@@ -26,7 +26,7 @@ public class SettingsForm: NSObject, FXForm {
         
         let defaults = NSMutableDictionary()
         defaults.setValue(true, forKey: Defaults.accessoryViewKey)
-        NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
+        NSUserDefaults.standardUserDefaults().registerDefaults(defaults as [NSObject : AnyObject])
         
         self.accessoryView = NSUserDefaults.standardUserDefaults().boolForKey(Defaults.accessoryViewKey)
     }

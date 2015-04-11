@@ -153,8 +153,8 @@ class EditorView: UIView, UITextViewDelegate {
     
     func preview() {
         if let item = self.finderItem {
-            if item.mimeType? == "text/markdown" {
-                self.loadHTML(self.renderMarkdown(item.content()), baseURL: item.parent().fileURL())
+            if item.mimeType == "text/markdown" {
+                self.loadHTML(self.renderMarkdown(item.content()) as String, baseURL: item.parent().fileURL())
             } else {
 //                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
 //                let indexItem = EDHFinderItem(path: indexPath)
@@ -184,7 +184,7 @@ class EditorView: UIView, UITextViewDelegate {
         let parser = GHMarkdownParser()
         parser.options = kGHMarkdownAutoLink
         parser.githubFlavored = true
-        let rendered = parser.HTMLStringFromMarkdownString(content)
+        let rendered = parser.HTMLStringFromMarkdownString(content as String)
         let body = "<article class=\"markdown-body\">\(rendered)</article>"
         let path = NSBundle.mainBundle().pathForResource("github-markdown", ofType: "css")
         let url = NSURL.fileURLWithPath(path!)

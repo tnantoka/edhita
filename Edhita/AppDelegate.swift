@@ -30,9 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         EDHFinder.sharedFinder().finderDelegate = self
         let masterNavController = EDHFinder.sharedFinder().listNavigationControllerWithDelegate(editorController)
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            let listController = masterNavController.topViewController as UITableViewController
-            listController.clearsSelectionOnViewWillAppear = false
-            listController.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+            if let listController = masterNavController.topViewController as? UITableViewController {
+                listController.clearsSelectionOnViewWillAppear = false
+                listController.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+            }
         }
         
         self.splitController = UISplitViewController()

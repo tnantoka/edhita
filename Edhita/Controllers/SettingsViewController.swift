@@ -10,16 +10,6 @@ import UIKit
 
 class SettingsViewController: FXFormViewController {
 
-    override init() {
-        super.init()
-        
-        self.title = NSLocalizedString("Settings", comment: "")
-        self.formController.form = SettingsForm.sharedForm
-        
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "doneItemDidTap:")
-        self.navigationItem.rightBarButtonItem = doneItem
-    }
-    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -32,6 +22,11 @@ class SettingsViewController: FXFormViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = NSLocalizedString("Settings", comment: "")
+        self.formController.form = SettingsForm.sharedForm
+        
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "doneItemDidTap:")
+        self.navigationItem.rightBarButtonItem = doneItem
     }
 
     override func didReceiveMemoryWarning() {

@@ -154,7 +154,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             style: .Cancel,
             handler: nil))
         
-        alertController.popoverPresentationController?.barButtonItem = sender as UIBarButtonItem
+        alertController.popoverPresentationController?.barButtonItem = sender as! UIBarButtonItem
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
@@ -195,7 +195,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.finderItem = item
         
         // Show editor controller on compact devise
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if appDelegate.splitController.collapsed {
             // FIXME: Unbalanced calls to begin/end appearance transitions for <UINavigationController: >.
             appDelegate.splitController.showDetailViewController(self.navigationController, sender: nil)
@@ -227,10 +227,10 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     
     func keyboardWillChangeFrameWithNotification(notification: NSNotification, showsKeyboard: Bool) {
         let userInfo = notification.userInfo!
-        let animationDuration: NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as NSNumber).doubleValue
+        let animationDuration: NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
         var viewHeight = CGRectGetHeight(self.view.bounds)
         if showsKeyboard {
-            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as NSValue).CGRectValue()
+            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
             let keyboardHeight = CGRectGetHeight(keyboardEndFrame)
             viewHeight = viewHeight + CGRectGetHeight(self.navigationController!.toolbar!.bounds) - keyboardHeight
         }
