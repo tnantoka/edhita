@@ -90,8 +90,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         super.didReceiveMemoryWarning()
     }
     
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        super.didRotateFromInterfaceOrientation(fromInterfaceOrientation)
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
 
         // TODO: Should use UISplitViewControllerDelegate
         self.splitViewController?.preferredDisplayMode = .Automatic
