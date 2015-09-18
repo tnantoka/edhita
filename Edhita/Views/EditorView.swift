@@ -34,15 +34,15 @@ class EditorView: UIView, UITextViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        self.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
 
         self.textView = UITextView(frame: self.bounds)
-        self.textView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        self.textView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
         self.textView.delegate = self
         self.addSubview(self.textView)
 
         self.webView = UIWebView(frame: self.bounds)
-        //self.webView.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+        //self.webView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
         //self.webView.scalesPageToFit = true
         self.addSubview(self.webView)
     }
@@ -188,7 +188,7 @@ class EditorView: UIView, UITextViewDelegate {
         let body = "<article class=\"markdown-body\">\(rendered)</article>"
         let path = NSBundle.mainBundle().pathForResource("github-markdown", ofType: "css")
         let url = NSURL.fileURLWithPath(path!)
-        let style = "<link rel=\"stylesheet\" href=\"\((url?.absoluteString)!)\">"
+        let style = "<link rel=\"stylesheet\" href=\"\(url.absoluteString)\">"
         return "\(style)\(body)"
     }
 }

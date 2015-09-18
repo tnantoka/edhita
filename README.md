@@ -6,20 +6,12 @@ http://edhita.bornneet.com/
 
 ![](/screenshot.png)
 
-## AppSecret.swift
-
-Here is an example.
+## Development
 
 ```
-import UIKit
-
-class AppSecret: NSObject {
-    struct Ad {
-        struct AdMob {
-            static let unitId = "ca-app-pub-xxxxxxxxxxxxxxxx/nnnnnnnnnn"
-        }
-    }
-}
+$ cp AppSecret.swift Edhita/Models/
+$ pod install
+$ open Edhita.xcworkspace
 ```
 
 ## Objective-C

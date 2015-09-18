@@ -141,8 +141,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
                     if item.isEditable() {
                         mailController.setMessageBody(item.content(), isHTML: false)
                     } else {
-                        let data = NSData(contentsOfURL: item.fileURL())
-                        mailController.addAttachmentData(data, mimeType: item.mimeType, fileName: item.name)
+                        if let data = NSData(contentsOfURL: item.fileURL()) {
+                            mailController.addAttachmentData(data, mimeType: item.mimeType, fileName: item.name)
+                        }
                     }
                 }
                 
@@ -154,7 +155,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             style: .Cancel,
             handler: nil))
         
-        alertController.popoverPresentationController?.barButtonItem = sender as! UIBarButtonItem
+        alertController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
         self.presentViewController(alertController, animated: true, completion: nil)
     }
 
@@ -198,7 +199,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if appDelegate.splitController.collapsed {
             // FIXME: Unbalanced calls to begin/end appearance transitions for <UINavigationController: >.
-            appDelegate.splitController.showDetailViewController(self.navigationController, sender: nil)
+            if let navigationController = self.navigationController {
+                appDelegate.splitController.showDetailViewController(navigationController, sender: nil)
+            }
 
             // Need navigation controller for landscape on iPhone 6 Plus
             // appDelegate.splitController.showDetailViewController(self, sender: nil)
@@ -207,7 +210,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     
     // MARK: - MFMailComposeViewControllerDelegate
     
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         if error != nil {
             // FIXME: Show error
             return
@@ -277,7 +280,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         }
     }
     
-    func barButtonItem(#icon: FAKIcon, action: Selector) -> UIBarButtonItem {
+    func barButtonItem(icon icon: FAKIcon, action: Selector) -> UIBarButtonItem {
         let image = self.iconImage(icon)
         let item = UIBarButtonItem(image: image, style: .Plain, target: self, action: action)
         return item

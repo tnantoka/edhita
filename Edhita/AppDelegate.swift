@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         self.initExample()
         
         self.editorController = EditorViewController()
-        let view = editorController.view // Force load view
+        let _ = editorController.view // Force load view
         let editorNavController = UINavigationController(rootViewController: self.editorController)
 
         EDHFinder.sharedFinder().toolbarHidden = false
@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     // MARK: - UISplitViewControllerDelegate
 
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool {
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
         if let secondaryAsNavController = secondaryViewController as? UINavigationController {
             if let topAsDetailController = secondaryAsNavController.topViewController as? EditorViewController {
                 if topAsDetailController.finderItem == nil {
@@ -108,7 +108,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         //EDHUtility.setIsFirstLaunch(true)
         if EDHUtility.isFirstLaunch() {
             let fromPath = NSBundle.mainBundle().pathForResource("bootstrap", ofType: nil)
-            let toPath = EDHFinder.sharedFinder().rootPath.stringByAppendingPathComponent("example")
+            let toPath = (EDHFinder.sharedFinder().rootPath as NSString).stringByAppendingPathComponent("example")
             FCFileManager.copyItemAtPath(fromPath, toPath: toPath)
             EDHUtility.setIsFirstLaunch(false)
         }
