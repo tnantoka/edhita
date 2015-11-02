@@ -33,5 +33,4 @@ Pods/
 .*.sw*
 
 # Edhita
-AppSecret.swift
-
+Edhita/Models/AppSecret.swift
