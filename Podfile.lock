@@ -74,4 +74,4 @@ SPEC CHECKSUMS:
   MGSwipeTableCell: fdeddef21fff3071c8ee151eb2c1a53dc9ac2f2c
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

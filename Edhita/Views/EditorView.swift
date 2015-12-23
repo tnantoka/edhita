@@ -153,7 +153,7 @@ class EditorView: UIView, UITextViewDelegate {
     
     func preview() {
         if let item = self.finderItem {
-            if item.mimeType == "text/markdown" {
+            if item.mimeType != nil && item.mimeType == "text/markdown" {
                 self.loadHTML(self.renderMarkdown(item.content()) as String, baseURL: item.parent().fileURL())
             } else {
 //                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
