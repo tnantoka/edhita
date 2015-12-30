@@ -151,12 +151,37 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         }))
         
         alertController.addAction(UIAlertAction(
+            title: NSLocalizedString("Upload on Dropbox", comment: ""),
+            style: .Default, handler: { (action) -> Void in
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                if let provider = appDelegate.provider {
+                    if !provider.isConnected() {
+                        provider.connectViaController(self)
+                        NSNotificationCenter.defaultCenter().addObserver(self, selector: "upload", name: "uploadOnLinking", object: nil)
+                    } else {
+                        self.upload()
+                    }
+                }
+        }))
+        
+        alertController.addAction(UIAlertAction(
             title: NSLocalizedString("Cancel", comment: ""),
             style: .Cancel,
             handler: nil))
         
         alertController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
+    func upload() {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        if let provider = appDelegate.provider,
+            let item = self.finderItem {
+                provider.uploadFile(fileName: item.name, path: item.path, onCompletion: { (uploaded, error) -> (Void) in
+                    print(uploaded)
+                    print(error)
+                })
+        }
     }
 
     func settingsItemDidTap(sender: AnyObject) {
@@ -288,5 +313,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     
     func iconImage(icon: FAKIcon) -> UIImage {
         return icon.imageWithSize(CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "uploadOnLinking", object: nil)
     }
 }

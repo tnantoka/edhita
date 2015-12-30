@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     var splitController: UISplitViewController!
     var editorController: EditorViewController!
-
+    lazy var provider: Provider? = {
+        return ProviderFactory.providerWithType("Dropbox")
+    }()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
@@ -43,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         editorController.navigationItem.leftBarButtonItem = self.splitController.displayModeButtonItem()
         editorController.navigationItem.leftItemsSupplementBackButton = true
         
+        self.provider?.setup()
         self.window?.rootViewController = self.splitController
         self.window?.makeKeyAndVisible()
         
@@ -69,6 +73,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        if let p = provider {
+            let b = p.canOpenUrl(url)
+            if b{
+                NSNotificationCenter.defaultCenter().postNotificationName("uploadOnLinking", object: nil)
+            }
+        }
+        return false
     }
 
     // MARK: - UISplitViewControllerDelegate

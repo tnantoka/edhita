@@ -1,6 +1,7 @@
 PODS:
   - Bootstrap (0.1.0)
   - Colours (5.5.0)
+  - Dropbox-iOS-SDK (1.3.13)
   - EDHFinder (0.1.1):
     - EDHUtility (~> 0.1)
     - FCFileManager (~> 1.0)
@@ -39,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - Bootstrap (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Bootstrap/Bootstrap.podspec`)
   - Colours (~> 5.5)
+  - Dropbox-iOS-SDK (= 1.3.13)
   - EDHFinder (~> 0.1)
   - EDHFontSelector (~> 0.1)
   - EDHInputAccessoryView (~> 0.1)
@@ -60,6 +62,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Bootstrap: 22c5f86c1970b2d3d485f583a711012eac0d32e3
   Colours: 46a9e057659f6c811e6ff33527a8ecb9245d4459
+  Dropbox-iOS-SDK: e0c9b08d1604b39cb78c1d0333251de0f6bdec60
   EDHFinder: f788e38302c119c24d53f021975fc16dc491f6d5
   EDHFontSelector: 32fb14f1bb5dc08f06195f3ba60f54abe8c98d96
   EDHInputAccessoryView: 0b70c3c7aa3143ddc03e3441a2f7d5de3b65b931
