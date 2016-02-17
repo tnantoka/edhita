@@ -6,6 +6,10 @@ http://edhita.bornneet.com/
 
 ![](/screenshot.png)
 
+## What Edhita means?
+
+`Edhita (Romaji)` == `エディタ (Katakana)` == `Editor (English)`
+
 ## Development
 
 ```
