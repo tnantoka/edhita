@@ -7,8 +7,7 @@
 #import "EDHInputAccessoryView.h"
 #import "EDHUtility.h"
 #import <FontAwesomeKit/FontAwesomeKit.h>
-#import "GADBannerView.h"
-#import "GADRequest.h"
+@import GoogleMobileAds;
 #import "Colours.h"
 #import "FXForms.h"
 #import "FCFileManager.h"

@@ -45,7 +45,7 @@ class FinderListViewController: EDHFinderListViewController {
         self.bannerView.rootViewController = self
         
         let request = GADRequest()
-        request.testDevices = [GAD_SIMULATOR_ID]
+        request.testDevices = [kGADSimulatorID]
         self.bannerView.loadRequest(request)
         
         self.tableView.tableFooterView = self.bannerView

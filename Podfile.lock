@@ -31,7 +31,7 @@ PODS:
   - FXForms (1.2.3)
   - GHMarkdownParser (0.1.2)
   - github-markdown-css (0.1.0)
-  - Google-Mobile-Ads-SDK (6.12.0)
+  - Google-Mobile-Ads-SDK (7.7.1)
   - Megrim (0.1.0)
   - MGSwipeTableCell (1.1.1)
   - VTAcknowledgementsViewController (0.12)
@@ -45,7 +45,7 @@ DEPENDENCIES:
   - FXForms (~> 1.2)
   - GHMarkdownParser (~> 0.1)
   - github-markdown-css (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/github-markdown-css/github-markdown-css.podspec`)
-  - Google-Mobile-Ads-SDK (~> 6.12)
+  - Google-Mobile-Ads-SDK
   - Megrim (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec`)
   - VTAcknowledgementsViewController (~> 0.12)
 
@@ -69,7 +69,7 @@ SPEC CHECKSUMS:
   FXForms: 0fc48705d6f73ab2ca2f7aa20a858228ee6e2042
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
   github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
-  Google-Mobile-Ads-SDK: 2a5ae48f92c66d584b1583278cfd2a7f8da24a8b
+  Google-Mobile-Ads-SDK: e27569901b58881d9a94b42f2c642739cfe3970a
   Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
   MGSwipeTableCell: fdeddef21fff3071c8ee151eb2c1a53dc9ac2f2c
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
