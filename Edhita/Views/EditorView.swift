@@ -71,9 +71,10 @@ class EditorView: UIView, UITextViewDelegate {
     }
     
     // Web view gets smaller and smaller with decimal fraction?
-    func updateWebViewFrame(var frame: CGRect) {
-        frame.size.width = ceil(CGRectGetWidth(frame))
-        self.webView.frame = frame
+    func updateWebViewFrame(frame: CGRect) {
+        var newFrame = frame
+        newFrame.size.width = ceil(CGRectGetWidth(frame))
+        self.webView.frame = newFrame
     }
     
     func updateControls() {

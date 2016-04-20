@@ -33,10 +33,10 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.view.addSubview(self.editorView)
         
         // Toolbar
-        self.fullscreenItem = UIBarButtonItem(image: nil, style: .Plain, target: self, action: "fullscreenItemDidTap:")
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshbeforeionRefreshingIconWithSize(self.kToolbarIconSize), action: "reloadItemDidTap:")
-        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIconWithSize(self.kToolbarIconSize), action: "shareItemDidTap:")
-        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIconWithSize(self.kToolbarIconSize), action: "settingsItemDidTap:")
+        self.fullscreenItem = UIBarButtonItem(image: nil, style: .Plain, target: self, action: #selector(fullscreenItemDidTap))
+        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshbeforeionRefreshingIconWithSize(self.kToolbarIconSize), action: #selector(reloadItemDidTap))
+        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIconWithSize(self.kToolbarIconSize), action: #selector(shareItemDidTap))
+        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIconWithSize(self.kToolbarIconSize), action: #selector(settingsItemDidTap))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
 
         self.toolbarItems = [
@@ -55,7 +55,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             NSLocalizedString("Browser", comment: ""),
             NSLocalizedString("Dual", comment: ""),
             ])
-        self.modeControl.addTarget(self, action: "modeControlDidChange:", forControlEvents: .ValueChanged)
+        self.modeControl.addTarget(self, action: #selector(modeControlDidChange), forControlEvents: .ValueChanged)
         self.modeControl.selectedSegmentIndex = 0
 
         let modeItem = UIBarButtonItem(customView: self.modeControl)
@@ -71,8 +71,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.navigationController?.setToolbarHidden(false, animated: true)
 
         let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: "handleKeyboardWillShowNotification:", name: UIKeyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: "handleKeyboardWillHideNotification:", name: UIKeyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: UIKeyboardWillShowNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: UIKeyboardWillHideNotification, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()

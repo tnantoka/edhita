@@ -25,7 +25,7 @@ class SettingsViewController: FXFormViewController {
         self.title = NSLocalizedString("Settings", comment: "")
         self.formController.form = SettingsForm.sharedForm
         
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "doneItemDidTap:")
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneItemDidTap))
         self.navigationItem.rightBarButtonItem = doneItem
     }
 
