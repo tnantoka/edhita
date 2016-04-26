@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        EDHFontSelector.sharedSelector().defaultFontName = "Courier"
 
         self.setAppearance()
         self.initExample()
@@ -25,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         self.editorController = EditorViewController()
         let _ = editorController.view // Force load view
         let editorNavController = UINavigationController(rootViewController: self.editorController)
-
+        
         EDHFinder.sharedFinder().toolbarHidden = false
         EDHFinder.sharedFinder().finderDelegate = self
         let masterNavController = EDHFinder.sharedFinder().listNavigationControllerWithDelegate(editorController)

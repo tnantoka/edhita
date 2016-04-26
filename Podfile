@@ -3,7 +3,7 @@ platform :ios, "8.0"
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'EDHFinder', '~> 0.1'
-pod 'EDHFontSelector', '~> 0.1'
+pod 'EDHFontSelector', :head
 pod 'EDHInputAccessoryView', '~> 0.1' 
 pod 'Google-Mobile-Ads-SDK'
 pod 'Colours', '~> 5.5'
