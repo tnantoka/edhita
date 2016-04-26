@@ -109,7 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func initExample() {
         //EDHUtility.setIsFirstLaunch(true)
         if EDHUtility.isFirstLaunch() {
-            let fromPath = NSBundle.mainBundle().pathForResource("bootstrap", ofType: nil)
+            let fromPath = NSBundle.mainBundle().pathForResource("example", ofType: nil)
             let toPath = (EDHFinder.sharedFinder().rootPath as NSString).stringByAppendingPathComponent("example")
             FCFileManager.copyItemAtPath(fromPath, toPath: toPath)
             EDHUtility.setIsFirstLaunch(false)
