@@ -13,3 +13,4 @@
 #import "FCFileManager.h"
 #import "GHMarkdownParser.h"
 #import "VTAcknowledgementsViewController.h"
+#import <DropboxSDK/DropboxSDK.h>

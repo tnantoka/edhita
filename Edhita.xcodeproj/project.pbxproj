@@ -22,6 +22,8 @@
 		9B6E1EBF19E423A100C72D13 /* FinderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E1EBE19E423A100C72D13 /* FinderListViewController.swift */; };
 		9B91999119E429B0003751FA /* AppSecret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91999019E429B0003751FA /* AppSecret.swift */; };
 		9B91999419E5185C003751FA /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91999319E5185C003751FA /* EditorView.swift */; };
+		A09BBED21C2D244400F6D99E /* DropboxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BBED01C2D244400F6D99E /* DropboxProvider.swift */; };
+		A09BBED31C2D244400F6D99E /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09BBED11C2D244400F6D99E /* Provider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		9B6E1EBE19E423A100C72D13 /* FinderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderListViewController.swift; sourceTree = "<group>"; };
 		9B91999019E429B0003751FA /* AppSecret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecret.swift; sourceTree = "<group>"; };
 		9B91999319E5185C003751FA /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		A09BBED01C2D244400F6D99E /* DropboxProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxProvider.swift; sourceTree = "<group>"; };
+		A09BBED11C2D244400F6D99E /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		B492F08361222755B88DE50C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A0558F7406E080FC81F80F /* Pods-Edhita.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edhita.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edhita/Pods-Edhita.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,6 +191,8 @@
 		9B91998F19E42827003751FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A09BBED01C2D244400F6D99E /* DropboxProvider.swift */,
+				A09BBED11C2D244400F6D99E /* Provider.swift */,
 				9B91999019E429B0003751FA /* AppSecret.swift */,
 				9B2E0A5519E683CC002E9CA4 /* SettingsForm.swift */,
 			);
@@ -359,8 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B2E0A5619E683CC002E9CA4 /* SettingsForm.swift in Sources */,
+				A09BBED21C2D244400F6D99E /* DropboxProvider.swift in Sources */,
 				9B6E1E9319E2EB2100C72D13 /* AppDelegate.swift in Sources */,
 				9B91999419E5185C003751FA /* EditorView.swift in Sources */,
+				A09BBED31C2D244400F6D99E /* Provider.swift in Sources */,
 				9B6E1EBF19E423A100C72D13 /* FinderListViewController.swift in Sources */,
 				9B6E1EBD19E35C2300C72D13 /* EditorViewController.swift in Sources */,
 				9B91999119E429B0003751FA /* AppSecret.swift in Sources */,
