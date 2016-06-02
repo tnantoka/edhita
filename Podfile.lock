@@ -6,7 +6,7 @@ PODS:
     - FCFileManager (~> 1.0)
     - FontAwesomeKit (~> 2.1)
     - MGSwipeTableCell (~> 1.1)
-  - EDHFontSelector (HEAD based on 0.2.1):
+  - EDHFontSelector (0.2.2):
     - EDHUtility (~> 0.1)
   - EDHInputAccessoryView (0.1.0):
     - EDHUtility (~> 0.1)
@@ -40,7 +40,7 @@ DEPENDENCIES:
   - Bootstrap (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Bootstrap/Bootstrap.podspec`)
   - Colours (~> 5.5)
   - EDHFinder (~> 0.1)
-  - EDHFontSelector (HEAD)
+  - EDHFontSelector (~> 0.2.2)
   - EDHInputAccessoryView (~> 0.1)
   - FXForms (~> 1.2)
   - GHMarkdownParser (~> 0.1)
@@ -58,20 +58,22 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec
 
 SPEC CHECKSUMS:
-  Bootstrap: 22c5f86c1970b2d3d485f583a711012eac0d32e3
+  Bootstrap: cbbdd0eec527ba4b52611893814ff3b7d8075a0e
   Colours: 46a9e057659f6c811e6ff33527a8ecb9245d4459
   EDHFinder: f788e38302c119c24d53f021975fc16dc491f6d5
-  EDHFontSelector: a6f382c263073b0ca9cfc5d3e38de772c08d1640
+  EDHFontSelector: db446999fa1bd5db9dbd3709018790d2dfc27f76
   EDHInputAccessoryView: 0b70c3c7aa3143ddc03e3441a2f7d5de3b65b931
   EDHUtility: 9e888c6880f52318e6f018374adb3d15c749f4a5
   FCFileManager: 028798097560c68ca0b9b73497ea0076af6d6e31
   FontAwesomeKit: 64759fb28b5d2e74a1bd81553d7c11ca10e32179
   FXForms: 0fc48705d6f73ab2ca2f7aa20a858228ee6e2042
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
-  github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
+  github-markdown-css: b6933c585e912d9c4b35a5204f1f12e18360b214
   Google-Mobile-Ads-SDK: e27569901b58881d9a94b42f2c642739cfe3970a
-  Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
+  Megrim: 8498c70aac297ca841e38e3400e45323be9cf6ef
   MGSwipeTableCell: fdeddef21fff3071c8ee151eb2c1a53dc9ac2f2c
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f700f759bf895b15266e1002511e82112fa3b5a0
+
+COCOAPODS: 1.0.1
