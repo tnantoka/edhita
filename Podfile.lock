@@ -58,7 +58,7 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec
 
 SPEC CHECKSUMS:
-  Bootstrap: cbbdd0eec527ba4b52611893814ff3b7d8075a0e
+  Bootstrap: 22c5f86c1970b2d3d485f583a711012eac0d32e3
   Colours: 46a9e057659f6c811e6ff33527a8ecb9245d4459
   EDHFinder: f788e38302c119c24d53f021975fc16dc491f6d5
   EDHFontSelector: db446999fa1bd5db9dbd3709018790d2dfc27f76
@@ -68,9 +68,9 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 64759fb28b5d2e74a1bd81553d7c11ca10e32179
   FXForms: 0fc48705d6f73ab2ca2f7aa20a858228ee6e2042
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
-  github-markdown-css: b6933c585e912d9c4b35a5204f1f12e18360b214
+  github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
   Google-Mobile-Ads-SDK: e27569901b58881d9a94b42f2c642739cfe3970a
-  Megrim: 8498c70aac297ca841e38e3400e45323be9cf6ef
+  Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
   MGSwipeTableCell: fdeddef21fff3071c8ee151eb2c1a53dc9ac2f2c
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
 
