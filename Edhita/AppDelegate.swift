@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var splitController: UISplitViewController!
     var editorController: EditorViewController!
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        EDHFontSelector.sharedSelector().defaultFontName = "Courier"
+        EDHFontSelector.shared().defaultFontName = "Courier"
 
         self.setAppearance()
         self.initExample()
@@ -28,21 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let _ = editorController.view // Force load view
         let editorNavController = UINavigationController(rootViewController: self.editorController)
         
-        EDHFinder.sharedFinder().toolbarHidden = false
-        EDHFinder.sharedFinder().finderDelegate = self
-        let masterNavController = EDHFinder.sharedFinder().listNavigationControllerWithDelegate(editorController)
-        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            if let listController = masterNavController.topViewController as? UITableViewController {
+        EDHFinder.shared().toolbarHidden = false
+        EDHFinder.shared().finderDelegate = self
+        let masterNavController = EDHFinder.shared().listNavigationController(with: editorController)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            if let listController = masterNavController?.topViewController as? UITableViewController {
                 listController.clearsSelectionOnViewWillAppear = false
                 listController.preferredContentSize = CGSize(width: 320.0, height: 600.0)
             }
         }
         
         self.splitController = UISplitViewController()
-        self.splitController.viewControllers = [masterNavController, editorNavController]
+        self.splitController.viewControllers = [masterNavController!, editorNavController]
         self.splitController.delegate = self
         
-        editorController.navigationItem.leftBarButtonItem = self.splitController.displayModeButtonItem()
+        editorController.navigationItem.leftBarButtonItem = self.splitController.displayModeButtonItem
         editorController.navigationItem.leftItemsSupplementBackButton = true
         
         self.window?.rootViewController = self.splitController
@@ -51,31 +51,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
+    func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
-    func applicationDidEnterBackground(application: UIApplication) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication) {
+    func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication) {
+    func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
     // MARK: - UISplitViewControllerDelegate
 
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
         if let secondaryAsNavController = secondaryViewController as? UINavigationController {
             if let topAsDetailController = secondaryAsNavController.topViewController as? EditorViewController {
                 if topAsDetailController.finderItem == nil {
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     // MARK: - EDHFinderDelegate
     
-    func listViewControllerWithPath(path: String!, delegate: EDHFinderListViewControllerDelegate!) -> EDHFinderListViewController! {
+    func listViewController(withPath path: String!, delegate: EDHFinderListViewControllerDelegate!) -> EDHFinderListViewController! {
         return FinderListViewController(path: path, delegate: delegate)
     }
     
@@ -98,8 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func setAppearance() {
         // 118, 122, 133
         // #767a85
-        UINavigationBar.appearance().barTintColor = UIColor.coolGrayColor()
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = UIColor.coolGray()
+        UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UINavigationBar.appearance().tintColor ]
         
         UIToolbar.appearance().barTintColor = UINavigationBar.appearance().barTintColor
@@ -109,9 +109,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func initExample() {
         //EDHUtility.setIsFirstLaunch(true)
         if EDHUtility.isFirstLaunch() {
-            let fromPath = NSBundle.mainBundle().pathForResource("bootstrap", ofType: nil)
-            let toPath = (EDHFinder.sharedFinder().rootPath as NSString).stringByAppendingPathComponent("example")
-            FCFileManager.copyItemAtPath(fromPath, toPath: toPath)
+            let fromPath = Bundle.main.path(forResource: "bootstrap", ofType: nil)
+            let toPath = (EDHFinder.shared().rootPath as NSString).appendingPathComponent("example")
+            FCFileManager.copyItem(atPath: fromPath, toPath: toPath)
             EDHUtility.setIsFirstLaunch(false)
         }
     }

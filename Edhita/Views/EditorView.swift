@@ -13,7 +13,7 @@ class EditorView: UIView, UITextViewDelegate {
     let kBorderWidth : CGFloat = 1.0
     
     enum EditorViewMode {
-        case None, Edit, Preview, Split
+        case none, edit, preview, split
     }
     
     var textView: UITextView!
@@ -23,7 +23,7 @@ class EditorView: UIView, UITextViewDelegate {
             self.configureView()
         }
     }
-    var mode: EditorViewMode = .None {
+    var mode: EditorViewMode = .none {
         didSet {
             if oldValue != self.mode {
                 self.updateControls()                
@@ -34,10 +34,10 @@ class EditorView: UIView, UITextViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        self.autoresizingMask = [.flexibleHeight, .flexibleWidth]
 
         self.textView = UITextView(frame: self.bounds)
-        self.textView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+        self.textView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.textView.delegate = self
         self.addSubview(self.textView)
 
@@ -53,27 +53,27 @@ class EditorView: UIView, UITextViewDelegate {
     
     func updateFrame() {
         switch self.mode {
-        case .Edit:
+        case .edit:
             self.textView.frame = self.bounds
             //self.webView.frame = self.bounds
             self.updateWebViewFrame(self.bounds)
-        case .Preview:
+        case .preview:
             self.textView.frame = self.bounds
             // self.webView.frame = self.bounds
             self.updateWebViewFrame(self.bounds)
-        case .Split:
-            self.textView.frame = CGRect(x: 0.0, y: 0.0, width: CGRectGetMidX(self.bounds), height: CGRectGetHeight(self.bounds))
+        case .split:
+            self.textView.frame = CGRect(x: 0.0, y: 0.0, width: self.bounds.midX, height: self.bounds.height)
             //self.webView.frame = CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds))
-            self.updateWebViewFrame(CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds)))
+            self.updateWebViewFrame(CGRect(x: self.bounds.midX + kBorderWidth, y: 0.0, width: self.bounds.midX - kBorderWidth, height: self.bounds.height))
         default:
             break
         }
     }
     
     // Web view gets smaller and smaller with decimal fraction?
-    func updateWebViewFrame(frame: CGRect) {
+    func updateWebViewFrame(_ frame: CGRect) {
         var newFrame = frame
-        newFrame.size.width = ceil(CGRectGetWidth(frame))
+        newFrame.size.width = ceil(frame.width)
         self.webView.frame = newFrame
     }
     
@@ -81,21 +81,21 @@ class EditorView: UIView, UITextViewDelegate {
         self.updateFrame()
         
         switch self.mode {
-        case .Edit:
-            self.textView.hidden = false
-            self.webView.hidden = true
+        case .edit:
+            self.textView.isHidden = false
+            self.webView.isHidden = true
 
             //self.textView.becomeFirstResponder()
             self.loadBlank()
-        case .Preview:
-            self.textView.hidden = true
-            self.webView.hidden = false
+        case .preview:
+            self.textView.isHidden = true
+            self.webView.isHidden = false
             
             self.textView.resignFirstResponder()
             self.preview()
-        case .Split:
-            self.textView.hidden = false
-            self.webView.hidden = false
+        case .split:
+            self.textView.isHidden = false
+            self.webView.isHidden = false
             self.preview()
         default:
             break
@@ -106,7 +106,7 @@ class EditorView: UIView, UITextViewDelegate {
         super.layoutSubviews()
         self.updateFrame()
         
-        if self.textView.isFirstResponder() {
+        if self.textView.isFirstResponder {
             let selectedRange = self.textView.selectedRange
             self.textView.scrollRangeToVisible(selectedRange)
         }
@@ -114,7 +114,7 @@ class EditorView: UIView, UITextViewDelegate {
     
     // MARK: - UITextViewDelegate
     
-    func textViewDidChange(textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         self.finderItem?.updateContent(textView.text)
         self.preview()
     }
@@ -124,7 +124,7 @@ class EditorView: UIView, UITextViewDelegate {
     func configureView() {
         if let item = self.finderItem {
             if item.isEditable() {
-                self.textView.editable = true
+                self.textView.isEditable = true
                 self.textView.text = item.content()
                 
                 if SettingsForm.sharedForm.accessoryView {
@@ -133,29 +133,29 @@ class EditorView: UIView, UITextViewDelegate {
                     self.textView.inputAccessoryView = nil
                 }
             } else {
-                self.textView.editable = false
+                self.textView.isEditable = false
                 self.textView.text = ""
 
                 self.textView.inputAccessoryView = nil
             }
             self.preview()
         } else {
-            self.textView.editable = false
+            self.textView.isEditable = false
             self.textView.text = ""
             self.loadBlank()
         }
         
-        EDHFontSelector.sharedSelector().applyToTextView(self.textView)
+        EDHFontSelector.shared().apply(to: self.textView)
     }
     
     func loadBlank() {
-        self.loadURL(NSURL(string: "about:blank"))
+        self.loadURL(URL(string: "about:blank"))
     }
     
     func preview() {
         if let item = self.finderItem {
             if item.mimeType != nil && item.mimeType == "text/markdown" {
-                self.loadHTML(self.renderMarkdown(item.content()) as String, baseURL: item.parent().fileURL())
+                self.loadHTML(self.renderMarkdown(item.content() as NSString) as String, baseURL: item.parent().fileURL())
             } else {
 //                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
 //                let indexItem = EDHFinderItem(path: indexPath)
@@ -169,11 +169,11 @@ class EditorView: UIView, UITextViewDelegate {
         }
     }
     
-    func loadURL(url: NSURL!) {
-        self.webView.loadRequest(NSURLRequest(URL: url, cachePolicy: .ReloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0))
+    func loadURL(_ url: URL!) {
+        self.webView.loadRequest(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0))
     }
     
-    func loadHTML(html: String!, baseURL: NSURL!) {
+    func loadHTML(_ html: String!, baseURL: URL!) {
         self.webView.loadHTMLString(html, baseURL: baseURL)
     }
     
@@ -181,15 +181,15 @@ class EditorView: UIView, UITextViewDelegate {
         self.webView.reload()
     }
     
-    func renderMarkdown(content: NSString) -> NSString {
+    func renderMarkdown(_ content: NSString) -> NSString {
         let parser = GHMarkdownParser()
         parser.options = kGHMarkdownAutoLink
         parser.githubFlavored = true
-        let rendered = parser.HTMLStringFromMarkdownString(content as String)
+        let rendered = parser.htmlString(fromMarkdownString: content as String)
         let body = "<article class=\"markdown-body\">\(rendered)</article>"
-        let path = NSBundle.mainBundle().pathForResource("github-markdown", ofType: "css")
-        let url = NSURL.fileURLWithPath(path!)
+        let path = Bundle.main.path(forResource: "github-markdown", ofType: "css")
+        let url = URL(fileURLWithPath: path!)
         let style = "<link rel=\"stylesheet\" href=\"\(url.absoluteString)\">"
-        return "\(style)\(body)"
+        return "\(style)\(body)" as NSString
     }
 }

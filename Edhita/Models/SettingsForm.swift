@@ -8,13 +8,13 @@
 
 import UIKit
 
-public class SettingsForm: NSObject, FXForm {
+open class SettingsForm: NSObject, FXForm {
 
-    private struct Defaults {
+    fileprivate struct Defaults {
         static let accessoryViewKey = "SettingsForm.Defaults.accessoryViewKey"
     }
 
-    public class var sharedForm: SettingsForm {
+    open class var sharedForm: SettingsForm {
         struct Singleton {
             static let sharedForm = SettingsForm()
         }
@@ -25,20 +25,20 @@ public class SettingsForm: NSObject, FXForm {
         super.init()
         
         var defaults = [String: AnyObject]()
-        defaults[Defaults.accessoryViewKey] = true
-        NSUserDefaults.standardUserDefaults().registerDefaults(defaults)
+        defaults[Defaults.accessoryViewKey] = true as AnyObject?
+        UserDefaults.standard.register(defaults: defaults)
         
-        self.accessoryView = NSUserDefaults.standardUserDefaults().boolForKey(Defaults.accessoryViewKey)
+        self.accessoryView = UserDefaults.standard.bool(forKey: Defaults.accessoryViewKey)
     }
     
     var accessoryView: Bool = true {
         didSet {
-            NSUserDefaults.standardUserDefaults().setBool(self.accessoryView, forKey: Defaults.accessoryViewKey)
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set(self.accessoryView, forKey: Defaults.accessoryViewKey)
+            UserDefaults.standard.synchronize()
         }
     }
     
-    public func extraFields() -> [AnyObject]! {
+    @nonobjc open func extraFields() -> [Any]! {
         return [
             [
                 FXFormFieldHeader : "",

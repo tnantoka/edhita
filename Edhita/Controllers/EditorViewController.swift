@@ -28,17 +28,17 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.edgesForExtendedLayout = .None
+        self.edgesForExtendedLayout = UIRectEdge()
         
         self.editorView = EditorView(frame: self.view.bounds)
         self.view.addSubview(self.editorView)
         
         // Toolbar
-        self.fullscreenItem = UIBarButtonItem(image: nil, style: .Plain, target: self, action: #selector(fullscreenItemDidTap))
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshbeforeionRefreshingIconWithSize(self.kToolbarIconSize), action: #selector(reloadItemDidTap))
-        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIconWithSize(self.kToolbarIconSize), action: #selector(shareItemDidTap))
-        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIconWithSize(self.kToolbarIconSize), action: #selector(settingsItemDidTap))
-        let flexibleItem = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(fullscreenItemDidTap))
+        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshbeforeionRefreshingIcon(withSize: self.kToolbarIconSize), action: #selector(reloadItemDidTap))
+        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize), action: #selector(shareItemDidTap))
+        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize), action: #selector(settingsItemDidTap))
+        let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         self.toolbarItems = [
             self.fullscreenItem,
@@ -56,7 +56,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             NSLocalizedString("Browser", comment: ""),
             NSLocalizedString("Dual", comment: ""),
             ])
-        self.modeControl.addTarget(self, action: #selector(modeControlDidChange), forControlEvents: .ValueChanged)
+        self.modeControl.addTarget(self, action: #selector(modeControlDidChange), for: .valueChanged)
         self.modeControl.selectedSegmentIndex = 0
 
         let modeItem = UIBarButtonItem(customView: self.modeControl)
@@ -66,67 +66,67 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.finderItem = nil
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.setToolbarHidden(false, animated: true)
 
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: UIKeyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: UIKeyboardWillHideNotification, object: nil)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()
     }
 
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        notificationCenter.removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
 
         // TODO: Should use UISplitViewControllerDelegate
-        self.splitViewController?.preferredDisplayMode = .Automatic
+        self.splitViewController?.preferredDisplayMode = .automatic
         self.updateFullscreenItem()
     }
     
     // MARK: - Actions
     
-    func fullscreenItemDidTap(sender: AnyObject) {
-        if self.splitViewController?.preferredDisplayMode == UISplitViewControllerDisplayMode.Automatic {
-            if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.AllVisible {
-                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden
+    func fullscreenItemDidTap(_ sender: AnyObject) {
+        if self.splitViewController?.preferredDisplayMode == UISplitViewControllerDisplayMode.automatic {
+            if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
+                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.primaryHidden
             } else {
-                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
             }
         } else {
-            self.splitViewController?.preferredDisplayMode = .Automatic
+            self.splitViewController?.preferredDisplayMode = .automatic
         }
         self.updateFullscreenItem()
     }
 
-    func reloadItemDidTap(sender: AnyObject) {
+    func reloadItemDidTap(_ sender: AnyObject) {
         self.editorView.reload()
     }
 
-    func shareItemDidTap(sender: AnyObject) {
+    func shareItemDidTap(_ sender: AnyObject) {
         let alertController = UIAlertController(
             title: NSLocalizedString("Share", comment: ""),
             message: "",
-            preferredStyle: .ActionSheet)
+            preferredStyle: .actionSheet)
 
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("E-mail", comment: ""),
-            style: .Default,
+            style: .default,
             handler: { (action: UIAlertAction!) in
                 if !MFMailComposeViewController.canSendMail() {
                     // FIXME: Please configure an e-mail account in the settings app.
@@ -142,42 +142,42 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
                     if item.isEditable() {
                         mailController.setMessageBody(item.content(), isHTML: false)
                     } else {
-                        if let data = NSData(contentsOfURL: item.fileURL()) {
+                        if let data = try? Data(contentsOf: item.fileURL()) {
                             mailController.addAttachmentData(data, mimeType: item.mimeType, fileName: item.name)
                         }
                     }
                 }
                 
-                self.presentViewController(mailController, animated: true, completion: nil)
+                self.present(mailController, animated: true, completion: nil)
         }))
         
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("Cancel", comment: ""),
-            style: .Cancel,
+            style: .cancel,
             handler: nil))
         
         alertController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 
-    func settingsItemDidTap(sender: AnyObject) {
+    func settingsItemDidTap(_ sender: AnyObject) {
         let formController = SettingsViewController()
         let navController = UINavigationController(rootViewController: formController)
-        navController.modalPresentationStyle = .FormSheet
-        self.presentViewController(navController, animated: true, completion: nil)
+        navController.modalPresentationStyle = .formSheet
+        self.present(navController, animated: true, completion: nil)
     }
 
-    func modeControlDidChange(sender: AnyObject) {
+    func modeControlDidChange(_ sender: AnyObject) {
         switch self.modeControl.selectedSegmentIndex {
         case 0:
-            self.editorView.mode = .Edit
-            self.reloadItem.enabled = false
+            self.editorView.mode = .edit
+            self.reloadItem.isEnabled = false
         case 1:
-            self.editorView.mode = .Preview
-            self.reloadItem.enabled = true
+            self.editorView.mode = .preview
+            self.reloadItem.isEnabled = true
         case 2:
-            self.editorView.mode = .Split
-            self.reloadItem.enabled = true
+            self.editorView.mode = .split
+            self.reloadItem.isEnabled = true
         default:
             break
         }
@@ -185,20 +185,20 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     // MARK: - EDHFinderListViewControllerDelegate
 
-    func listViewController(controller: EDHFinderListViewController!, didMoveToDirectory item: EDHFinderItem!) {
+    func listViewController(_ controller: EDHFinderListViewController!, didMoveToDirectory item: EDHFinderItem!) {
         self.finderItem = nil
     }
     
-    func listViewController(controller: EDHFinderListViewController!, didBackToDirectory item: EDHFinderItem!) {
+    func listViewController(_ controller: EDHFinderListViewController!, didBackToDirectory item: EDHFinderItem!) {
         self.listViewController(controller, didMoveToDirectory: item)
     }
     
-    func listViewController(controller: EDHFinderListViewController!, didSelectFile item: EDHFinderItem!) {
+    func listViewController(_ controller: EDHFinderListViewController!, didSelectFile item: EDHFinderItem!) {
         self.finderItem = item
         
         // Show editor controller on compact devise
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        if appDelegate.splitController.collapsed {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appDelegate.splitController.isCollapsed {
             // FIXME: Unbalanced calls to begin/end appearance transitions for <UINavigationController: >.
             if let navigationController = self.navigationController {
                 appDelegate.splitController.showDetailViewController(navigationController, sender: nil)
@@ -211,38 +211,38 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     
     // MARK: - MFMailComposeViewControllerDelegate
     
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if error != nil {
             // FIXME: Show error
             return
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 
     // MARK: - Keyboard notification
     
-    func handleKeyboardWillShowNotification(notification: NSNotification) {
+    func handleKeyboardWillShowNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: true)
     }
     
-    func handleKeyboardWillHideNotification(notification: NSNotification) {
+    func handleKeyboardWillHideNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: false)
     }
     
-    func keyboardWillChangeFrameWithNotification(notification: NSNotification, showsKeyboard: Bool) {
-        let userInfo = notification.userInfo!
-        let animationDuration: NSTimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
-        var viewHeight = CGRectGetHeight(self.view.bounds)
+    func keyboardWillChangeFrameWithNotification(_ notification: Notification, showsKeyboard: Bool) {
+        let userInfo = (notification as NSNotification).userInfo!
+        let animationDuration: TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        var viewHeight = self.view.bounds.height
         if showsKeyboard {
-            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue()
-            let keyboardHeight = CGRectGetHeight(keyboardEndFrame)
-            viewHeight = viewHeight + CGRectGetHeight(self.navigationController!.toolbar!.bounds) - keyboardHeight
+            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let keyboardHeight = keyboardEndFrame.height
+            viewHeight = viewHeight + self.navigationController!.toolbar!.bounds.height - keyboardHeight
         }
         
-        UIView.animateWithDuration(
-            animationDuration,
+        UIView.animate(
+            withDuration: animationDuration,
             delay: 0.0,
-            options: UIViewAnimationOptions.BeginFromCurrentState,
+            options: UIViewAnimationOptions.beginFromCurrentState,
             animations: {
                 self.editorView.frame.size.height = viewHeight
             }, completion: nil)
@@ -254,11 +254,11 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         if let item = self.finderItem {
             self.title = item.name
 
-            self.shareItem.enabled = true
+            self.shareItem.isEnabled = true
         } else {
             self.title = NSLocalizedString("Edhita", comment: "")
 
-            self.shareItem.enabled = false
+            self.shareItem.isEnabled = false
         }
         self.editorView.finderItem = self.finderItem
         self.modeControlDidChange(self.modeControl)
@@ -266,28 +266,28 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     
     func updateFullscreenItem() {
         var icon: FAKIcon
-        if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.AllVisible {
+        if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
             // FIXME: Does not show back button label after rotation to portrait
             self.navigationItem.leftBarButtonItem = nil // Don't show default exapnd item on portrail
-            icon = FAKIonIcons.arrowExpandIconWithSize(self.kToolbarIconSize)
+            icon = FAKIonIcons.arrowExpandIcon(withSize: self.kToolbarIconSize)
         } else {
-            self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-            icon = FAKIonIcons.arrowShrinkIconWithSize(self.kToolbarIconSize)
+            self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+            icon = FAKIonIcons.arrowShrinkIcon(withSize: self.kToolbarIconSize)
         }
-        self.fullscreenItem.image = icon.imageWithSize(CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
+        self.fullscreenItem.image = icon.image(with: CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
 
-        if self.splitViewController?.collapsed == true {
-            self.fullscreenItem.enabled = false
+        if self.splitViewController?.isCollapsed == true {
+            self.fullscreenItem.isEnabled = false
         }
     }
     
-    func barButtonItem(icon icon: FAKIcon, action: Selector) -> UIBarButtonItem {
+    func barButtonItem(icon: FAKIcon, action: Selector) -> UIBarButtonItem {
         let image = self.iconImage(icon)
-        let item = UIBarButtonItem(image: image, style: .Plain, target: self, action: action)
+        let item = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
         return item
     }
     
-    func iconImage(icon: FAKIcon) -> UIImage {
-        return icon.imageWithSize(CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
+    func iconImage(_ icon: FAKIcon) -> UIImage {
+        return icon.image(with: CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
     }
 }

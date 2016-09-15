@@ -18,7 +18,7 @@ class FinderListViewController: EDHFinderListViewController {
         self.initAd()
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -29,7 +29,7 @@ class FinderListViewController: EDHFinderListViewController {
     // MARK: - Utilities
     
     func initAd() {
-        if UIDevice.currentDevice().orientation.isLandscape {
+        if UIDevice.current.orientation.isLandscape {
             self.bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerLandscape)
         } else {
             self.bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
@@ -46,7 +46,7 @@ class FinderListViewController: EDHFinderListViewController {
         
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
-        self.bannerView.loadRequest(request)
+        self.bannerView.load(request)
         
         self.tableView.tableFooterView = self.bannerView
     }

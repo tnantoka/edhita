@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: FXFormViewController {
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
 
@@ -25,7 +25,7 @@ class SettingsViewController: FXFormViewController {
         self.title = NSLocalizedString("Settings", comment: "")
         self.formController.form = SettingsForm.sharedForm
         
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(doneItemDidTap))
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneItemDidTap))
         self.navigationItem.rightBarButtonItem = doneItem
     }
 
@@ -36,25 +36,25 @@ class SettingsViewController: FXFormViewController {
     
     // MARK: - Actions
     
-    func fontDidTap(sender: AnyObject) {
-        let fontController = EDHFontSelector.sharedSelector().settingsViewController()
-        self.navigationController?.pushViewController(fontController, animated: true)
+    func fontDidTap(_ sender: AnyObject) {
+        let fontController = EDHFontSelector.shared().settingsViewController()
+        self.navigationController?.pushViewController(fontController!, animated: true)
     }
 
-    func acknowledgementsDidTap(sender: AnyObject) {
-        let acknowledgementsController = VTAcknowledgementsViewController(acknowledgementsPlistPath: NSBundle.mainBundle().pathForResource("Pods-acknowledgements", ofType: "plist"))
+    func acknowledgementsDidTap(_ sender: AnyObject) {
+        let acknowledgementsController = VTAcknowledgementsViewController(acknowledgementsPlistPath: Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist"))
         //let acknowledgementsController = VTAcknowledgementsViewController() // Doesn't work
-        self.navigationController?.pushViewController(acknowledgementsController, animated: true)
+        self.navigationController?.pushViewController(acknowledgementsController!, animated: true)
     }
 
-    func doneItemDidTap(sender: AnyObject) {
+    func doneItemDidTap(_ sender: AnyObject) {
         self.close()
     }
     
     // MARK: - Utilities
     
     func close() {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
 }
