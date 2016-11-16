@@ -35,7 +35,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         
         // Toolbar
         self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(fullscreenItemDidTap))
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshbeforeionRefreshingIcon(withSize: self.kToolbarIconSize), action: #selector(reloadItemDidTap))
+        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize), action: #selector(reloadItemDidTap))
         self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize), action: #selector(shareItemDidTap))
         let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize), action: #selector(settingsItemDidTap))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
