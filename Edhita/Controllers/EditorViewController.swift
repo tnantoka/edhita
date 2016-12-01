@@ -152,6 +152,22 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         }))
         
         alertController.addAction(UIAlertAction(
+            title: NSLocalizedString("Open in Another App", comment: ""),
+            style: .default,
+            handler: { (action: UIAlertAction!) in
+                guard let item = self.finderItem else { return }
+
+                var items: [Any] = [item.fileURL()]
+
+                if item.isEditable() {
+                    items.append(item.content())
+                }
+
+                let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                self.present(activityController, animated: true, completion: nil)
+        }))
+
+        alertController.addAction(UIAlertAction(
             title: NSLocalizedString("Cancel", comment: ""),
             style: .cancel,
             handler: nil))
