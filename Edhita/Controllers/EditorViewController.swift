@@ -219,8 +219,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.finderItem = item
 
         // Show editor controller on compact devise
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if appDelegate.splitController.isCollapsed {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.splitController.isCollapsed {
             // FIXME: Unbalanced calls to begin/end appearance transitions for <UINavigationController: >.
             if let navigationController = self.navigationController {
                 appDelegate.splitController.showDetailViewController(navigationController, sender: nil)
@@ -254,13 +253,13 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     func keyboardWillChangeFrameWithNotification(_ notification: Notification, showsKeyboard: Bool) {
         let userInfo = (notification as NSNotification).userInfo!
-        let durationInfo = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber ?? NSNumber()
+        let durationInfo = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber) ?? NSNumber()
         let animationDuration: TimeInterval = durationInfo.doubleValue
         var viewHeight = self.view.bounds.height
         if showsKeyboard {
-            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
             let keyboardHeight = keyboardEndFrame.height
-            viewHeight = viewHeight + self.navigationController!.toolbar!.bounds.height - keyboardHeight
+            viewHeight += self.navigationController!.toolbar!.bounds.height - keyboardHeight
         }
 
         UIView.animate(
