@@ -41,7 +41,7 @@ class FinderListViewController: EDHFinderListViewController {
 //            self.bannerView = GADBannerView(adSize: kGADAdSizeBanner)
 //        }
 
-        self.bannerView.adUnitID =  AppSecret.Ad.AdMob.unitId
+        self.bannerView.adUnitID =  AppSecret.AdMob.unitId
         self.bannerView.rootViewController = self
 
         let request = GADRequest()

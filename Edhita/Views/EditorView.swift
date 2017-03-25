@@ -10,7 +10,7 @@ import UIKit
 
 class EditorView: UIView, UITextViewDelegate {
 
-    let kBorderWidth : CGFloat = 1.0
+    let kBorderWidth: CGFloat = 1.0
 
     enum EditorViewMode {
         case none, edit, preview, split

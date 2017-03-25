@@ -41,16 +41,16 @@ open class SettingsForm: NSObject, FXForm {
     @nonobjc open func extraFields() -> [Any]! {
         return [
             [
-                FXFormFieldHeader : "",
-                FXFormFieldType : FXFormFieldTypeLabel,
-                FXFormFieldAction : "fontDidTap:",
-                FXFormFieldTitle : NSLocalizedString("Font", comment: "")
+                FXFormFieldHeader: "",
+                FXFormFieldType: FXFormFieldTypeLabel,
+                FXFormFieldAction: "fontDidTap:",
+                FXFormFieldTitle: NSLocalizedString("Font", comment: "")
             ],
             [
-                FXFormFieldHeader : "",
-                FXFormFieldType : FXFormFieldTypeLabel,
-                FXFormFieldAction : "acknowledgementsDidTap:",
-                FXFormFieldTitle : NSLocalizedString("Acknowledgements", comment: "")
+                FXFormFieldHeader: "",
+                FXFormFieldType: FXFormFieldTypeLabel,
+                FXFormFieldAction: "acknowledgementsDidTap:",
+                FXFormFieldTitle: NSLocalizedString("Acknowledgements", comment: "")
             ]
         ]
     }

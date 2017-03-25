@@ -133,7 +133,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("E-mail", comment: ""),
             style: .default,
-            handler: { (action: UIAlertAction!) in
+            handler: { (_: UIAlertAction!) in
                 if !MFMailComposeViewController.canSendMail() {
                     // FIXME: Please configure an e-mail account in the settings app.
                     return
@@ -160,7 +160,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("Open in Another App", comment: ""),
             style: .default,
-            handler: { (action: UIAlertAction!) in
+            handler: { (_: UIAlertAction!) in
                 guard let item = self.finderItem else { return }
 
                 var items: [Any] = [item.fileURL()]
