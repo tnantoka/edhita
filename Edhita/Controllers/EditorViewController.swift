@@ -24,20 +24,24 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             self.configureView()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.edgesForExtendedLayout = UIRectEdge()
-        
+
         self.editorView = EditorView(frame: self.view.bounds)
         self.view.addSubview(self.editorView)
-        
+
         // Toolbar
-        self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(fullscreenItemDidTap))
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize), action: #selector(reloadItemDidTap))
-        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize), action: #selector(shareItemDidTap))
-        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize), action: #selector(settingsItemDidTap))
+        self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self,
+                                              action: #selector(fullscreenItemDidTap))
+        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize),
+                                             action: #selector(reloadItemDidTap))
+        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize),
+                                            action: #selector(shareItemDidTap))
+        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize),
+                                              action: #selector(settingsItemDidTap))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         self.toolbarItems = [
@@ -49,12 +53,12 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             flexibleItem,
             settingsItem
         ]
-        
+
         // Right
         self.modeControl = UISegmentedControl(items: [
             NSLocalizedString("Editor", comment: ""),
             NSLocalizedString("Browser", comment: ""),
-            NSLocalizedString("Dual", comment: ""),
+            NSLocalizedString("Dual", comment: "")
             ])
         self.modeControl.addTarget(self, action: #selector(modeControlDidChange), for: .valueChanged)
         self.modeControl.selectedSegmentIndex = 0
@@ -65,15 +69,17 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         // Init
         self.finderItem = nil
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.navigationController?.setToolbarHidden(false, animated: true)
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification),
+                                       name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification),
+                                       name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()
@@ -90,7 +96,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
@@ -98,9 +104,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.splitViewController?.preferredDisplayMode = .automatic
         self.updateFullscreenItem()
     }
-    
+
     // MARK: - Actions
-    
+
     func fullscreenItemDidTap(_ sender: AnyObject) {
         if self.splitViewController?.preferredDisplayMode == UISplitViewControllerDisplayMode.automatic {
             if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
@@ -127,18 +133,18 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("E-mail", comment: ""),
             style: .default,
-            handler: { (action: UIAlertAction!) in
+            handler: { (_: UIAlertAction!) in
                 if !MFMailComposeViewController.canSendMail() {
                     // FIXME: Please configure an e-mail account in the settings app.
                     return
                 }
-                
+
                 let mailController = MFMailComposeViewController()
                 mailController.mailComposeDelegate = self
-                
+
                 if let item = self.finderItem {
                     mailController.setSubject(item.name)
-                    
+
                     if item.isEditable() {
                         mailController.setMessageBody(item.content(), isHTML: false)
                     } else {
@@ -147,14 +153,14 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
                         }
                     }
                 }
-                
+
                 self.present(mailController, animated: true, completion: nil)
         }))
-        
+
         alertController.addAction(UIAlertAction(
             title: NSLocalizedString("Open in Another App", comment: ""),
             style: .default,
-            handler: { (action: UIAlertAction!) in
+            handler: { (_: UIAlertAction!) in
                 guard let item = self.finderItem else { return }
 
                 var items: [Any] = [item.fileURL()]
@@ -171,7 +177,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             title: NSLocalizedString("Cancel", comment: ""),
             style: .cancel,
             handler: nil))
-        
+
         alertController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
         self.present(alertController, animated: true, completion: nil)
     }
@@ -204,17 +210,16 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     func listViewController(_ controller: EDHFinderListViewController!, didMoveToDirectory item: EDHFinderItem!) {
         self.finderItem = nil
     }
-    
+
     func listViewController(_ controller: EDHFinderListViewController!, didBackToDirectory item: EDHFinderItem!) {
         self.listViewController(controller, didMoveToDirectory: item)
     }
-    
+
     func listViewController(_ controller: EDHFinderListViewController!, didSelectFile item: EDHFinderItem!) {
         self.finderItem = item
-        
+
         // Show editor controller on compact devise
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        if appDelegate.splitController.isCollapsed {
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate, appDelegate.splitController.isCollapsed {
             // FIXME: Unbalanced calls to begin/end appearance transitions for <UINavigationController: >.
             if let navigationController = self.navigationController {
                 appDelegate.splitController.showDetailViewController(navigationController, sender: nil)
@@ -224,10 +229,11 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             // appDelegate.splitController.showDetailViewController(self, sender: nil)
         }
     }
-    
+
     // MARK: - MFMailComposeViewControllerDelegate
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult, error: Error?) {
         if error != nil {
             // FIXME: Show error
             return
@@ -236,25 +242,26 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     }
 
     // MARK: - Keyboard notification
-    
+
     func handleKeyboardWillShowNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: true)
     }
-    
+
     func handleKeyboardWillHideNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: false)
     }
-    
+
     func keyboardWillChangeFrameWithNotification(_ notification: Notification, showsKeyboard: Bool) {
         let userInfo = (notification as NSNotification).userInfo!
-        let animationDuration: TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let durationInfo = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber) ?? NSNumber()
+        let animationDuration: TimeInterval = durationInfo.doubleValue
         var viewHeight = self.view.bounds.height
         if showsKeyboard {
-            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
             let keyboardHeight = keyboardEndFrame.height
-            viewHeight = viewHeight + self.navigationController!.toolbar!.bounds.height - keyboardHeight
+            viewHeight += self.navigationController!.toolbar!.bounds.height - keyboardHeight
         }
-        
+
         UIView.animate(
             withDuration: animationDuration,
             delay: 0.0,
@@ -279,7 +286,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.editorView.finderItem = self.finderItem
         self.modeControlDidChange(self.modeControl)
     }
-    
+
     func updateFullscreenItem() {
         var icon: FAKIcon
         if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
@@ -296,13 +303,13 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             self.fullscreenItem.isEnabled = false
         }
     }
-    
+
     func barButtonItem(icon: FAKIcon, action: Selector) -> UIBarButtonItem {
         let image = self.iconImage(icon)
         let item = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
         return item
     }
-    
+
     func iconImage(_ icon: FAKIcon) -> UIImage {
         return icon.image(with: CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
     }
