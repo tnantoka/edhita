@@ -34,10 +34,14 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.view.addSubview(self.editorView)
 
         // Toolbar
-        self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self, action: #selector(fullscreenItemDidTap))
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize), action: #selector(reloadItemDidTap))
-        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize), action: #selector(shareItemDidTap))
-        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize), action: #selector(settingsItemDidTap))
+        self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self,
+                                              action: #selector(fullscreenItemDidTap))
+        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize),
+                                             action: #selector(reloadItemDidTap))
+        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize),
+                                            action: #selector(shareItemDidTap))
+        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize),
+                                              action: #selector(settingsItemDidTap))
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         self.toolbarItems = [
@@ -54,7 +58,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.modeControl = UISegmentedControl(items: [
             NSLocalizedString("Editor", comment: ""),
             NSLocalizedString("Browser", comment: ""),
-            NSLocalizedString("Dual", comment: ""),
+            NSLocalizedString("Dual", comment: "")
             ])
         self.modeControl.addTarget(self, action: #selector(modeControlDidChange), for: .valueChanged)
         self.modeControl.selectedSegmentIndex = 0
@@ -72,8 +76,10 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.navigationController?.setToolbarHidden(false, animated: true)
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification),
+                                       name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification),
+                                       name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()
@@ -227,7 +233,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     // MARK: - MFMailComposeViewControllerDelegate
 
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult, error: Error?) {
         if error != nil {
             // FIXME: Show error
             return
@@ -247,7 +254,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     func keyboardWillChangeFrameWithNotification(_ notification: Notification, showsKeyboard: Bool) {
         let userInfo = (notification as NSNotification).userInfo!
-        let animationDuration: TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue
+        let durationInfo = userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber ?? NSNumber()
+        let animationDuration: TimeInterval = durationInfo.doubleValue
         var viewHeight = self.view.bounds.height
         if showsKeyboard {
             let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue

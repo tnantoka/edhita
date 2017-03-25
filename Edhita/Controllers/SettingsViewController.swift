@@ -42,7 +42,9 @@ class SettingsViewController: FXFormViewController {
     }
 
     func acknowledgementsDidTap(_ sender: AnyObject) {
-        let acknowledgementsController = VTAcknowledgementsViewController(acknowledgementsPlistPath: Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist"))
+        let acknowledgementsController = VTAcknowledgementsViewController(
+            acknowledgementsPlistPath: Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist")
+        )
         //let acknowledgementsController = VTAcknowledgementsViewController() // Doesn't work
         self.navigationController?.pushViewController(acknowledgementsController!, animated: true)
     }

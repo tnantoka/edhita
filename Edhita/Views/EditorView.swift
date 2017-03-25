@@ -63,8 +63,12 @@ class EditorView: UIView, UITextViewDelegate {
             self.updateWebViewFrame(self.bounds)
         case .split:
             self.textView.frame = CGRect(x: 0.0, y: 0.0, width: self.bounds.midX, height: self.bounds.height)
-            //self.webView.frame = CGRect(x: CGRectGetMidX(self.bounds) + kBorderWidth, y: 0.0, width: CGRectGetMidX(self.bounds) - kBorderWidth, height: CGRectGetHeight(self.bounds))
-            self.updateWebViewFrame(CGRect(x: self.bounds.midX + kBorderWidth, y: 0.0, width: self.bounds.midX - kBorderWidth, height: self.bounds.height))
+            self.updateWebViewFrame(CGRect(
+                x: self.bounds.midX + kBorderWidth,
+                y: 0.0,
+                width: self.bounds.midX - kBorderWidth,
+                height: self.bounds.height
+            ))
         default:
             break
         }
@@ -157,20 +161,15 @@ class EditorView: UIView, UITextViewDelegate {
             if item.mimeType != nil && item.mimeType == "text/markdown" {
                 self.loadHTML(self.renderMarkdown(item.content()), baseURL: item.parent().fileURL())
             } else {
-//                let indexPath = item.path.stringByDeletingLastPathComponent.stringByAppendingPathComponent("index.html")
-//                let indexItem = EDHFinderItem(path: indexPath)
-//                if indexItem.isFile {
-//                    self.loadURL(indexItem.fileURL())
-//                } else {
-//                    self.loadURL(item.fileURL())
-//                }
                 self.loadURL(item.fileURL())
             }
         }
     }
 
     func loadURL(_ url: URL!) {
-        self.webView.loadRequest(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0))
+        self.webView.loadRequest(
+            URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0)
+        )
     }
 
     func loadHTML(_ html: String!, baseURL: URL!) {

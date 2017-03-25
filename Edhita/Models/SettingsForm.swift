@@ -44,14 +44,14 @@ open class SettingsForm: NSObject, FXForm {
                 FXFormFieldHeader : "",
                 FXFormFieldType : FXFormFieldTypeLabel,
                 FXFormFieldAction : "fontDidTap:",
-                FXFormFieldTitle : NSLocalizedString("Font", comment: ""),
+                FXFormFieldTitle : NSLocalizedString("Font", comment: "")
             ],
             [
                 FXFormFieldHeader : "",
                 FXFormFieldType : FXFormFieldTypeLabel,
                 FXFormFieldAction : "acknowledgementsDidTap:",
-                FXFormFieldTitle : NSLocalizedString("Acknowledgements", comment: ""),
-            ],
+                FXFormFieldTitle : NSLocalizedString("Acknowledgements", comment: "")
+            ]
         ]
     }
 }
