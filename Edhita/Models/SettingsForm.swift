@@ -23,21 +23,21 @@ open class SettingsForm: NSObject, FXForm {
 
     override init() {
         super.init()
-        
+
         var defaults = [String: AnyObject]()
         defaults[Defaults.accessoryViewKey] = true as AnyObject?
         UserDefaults.standard.register(defaults: defaults)
-        
+
         self.accessoryView = UserDefaults.standard.bool(forKey: Defaults.accessoryViewKey)
     }
-    
+
     var accessoryView: Bool = true {
         didSet {
             UserDefaults.standard.set(self.accessoryView, forKey: Defaults.accessoryViewKey)
             UserDefaults.standard.synchronize()
         }
     }
-    
+
     @nonobjc open func extraFields() -> [Any]! {
         return [
             [

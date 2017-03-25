@@ -18,16 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        
+
         EDHFontSelector.shared().defaultFontName = "Courier"
 
         self.setAppearance()
         self.initExample()
-        
+
         self.editorController = EditorViewController()
         let _ = editorController.view // Force load view
         let editorNavController = UINavigationController(rootViewController: self.editorController)
-        
+
         EDHFinder.shared().toolbarHidden = false
         EDHFinder.shared().finderDelegate = self
         let masterNavController = EDHFinder.shared().listNavigationController(with: editorController)
@@ -37,17 +37,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 listController.preferredContentSize = CGSize(width: 320.0, height: 600.0)
             }
         }
-        
+
         self.splitController = UISplitViewController()
         self.splitController.viewControllers = [masterNavController!, editorNavController]
         self.splitController.delegate = self
-        
+
         editorController.navigationItem.leftBarButtonItem = self.splitController.displayModeButtonItem
         editorController.navigationItem.leftItemsSupplementBackButton = true
-        
+
         self.window?.rootViewController = self.splitController
         self.window?.makeKeyAndVisible()
-        
+
         return true
     }
 
@@ -88,20 +88,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
     // MARK: - EDHFinderDelegate
-    
+
     func listViewController(withPath path: String!, delegate: EDHFinderListViewControllerDelegate!) -> EDHFinderListViewController! {
         return FinderListViewController(path: path, delegate: delegate)
     }
-    
+
     // MARK: - Utilities
-    
+
     func setAppearance() {
         // 118, 122, 133
         // #767a85
         UINavigationBar.appearance().barTintColor = UIColor.coolGray()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [ NSForegroundColorAttributeName: UINavigationBar.appearance().tintColor ]
-        
+
         UIToolbar.appearance().barTintColor = UINavigationBar.appearance().barTintColor
         UIToolbar.appearance().tintColor = UINavigationBar.appearance().tintColor
     }
@@ -117,4 +117,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
 
 }
-

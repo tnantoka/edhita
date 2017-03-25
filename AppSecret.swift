@@ -7,4 +7,3 @@ class AppSecret: NSObject {
         }
     }
 }
-

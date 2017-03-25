@@ -17,14 +17,14 @@ class SettingsViewController: FXFormViewController {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.title = NSLocalizedString("Settings", comment: "")
         self.formController.form = SettingsForm.sharedForm
-        
+
         let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneItemDidTap))
         self.navigationItem.rightBarButtonItem = doneItem
     }
@@ -33,9 +33,9 @@ class SettingsViewController: FXFormViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     // MARK: - Actions
-    
+
     func fontDidTap(_ sender: AnyObject) {
         let fontController = EDHFontSelector.shared().settingsViewController()
         self.navigationController?.pushViewController(fontController!, animated: true)
@@ -50,9 +50,9 @@ class SettingsViewController: FXFormViewController {
     func doneItemDidTap(_ sender: AnyObject) {
         self.close()
     }
-    
+
     // MARK: - Utilities
-    
+
     func close() {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }

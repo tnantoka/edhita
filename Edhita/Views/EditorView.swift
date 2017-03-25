@@ -11,11 +11,11 @@ import UIKit
 class EditorView: UIView, UITextViewDelegate {
 
     let kBorderWidth : CGFloat = 1.0
-    
+
     enum EditorViewMode {
         case none, edit, preview, split
     }
-    
+
     var textView: UITextView!
     var webView: UIWebView! // TODO: Use WKWebView
     var finderItem: EDHFinderItem? {
@@ -26,7 +26,7 @@ class EditorView: UIView, UITextViewDelegate {
     var mode: EditorViewMode = .none {
         didSet {
             if oldValue != self.mode {
-                self.updateControls()                
+                self.updateControls()
             }
         }
     }
@@ -50,7 +50,7 @@ class EditorView: UIView, UITextViewDelegate {
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func updateFrame() {
         switch self.mode {
         case .edit:
@@ -69,17 +69,17 @@ class EditorView: UIView, UITextViewDelegate {
             break
         }
     }
-    
+
     // Web view gets smaller and smaller with decimal fraction?
     func updateWebViewFrame(_ frame: CGRect) {
         var newFrame = frame
         newFrame.size.width = ceil(frame.width)
         self.webView.frame = newFrame
     }
-    
+
     func updateControls() {
         self.updateFrame()
-        
+
         switch self.mode {
         case .edit:
             self.textView.isHidden = false
@@ -90,7 +90,7 @@ class EditorView: UIView, UITextViewDelegate {
         case .preview:
             self.textView.isHidden = true
             self.webView.isHidden = false
-            
+
             self.textView.resignFirstResponder()
             self.preview()
         case .split:
@@ -101,32 +101,32 @@ class EditorView: UIView, UITextViewDelegate {
             break
         }
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         self.updateFrame()
-        
+
         if self.textView.isFirstResponder {
             let selectedRange = self.textView.selectedRange
             self.textView.scrollRangeToVisible(selectedRange)
         }
     }
-    
+
     // MARK: - UITextViewDelegate
-    
+
     func textViewDidChange(_ textView: UITextView) {
         self.finderItem?.updateContent(textView.text)
         self.preview()
     }
-    
+
     // MARK: - Utilities
-    
+
     func configureView() {
         if let item = self.finderItem {
             if item.isEditable() {
                 self.textView.isEditable = true
                 self.textView.text = item.content()
-                
+
                 if SettingsForm.sharedForm.accessoryView {
                     self.textView.inputAccessoryView = EDHInputAccessoryView(textView: self.textView)
                 } else {
@@ -144,14 +144,14 @@ class EditorView: UIView, UITextViewDelegate {
             self.textView.text = ""
             self.loadBlank()
         }
-        
+
         EDHFontSelector.shared().apply(to: self.textView)
     }
-    
+
     func loadBlank() {
         self.loadURL(URL(string: "about:blank"))
     }
-    
+
     func preview() {
         if let item = self.finderItem {
             if item.mimeType != nil && item.mimeType == "text/markdown" {
@@ -168,19 +168,19 @@ class EditorView: UIView, UITextViewDelegate {
             }
         }
     }
-    
+
     func loadURL(_ url: URL!) {
         self.webView.loadRequest(URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0))
     }
-    
+
     func loadHTML(_ html: String!, baseURL: URL!) {
         self.webView.loadHTMLString(html, baseURL: baseURL)
     }
-    
+
     func reload() {
         self.webView.reload()
     }
-    
+
     func renderMarkdown(_ content: String) -> String {
         let parser = GHMarkdownParser()
         parser.options = kGHMarkdownAutoLink
