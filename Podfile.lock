@@ -1,6 +1,8 @@
 PODS:
   - Bootstrap (0.1.0)
-  - Colours (5.5.0)
+  - Colours (5.13.0):
+    - Colours/ObjC (= 5.13.0)
+  - Colours/ObjC (5.13.0)
   - EDHFinder (0.1.2):
     - EDHUtility (~> 0.1)
     - FCFileManager (~> 1.0)
@@ -39,7 +41,7 @@ PODS:
 
 DEPENDENCIES:
   - Bootstrap (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Bootstrap/Bootstrap.podspec`)
-  - Colours (~> 5.5)
+  - Colours (~> 5.13.0)
   - EDHFinder (~> 0.1)
   - EDHFontSelector (~> 0.2.2)
   - EDHInputAccessoryView (~> 0.1)
@@ -61,7 +63,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Bootstrap: 22c5f86c1970b2d3d485f583a711012eac0d32e3
-  Colours: 46a9e057659f6c811e6ff33527a8ecb9245d4459
+  Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   EDHFinder: 26c9daabda0a535f68db0451ae2bd4eaefad4469
   EDHFontSelector: db446999fa1bd5db9dbd3709018790d2dfc27f76
   EDHInputAccessoryView: 0b70c3c7aa3143ddc03e3441a2f7d5de3b65b931
@@ -77,6 +79,6 @@ SPEC CHECKSUMS:
   SwiftLint: 90665265ae50b58167c674a11c680bbabe9d6513
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
 
-PODFILE CHECKSUM: b2cc1ef2a1110cd0200a8cd98dcbb1909ef9628d
+PODFILE CHECKSUM: fd22b4be12cfe66cb282ef5ef737fcdcc3c65781
 
 COCOAPODS: 1.1.1

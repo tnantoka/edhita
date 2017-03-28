@@ -7,7 +7,7 @@ target 'Edhita' do
   pod 'EDHFontSelector', '~> 0.2.2'
   pod 'EDHInputAccessoryView', '~> 0.1'
   pod 'Google-Mobile-Ads-SDK'
-  pod 'Colours', '~> 5.5'
+  pod 'Colours', '~> 5.13.0'
   pod 'FXForms', '~> 1.2'
   pod 'GHMarkdownParser', '~> 0.1'
   pod 'VTAcknowledgementsViewController', '~> 0.12'
