@@ -170,6 +170,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
                 }
 
                 let activityController = UIActivityViewController(activityItems: items, applicationActivities: nil)
+                activityController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
                 self.present(activityController, animated: true, completion: nil)
         }))
 
