@@ -77,9 +77,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification),
-                                       name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+                                       name: .UIKeyboardWillShow, object: nil)
         notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification),
-                                       name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+                                       name: .UIKeyboardWillHide, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()
@@ -89,8 +89,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         super.viewWillDisappear(animated)
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        notificationCenter.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
+        notificationCenter.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -256,19 +256,25 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         let userInfo = (notification as NSNotification).userInfo!
         let durationInfo = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber) ?? NSNumber()
         let animationDuration: TimeInterval = durationInfo.doubleValue
-        var viewHeight = self.view.bounds.height
+        var viewHeight = view.bounds.height
+        let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect) ?? CGRect.zero
+        let withHardwareKeyboard = keyboardEndFrame.maxY > navigationController!.view.bounds.height
         if showsKeyboard {
-            let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue ?? CGRect.zero
-            let keyboardHeight = keyboardEndFrame.height
-            viewHeight += self.navigationController!.toolbar!.bounds.height - keyboardHeight
+            let toolBarHeight = navigationController!.toolbar!.bounds.height
+            if withHardwareKeyboard {
+                viewHeight -= toolBarHeight
+            } else {
+                let keyboardHeight = keyboardEndFrame.height
+                viewHeight += toolBarHeight - keyboardHeight
+            }
         }
 
         UIView.animate(
             withDuration: animationDuration,
             delay: 0.0,
             options: UIViewAnimationOptions.beginFromCurrentState,
-            animations: {
-                self.editorView.frame.size.height = viewHeight
+            animations: { [weak self] in
+                self?.editorView.frame.size.height = viewHeight
             }, completion: nil)
     }
 
