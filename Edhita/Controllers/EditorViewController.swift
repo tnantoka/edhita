@@ -107,7 +107,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     // MARK: - Actions
 
-    func fullscreenItemDidTap(_ sender: AnyObject) {
+    @objc func fullscreenItemDidTap(_ sender: AnyObject) {
         if self.splitViewController?.preferredDisplayMode == UISplitViewControllerDisplayMode.automatic {
             if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
                 self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.primaryHidden
@@ -120,11 +120,11 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.updateFullscreenItem()
     }
 
-    func reloadItemDidTap(_ sender: AnyObject) {
+    @objc func reloadItemDidTap(_ sender: AnyObject) {
         self.editorView.reload()
     }
 
-    func shareItemDidTap(_ sender: AnyObject) {
+    @objc func shareItemDidTap(_ sender: AnyObject) {
         let alertController = UIAlertController(
             title: NSLocalizedString("Share", comment: ""),
             message: "",
@@ -183,14 +183,14 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.present(alertController, animated: true, completion: nil)
     }
 
-    func settingsItemDidTap(_ sender: AnyObject) {
+    @objc func settingsItemDidTap(_ sender: AnyObject) {
         let formController = SettingsViewController()
         let navController = UINavigationController(rootViewController: formController)
         navController.modalPresentationStyle = .formSheet
         self.present(navController, animated: true, completion: nil)
     }
 
-    func modeControlDidChange(_ sender: AnyObject) {
+    @objc func modeControlDidChange(_ sender: AnyObject) {
         switch self.modeControl.selectedSegmentIndex {
         case 0:
             self.editorView.mode = .edit
@@ -244,11 +244,11 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     // MARK: - Keyboard notification
 
-    func handleKeyboardWillShowNotification(_ notification: Notification) {
+    @objc func handleKeyboardWillShowNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: true)
     }
 
-    func handleKeyboardWillHideNotification(_ notification: Notification) {
+    @objc func handleKeyboardWillHideNotification(_ notification: Notification) {
         keyboardWillChangeFrameWithNotification(notification, showsKeyboard: false)
     }
 

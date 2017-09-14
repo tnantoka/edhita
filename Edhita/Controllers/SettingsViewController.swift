@@ -36,12 +36,12 @@ class SettingsViewController: FXFormViewController {
 
     // MARK: - Actions
 
-    func fontDidTap(_ sender: AnyObject) {
+    @objc func fontDidTap(_ sender: AnyObject) {
         let fontController = EDHFontSelector.shared().settingsViewController()
         self.navigationController?.pushViewController(fontController!, animated: true)
     }
 
-    func acknowledgementsDidTap(_ sender: AnyObject) {
+    @objc func acknowledgementsDidTap(_ sender: AnyObject) {
         let acknowledgementsController = VTAcknowledgementsViewController(
             acknowledgementsPlistPath: Bundle.main.path(forResource: "Pods-acknowledgements", ofType: "plist")
         )
@@ -49,7 +49,7 @@ class SettingsViewController: FXFormViewController {
         self.navigationController?.pushViewController(acknowledgementsController!, animated: true)
     }
 
-    func doneItemDidTap(_ sender: AnyObject) {
+    @objc func doneItemDidTap(_ sender: AnyObject) {
         self.close()
     }
 

@@ -31,14 +31,14 @@ open class SettingsForm: NSObject, FXForm {
         self.accessoryView = UserDefaults.standard.bool(forKey: Defaults.accessoryViewKey)
     }
 
-    var accessoryView: Bool = true {
+    @objc var accessoryView: Bool = true {
         didSet {
             UserDefaults.standard.set(self.accessoryView, forKey: Defaults.accessoryViewKey)
             UserDefaults.standard.synchronize()
         }
     }
 
-    @nonobjc open func extraFields() -> [Any]! {
+    public func extraFields() -> [Any]! {
         return [
             [
                 FXFormFieldHeader: "",

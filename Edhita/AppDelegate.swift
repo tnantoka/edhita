@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         UINavigationBar.appearance().barTintColor = UIColor.coolGray()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [
-            NSForegroundColorAttributeName: UINavigationBar.appearance().tintColor
+            NSAttributedStringKey.foregroundColor: UINavigationBar.appearance().tintColor
         ]
 
         UIToolbar.appearance().barTintColor = UINavigationBar.appearance().barTintColor
