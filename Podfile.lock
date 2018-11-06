@@ -33,7 +33,7 @@ PODS:
   - FXForms (1.2.3)
   - GHMarkdownParser (0.1.2)
   - github-markdown-css (0.1.0)
-  - Google-Mobile-Ads-SDK (7.11.0)
+  - Google-Mobile-Ads-SDK (7.35.1)
   - Megrim (0.1.0)
   - MGSwipeTableCell (1.5.6)
   - SwiftLint (0.27.0)
@@ -89,7 +89,7 @@ SPEC CHECKSUMS:
   FXForms: 0fc48705d6f73ab2ca2f7aa20a858228ee6e2042
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
   github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
-  Google-Mobile-Ads-SDK: 0e864ab93ba1ff8afe92e16de0e4e883f581ed33
+  Google-Mobile-Ads-SDK: 151d5e87b4a0ae6d7d07e2cd8d55d1b41ea2e61e
   Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
