@@ -10,12 +10,19 @@ import UIKit
 
 class FinderListViewController: EDHFinderListViewController {
 
+    let kToolbarIconSize: CGFloat = 26.0
+
     var bannerView: GADBannerView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.initAd()
+
+        let settingsItem = Utility.barButtonItem(target: self,
+                                                 icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize),
+                                                 action: #selector(settingsItemDidTap))
+        navigationItem.leftBarButtonItem = settingsItem
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -51,4 +58,12 @@ class FinderListViewController: EDHFinderListViewController {
         self.tableView.tableFooterView = self.bannerView
     }
 
+    // MARK: - Actions
+
+    @objc func settingsItemDidTap(_ sender: AnyObject) {
+        let formController = SettingsViewController()
+        let navController = UINavigationController(rootViewController: formController)
+        navController.modalPresentationStyle = .formSheet
+        self.present(navController, animated: true, completion: nil)
+    }
 }

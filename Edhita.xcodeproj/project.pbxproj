@@ -14,6 +14,7 @@
 		9B2E0A6119E76AE3002E9CA4 /* bootstrap in Resources */ = {isa = PBXBuildFile; fileRef = 9B2E0A6019E76AE3002E9CA4 /* bootstrap */; };
 		9B372B0F19EFF6BB00295862 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B372B1119EFF6BB00295862 /* Localizable.strings */; };
 		9B372B1419EFFB1300295862 /* github-markdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 9B372B1319EFFB1300295862 /* github-markdown.css */; };
+		9B4A580C2191DB2B00D780A0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4A580B2191DB2B00D780A0 /* Utility.swift */; };
 		9B6E1E9319E2EB2100C72D13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9219E2EB2100C72D13 /* AppDelegate.swift */; };
 		9B6E1E9C19E2EB2100C72D13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9B19E2EB2100C72D13 /* Images.xcassets */; };
 		9B6E1E9F19E2EB2100C72D13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B6E1E9D19E2EB2100C72D13 /* LaunchScreen.xib */; };
@@ -43,6 +44,7 @@
 		9B372B1019EFF6BB00295862 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9B372B1219EFF6C700295862 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9B372B1319EFFB1300295862 /* github-markdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "github-markdown.css"; sourceTree = "<group>"; };
+		9B4A580B2191DB2B00D780A0 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9B6E1E8D19E2EB2100C72D13 /* Edhita.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edhita.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6E1E9119E2EB2100C72D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B6E1E9219E2EB2100C72D13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				9B91999019E429B0003751FA /* AppSecret.swift */,
 				9B2E0A5519E683CC002E9CA4 /* SettingsForm.swift */,
+				9B4A580B2191DB2B00D780A0 /* Utility.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				9B6E1E9319E2EB2100C72D13 /* AppDelegate.swift in Sources */,
 				9B91999419E5185C003751FA /* EditorView.swift in Sources */,
 				9B6E1EBF19E423A100C72D13 /* FinderListViewController.swift in Sources */,
+				9B4A580C2191DB2B00D780A0 /* Utility.swift in Sources */,
 				9B6E1EBD19E35C2300C72D13 /* EditorViewController.swift in Sources */,
 				9B91999119E429B0003751FA /* AppSecret.swift in Sources */,
 				9B2E0A5819E6C876002E9CA4 /* SettingsViewController.swift in Sources */,

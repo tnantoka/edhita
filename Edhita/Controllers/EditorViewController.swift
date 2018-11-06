@@ -11,11 +11,12 @@ import MessageUI
 
 class EditorViewController: UIViewController, EDHFinderListViewControllerDelegate, MFMailComposeViewControllerDelegate {
 
-    let kToolbarIconSize: CGFloat = 30.0
+    let toolbarIconSize: CGFloat = 30.0
 
     var fullscreenItem: UIBarButtonItem!
     var reloadItem: UIBarButtonItem!
     var shareItem: UIBarButtonItem!
+    var countItem: UIBarButtonItem!
     var modeControl: UISegmentedControl!
     var editorView: EditorView!
 
@@ -31,17 +32,19 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         self.edgesForExtendedLayout = UIRectEdge()
 
         self.editorView = EditorView(frame: self.view.bounds)
+        editorView.onChangeText = updateCountItem
         self.view.addSubview(self.editorView)
 
         // Toolbar
         self.fullscreenItem = UIBarButtonItem(image: nil, style: .plain, target: self,
                                               action: #selector(fullscreenItemDidTap))
-        self.reloadItem = self.barButtonItem(icon: FAKIonIcons.refreshIcon(withSize: self.kToolbarIconSize),
-                                             action: #selector(reloadItemDidTap))
-        self.shareItem = self.barButtonItem(icon: FAKIonIcons.shareIcon(withSize: self.kToolbarIconSize),
-                                            action: #selector(shareItemDidTap))
-        let settingsItem = self.barButtonItem(icon: FAKIonIcons.gearAIcon(withSize: self.kToolbarIconSize),
-                                              action: #selector(settingsItemDidTap))
+        self.reloadItem = Utility.barButtonItem(target: self,
+                                                icon: FAKIonIcons.refreshIcon(withSize: self.toolbarIconSize),
+                                                action: #selector(reloadItemDidTap))
+        self.shareItem = Utility.barButtonItem(target: self,
+                                               icon: FAKIonIcons.shareIcon(withSize: self.toolbarIconSize),
+                                               action: #selector(shareItemDidTap))
+        self.countItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let flexibleItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         self.toolbarItems = [
@@ -51,7 +54,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
             flexibleItem,
             shareItem,
             flexibleItem,
-            settingsItem
+            countItem
         ]
 
         // Right
@@ -292,6 +295,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         }
         self.editorView.finderItem = self.finderItem
         self.modeControlDidChange(self.modeControl)
+        updateCountItem()
     }
 
     func updateFullscreenItem() {
@@ -299,10 +303,10 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
             // FIXME: Does not show back button label after rotation to portrait
             self.navigationItem.leftBarButtonItem = nil // Don't show default exapnd item on portrail
-            icon = FAKIonIcons.arrowExpandIcon(withSize: self.kToolbarIconSize)
+            icon = FAKIonIcons.arrowExpandIcon(withSize: toolbarIconSize)
         } else {
             self.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
-            icon = FAKIonIcons.arrowShrinkIcon(withSize: self.kToolbarIconSize)
+            icon = FAKIonIcons.arrowShrinkIcon(withSize: toolbarIconSize)
         }
         self.fullscreenItem.image = icon.image(with: CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
 
@@ -311,13 +315,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         }
     }
 
-    func barButtonItem(icon: FAKIcon, action: Selector) -> UIBarButtonItem {
-        let image = self.iconImage(icon)
-        let item = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
-        return item
-    }
-
-    func iconImage(_ icon: FAKIcon) -> UIImage {
-        return icon.image(with: CGSize(width: icon.iconFontSize, height: icon.iconFontSize))
+    func updateCountItem() {
+        countItem.title = String(format: NSLocalizedString("Chars: %d", comment: ""), editorView.count)
     }
 }

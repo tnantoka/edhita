@@ -18,6 +18,7 @@ class EditorView: UIView, UITextViewDelegate {
 
     var textView: UITextView!
     var webView: UIWebView! // TODO: Use WKWebView
+    var onChangeText: () -> Void = {}
     var finderItem: EDHFinderItem? {
         didSet {
             self.configureView()
@@ -29,6 +30,9 @@ class EditorView: UIView, UITextViewDelegate {
                 self.updateControls()
             }
         }
+    }
+    var count: Int {
+        return textView.text.count
     }
 
     override init(frame: CGRect) {
@@ -121,6 +125,7 @@ class EditorView: UIView, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.finderItem?.updateContent(textView.text)
         self.preview()
+        onChangeText()
     }
 
     // MARK: - Utilities
