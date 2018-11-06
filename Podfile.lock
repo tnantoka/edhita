@@ -36,7 +36,7 @@ PODS:
   - Google-Mobile-Ads-SDK (7.11.0)
   - Megrim (0.1.0)
   - MGSwipeTableCell (1.5.6)
-  - SwiftLint (0.16.0)
+  - SwiftLint (0.27.0)
   - VTAcknowledgementsViewController (0.12)
 
 DEPENDENCIES:
@@ -52,6 +52,22 @@ DEPENDENCIES:
   - Megrim (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec`)
   - SwiftLint
   - VTAcknowledgementsViewController (~> 0.12)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Colours
+    - EDHFinder
+    - EDHFontSelector
+    - EDHInputAccessoryView
+    - EDHUtility
+    - FCFileManager
+    - FontAwesomeKit
+    - FXForms
+    - GHMarkdownParser
+    - Google-Mobile-Ads-SDK
+    - MGSwipeTableCell
+    - SwiftLint
+    - VTAcknowledgementsViewController
 
 EXTERNAL SOURCES:
   Bootstrap:
@@ -76,9 +92,9 @@ SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 0e864ab93ba1ff8afe92e16de0e4e883f581ed33
   Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
   MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
-  SwiftLint: 90665265ae50b58167c674a11c680bbabe9d6513
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
 
 PODFILE CHECKSUM: fd22b4be12cfe66cb282ef5ef737fcdcc3c65781
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3
