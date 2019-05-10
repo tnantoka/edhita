@@ -56,7 +56,7 @@
 		9B6E1EB419E3587900C72D13 /* Edhita-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Edhita-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B6E1EBC19E35C2300C72D13 /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		9B6E1EBE19E423A100C72D13 /* FinderListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderListViewController.swift; sourceTree = "<group>"; };
-		9B91999019E429B0003751FA /* AppSecret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecret.swift; sourceTree = "<group>"; };
+		9B91999019E429B0003751FA /* AppSecret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSecret.swift; path = ../../AppSecret.swift; sourceTree = "<group>"; };
 		9B91999319E5185C003751FA /* EditorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		C9064963BAFB1A9695BB7AC8 /* libPods-Edhita.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Edhita.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E29EC0DAB28A9310422CC0 /* Pods-Edhita.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edhita.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edhita/Pods-Edhita.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +266,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				ja,
@@ -311,7 +312,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Edhita/Pods-Edhita-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Edhita/Pods-Edhita-resources.sh",
 				"${PODS_ROOT}/EDHFinder/Pod/Assets/EDHFinder.bundle",
 				"${PODS_ROOT}/EDHFontSelector/Pod/Assets/EDHFontSelector.bundle",
 				"${PODS_ROOT}/EDHUtility/Pod/Assets/EDHUtility.bundle",
@@ -336,7 +337,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edhita/Pods-Edhita-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Edhita/Pods-Edhita-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5DC82A40FEEAADFE007BABCE /* [CP] Check Pods Manifest.lock */ = {
