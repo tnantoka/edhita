@@ -10,34 +10,68 @@ PODS:
     - MGSwipeTableCell (~> 1.1)
   - EDHFontSelector (0.2.2):
     - EDHUtility (~> 0.1)
-  - EDHInputAccessoryView (0.1.0):
+  - EDHInputAccessoryView (0.1.1):
     - EDHUtility (~> 0.1)
     - FontAwesomeKit (~> 2.1)
   - EDHUtility (0.1.2)
-  - FCFileManager (1.0.18)
-  - FontAwesomeKit (2.2.0):
-    - FontAwesomeKit/Core (= 2.2.0)
-    - FontAwesomeKit/FontAwesome (= 2.2.0)
-    - FontAwesomeKit/FoundationIcons (= 2.2.0)
-    - FontAwesomeKit/IonIcons (= 2.2.0)
-    - FontAwesomeKit/Zocial (= 2.2.0)
-  - FontAwesomeKit/Core (2.2.0)
-  - FontAwesomeKit/FontAwesome (2.2.0):
+  - FCFileManager (1.0.20)
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.2.0):
+  - FontAwesomeKit/FoundationIcons (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.2.0):
+  - FontAwesomeKit/IonIcons (2.2.1):
     - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.2.0):
+  - FontAwesomeKit/Material (2.2.1):
     - FontAwesomeKit/Core
-  - FXForms (1.2.3)
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
+  - FXForms (1.2.14)
   - GHMarkdownParser (0.1.2)
   - github-markdown-css (0.1.0)
-  - Google-Mobile-Ads-SDK (7.35.1)
+  - Google-Mobile-Ads-SDK (7.43.1):
+    - GoogleAppMeasurement (~> 6.0)
+  - GoogleAppMeasurement (6.0.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.0.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.0.0)
+  - GoogleUtilities/Logger (6.0.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.0.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.0.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.0.0)"
+  - GoogleUtilities/Reachability (6.0.0):
+    - GoogleUtilities/Logger
   - Megrim (0.1.0)
-  - MGSwipeTableCell (1.5.6)
-  - SwiftLint (0.27.0)
-  - VTAcknowledgementsViewController (0.12)
+  - MGSwipeTableCell (1.6.8)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
+  - SwiftLint (0.32.0)
+  - VTAcknowledgementsViewController (0.17)
 
 DEPENDENCIES:
   - Bootstrap (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Bootstrap/Bootstrap.podspec`)
@@ -65,7 +99,10 @@ SPEC REPOS:
     - FXForms
     - GHMarkdownParser
     - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - MGSwipeTableCell
+    - nanopb
     - SwiftLint
     - VTAcknowledgementsViewController
 
@@ -78,23 +115,26 @@ EXTERNAL SOURCES:
     :podspec: https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec
 
 SPEC CHECKSUMS:
-  Bootstrap: 22c5f86c1970b2d3d485f583a711012eac0d32e3
+  Bootstrap: cbbdd0eec527ba4b52611893814ff3b7d8075a0e
   Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   EDHFinder: 26c9daabda0a535f68db0451ae2bd4eaefad4469
   EDHFontSelector: db446999fa1bd5db9dbd3709018790d2dfc27f76
-  EDHInputAccessoryView: 0b70c3c7aa3143ddc03e3441a2f7d5de3b65b931
+  EDHInputAccessoryView: 3e15385630d6dabb335c52981ffde957d192c8d0
   EDHUtility: 9e888c6880f52318e6f018374adb3d15c749f4a5
-  FCFileManager: 3d13576da1f709d37460bd7669cdf07b9d6d8bc3
-  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  FXForms: 0fc48705d6f73ab2ca2f7aa20a858228ee6e2042
+  FCFileManager: e0f73316e6aa2eb04d2ff4caa75fe7df1ae44270
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  FXForms: 724500c0c3f3eb3ba1004b3b83abcee55d3daf18
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
-  github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
-  Google-Mobile-Ads-SDK: 151d5e87b4a0ae6d7d07e2cd8d55d1b41ea2e61e
-  Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
-  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
-  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  VTAcknowledgementsViewController: 5ef73fca3a6179a5488a86ea99d3c7018e8e2fcb
+  github-markdown-css: b6933c585e912d9c4b35a5204f1f12e18360b214
+  Google-Mobile-Ads-SDK: 9d3474acb70a6c12bfa69c9fe1ac28d7de8b9be9
+  GoogleAppMeasurement: 7f028ea162b72c8f326daec74afc95d94f7a47d6
+  GoogleUtilities: f1faafc033ea203adf1783ce00af455bb99d0e5b
+  Megrim: 8498c70aac297ca841e38e3400e45323be9cf6ef
+  MGSwipeTableCell: dc4eca3212ed38a563b27d6aa7b3c01ce656c1e2
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
 
 PODFILE CHECKSUM: fd22b4be12cfe66cb282ef5ef737fcdcc3c65781
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0
