@@ -80,9 +80,9 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillShowNotification),
-                                       name: .UIKeyboardWillShow, object: nil)
+                                       name: UIResponder.keyboardWillShowNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(handleKeyboardWillHideNotification),
-                                       name: .UIKeyboardWillHide, object: nil)
+                                       name: UIResponder.keyboardWillHideNotification, object: nil)
 
         self.modeControlDidChange(self.modeControl)
         self.updateFullscreenItem()
@@ -92,8 +92,8 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         super.viewWillDisappear(animated)
 
         let notificationCenter = NotificationCenter.default
-        notificationCenter.removeObserver(self, name: .UIKeyboardWillShow, object: nil)
-        notificationCenter.removeObserver(self, name: .UIKeyboardWillHide, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -111,11 +111,11 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
     // MARK: - Actions
 
     @objc func fullscreenItemDidTap(_ sender: AnyObject) {
-        if self.splitViewController?.preferredDisplayMode == UISplitViewControllerDisplayMode.automatic {
-            if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
-                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.primaryHidden
+        if self.splitViewController?.preferredDisplayMode == UISplitViewController.DisplayMode.automatic {
+            if self.splitViewController?.displayMode == UISplitViewController.DisplayMode.allVisible {
+                self.splitViewController?.preferredDisplayMode = UISplitViewController.DisplayMode.primaryHidden
             } else {
-                self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
+                self.splitViewController?.preferredDisplayMode = UISplitViewController.DisplayMode.allVisible
             }
         } else {
             self.splitViewController?.preferredDisplayMode = .automatic
@@ -257,10 +257,10 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     func keyboardWillChangeFrameWithNotification(_ notification: Notification, showsKeyboard: Bool) {
         let userInfo = (notification as NSNotification).userInfo!
-        let durationInfo = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber) ?? NSNumber()
+        let durationInfo = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber) ?? NSNumber()
         let animationDuration: TimeInterval = durationInfo.doubleValue
         var viewHeight = view.bounds.height
-        let keyboardEndFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect) ?? CGRect.zero
+        let keyboardEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect) ?? CGRect.zero
         let withHardwareKeyboard = keyboardEndFrame.maxY > navigationController!.view.bounds.height
         if showsKeyboard {
             let toolBarHeight = navigationController!.toolbar!.bounds.height
@@ -275,7 +275,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
         UIView.animate(
             withDuration: animationDuration,
             delay: 0.0,
-            options: UIViewAnimationOptions.beginFromCurrentState,
+            options: UIView.AnimationOptions.beginFromCurrentState,
             animations: { [weak self] in
                 self?.editorView.frame.size.height = viewHeight
             }, completion: nil)
@@ -300,7 +300,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     func updateFullscreenItem() {
         var icon: FAKIcon
-        if self.splitViewController?.displayMode == UISplitViewControllerDisplayMode.allVisible {
+        if self.splitViewController?.displayMode == UISplitViewController.DisplayMode.allVisible {
             // FIXME: Does not show back button label after rotation to portrait
             self.navigationItem.leftBarButtonItem = nil // Don't show default exapnd item on portrail
             icon = FAKIonIcons.arrowExpandIcon(withSize: toolbarIconSize)
