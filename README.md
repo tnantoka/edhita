@@ -14,11 +14,7 @@ http://edhita.bornneet.com/
 
 ```
 $ cp AppSecret.swift Edhita/Models/
-
-$ gem install bundler
-$ bundle
-$ bundle exec pod install
-
+$ pod install
 $ open Edhita.xcworkspace
 ```
 
