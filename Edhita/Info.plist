@@ -68,5 +68,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>GADIsAdManagerApp</key>
+	<true/>
 </dict>
 </plist>
