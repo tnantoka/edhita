@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class EditorView: UIView, UITextViewDelegate {
 
@@ -17,7 +18,7 @@ class EditorView: UIView, UITextViewDelegate {
     }
 
     var textView: UITextView!
-    var webView: UIWebView! // TODO: Use WKWebView
+    var webView: WKWebView!
     var onChangeText: () -> Void = {}
     var finderItem: EDHFinderItem? {
         didSet {
@@ -45,7 +46,7 @@ class EditorView: UIView, UITextViewDelegate {
         self.textView.delegate = self
         self.addSubview(self.textView)
 
-        self.webView = UIWebView(frame: self.bounds)
+        self.webView = WKWebView(frame: self.bounds)
         //self.webView.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
         //self.webView.scalesPageToFit = true
         self.addSubview(self.webView)
@@ -94,7 +95,7 @@ class EditorView: UIView, UITextViewDelegate {
             self.webView.isHidden = true
 
             //self.textView.becomeFirstResponder()
-            self.loadBlank()
+            //self.loadBlank()
         case .preview:
             self.textView.isHidden = true
             self.webView.isHidden = false
@@ -172,7 +173,7 @@ class EditorView: UIView, UITextViewDelegate {
     }
 
     func loadURL(_ url: URL!) {
-        self.webView.loadRequest(
+        self.webView.load(
             URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 0.0)
         )
     }

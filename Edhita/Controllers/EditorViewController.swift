@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import WebKit
 
 class EditorViewController: UIViewController, EDHFinderListViewControllerDelegate, MFMailComposeViewControllerDelegate {
 
@@ -33,6 +34,7 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
         self.editorView = EditorView(frame: self.view.bounds)
         editorView.onChangeText = updateCountItem
+        editorView.webView.uiDelegate = self
         self.view.addSubview(self.editorView)
 
         // Toolbar
@@ -317,5 +319,72 @@ class EditorViewController: UIViewController, EDHFinderListViewControllerDelegat
 
     func updateCountItem() {
         countItem.title = String(format: NSLocalizedString("Chars: %d", comment: ""), editorView.count)
+    }
+}
+
+extension EditorViewController: WKUIDelegate {
+    func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("OK", comment: ""),
+                style: .default,
+                handler: { _ in
+                    completionHandler()
+            }
+            )
+        )
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func webView(_ webView: WKWebView, runJavaScriptConfirmPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (Bool) -> Void) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("OK", comment: ""),
+                style: .default,
+                handler: { [completionHandler] _ in
+                    completionHandler(true)
+            }
+            )
+        )
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Cancel", comment: ""),
+                style: .cancel,
+                handler: { _ in
+                    completionHandler(false)
+            }
+            )
+        )
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func webView(_ webView: WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: String, defaultText: String?, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping (String?) -> Void) {
+        let alertController = UIAlertController(title: nil, message: prompt, preferredStyle: .alert)
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("OK", comment: ""),
+                style: .default,
+                handler: { [completionHandler] _ in
+                    if let textField = alertController.textFields?.first {
+                        completionHandler(textField.text)
+                    } else {
+                        completionHandler("")
+                    }
+                }
+            )
+        )
+        alertController.addAction(
+            UIAlertAction(
+                title: NSLocalizedString("Cancel", comment: ""),
+                style: .cancel,
+                handler: { _ in
+                    completionHandler(nil)
+            }
+            )
+        )
+        alertController.addTextField { $0.text = defaultText }
+        present(alertController, animated: true, completion: nil)
     }
 }
