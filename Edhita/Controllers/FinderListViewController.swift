@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AppTrackingTransparency
+import AdSupport
 
 class FinderListViewController: EDHFinderListViewController {
 
@@ -52,11 +54,21 @@ class FinderListViewController: EDHFinderListViewController {
         self.bannerView.adUnitID =  AppSecret.AdMob.unitId
         self.bannerView.rootViewController = self
 
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        self.bannerView.load(request)
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { _ in
+                self.loadAd()
+            })
+        } else {
+            self.loadAd()
+        }
 
         self.tableView.tableFooterView = self.bannerView
+    }
+
+    func loadAd() {
+        let request = GADRequest()
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = []
+        self.bannerView.load(request)
     }
 
     // MARK: - Actions

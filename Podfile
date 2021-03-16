@@ -1,4 +1,4 @@
-platform :ios, "8.0"
+platform :ios, '10.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -6,7 +6,7 @@ target 'Edhita' do
   pod 'EDHFinder', '~> 0.1'
   pod 'EDHFontSelector', '~> 0.2.2'
   pod 'EDHInputAccessoryView', '~> 0.1'
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK', '7.69.0'
   pod 'Colours', '~> 5.13.0'
   pod 'FXForms', '~> 1.2'
   pod 'GHMarkdownParser', '~> 0.1'

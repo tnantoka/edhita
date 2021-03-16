@@ -39,37 +39,41 @@ PODS:
   - FXForms (1.2.14)
   - GHMarkdownParser (0.1.2)
   - github-markdown-css (0.1.0)
-  - Google-Mobile-Ads-SDK (7.43.1):
-    - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.0.0):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 0.3)
-  - GoogleUtilities/AppDelegateSwizzler (6.0.0):
+  - Google-Mobile-Ads-SDK (7.69.0):
+    - GoogleAppMeasurement (~> 7.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAppMeasurement (7.6.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30907.0)
+  - GoogleUserMessagingPlatform (1.4.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.2.2):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.0.0)
-  - GoogleUtilities/Logger (6.0.0):
+  - GoogleUtilities/Environment (7.2.2):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (7.2.2):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.0.0):
+  - GoogleUtilities/MethodSwizzler (7.2.2):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.0.0):
+  - GoogleUtilities/Network (7.2.2):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.0.0)"
-  - GoogleUtilities/Reachability (6.0.0):
+  - "GoogleUtilities/NSData+zlib (7.2.2)"
+  - GoogleUtilities/Reachability (7.2.2):
     - GoogleUtilities/Logger
   - Megrim (0.1.0)
   - MGSwipeTableCell (1.6.8)
-  - nanopb (0.3.901):
-    - nanopb/decode (= 0.3.901)
-    - nanopb/encode (= 0.3.901)
-  - nanopb/decode (0.3.901)
-  - nanopb/encode (0.3.901)
+  - nanopb (2.30907.0):
+    - nanopb/decode (= 2.30907.0)
+    - nanopb/encode (= 2.30907.0)
+  - nanopb/decode (2.30907.0)
+  - nanopb/encode (2.30907.0)
+  - PromisesObjC (1.2.12)
   - SwiftLint (0.32.0)
   - VTAcknowledgementsViewController (0.17)
 
@@ -82,13 +86,13 @@ DEPENDENCIES:
   - FXForms (~> 1.2)
   - GHMarkdownParser (~> 0.1)
   - github-markdown-css (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/github-markdown-css/github-markdown-css.podspec`)
-  - Google-Mobile-Ads-SDK
+  - Google-Mobile-Ads-SDK (= 7.69.0)
   - Megrim (from `https://raw.githubusercontent.com/tnantoka/podspecs/master/Specs/Megrim/Megrim.podspec`)
   - SwiftLint
   - VTAcknowledgementsViewController (~> 0.12)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Colours
     - EDHFinder
     - EDHFontSelector
@@ -100,9 +104,11 @@ SPEC REPOS:
     - GHMarkdownParser
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
     - GoogleUtilities
     - MGSwipeTableCell
     - nanopb
+    - PromisesObjC
     - SwiftLint
     - VTAcknowledgementsViewController
 
@@ -126,15 +132,17 @@ SPEC CHECKSUMS:
   FXForms: 724500c0c3f3eb3ba1004b3b83abcee55d3daf18
   GHMarkdownParser: 14cbf59d0ab9450017d843dffd4a3ef691e5bd77
   github-markdown-css: 829d641e9e4757e468bf1d394d3daab654c51cb2
-  Google-Mobile-Ads-SDK: 9d3474acb70a6c12bfa69c9fe1ac28d7de8b9be9
-  GoogleAppMeasurement: 7f028ea162b72c8f326daec74afc95d94f7a47d6
-  GoogleUtilities: f1faafc033ea203adf1783ce00af455bb99d0e5b
+  Google-Mobile-Ads-SDK: 2f288748a42920d1c744946a460896a95b0e9110
+  GoogleAppMeasurement: c542a2feaac9ab98fd074e8f1a02c3585bbfbd47
+  GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
+  GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
   Megrim: 1ef3b73344e1ac96195d8dbdba647966437ae9c0
   MGSwipeTableCell: dc4eca3212ed38a563b27d6aa7b3c01ce656c1e2
-  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
   VTAcknowledgementsViewController: 6056f5f5e5ed995bbf0581bed6ddd29355ca9a80
 
-PODFILE CHECKSUM: fd22b4be12cfe66cb282ef5ef737fcdcc3c65781
+PODFILE CHECKSUM: 300f98ca7be73dded32b934e96bb0a70bae3d0cc
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.1
