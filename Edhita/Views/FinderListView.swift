@@ -10,7 +10,7 @@ import SwiftUI
 struct FinderListView: View {
     let url: URL
 
-    @State var items = [FinderItem]()
+    @State private var items = [FinderItem]()
 
     var body: some View {
         List {

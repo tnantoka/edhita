@@ -12,7 +12,7 @@ import Ink
 struct WebView: UIViewRepresentable {
     let url: URL
     
-    let view = WKWebView(frame: .zero)
+    private let view = WKWebView(frame: .zero)
 
     func makeUIView(context: Context) -> WKWebView  {
         view
