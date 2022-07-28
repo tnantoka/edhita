@@ -20,6 +20,7 @@
 		9BFDA6A728902A37007EE921 /* root in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6A628902A37007EE921 /* root */; };
 		9BFDA6A928903413007EE921 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6A828903413007EE921 /* EditorView.swift */; };
 		9BFDA6AB28915D46007EE921 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6AA28915D46007EE921 /* WebView.swift */; };
+		9BFDA6B128928604007EE921 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFDA6B028928604007EE921 /* Ink */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFDA6B128928604007EE921 /* Ink in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +179,9 @@
 			dependencies = (
 			);
 			name = Edhita;
+			packageProductDependencies = (
+				9BFDA6B028928604007EE921 /* Ink */,
+			);
 			productName = Edhita;
 			productReference = 9B376927288D8D46002392EB /* Edhita.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 9B37691E288D8D46002392EB;
+			packageReferences = (
+				9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */,
+			);
 			productRefGroup = 9B376928288D8D46002392EB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -617,6 +625,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Ink.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9BFDA6B028928604007EE921 /* Ink */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */;
+			productName = Ink;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B37691F288D8D46002392EB /* Project object */;
 }

@@ -16,7 +16,7 @@ struct EditorView: View {
         WebView(url: item.url)
     }
     var body: some View {
-        HStack {
+        HStack(spacing: 0.0) {
             TextEditor(text: $content)
                 .navigationTitle(item.url.lastPathComponent)
                 .navigationBarTitleDisplayMode(.inline)
@@ -34,6 +34,10 @@ struct EditorView: View {
                 }.onDisappear() {
                     UITextView.appearance().backgroundColor = nil
                 }
+            Color
+                .black
+                .opacity(0.12)
+                .frame(width: 1.0)
             webView
         }
     }

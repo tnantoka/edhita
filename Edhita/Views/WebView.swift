@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WebKit
+import Ink
 
 struct WebView: UIViewRepresentable {
     let url: URL
@@ -18,12 +19,24 @@ struct WebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        let req = URLRequest(url: url)
-        uiView.load(req)
+        if isMarkdown {
+            if let markdown = try? String(contentsOf: url) {
+                let parser = MarkdownParser()
+                let html = parser.html(from: markdown)
+                uiView.loadHTMLString(html, baseURL: url)
+            }
+        } else {
+            let req = URLRequest(url: url)
+            uiView.load(req)
+        }
     }
 
     func reload() {
         view.reload()
+    }
+
+    private var isMarkdown: Bool {
+        url.lastPathComponent.hasSuffix(".md") || url.lastPathComponent.hasSuffix(".markdown")
     }
 }
 
