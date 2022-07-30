@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FinderListView: View {
     @Environment(\.editMode) private var editMode
-    
+
     @ObservedObject var list: FinderList
 
     @State private var selectedItem: FinderItem?
@@ -39,19 +39,30 @@ struct FinderListView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    withAnimation {
-                        editMode?.wrappedValue = editMode?.wrappedValue.isEditing ?? false ? EditMode.inactive : EditMode.active
+                Button(
+                    action: {
+                        withAnimation {
+                            editMode?.wrappedValue =
+                                editMode?.wrappedValue.isEditing ?? false
+                                ? EditMode.inactive : EditMode.active
+                        }
+                        selectedItem = nil
+                    },
+                    label: {
+                        Image(
+                            systemName: editMode?.wrappedValue.isEditing ?? false
+                                ? "xmark" : "pencil")
+
                     }
-                    selectedItem = nil
-                }) {
-                    Image(systemName: editMode?.wrappedValue.isEditing ?? false ? "xmark" : "pencil")
-                }
+                )
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {}) {
-                    Image(systemName: "plus")
-                }
+                Button(
+                    action: {},
+                    label: {
+                        Image(systemName: "plus")
+                    }
+                )
             }
         }
         .toolbar {
@@ -59,21 +70,26 @@ struct FinderListView: View {
                 Text(list.relativePath)
             }
             ToolbarItem(placement: .bottomBar) {
-                Button(action: {
-                    isPresentedItemDialog = true
-                }) {
-                    Image(systemName: "square.and.arrow.up")
-                }
+                Button(
+                    action: {
+                        isPresentedItemDialog = true
+                    },
+                    label: {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                )
                 .disabled(selectedItem == nil)
-                .confirmationDialog(selectedItem?.url.lastPathComponent ?? "", isPresented: $isPresentedItemDialog) {
+                .confirmationDialog(
+                    selectedItem?.url.lastPathComponent ?? "", isPresented: $isPresentedItemDialog
+                ) {
                     Button(NSLocalizedString("Rename", comment: "")) {
-                        
+
                     }
                     Button(NSLocalizedString("Duplicate", comment: "")) {
-                        
+
                     }
                     Button(NSLocalizedString("Move", comment: "")) {
-                        
+
                     }
                     Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
                         withAnimation {

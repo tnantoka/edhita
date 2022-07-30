@@ -13,7 +13,7 @@ struct FinderItemView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: item.isDirectory ?  "folder" : "doc.text")
+                Image(systemName: item.isDirectory ? "folder" : "doc.text")
                     .frame(minWidth: 24.0)
                 Text(item.url.lastPathComponent)
             }
@@ -27,7 +27,8 @@ struct FinderItemView: View {
 
 struct FinderItemView_Previews: PreviewProvider {
     static var previews: some View {
-        let url = Bundle.main.url(forResource: "root_file", withExtension: "txt", subdirectory: "root")!
+        let url = Bundle.main.url(
+            forResource: "root_file", withExtension: "txt", subdirectory: "root")!
         let item = FinderItem(url: url)
         List {
             FinderItemView(item: item)

@@ -20,27 +20,27 @@ struct EditorView: View {
 
     @State private var content = ""
     @State private var mode = Mode.edit
-    
+
     var webView: WebView {
         WebView(url: item.url)
     }
-    
+
     var body: some View {
         HStack(spacing: 0.0) {
-            if (mode == .edit || mode == .split) {
+            if mode == .edit || mode == .split {
                 TextEditor(text: $content)
                     .padding(.all, 8.0)
                     .onChange(of: content) { content in
                         item.save(content: content)
                     }
             }
-            if (mode == .split) {
+            if mode == .split {
                 Color
                     .black
                     .opacity(0.12)
                     .frame(width: 1.0)
             }
-            if (mode == .preview || mode == .split) {
+            if mode == .preview || mode == .split {
                 webView
             }
         }
@@ -50,9 +50,9 @@ struct EditorView: View {
             guard let content = try? String(contentsOf: item.url) else { return }
             self.content = content
         }
-        .onAppear() {
+        .onAppear {
             UITextView.appearance().backgroundColor = .clear
-        }.onDisappear() {
+        }.onDisappear {
             UITextView.appearance().backgroundColor = nil
         }
         .toolbar {
@@ -69,7 +69,8 @@ struct EditorView: View {
 
 struct EditorView_Previews: PreviewProvider {
     static var previews: some View {
-        let url = Bundle.main.url(forResource: "root_file", withExtension: "txt", subdirectory: "root")!
+        let url = Bundle.main.url(
+            forResource: "root_file", withExtension: "txt", subdirectory: "root")!
         let item = FinderItem(url: url)
         NavigationView {
             EditorView(item: item)

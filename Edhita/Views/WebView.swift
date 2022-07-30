@@ -5,19 +5,19 @@
 //  Created by Tatsuya Tobioka on 2022/07/27.
 //
 
+import Ink
 import SwiftUI
 import WebKit
-import Ink
 
 struct WebView: UIViewRepresentable {
     let url: URL
-    
+
     private let view = WKWebView(frame: .zero)
 
-    func makeUIView(context: Context) -> WKWebView  {
+    func makeUIView(context: Context) -> WKWebView {
         view
     }
-    
+
     func updateUIView(_ uiView: WKWebView, context: Context) {
         if isMarkdown {
             if let markdown = try? String(contentsOf: url) {
@@ -47,4 +47,3 @@ struct WebView_Previews: PreviewProvider {
         )
     }
 }
-
