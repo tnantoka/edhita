@@ -47,6 +47,7 @@ struct FinderListView: View {
                                 ? EditMode.inactive : EditMode.active
                         }
                         selectedItem = nil
+                        isPresentedItemDialog = false
                     },
                     label: {
                         Image(
@@ -57,12 +58,48 @@ struct FinderListView: View {
                 )
             }
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(
-                    action: {},
-                    label: {
-                        Image(systemName: "plus")
+                HStack {
+                    if !(editMode?.wrappedValue.isEditing ?? false) {
+                        Button(
+                            action: {},
+                            label: {
+                                Image(systemName: "plus")
+                            }
+                        )
                     }
-                )
+                    if editMode?.wrappedValue.isEditing ?? false {
+                        Button(
+                            action: {
+                                isPresentedItemDialog = true
+                            },
+                            label: {
+                                Image(systemName: "ellipsis")
+                            }
+                        )
+                        .disabled(selectedItem == nil)
+                        .confirmationDialog(
+                            selectedItem?.url.lastPathComponent ?? "",
+                            isPresented: $isPresentedItemDialog
+                        ) {
+                            Button(NSLocalizedString("Rename", comment: "")) {
+
+                            }
+                            Button(NSLocalizedString("Duplicate", comment: "")) {
+                                withAnimation {
+                                    list.duplicateItem(item: selectedItem)
+                                }
+                            }
+                            Button(NSLocalizedString("Move", comment: "")) {
+
+                            }
+                            Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
+                                withAnimation {
+                                    list.deleteItem(item: selectedItem)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         .toolbar {
@@ -70,33 +107,6 @@ struct FinderListView: View {
                 Text(list.relativePath)
             }
             ToolbarItem(placement: .bottomBar) {
-                Button(
-                    action: {
-                        isPresentedItemDialog = true
-                    },
-                    label: {
-                        Image(systemName: "square.and.arrow.up")
-                    }
-                )
-                .disabled(selectedItem == nil)
-                .confirmationDialog(
-                    selectedItem?.url.lastPathComponent ?? "", isPresented: $isPresentedItemDialog
-                ) {
-                    Button(NSLocalizedString("Rename", comment: "")) {
-
-                    }
-                    Button(NSLocalizedString("Duplicate", comment: "")) {
-
-                    }
-                    Button(NSLocalizedString("Move", comment: "")) {
-
-                    }
-                    Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
-                        withAnimation {
-                            list.deleteItem(item: selectedItem)
-                        }
-                    }
-                }
             }
         }
     }

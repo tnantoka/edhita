@@ -46,7 +46,9 @@ extension FinderList {
             )
         else { fatalError() }
 
-        return urls.map { FinderItem(url: $0) }
+        return urls.map { FinderItem(url: $0) }.sorted {
+            $0.contentModificationDate > $1.contentModificationDate
+        }
     }
 
     static func relativePath(for url: URL) -> String {
@@ -63,5 +65,12 @@ extension FinderList {
             items.remove(at: index)
         }
         item.destroy()
+    }
+
+    func duplicateItem(item: FinderItem?) {
+        guard let item = item else { return }
+
+        item.duplicate()
+        refresh()
     }
 }

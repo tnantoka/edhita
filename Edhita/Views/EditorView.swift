@@ -47,8 +47,7 @@ struct EditorView: View {
         .navigationTitle(item.url.lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            guard let content = try? String(contentsOf: item.url) else { return }
-            self.content = content
+            self.content = item.content
         }
         .onAppear {
             UITextView.appearance().backgroundColor = .clear

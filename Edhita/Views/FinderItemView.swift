@@ -15,7 +15,7 @@ struct FinderItemView: View {
             HStack {
                 Image(systemName: item.isDirectory ? "folder" : "doc.text")
                     .frame(minWidth: 24.0)
-                Text(item.url.lastPathComponent)
+                Text(item.filename)
             }
             Spacer()
             Text(item.contentModificationDate.description(with: Locale.current))

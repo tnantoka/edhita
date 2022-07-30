@@ -8,8 +8,19 @@
 import Foundation
 
 struct FinderItem: Identifiable, Hashable {
-    let id: UUID
     var url: URL
+
+    var id: String {
+        url.path
+    }
+
+    var filename: String {
+        url.lastPathComponent
+    }
+
+    var content: String {
+        (try? String(contentsOf: url)) ?? ""
+    }
 
     var isDirectory: Bool {
         (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) ?? false
@@ -20,8 +31,7 @@ struct FinderItem: Identifiable, Hashable {
             ?? Date.distantPast
     }
 
-    init(id: UUID = UUID(), url: URL) {
-        self.id = id
+    init(url: URL) {
         self.url = url
     }
 
@@ -31,5 +41,20 @@ struct FinderItem: Identifiable, Hashable {
 
     func destroy() {
         try? FileManager.default.removeItem(at: url)
+    }
+
+    func duplicate() {
+        var duplicatedURL = self.duplicatedURL(suffix: "")
+        var i = 2
+        while FileManager.default.fileExists(atPath: duplicatedURL.path) {
+            duplicatedURL = self.duplicatedURL(suffix: " \(i)")
+            i += 1
+        }
+        try? FileManager.default.copyItem(at: url, to: duplicatedURL)
+    }
+
+    private func duplicatedURL(suffix: String) -> URL {
+        url.deletingLastPathComponent().appendingPathComponent(
+            String(format: NSLocalizedString("Copy of %@", comment: ""), filename) + suffix)
     }
 }
