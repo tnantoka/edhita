@@ -8,6 +8,9 @@
 import Foundation
 
 struct FinderList {
+}
+
+extension FinderList {    
     static var rootURL: URL {
         guard let documentDirectory = try? FileManager.default.url(
             for: .documentDirectory,
@@ -25,5 +28,10 @@ struct FinderList {
         ) else { fatalError() }
 
         return urls.map { FinderItem(url: $0) }
+    }
+    
+    static func relativePath(for url: URL) -> String {
+        let path = url.path.replacingOccurrences(of: rootURL.path, with: "")
+        return path.isEmpty ? "/" : path
     }
 }

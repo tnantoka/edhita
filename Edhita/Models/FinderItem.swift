@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct FinderItem: Identifiable {
+struct FinderItem: Identifiable, Hashable {
     let id: UUID
     var url: URL
 
     var isDirectory: Bool {
-        try! url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory!
+        (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) ?? false
     }
 
     var contentModificationDate: Date {
-        try! url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate!
+        (try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate) ?? Date.distantPast
     }
 
     init(id: UUID = UUID(), url: URL) {
@@ -26,5 +26,9 @@ struct FinderItem: Identifiable {
     
     func save(content: String) {
         try? content.write(to: url, atomically: true, encoding: .utf8)
+    }
+    
+    func destroy() {
+        try? FileManager.default.removeItem(at: url)
     }
 }
