@@ -7,7 +7,22 @@
 
 import Foundation
 
-struct FinderList {
+class FinderList: ObservableObject {
+    let url: URL
+    @Published var items: [FinderItem] = []
+    
+    var relativePath: String {
+        FinderList.relativePath(for: url)
+    }
+
+    init(url: URL) {
+        self.url = url
+        refresh()
+    }
+    
+    func refresh() {
+        items = FinderList.items(for: url)
+    }
 }
 
 extension FinderList {    
@@ -33,5 +48,16 @@ extension FinderList {
     static func relativePath(for url: URL) -> String {
         let path = url.path.replacingOccurrences(of: rootURL.path, with: "")
         return path.isEmpty ? "/" : path
+    }
+}
+
+extension FinderList {
+    func deleteItem(item: FinderItem?) {
+        guard let item = item else { return }
+        
+        if let index = items.firstIndex(of: item) {
+            items.remove(at: index)
+        }
+        item.destroy()
     }
 }

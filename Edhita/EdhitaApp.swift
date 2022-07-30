@@ -12,7 +12,7 @@ struct EdhitaApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                FinderListView(url: FinderList.rootURL)
+                FinderListView(list: FinderList(url: FinderList.rootURL))
             }
         }
     }

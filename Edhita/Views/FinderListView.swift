@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct FinderListView: View {
-    let url: URL
-
-    @Environment(\.editMode) var editMode
+    @Environment(\.editMode) private var editMode
     
-    @State private var items = [FinderItem]()
+    @ObservedObject var list: FinderList
+
     @State private var selectedItem: FinderItem?
     @State private var isPresentedItemDialog = false
 
     var body: some View {
         List(selection: $selectedItem) {
-            ForEach(items, id: \.self) { item in
+            ForEach(list.items, id: \.self) { item in
                 if item.isDirectory {
                     NavigationLink(
-                        destination: FinderListView(url: item.url)
+                        destination: FinderListView(list: FinderList(url: item.url))
                     ) {
                         FinderItemView(item: item)
                     }
@@ -34,12 +33,9 @@ struct FinderListView: View {
                     }
                 }
             }
-            .onDelete { indices in
-                items.remove(atOffsets: indices)
-            }
         }
         .listStyle(.plain)
-        .navigationTitle(url.lastPathComponent)
+        .navigationTitle(list.url.lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -60,7 +56,7 @@ struct FinderListView: View {
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
-                Text(FinderList.relativePath(for: url))
+                Text(list.relativePath)
             }
             ToolbarItem(placement: .bottomBar) {
                 Button(action: {
@@ -80,22 +76,12 @@ struct FinderListView: View {
                         
                     }
                     Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
-                        guard let selectedItem = selectedItem else {
-                            return
-                        }
-
                         withAnimation {
-                            if let index = items.firstIndex(of: selectedItem) {
-                                items.remove(at: index)
-                            }
-                            selectedItem.destroy()
+                            list.deleteItem(item: selectedItem)
                         }
                     }
                 }
             }
-        }
-        .onAppear {
-            items = FinderList.items(for: url)
         }
     }
 }
@@ -103,8 +89,9 @@ struct FinderListView: View {
 struct FinderListView_Previews: PreviewProvider {
     static var previews: some View {
         let url = Bundle.main.url(forResource: "root", withExtension: nil)!
+        let list = FinderList(url: url)
         NavigationView {
-            FinderListView(url: url)
+            FinderListView(list: list)
         }
     }
 }
