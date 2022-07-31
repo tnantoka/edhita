@@ -73,4 +73,11 @@ extension FinderList {
         item.duplicate()
         refresh()
     }
+
+    func renameItem(item: FinderItem?, name: String) {
+        guard let item = item else { return }
+
+        item.rename(name: name)
+        refresh()
+    }
 }

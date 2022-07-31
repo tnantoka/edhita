@@ -14,6 +14,7 @@ struct FinderListView: View {
 
     @State private var selectedItem: FinderItem?
     @State private var isPresentedItemDialog = false
+    @State private var isPresentedRenamePrompt = false
 
     var body: some View {
         List(selection: $selectedItem) {
@@ -82,7 +83,7 @@ struct FinderListView: View {
                             isPresented: $isPresentedItemDialog
                         ) {
                             Button(NSLocalizedString("Rename", comment: "")) {
-
+                                isPresentedRenamePrompt = true
                             }
                             Button(NSLocalizedString("Duplicate", comment: "")) {
                                 withAnimation {
@@ -107,6 +108,21 @@ struct FinderListView: View {
                 Text(list.relativePath)
             }
             ToolbarItem(placement: .bottomBar) {
+            }
+        }
+        .sheet(isPresented: $isPresentedRenamePrompt) {
+            NavigationView {
+                PromptView(
+                    title: NSLocalizedString("Rename", comment: ""),
+                    textLabel: NSLocalizedString("Name", comment: ""),
+                    defaultText: selectedItem?.filename ?? "",
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
+                    },
+                    onSave: { name in
+                        list.renameItem(item: selectedItem, name: name)
+                    }
+                )
             }
         }
     }

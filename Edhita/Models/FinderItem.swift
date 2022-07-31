@@ -57,4 +57,9 @@ struct FinderItem: Identifiable, Hashable {
         url.deletingLastPathComponent().appendingPathComponent(
             String(format: NSLocalizedString("Copy of %@", comment: ""), filename) + suffix)
     }
+
+    func rename(name: String) {
+        try? FileManager.default.moveItem(
+            at: url, to: url.deletingLastPathComponent().appendingPathComponent(name))
+    }
 }
