@@ -15,6 +15,7 @@ struct FinderListView: View {
     @State private var selectedItem: FinderItem?
     @State private var isPresentedItemDialog = false
     @State private var isPresentedRenamePrompt = false
+    @State private var isPresentedMoveList = false
     @State private var isEditing = false
 
     var body: some View {
@@ -90,6 +91,7 @@ struct FinderListView: View {
                                 }
                             }
                             Button(NSLocalizedString("Move", comment: "")) {
+                                isPresentedMoveList = true
                             }
                             Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
                                 withAnimation {
@@ -104,8 +106,6 @@ struct FinderListView: View {
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 Text(list.relativePath)
-            }
-            ToolbarItem(placement: .bottomBar) {
             }
         }
         .sheet(isPresented: $isPresentedRenamePrompt) {
@@ -122,6 +122,22 @@ struct FinderListView: View {
                     text: selectedItem?.filename ?? ""
                 )
             }
+        }
+        .sheet(isPresented: $isPresentedMoveList) {
+            if let selectedItem = selectedItem {
+                NavigationView {
+                    MoveListView(
+                        list: FinderList(url: FinderList.rootURL),
+                        isPresented: $isPresentedMoveList, item: selectedItem
+                    ) { url in
+                        self.selectedItem = nil
+                        list.moveItem(item: selectedItem, url: url)
+                    }
+                }
+            }
+        }
+        .onAppear {
+            list.refresh()
         }
         .environment(\.editMode, .constant(isEditing ? .active : .inactive))
     }

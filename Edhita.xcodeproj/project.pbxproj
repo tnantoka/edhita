@@ -22,6 +22,7 @@
 		9BFDA6AB28915D46007EE921 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6AA28915D46007EE921 /* WebView.swift */; };
 		9BFDA6B128928604007EE921 /* Ink in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFDA6B028928604007EE921 /* Ink */; };
 		9BFDA6B32895FC95007EE921 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6B22895FC95007EE921 /* PromptView.swift */; };
+		9BFDA6B528966785007EE921 /* MoveListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6B428966785007EE921 /* MoveListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9BFDA6A828903413007EE921 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		9BFDA6AA28915D46007EE921 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		9BFDA6B22895FC95007EE921 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		9BFDA6B428966785007EE921 /* MoveListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFAF5CE2890213200AE31AC /* FinderListView.swift */,
+				9BFDA6B428966785007EE921 /* MoveListView.swift */,
 				9BFAF5D02890213D00AE31AC /* FinderItemView.swift */,
 				9BFDA6A828903413007EE921 /* EditorView.swift */,
 				9BFDA6AA28915D46007EE921 /* WebView.swift */,
@@ -306,6 +309,7 @@
 				9BFDA6B32895FC95007EE921 /* PromptView.swift in Sources */,
 				9B37692B288D8D46002392EB /* EdhitaApp.swift in Sources */,
 				9BFAF5CD288EDAC000AE31AC /* FinderItem.swift in Sources */,
+				9BFDA6B528966785007EE921 /* MoveListView.swift in Sources */,
 				9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */,
 				9BFDA6A928903413007EE921 /* EditorView.swift in Sources */,
 				9BFAF5CF2890213200AE31AC /* FinderListView.swift in Sources */,

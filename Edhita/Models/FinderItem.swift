@@ -62,4 +62,9 @@ struct FinderItem: Identifiable, Hashable {
         try? FileManager.default.moveItem(
             at: url, to: url.deletingLastPathComponent().appendingPathComponent(name))
     }
+
+    func move(directory: URL) {
+        try? FileManager.default.moveItem(
+            at: url, to: directory.appendingPathComponent(filename))
+    }
 }

@@ -80,4 +80,11 @@ extension FinderList {
         item.rename(name: name)
         refresh()
     }
+
+    func moveItem(item: FinderItem?, url: URL) {
+        guard let item = item else { return }
+
+        item.move(directory: url)
+        refresh()
+    }
 }
