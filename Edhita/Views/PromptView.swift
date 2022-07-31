@@ -10,11 +10,10 @@ import SwiftUI
 struct PromptView: View {
     let title: String
     let textLabel: String
-    let defaultText: String
     let canSave: (String) -> Bool
     let onSave: (String) -> Void
 
-    @State var text = ""
+    @State var text: String
 
     @FocusState private var isFocused
 
@@ -46,7 +45,6 @@ struct PromptView: View {
             }
         }
         .onAppear {
-            text = defaultText
             // FIXME: https://stackoverflow.com/questions/68073919/swiftui-focusstate-how-to-give-it-initial-value
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
                 isFocused = true
@@ -61,9 +59,9 @@ struct PromptView_Previews: PreviewProvider {
             PromptView(
                 title: "Title",
                 textLabel: "Text",
-                defaultText: "",
                 canSave: { _ in true },
-                onSave: { _ in }
+                onSave: { _ in },
+                text: ""
             )
         }
     }

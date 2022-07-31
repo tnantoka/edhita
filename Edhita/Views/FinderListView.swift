@@ -15,6 +15,7 @@ struct FinderListView: View {
     @State private var selectedItem: FinderItem?
     @State private var isPresentedItemDialog = false
     @State private var isPresentedRenamePrompt = false
+    @State private var isEditing = false
 
     var body: some View {
         List(selection: $selectedItem) {
@@ -43,16 +44,14 @@ struct FinderListView: View {
                 Button(
                     action: {
                         withAnimation {
-                            editMode?.wrappedValue =
-                                editMode?.wrappedValue.isEditing ?? false
-                                ? EditMode.inactive : EditMode.active
+                            isEditing.toggle()
                         }
                         selectedItem = nil
                         isPresentedItemDialog = false
                     },
                     label: {
                         Image(
-                            systemName: editMode?.wrappedValue.isEditing ?? false
+                            systemName: isEditing
                                 ? "xmark" : "pencil")
 
                     }
@@ -60,7 +59,7 @@ struct FinderListView: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
-                    if !(editMode?.wrappedValue.isEditing ?? false) {
+                    if !isEditing {
                         Button(
                             action: {},
                             label: {
@@ -68,7 +67,7 @@ struct FinderListView: View {
                             }
                         )
                     }
-                    if editMode?.wrappedValue.isEditing ?? false {
+                    if isEditing {
                         Button(
                             action: {
                                 isPresentedItemDialog = true
@@ -91,7 +90,6 @@ struct FinderListView: View {
                                 }
                             }
                             Button(NSLocalizedString("Move", comment: "")) {
-
                             }
                             Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
                                 withAnimation {
@@ -115,16 +113,17 @@ struct FinderListView: View {
                 PromptView(
                     title: NSLocalizedString("Rename", comment: ""),
                     textLabel: NSLocalizedString("Name", comment: ""),
-                    defaultText: selectedItem?.filename ?? "",
                     canSave: { name in
                         name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
                     },
                     onSave: { name in
                         list.renameItem(item: selectedItem, name: name)
-                    }
+                    },
+                    text: selectedItem?.filename ?? ""
                 )
             }
         }
+        .environment(\.editMode, .constant(isEditing ? .active : .inactive))
     }
 }
 
