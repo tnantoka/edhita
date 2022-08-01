@@ -13,7 +13,11 @@ struct FinderListView: View {
     @ObservedObject var list: FinderList
 
     @State private var selectedItem: FinderItem?
-    @State private var isPresentedItemDialog = false
+    @State private var isPresentedAddDialog = false
+    @State private var isPresentedEditDialog = false
+    @State private var isPresentedFilePrompt = false
+    @State private var isPresentedDirectoryPrompt = false
+    @State private var isPresentedDownloadPrompt = false
     @State private var isPresentedRenamePrompt = false
     @State private var isPresentedMoveList = false
     @State private var isEditing = false
@@ -48,13 +52,12 @@ struct FinderListView: View {
                             isEditing.toggle()
                         }
                         selectedItem = nil
-                        isPresentedItemDialog = false
+                        isPresentedEditDialog = false
                     },
                     label: {
                         Image(
                             systemName: isEditing
                                 ? "xmark" : "pencil")
-
                     }
                 )
             }
@@ -62,16 +65,32 @@ struct FinderListView: View {
                 HStack {
                     if !isEditing {
                         Button(
-                            action: {},
+                            action: {
+                                isPresentedAddDialog.toggle()
+                            },
                             label: {
                                 Image(systemName: "plus")
                             }
                         )
+                        .confirmationDialog(
+                            selectedItem?.url.lastPathComponent ?? "",
+                            isPresented: $isPresentedAddDialog
+                        ) {
+                            Button(NSLocalizedString("File", comment: "")) {
+                                isPresentedFilePrompt.toggle()
+                            }
+                            Button(NSLocalizedString("Directory", comment: "")) {
+                                isPresentedDirectoryPrompt.toggle()
+                            }
+                            Button(NSLocalizedString("Download", comment: "")) {
+                                isPresentedDownloadPrompt.toggle()
+                            }
+                        }
                     }
                     if isEditing {
                         Button(
                             action: {
-                                isPresentedItemDialog = true
+                                isPresentedEditDialog.toggle()
                             },
                             label: {
                                 Image(systemName: "ellipsis")
@@ -80,10 +99,10 @@ struct FinderListView: View {
                         .disabled(selectedItem == nil)
                         .confirmationDialog(
                             selectedItem?.url.lastPathComponent ?? "",
-                            isPresented: $isPresentedItemDialog
+                            isPresented: $isPresentedEditDialog
                         ) {
                             Button(NSLocalizedString("Rename", comment: "")) {
-                                isPresentedRenamePrompt = true
+                                isPresentedRenamePrompt.toggle()
                             }
                             Button(NSLocalizedString("Duplicate", comment: "")) {
                                 withAnimation {
@@ -91,7 +110,7 @@ struct FinderListView: View {
                                 }
                             }
                             Button(NSLocalizedString("Move", comment: "")) {
-                                isPresentedMoveList = true
+                                isPresentedMoveList.toggle()
                             }
                             Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
                                 withAnimation {
@@ -120,6 +139,53 @@ struct FinderListView: View {
                         list.renameItem(item: selectedItem, name: name)
                     },
                     text: selectedItem?.filename ?? ""
+                )
+            }
+        }
+        .sheet(isPresented: $isPresentedFilePrompt) {
+            NavigationView {
+                PromptView(
+                    title: NSLocalizedString("New File", comment: ""),
+                    textLabel: NSLocalizedString("Name", comment: ""),
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
+                    },
+                    onSave: { name in
+                        list.addItem(name: name, isDirectory: false)
+                    },
+                    text: ""
+                )
+            }
+        }
+        .sheet(isPresented: $isPresentedDirectoryPrompt) {
+            NavigationView {
+                PromptView(
+                    title: NSLocalizedString("New Directory", comment: ""),
+                    textLabel: NSLocalizedString("Name", comment: ""),
+                    canSave: { name in
+                        name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
+                    },
+                    onSave: { name in
+                        list.addItem(name: name, isDirectory: true)
+                    },
+                    text: ""
+                )
+            }
+        }
+        .sheet(isPresented: $isPresentedDownloadPrompt) {
+            NavigationView {
+                PromptView(
+                    title: NSLocalizedString("Download", comment: ""),
+                    textLabel: NSLocalizedString("URL", comment: ""),
+                    canSave: { urlString in
+                        guard let url = URL(string: urlString) else { return false }
+                        return list.items.first(where: { $0.filename == url.lastPathComponent })
+                            != nil
+                    },
+                    onSave: { urlString in
+                        list.downloadItem(urlString: urlString)
+                    },
+                    text: "https://"
                 )
             }
         }

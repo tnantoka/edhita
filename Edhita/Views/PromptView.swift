@@ -21,8 +21,9 @@ struct PromptView: View {
 
     var body: some View {
         Form {
-            Section(header: Text(title)) {
+            Section(header: Text(textLabel)) {
                 TextField(textLabel, text: $text)
+                    .autocapitalization(.none)
                     .focused($isFocused)
             }
         }
@@ -47,7 +48,7 @@ struct PromptView: View {
         .onAppear {
             // FIXME: https://stackoverflow.com/questions/68073919/swiftui-focusstate-how-to-give-it-initial-value
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                isFocused = true
+                isFocused.toggle()
             }
         }
     }

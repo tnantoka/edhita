@@ -87,4 +87,24 @@ extension FinderList {
         item.move(directory: url)
         refresh()
     }
+
+    func addItem(name: String, isDirectory: Bool) {
+        let url = self.url.appendingPathComponent(name)
+
+        if isDirectory {
+            try? FileManager.default.createDirectory(at: url, withIntermediateDirectories: false)
+        } else {
+            try? "".write(to: url, atomically: true, encoding: .utf8)
+        }
+        refresh()
+    }
+
+    func downloadItem(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+
+        if let data = try? Data(contentsOf: url) {
+            try? data.write(to: self.url.appendingPathComponent(url.lastPathComponent))
+        }
+        refresh()
+    }
 }
