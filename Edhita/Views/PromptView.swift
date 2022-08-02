@@ -31,14 +31,14 @@ struct PromptView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button(NSLocalizedString("Cancel", comment: "")) {
+                Button("Cancel") {
                     dismiss()
                 }
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(NSLocalizedString("Save", comment: "")) {
+                Button("Save") {
                     onSave(text)
                     dismiss()
                 }

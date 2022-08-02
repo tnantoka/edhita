@@ -37,14 +37,14 @@ struct MoveListView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Button(NSLocalizedString("Cancel", comment: "")) {
+                Button("Cancel") {
                     isPresented.toggle()
                 }
             }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button(NSLocalizedString("Move", comment: "")) {
+                Button("Move") {
                     onMove(list.url)
                     isPresented.toggle()
                 }

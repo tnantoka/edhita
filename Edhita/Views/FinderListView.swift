@@ -20,6 +20,7 @@ struct FinderListView: View {
     @State private var isPresentedDownloadPrompt = false
     @State private var isPresentedRenamePrompt = false
     @State private var isPresentedMoveList = false
+    @State private var isPresentedInfo = false
     @State private var isEditing = false
 
     var body: some View {
@@ -76,13 +77,13 @@ struct FinderListView: View {
                             selectedItem?.url.lastPathComponent ?? "",
                             isPresented: $isPresentedAddDialog
                         ) {
-                            Button(NSLocalizedString("File", comment: "")) {
+                            Button("File") {
                                 isPresentedFilePrompt.toggle()
                             }
-                            Button(NSLocalizedString("Directory", comment: "")) {
+                            Button("Directory") {
                                 isPresentedDirectoryPrompt.toggle()
                             }
-                            Button(NSLocalizedString("Download", comment: "")) {
+                            Button("Download") {
                                 isPresentedDownloadPrompt.toggle()
                             }
                         }
@@ -101,18 +102,18 @@ struct FinderListView: View {
                             selectedItem?.url.lastPathComponent ?? "",
                             isPresented: $isPresentedEditDialog
                         ) {
-                            Button(NSLocalizedString("Rename", comment: "")) {
+                            Button("Rename") {
                                 isPresentedRenamePrompt.toggle()
                             }
-                            Button(NSLocalizedString("Duplicate", comment: "")) {
+                            Button("Duplicate") {
                                 withAnimation {
                                     list.duplicateItem(item: selectedItem)
                                 }
                             }
-                            Button(NSLocalizedString("Move", comment: "")) {
+                            Button("Move") {
                                 isPresentedMoveList.toggle()
                             }
-                            Button(NSLocalizedString("Delete", comment: ""), role: .destructive) {
+                            Button("Delete", role: .destructive) {
                                 withAnimation {
                                     list.deleteItem(item: selectedItem)
                                 }
@@ -123,6 +124,18 @@ struct FinderListView: View {
             }
         }
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(
+                    action: {
+                        isPresentedInfo.toggle()
+                    },
+                    label: {
+                        Image(systemName: "gearshape")
+                    }
+                )
+            }
+        }
+        .toolbar {
             ToolbarItem(placement: .bottomBar) {
                 Text(list.relativePath)
             }
@@ -130,8 +143,8 @@ struct FinderListView: View {
         .sheet(isPresented: $isPresentedRenamePrompt) {
             NavigationView {
                 PromptView(
-                    title: NSLocalizedString("Rename", comment: ""),
-                    textLabel: NSLocalizedString("Name", comment: ""),
+                    title: "Rename",
+                    textLabel: "Name",
                     canSave: { name in
                         name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
                     },
@@ -145,8 +158,8 @@ struct FinderListView: View {
         .sheet(isPresented: $isPresentedFilePrompt) {
             NavigationView {
                 PromptView(
-                    title: NSLocalizedString("New File", comment: ""),
-                    textLabel: NSLocalizedString("Name", comment: ""),
+                    title: "New File",
+                    textLabel: "Name",
                     canSave: { name in
                         name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
                     },
@@ -160,8 +173,8 @@ struct FinderListView: View {
         .sheet(isPresented: $isPresentedDirectoryPrompt) {
             NavigationView {
                 PromptView(
-                    title: NSLocalizedString("New Directory", comment: ""),
-                    textLabel: NSLocalizedString("Name", comment: ""),
+                    title: "New Directory",
+                    textLabel: "Name",
                     canSave: { name in
                         name.isEmpty || list.items.first(where: { $0.filename == name }) != nil
                     },
@@ -175,8 +188,8 @@ struct FinderListView: View {
         .sheet(isPresented: $isPresentedDownloadPrompt) {
             NavigationView {
                 PromptView(
-                    title: NSLocalizedString("Download", comment: ""),
-                    textLabel: NSLocalizedString("URL", comment: ""),
+                    title: "Download",
+                    textLabel: "URL",
                     canSave: { urlString in
                         guard let url = URL(string: urlString) else { return false }
                         return list.items.first(where: { $0.filename == url.lastPathComponent })
@@ -200,6 +213,11 @@ struct FinderListView: View {
                         list.moveItem(item: selectedItem, url: url)
                     }
                 }
+            }
+        }
+        .sheet(isPresented: $isPresentedInfo) {
+            NavigationView {
+                InfoView()
             }
         }
         .onAppear {
