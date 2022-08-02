@@ -37,7 +37,7 @@ struct InfoView: View {
             }
         }
         .sheet(isPresented: $isPresentedAcknowledgments) {
-            SafariView(url: URL(string: "https://google.com/")!)
+            SafariView(url: URL(string: "https://github.com/tnantoka/edhita#acknowledgments")!)
         }
         .onChange(of: keyboardAccessory) {
             Settings.shared.keyboardAccessory = $0
