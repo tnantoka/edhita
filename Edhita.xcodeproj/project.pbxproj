@@ -27,6 +27,7 @@
 		9BFDA6B928981A76007EE921 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6B828981A76007EE921 /* SafariView.swift */; };
 		9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6BA289914A4007EE921 /* FontSettingsView.swift */; };
 		9BFDA6BD28991698007EE921 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6BC28991698007EE921 /* FontManager.swift */; };
+		9BFDA6BF28995123007EE921 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6BE28995123007EE921 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		9BFDA6B828981A76007EE921 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		9BFDA6BA289914A4007EE921 /* FontSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingsView.swift; sourceTree = "<group>"; };
 		9BFDA6BC28991698007EE921 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		9BFDA6BE28995123007EE921 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				9BFAF5CA288EDAB400AE31AC /* FinderList.swift */,
 				9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */,
 				9BFDA6BC28991698007EE921 /* FontManager.swift */,
+				9BFDA6BE28995123007EE921 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				9BFDA6B928981A76007EE921 /* SafariView.swift in Sources */,
 				9B37692B288D8D46002392EB /* EdhitaApp.swift in Sources */,
 				9BFAF5CD288EDAC000AE31AC /* FinderItem.swift in Sources */,
+				9BFDA6BF28995123007EE921 /* Settings.swift in Sources */,
 				9BFDA6B528966785007EE921 /* MoveListView.swift in Sources */,
 				9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */,
 				9BFDA6B7289804BD007EE921 /* InfoView.swift in Sources */,

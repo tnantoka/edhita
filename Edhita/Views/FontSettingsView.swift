@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct FontSettingsView: View {
-    @State var fontName = FontManager.defaultFontName
-    @State var fontSize = FontManager.defaultFontSize
-    @State var textColor = Color.black
-    @State var backgroundColor = Color.white
+    @State var fontName = Settings.shared.fontName
+    @State var fontSize = Settings.shared.fontSize
+    @State var textColor = Settings.shared.textColor
+    @State var backgroundColor = Settings.shared.backgroundColor
 
     var body: some View {
         Form {
@@ -43,10 +43,22 @@ struct FontSettingsView: View {
                 Button("Reset") {
                     fontName = FontManager.defaultFontName
                     fontSize = FontManager.defaultFontSize
-                    textColor = Color.black
-                    backgroundColor = Color.white
+                    textColor = FontManager.defaultTextColor
+                    backgroundColor = FontManager.defaultBackgroundColor
                 }
             }
+        }
+        .onChange(of: fontName) {
+            Settings.shared.fontName = $0
+        }
+        .onChange(of: fontSize) {
+            Settings.shared.fontSize = $0
+        }
+        .onChange(of: textColor) {
+            Settings.shared.textColor = $0
+        }
+        .onChange(of: backgroundColor) {
+            Settings.shared.backgroundColor = $0
         }
     }
 }

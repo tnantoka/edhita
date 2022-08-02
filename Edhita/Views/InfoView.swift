@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InfoView: View {
-    @State var keyboardAccessory = true
+    @State var keyboardAccessory = Settings.shared.keyboardAccessory
     @State var isPresentedAcknowledgments = false
 
     @Environment(\.dismiss) var dismiss
@@ -38,6 +38,9 @@ struct InfoView: View {
         }
         .sheet(isPresented: $isPresentedAcknowledgments) {
             SafariView(url: URL(string: "https://google.com/")!)
+        }
+        .onChange(of: keyboardAccessory) {
+            Settings.shared.keyboardAccessory = $0
         }
     }
 }
