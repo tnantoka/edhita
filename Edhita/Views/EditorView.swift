@@ -33,6 +33,9 @@ struct EditorView: View {
                     .onChange(of: content) { content in
                         item.save(content: content)
                     }
+                    .background(Settings.shared.backgroundColor)
+                    .foregroundColor(Settings.shared.textColor)
+                    .font(.custom(Settings.shared.fontName, size: Settings.shared.fontSize))
             }
             if mode == .split {
                 Color
