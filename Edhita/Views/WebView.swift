@@ -11,11 +11,10 @@ import WebKit
 
 struct WebView: UIViewRepresentable {
     let url: URL
-
-    private let view = WKWebView(frame: .zero)
+    let reloader: Bool
 
     func makeUIView(context: Context) -> WKWebView {
-        view
+        WKWebView(frame: .zero)
     }
 
     func updateUIView(_ uiView: WKWebView, context: Context) {
@@ -31,10 +30,6 @@ struct WebView: UIViewRepresentable {
         }
     }
 
-    func reload() {
-        view.reload()
-    }
-
     private var isMarkdown: Bool {
         url.lastPathComponent.hasSuffix(".md") || url.lastPathComponent.hasSuffix(".markdown")
     }
@@ -43,7 +38,8 @@ struct WebView: UIViewRepresentable {
 struct WebView_Previews: PreviewProvider {
     static var previews: some View {
         WebView(
-            url: URL(string: "https://example.com/")!
+            url: URL(string: "https://example.com/")!,
+            reloader: false
         )
     }
 }

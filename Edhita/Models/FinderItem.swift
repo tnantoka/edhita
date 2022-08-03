@@ -19,7 +19,11 @@ struct FinderItem: Identifiable, Hashable {
     }
 
     var content: String {
-        (try? String(contentsOf: url)) ?? ""
+        _content ?? ""
+    }
+
+    var _content: String? {
+        try? String(contentsOf: url)
     }
 
     var isDirectory: Bool {
@@ -29,6 +33,17 @@ struct FinderItem: Identifiable, Hashable {
     var contentModificationDate: Date {
         (try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate)
             ?? Date.distantPast
+    }
+
+    var isEditable: Bool {
+        _content != nil
+    }
+
+    var activityItems: [Any] {
+        [
+            url,
+            _content as Any,
+        ].compactMap { $0 }
     }
 
     init(url: URL) {

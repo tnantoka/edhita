@@ -20,9 +20,11 @@ struct EditorView: View {
 
     @State private var content = ""
     @State private var mode = Mode.edit
+    @State private var reloader = false
+    @State private var isPresentedActivity = false
 
     var webView: WebView {
-        WebView(url: item.url)
+        WebView(url: item.url, reloader: reloader)
     }
 
     var body: some View {
@@ -36,6 +38,7 @@ struct EditorView: View {
                     .background(Settings.shared.backgroundColor)
                     .foregroundColor(Settings.shared.textColor)
                     .font(.custom(Settings.shared.fontName, size: Settings.shared.fontSize))
+                    .disabled(!item.isEditable)
             }
             if mode == .split {
                 Color
@@ -65,6 +68,34 @@ struct EditorView: View {
                 }
             }
             .pickerStyle(.segmented)
+        }
+        .toolbar {
+            ToolbarItem(placement: .bottomBar) {
+                HStack {
+                    Button(
+                        action: {
+                            isPresentedActivity.toggle()
+                        },
+                        label: {
+                            Image(systemName: "square.and.arrow.up")
+                        }
+                    )
+                    Button(
+                        action: {
+                            reloader.toggle()
+                        },
+                        label: {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                    )
+                    .disabled(mode == .edit)
+                    Spacer()
+                    Text(String(format: NSLocalizedString("Chars: %d", comment: ""), content.count))
+                }
+            }
+        }
+        .sheet(isPresented: $isPresentedActivity) {
+            ActivityView(activityItems: item.activityItems)
         }
     }
 }
