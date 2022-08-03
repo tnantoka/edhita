@@ -29,6 +29,8 @@
 		9BFDA6BD28991698007EE921 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6BC28991698007EE921 /* FontManager.swift */; };
 		9BFDA6BF28995123007EE921 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6BE28995123007EE921 /* Settings.swift */; };
 		9BFDA6C1289A99C2007EE921 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6C0289A99C2007EE921 /* ActivityView.swift */; };
+		9BFDA6C4289AB0B6007EE921 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFDA6C3289AB0B6007EE921 /* Introspect */; };
+		9BFDA6C6289AB1D1007EE921 /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,7 @@
 		9BFDA6BC28991698007EE921 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		9BFDA6BE28995123007EE921 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9BFDA6C0289A99C2007EE921 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFDA6B128928604007EE921 /* Ink in Frameworks */,
+				9BFDA6C4289AB0B6007EE921 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +187,7 @@
 				9BFDA6B6289804BD007EE921 /* InfoView.swift */,
 				9BFDA6BA289914A4007EE921 /* FontSettingsView.swift */,
 				9BFDA6C0289A99C2007EE921 /* ActivityView.swift */,
+				9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			name = Edhita;
 			packageProductDependencies = (
 				9BFDA6B028928604007EE921 /* Ink */,
+				9BFDA6C3289AB0B6007EE921 /* Introspect */,
 			);
 			productName = Edhita;
 			productReference = 9B376927288D8D46002392EB /* Edhita.app */;
@@ -280,6 +286,7 @@
 			mainGroup = 9B37691E288D8D46002392EB;
 			packageReferences = (
 				9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */,
+				9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 9B376928288D8D46002392EB /* Products */;
 			projectDirPath = "";
@@ -329,6 +336,7 @@
 				9B37692B288D8D46002392EB /* EdhitaApp.swift in Sources */,
 				9BFAF5CD288EDAC000AE31AC /* FinderItem.swift in Sources */,
 				9BFDA6BF28995123007EE921 /* Settings.swift in Sources */,
+				9BFDA6C6289AB1D1007EE921 /* AccessoryView.swift in Sources */,
 				9BFDA6B528966785007EE921 /* MoveListView.swift in Sources */,
 				9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */,
 				9BFDA6B7289804BD007EE921 /* InfoView.swift in Sources */,
@@ -667,6 +675,14 @@
 				kind = branch;
 			};
 		};
+		9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -674,6 +690,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */;
 			productName = Ink;
+		};
+		9BFDA6C3289AB0B6007EE921 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

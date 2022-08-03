@@ -5,6 +5,7 @@
 //  Created by Tatsuya Tobioka on 2022/07/26.
 //
 
+import Introspect
 import SwiftUI
 
 struct EditorView: View {
@@ -22,6 +23,7 @@ struct EditorView: View {
     @State private var mode = Mode.edit
     @State private var reloader = false
     @State private var isPresentedActivity = false
+    @State private var textView: UITextView?
 
     var webView: WebView {
         WebView(url: item.url, reloader: reloader)
@@ -39,6 +41,9 @@ struct EditorView: View {
                     .foregroundColor(Settings.shared.textColor)
                     .font(.custom(Settings.shared.fontName, size: Settings.shared.fontSize))
                     .disabled(!item.isEditable)
+                    .introspectTextView(customize: { textView in
+                        self.textView = textView
+                    })
             }
             if mode == .split {
                 Color
@@ -61,13 +66,15 @@ struct EditorView: View {
             UITextView.appearance().backgroundColor = nil
         }
         .toolbar {
-            Picker("", selection: $mode) {
-                ForEach(Mode.allCases) {
-                    mode in
-                    Text(mode.rawValue).tag(mode)
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Picker("", selection: $mode) {
+                    ForEach(Mode.allCases) {
+                        mode in
+                        Text(mode.rawValue).tag(mode)
+                    }
                 }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
         }
         .toolbar {
             ToolbarItem(placement: .bottomBar) {
@@ -92,6 +99,14 @@ struct EditorView: View {
                     Spacer()
                     Text(String(format: NSLocalizedString("Chars: %d", comment: ""), content.count))
                 }
+            }
+        }
+        .toolbar {
+            ToolbarItem(placement: .keyboard) {
+                if let textView = textView, Settings.shared.keyboardAccessory {
+                    AccessoryView(textView: textView)
+                }
+
             }
         }
         .sheet(isPresented: $isPresentedActivity) {
