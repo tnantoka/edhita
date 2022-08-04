@@ -24,25 +24,28 @@ struct FinderListView: View {
     @State private var isEditing = false
 
     var body: some View {
-        List(selection: $selectedItem) {
-            ForEach(list.items, id: \.self) { item in
-                if item.isDirectory {
-                    NavigationLink(
-                        destination: FinderListView(list: FinderList(url: item.url))
-                    ) {
-                        FinderItemView(item: item)
-                    }
-                    .isDetailLink(false)
-                } else {
-                    NavigationLink(
-                        destination: EditorView(item: item)
-                    ) {
-                        FinderItemView(item: item)
+        VStack {
+            List(selection: $selectedItem) {
+                ForEach(list.items, id: \.self) { item in
+                    if item.isDirectory {
+                        NavigationLink(
+                            destination: FinderListView(list: FinderList(url: item.url))
+                        ) {
+                            FinderItemView(item: item)
+                        }
+                        .isDetailLink(false)
+                    } else {
+                        NavigationLink(
+                            destination: EditorView(item: item)
+                        ) {
+                            FinderItemView(item: item)
+                        }
                     }
                 }
             }
+            .listStyle(.plain)
+            AdBannerView()
         }
-        .listStyle(.plain)
         .navigationTitle(list.url.lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

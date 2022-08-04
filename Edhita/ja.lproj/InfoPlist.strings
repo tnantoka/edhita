@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Edhita
+
+  Created by Tatsuya Tobioka on 2022/08/04.
+  
+*/
+
+"NSUserTrackingUsageDescription" = "できるだけ関心のある広告を表示するために使用します";

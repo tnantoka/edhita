@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Edhita
+
+  Created by Tatsuya Tobioka on 2022/08/04.
+  
+*/
+
+"NSUserTrackingUsageDescription" = "It will be used to deliver personalized ads to you.";
