@@ -55,6 +55,63 @@ extension FinderList {
         let path = url.path.replacingOccurrences(of: rootURL.path, with: "")
         return path.isEmpty ? "/" : path
     }
+
+    static func createExamples() {
+        let root = FinderList(url: rootURL)
+        root.addItem(name: "examples", isDirectory: true)
+
+        let examples = FinderList(url: rootURL.appendingPathComponent("examples"))
+        examples.addItem(name: "index.html", isDirectory: false)
+        examples.addItem(name: "index.md", isDirectory: false)
+        examples.addItem(name: "style.css", isDirectory: false)
+        examples.addItem(name: "script.js", isDirectory: false)
+        examples.refresh()
+
+        let items = examples.items
+        items.first { $0.filename == "index.md" }?.update(
+            content: """
+                # Hello
+                - list item 1
+                - list item 2
+                - list item 3
+                """
+        )
+        items.first { $0.filename == "script.js" }?.update(
+            content: """
+                document.querySelector('button').addEventListener('click', () => {
+                  document.querySelector('input').value = new Date();
+                });
+                """
+        )
+        items.first { $0.filename == "style.css" }?.update(
+            content: """
+                body {
+                  background: #f9f9f9;
+                }
+                """
+        )
+        items.first { $0.filename == "index.html" }?.update(
+            content: """
+                <!doctype html>
+                <html>
+                  <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <title>Example</title>
+                    <link href="style.css" rel="stylesheet">
+                  </head>
+                  <body>
+                    <h1>Hello, world!</h1>
+                    <p>
+                      <button>Hello</button><br>
+                      <input type="text">
+                    </p>
+                    <script src="script.js"></script>
+                  </body>
+                </html>
+                """
+        )
+    }
 }
 
 extension FinderList {

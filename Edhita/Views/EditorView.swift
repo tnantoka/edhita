@@ -35,7 +35,7 @@ struct EditorView: View {
                 TextEditor(text: $content)
                     .padding(.all, 8.0)
                     .onChange(of: content) { content in
-                        item.save(content: content)
+                        item.update(content: content)
                     }
                     .background(Settings.shared.backgroundColor)
                     .foregroundColor(Settings.shared.textColor)

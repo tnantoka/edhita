@@ -22,6 +22,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             GADMobileAds.sharedInstance().start(completionHandler: nil)
         #endif
 
+        if Settings.shared.firstLaunch {
+            FinderList.createExamples()
+            Settings.shared.firstLaunch = false
+        }
+
         return true
     }
 }

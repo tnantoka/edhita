@@ -50,7 +50,7 @@ struct FinderItem: Identifiable, Hashable {
         self.url = url
     }
 
-    func save(content: String) {
+    func update(content: String) {
         try? content.write(to: url, atomically: true, encoding: .utf8)
     }
 
