@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Edhita
+
+  Created by Tatsuya Tobioka on 2022/08/04.
+  
+*/
+
+"Acknowledgments" = "Acknowledgments";
+"ABCDEFGHIJKLM NOPQRSTUVWXYZ abcdefghijklm nopqrstuvwxyz 1234567890" = "ABCDEFGHIJKLM NOPQRSTUVWXYZ abcdefghijklm nopqrstuvwxyz 1234567890";
+"Background color" = "Background color";
+"Cancel" = "Cancel";
+"Chars: %d" = "Chars: %d";
+"Close" = "Close";
+"Directory" = "Directory";
+"Download" = "Download";
+"Duplicate" = "Duplicate";
+"Edit" = "Edit";
+"File" = "File";
+"Font" = "Font";
+"Font name" = "Font name";
+"Font size" = "Font size";
+"Info" = "Info";
+"Keyboard Accessory" = "Keyboard Accessory";
+"Move" = "Move";
+"Name" = "Name";
+"New Directory" = "New Directory";
+"New File" = "New File";
+"Preview" = "Preview";
+"Rename" = "Rename";
+"Reset" = "Reset";
+"Save" = "Save";
+"Settings" = "Settings";
+"Split" = "Split";
+"Text color" = "Text color";

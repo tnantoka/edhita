@@ -70,7 +70,7 @@ struct EditorView: View {
                 Picker("", selection: $mode) {
                     ForEach(Mode.allCases) {
                         mode in
-                        Text(mode.rawValue).tag(mode)
+                        Text(NSLocalizedString(mode.rawValue, comment: "")).tag(mode)
                     }
                 }
                 .pickerStyle(.segmented)

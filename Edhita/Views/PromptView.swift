@@ -21,13 +21,13 @@ struct PromptView: View {
 
     var body: some View {
         Form {
-            Section(header: Text(textLabel)) {
-                TextField(textLabel, text: $text)
+            Section(header: Text(NSLocalizedString(textLabel, comment: ""))) {
+                TextField(NSLocalizedString(textLabel, comment: ""), text: $text)
                     .autocapitalization(.none)
                     .focused($isFocused)
             }
         }
-        .navigationTitle(title)
+        .navigationTitle(NSLocalizedString(title, comment: ""))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {

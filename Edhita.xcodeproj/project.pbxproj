@@ -36,6 +36,7 @@
 		9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */; };
 		9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D4289BEAAB007EE921 /* Constants.swift */; };
 		9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */; };
+		9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6DE289BF6EB007EE921 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFDA6D4289BEAAB007EE921 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		9BFDA6DD289BF6EB007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9BFDA6DF289BF6EC007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 				9B37692E288D8D47002392EB /* Assets.xcassets */,
 				9B376930288D8D47002392EB /* Preview Content */,
 				9BFDA6CE289BC3EF007EE921 /* InfoPlist.strings */,
+				9BFDA6DE289BF6EB007EE921 /* Localizable.strings */,
 			);
 			path = Edhita;
 			sourceTree = "<group>";
@@ -324,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */,
 				9B376932288D8D47002392EB /* Preview Assets.xcassets in Resources */,
 				9BFDA6CC289BC3EF007EE921 /* InfoPlist.strings in Resources */,
 				9BFDA6A728902A37007EE921 /* root in Resources */,
@@ -414,6 +419,15 @@
 				9BFDA6D0289BC412007EE921 /* ja */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9BFDA6DE289BF6EB007EE921 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BFDA6DD289BF6EB007EE921 /* en */,
+				9BFDA6DF289BF6EC007EE921 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

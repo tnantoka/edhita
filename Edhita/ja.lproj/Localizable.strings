@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  Edhita
+
+  Created by Tatsuya Tobioka on 2022/08/04.
+  
+*/
+
+"Acknowledgments" = "謝辞";
+"ABCDEFGHIJKLM NOPQRSTUVWXYZ abcdefghijklm nopqrstuvwxyz 1234567890" = "あのイーハトーヴォの すきとおった風、 夏でも底に冷たさをもつ青いそら、 うつくしい森で飾られたモーリオ市、 郊外のぎらぎらひかる草の波。";
+"Background color" = "背景色";
+"Cancel" = "キャンセル";
+"Chars: %d" = "%d文字";
+"Close" = "閉じる";
+"Directory" = "ディレクトリー";
+"Download" = "ダウンロード";
+"Duplicate" = "複製";
+"Edit" = "編集";
+"File" = "ファイル";
+"Font" = "フォント";
+"Font name" = "フォント名";
+"Font size" = "フォントサイズ";
+"Info" = "情報";
+"Keyboard Accessory" = "キーボードアクセサリー";
+"Move" = "移動";
+"Name" = "名前";
+"New Directory" = "新規ディレクトリー";
+"New File" = "新規ファイル";
+"Preview" = "プレビュー";
+"Rename" = "名前変更";
+"Reset" = "リセット";
+"Save" = "保存";
+"Settings" = "設定";
+"Split" = "分割";
+"Text color" = "テキスト色";
