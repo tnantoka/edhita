@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class FinderList: ObservableObject {
     let url: URL
@@ -58,13 +59,18 @@ extension FinderList {
 
     static func createExamples() {
         let root = FinderList(url: rootURL)
-        if FileManager.default.fileExists(atPath: rootURL.appendingPathComponent("examples").path) {
+        let examplesURL = rootURL.appendingPathComponent("examples")
+        if FileManager.default.fileExists(atPath: examplesURL.path) {
             return
         }
 
         root.addItem(name: "examples", isDirectory: true)
 
-        let examples = FinderList(url: rootURL.appendingPathComponent("examples"))
+        let examples = FinderList(url: examplesURL)
+
+        try? UIImage(named: "AppIcon60x60")?.pngData()?.write(
+            to: examplesURL.appendingPathComponent("logo.png"))
+
         examples.addItem(name: "index.html", isDirectory: false)
         examples.addItem(name: "index.md", isDirectory: false)
         examples.addItem(name: "style.css", isDirectory: false)
@@ -74,10 +80,14 @@ extension FinderList {
         let items = examples.items
         items.first { $0.filename == "index.md" }?.update(
             content: """
-                # Hello
-                - list item 1
-                - list item 2
-                - list item 3
+                # Edhita
+
+                ---
+
+                Fully open source text editor for iOS written in SwiftUI.  
+                https://edhita.bornneet.com/
+
+                ![](logo.png)
                 """
         )
         items.first { $0.filename == "script.js" }?.update(

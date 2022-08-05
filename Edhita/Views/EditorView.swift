@@ -25,8 +25,8 @@ struct EditorView: View {
     @State private var isPresentedActivity = false
     @State private var textView: UITextView?
 
-    var webView: WebView {
-        WebView(url: item.url, reloader: reloader)
+    var webView: PreviewWebView {
+        PreviewWebView(url: item.url, reloader: reloader)
     }
 
     var body: some View {
@@ -36,6 +36,7 @@ struct EditorView: View {
                     .padding(.all, 8.0)
                     .onChange(of: content) { content in
                         item.update(content: content)
+                        reloader.toggle()
                     }
                     .background(Settings.shared.backgroundColor)
                     .foregroundColor(Settings.shared.textColor)
@@ -58,7 +59,9 @@ struct EditorView: View {
         .navigationTitle(item.url.lastPathComponent)
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            self.content = item.content
+            self.content =
+                item.isEditable
+                ? item.content : NSLocalizedString("The item cannot be edited", comment: "")
         }
         .onAppear {
             UITextView.appearance().backgroundColor = .clear
