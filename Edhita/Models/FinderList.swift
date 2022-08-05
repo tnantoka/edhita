@@ -58,6 +58,10 @@ extension FinderList {
 
     static func createExamples() {
         let root = FinderList(url: rootURL)
+        if FileManager.default.fileExists(atPath: rootURL.appendingPathComponent("examples").path) {
+            return
+        }
+
         root.addItem(name: "examples", isDirectory: true)
 
         let examples = FinderList(url: rootURL.appendingPathComponent("examples"))

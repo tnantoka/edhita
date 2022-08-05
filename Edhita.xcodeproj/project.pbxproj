@@ -37,6 +37,7 @@
 		9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D4289BEAAB007EE921 /* Constants.swift */; };
 		9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */; };
 		9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6DE289BF6EB007EE921 /* Localizable.strings */; };
+		9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		9BFDA6DD289BF6EB007EE921 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BFDA6DF289BF6EC007EE921 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				9BFDA6C0289A99C2007EE921 /* ActivityView.swift */,
 				9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */,
 				9BFDA6D8289BEB5C007EE921 /* AdBannerView.swift */,
+				9BFDA6E0289D3C8C007EE921 /* PlaceholderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */,
 				9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
 				9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
+				9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
 				9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,7 @@ struct EdhitaApp: App {
         WindowGroup {
             NavigationView {
                 FinderListView(list: FinderList(url: FinderList.rootURL))
+                PlaceholderView()
             }
             .onReceive(
                 NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)

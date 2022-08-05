@@ -15,8 +15,8 @@ class FontManager {
 
     static let defaultFontName = "CourierNewPSMT"
     static let defaultFontSize = UIFont.systemFontSize
-    static let defaultTextColor = Color.black
-    static let defaultBackgroundColor = Color.white
+    static let defaultTextColor = Color("Text")
+    static let defaultBackgroundColor = Color("Background")
 
     lazy var fontNames: [String] = {
         Array(

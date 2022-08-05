@@ -10,7 +10,11 @@ import SwiftUI
 
 struct AdBannerView: View {
     var body: some View {
-        let height = [50, 100].randomElement() ?? 50
+        #if DEBUG
+            let height = Constants.enableAd ? [50, 100].randomElement() ?? 50 : 0
+        #else
+            let height = [50, 100].randomElement() ?? 50
+        #endif
         AdBannerViewWithController(height: height).frame(height: CGFloat(height))
     }
 }

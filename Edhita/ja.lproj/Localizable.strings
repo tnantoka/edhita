@@ -26,6 +26,7 @@
 "Name" = "名前";
 "New Directory" = "新規ディレクトリー";
 "New File" = "新規ファイル";
+"No item selected." = "ファイルが選択されていません";
 "Preview" = "プレビュー";
 "Rename" = "名前変更";
 "Reset" = "リセット";
