@@ -6,6 +6,7 @@
 //
 
 import AppTrackingTransparency
+import GoogleMobileAds
 import SwiftUI
 
 @main
@@ -22,7 +23,15 @@ struct EdhitaApp: App {
             .onReceive(
                 NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)
             ) { _ in
-                ATTrackingManager.requestTrackingAuthorization { _ in }
+                ATTrackingManager.requestTrackingAuthorization { _ in
+                    #if DEBUG
+                        if Constants.enableAd {
+                            GADMobileAds.sharedInstance().start(completionHandler: nil)
+                        }
+                    #else
+                        GADMobileAds.sharedInstance().start(completionHandler: nil)
+                    #endif
+                }
             }
         }
     }

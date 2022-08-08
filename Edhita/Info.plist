@@ -4,6 +4,8 @@
 <dict>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-6374739630212171~7866879841</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
