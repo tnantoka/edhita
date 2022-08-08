@@ -19,15 +19,16 @@ $ open Edhita.xcodeproj
 
 The Swift Package Manager is used for dependencies.
 
-## Objective-C
+## SwiftUI
 
-Edhita 1.0 was written in Objective-C.  
-The source code is available on [Objective-C branch](https://github.com/tnantoka/edhita/tree/Objective-C).
+Edhita is currently built with SwiftUI.  
+Previous versions were built with Swift (UIKIt) or Objective-C.
 
-## Swift (UIKit)
-
-Edhita 2.0 was written in Swift with UIKit.  
-The source code is available on [uikit branch](https://github.com/tnantoka/edhita/tree/uikit).
+Year | Version | Technology | Branch
+--- | --- | --- | ---
+2022 | 3.x.x | SwiftUI | [master](https://github.com/tnantoka/edhita/tree/master)
+2014 | 2.x.x | Swift (UIKit) | [uikit](https://github.com/tnantoka/edhita/tree/uikit)
+2010 | 1.x.x | Objective-C | [Objective-C](https://github.com/tnantoka/edhita/tree/Objective-C)
 
 ## Mojicon
 
