@@ -10,6 +10,10 @@ https://edhita.bornneet.com/
 
 `Edhita (Japanese Romaji)` == `エディタ (Japanese Katakana)` == `Editor (English)`
 
+## Looking for the Android version?
+
+If you're curious about the Android counterpart, developed using Kotlin, check out [DotText](https://github.com/tnantoka/DotText).
+
 ## Development
 
 ```
