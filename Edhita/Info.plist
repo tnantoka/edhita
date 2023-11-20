@@ -13,5 +13,7 @@
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
 	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>It will be used to deliver personalized ads to you.</string>
 </dict>
 </plist>
