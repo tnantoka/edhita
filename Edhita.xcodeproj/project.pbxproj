@@ -13,6 +13,8 @@
 		9B37693C288D8D47002392EB /* EdhitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37693B288D8D47002392EB /* EdhitaTests.swift */; };
 		9B376946288D8D47002392EB /* EdhitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376945288D8D47002392EB /* EdhitaUITests.swift */; };
 		9B376948288D8D47002392EB /* EdhitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */; };
+		9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8FD48E2B0A4976009950B9 /* AdManager.swift */; };
+		9B8FD4922B0A4A56009950B9 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */; };
 		9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CA288EDAB400AE31AC /* FinderList.swift */; };
 		9BFAF5CD288EDAC000AE31AC /* FinderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */; };
 		9BFAF5CF2890213200AE31AC /* FinderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CE2890213200AE31AC /* FinderListView.swift */; };
@@ -31,7 +33,6 @@
 		9BFDA6C1289A99C2007EE921 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6C0289A99C2007EE921 /* ActivityView.swift */; };
 		9BFDA6C4289AB0B6007EE921 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFDA6C3289AB0B6007EE921 /* Introspect */; };
 		9BFDA6C6289AB1D1007EE921 /* AccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6C5289AB1D1007EE921 /* AccessoryView.swift */; };
-		9BFDA6C9289BC241007EE921 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFDA6C8289BC241007EE921 /* GoogleMobileAds */; };
 		9BFDA6CC289BC3EF007EE921 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9BFDA6CE289BC3EF007EE921 /* InfoPlist.strings */; };
 		9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D2289BE9F8007EE921 /* AppDelegate.swift */; };
 		9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFDA6D4289BEAAB007EE921 /* Constants.swift */; };
@@ -67,6 +68,7 @@
 		9B376941288D8D47002392EB /* EdhitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdhitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B376945288D8D47002392EB /* EdhitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITests.swift; sourceTree = "<group>"; };
 		9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B8FD48E2B0A4976009950B9 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		9BFAF5CA288EDAB400AE31AC /* FinderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderList.swift; sourceTree = "<group>"; };
 		9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderItem.swift; sourceTree = "<group>"; };
 		9BFAF5CE2890213200AE31AC /* FinderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderListView.swift; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFDA6C9289BC241007EE921 /* GoogleMobileAds in Frameworks */,
+				9B8FD4922B0A4A56009950B9 /* GoogleMobileAds in Frameworks */,
 				9BFDA6B128928604007EE921 /* Ink in Frameworks */,
 				9BFDA6C4289AB0B6007EE921 /* Introspect in Frameworks */,
 			);
@@ -192,6 +194,7 @@
 				9BFDA6BC28991698007EE921 /* FontManager.swift */,
 				9BFDA6BE28995123007EE921 /* Settings.swift */,
 				9BFDA6D4289BEAAB007EE921 /* Constants.swift */,
+				9B8FD48E2B0A4976009950B9 /* AdManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -235,7 +238,7 @@
 			packageProductDependencies = (
 				9BFDA6B028928604007EE921 /* Ink */,
 				9BFDA6C3289AB0B6007EE921 /* Introspect */,
-				9BFDA6C8289BC241007EE921 /* GoogleMobileAds */,
+				9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */,
 			);
 			productName = Edhita;
 			productReference = 9B376927288D8D46002392EB /* Edhita.app */;
@@ -313,7 +316,7 @@
 			packageReferences = (
 				9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */,
 				9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				9BFDA6C7289BC241007EE921 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */,
+				9B8FD4902B0A4A56009950B9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 9B376928288D8D46002392EB /* Products */;
 			projectDirPath = "";
@@ -378,6 +381,7 @@
 				9BFDA6D9289BEB5C007EE921 /* AdBannerView.swift in Sources */,
 				9BFDA6D3289BE9F8007EE921 /* AppDelegate.swift in Sources */,
 				9BFDA6BB289914A4007EE921 /* FontSettingsView.swift in Sources */,
+				9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */,
 				9BFDA6E1289D3C8C007EE921 /* PlaceholderView.swift in Sources */,
 				9BFDA6D5289BEAAB007EE921 /* Constants.swift in Sources */,
 			);
@@ -559,7 +563,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
 				DEVELOPMENT_TEAM = H4Z42X3L6X;
 				ENABLE_PREVIEWS = YES;
@@ -574,7 +578,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
 				DEVELOPMENT_TEAM = H4Z42X3L6X;
 				ENABLE_PREVIEWS = YES;
@@ -604,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -727,6 +731,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9B8FD4902B0A4A56009950B9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JohnSundell/Ink.git";
@@ -743,17 +755,14 @@
 				kind = branch;
 			};
 		};
-		9BFDA6C7289BC241007EE921 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quanghits/GoogleMobileAds";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B8FD4902B0A4A56009950B9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		9BFDA6B028928604007EE921 /* Ink */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */;
@@ -763,11 +772,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BFDA6C2289AB0B6007EE921 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
-		};
-		9BFDA6C8289BC241007EE921 /* GoogleMobileAds */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9BFDA6C7289BC241007EE921 /* XCRemoteSwiftPackageReference "GoogleMobileAds" */;
-			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

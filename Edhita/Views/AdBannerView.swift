@@ -5,17 +5,28 @@
 //  Created by Tatsuya Tobioka on 2022/08/04.
 //
 
+import AppTrackingTransparency
 import GoogleMobileAds
 import SwiftUI
 
 struct AdBannerView: View {
+    @State private var onReady = false
+
     var body: some View {
         #if DEBUG
             let height = Constants.enableAd ? [50, 100].randomElement() ?? 50 : 0
         #else
             let height = [50, 100].randomElement() ?? 50
         #endif
-        AdBannerViewWithController(height: height).frame(height: CGFloat(height))
+
+        if onReady {
+            AdBannerViewWithController(height: height).frame(height: CGFloat(height))
+        } else {
+            VStack {}
+                .onAppear {
+                    AdManager.shared.start { onReady = true }
+                }
+        }
     }
 }
 
