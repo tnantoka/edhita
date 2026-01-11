@@ -38,7 +38,7 @@ struct AdBannerViewWithController: UIViewControllerRepresentable {
     ) -> UIViewController {
         let controller = UIViewController()
 
-        let view = GADBannerView(adSize: height == 50 ? GADAdSizeBanner : GADAdSizeLargeBanner)
+        let view = BannerView(adSize: height == 50 ? AdSizeBanner : AdSizeLargeBanner)
 
         #if DEBUG
             view.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -49,10 +49,10 @@ struct AdBannerViewWithController: UIViewControllerRepresentable {
         view.rootViewController = controller
         #if DEBUG
             if Constants.enableAd {
-                view.load(GADRequest())
+                view.load(Request())
             }
         #else
-            view.load(GADRequest())
+            view.load(Request())
         #endif
 
         controller.view.addSubview(view)

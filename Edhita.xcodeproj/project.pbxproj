@@ -13,6 +13,7 @@
 		9B37693C288D8D47002392EB /* EdhitaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B37693B288D8D47002392EB /* EdhitaTests.swift */; };
 		9B376946288D8D47002392EB /* EdhitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376945288D8D47002392EB /* EdhitaUITests.swift */; };
 		9B376948288D8D47002392EB /* EdhitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */; };
+		9B8142C02F13D2810012359C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */; };
 		9B8FD48F2B0A4976009950B9 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8FD48E2B0A4976009950B9 /* AdManager.swift */; };
 		9B8FD4922B0A4A56009950B9 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8FD4912B0A4A56009950B9 /* GoogleMobileAds */; };
 		9BFAF5CB288EDAB400AE31AC /* FinderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFAF5CA288EDAB400AE31AC /* FinderList.swift */; };
@@ -68,6 +69,7 @@
 		9B376941288D8D47002392EB /* EdhitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EdhitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B376945288D8D47002392EB /* EdhitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITests.swift; sourceTree = "<group>"; };
 		9B376947288D8D47002392EB /* EdhitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdhitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9B8FD48E2B0A4976009950B9 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
 		9BFAF5CA288EDAB400AE31AC /* FinderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderList.swift; sourceTree = "<group>"; };
 		9BFAF5CC288EDAC000AE31AC /* FinderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderItem.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				9B376930288D8D47002392EB /* Preview Content */,
 				9BFDA6CE289BC3EF007EE921 /* InfoPlist.strings */,
 				9BFDA6DE289BF6EB007EE921 /* Localizable.strings */,
+				9B8142BF2F13D2810012359C /* PrivacyInfo.xcprivacy */,
 			);
 			path = Edhita;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8142C02F13D2810012359C /* PrivacyInfo.xcprivacy in Resources */,
 				9BFDA6DC289BF6EB007EE921 /* Localizable.strings in Resources */,
 				9B376932288D8D47002392EB /* Preview Assets.xcassets in Resources */,
 				9BFDA6CC289BC3EF007EE921 /* InfoPlist.strings in Resources */,
@@ -563,7 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
 				DEVELOPMENT_TEAM = H4Z42X3L6X;
 				ENABLE_PREVIEWS = YES;
@@ -578,7 +582,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -593,7 +597,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 25;
 				DEVELOPMENT_ASSET_PATHS = "\"Edhita/Preview Content\"";
 				DEVELOPMENT_TEAM = H4Z42X3L6X;
 				ENABLE_PREVIEWS = YES;
@@ -608,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bornneet.Edhita;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -736,7 +740,7 @@
 			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
+				minimumVersion = 12.0.0;
 			};
 		};
 		9BFDA6AF28928604007EE921 /* XCRemoteSwiftPackageReference "Ink" */ = {

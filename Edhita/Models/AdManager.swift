@@ -22,7 +22,7 @@ class AdManager {
             callback()
         } else {
             requestTracking {
-                GADMobileAds.sharedInstance().start { [weak self] _ in
+                MobileAds.shared.start { [weak self] _ in
                     self?.isStarted = true
                     callback()
                 }
@@ -52,18 +52,18 @@ class AdManager {
     }
 
     private func requestGDPR(callback: @escaping () -> Void) {
-        let parameters = UMPRequestParameters()
-        parameters.tagForUnderAgeOfConsent = false
+        let parameters = RequestParameters()
+        parameters.isTaggedForUnderAgeOfConsent = false
 
         #if DEBUG
             if Constants.debugGDPR {
-                let debugSettings = UMPDebugSettings()
+                let debugSettings = DebugSettings()
                 debugSettings.geography = .EEA
                 parameters.debugSettings = debugSettings
             }
         #endif
 
-        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters) {
+        ConsentInformation.shared.requestConsentInfoUpdate(with: parameters) {
             [weak self] requestConsentError in
             guard self != nil else { return }
             guard requestConsentError == nil else { return }
@@ -73,16 +73,16 @@ class AdManager {
                     .windows.first?.rootViewController
             else { return }
 
-            UMPConsentForm.loadAndPresentIfRequired(from: rootViewController) {
+            ConsentForm.loadAndPresentIfRequired(from: rootViewController) {
                 loadAndPresentError in
                 guard loadAndPresentError == nil else { return }
 
-                if UMPConsentInformation.sharedInstance.canRequestAds {
+                if ConsentInformation.shared.canRequestAds {
                     callback()
                 }
             }
 
-            if UMPConsentInformation.sharedInstance.canRequestAds {
+            if ConsentInformation.shared.canRequestAds {
                 callback()
             }
         }
