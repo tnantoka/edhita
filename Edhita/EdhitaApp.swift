@@ -14,9 +14,16 @@ struct EdhitaApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                FinderListView(list: FinderList(url: FinderList.rootURL))
-                PlaceholderView()
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                NavigationView {
+                    FinderListView(list: FinderList(url: FinderList.rootURL))
+                }
+                .navigationViewStyle(.stack)
+            } else {
+                NavigationView {
+                    FinderListView(list: FinderList(url: FinderList.rootURL))
+                    PlaceholderView()
+                }
             }
         }
     }
